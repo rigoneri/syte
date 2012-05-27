@@ -1,14 +1,13 @@
 # Syte
 
-Syte is a easy to setup and deploy personal site that has social integrations like tumblr, twitter, github and dribbble. You can start off by seeing an example of it on my personal website <http://rigoneri.com>
+Syte is a really simple but powerful packaged personal site that has social integrations like tumblr, twitter, github and dribbble. You can start off by seeing an example of it on my personal   site <http://rigoneri.com>
 
 ### There is only one rule
 
-You can use, reproduce and do whatever you want with syte as long as you choose a different adjacent color as the ones used by the people below:
+You can use, reproduce and do whatever you want with syte as long as you choose a different adjacent color as the ones used by the people below. Once you have chosen your color and deployed your Syte based site, please send a pull request with an image of you containing the color on the border like the ones above.
 
 [![rigoneri](https://github.com/rigoneri/syte/blob/master/readme-imgs/rigoneri.png?raw=true)](http://rigoneri.com)
 
-Once you have chosen your color and deployed your syte based site, please send a pull request with an image containing the color on the border like the ones above.
 
 ## Social Integrations
 
@@ -27,7 +26,7 @@ Syte has twitter integration, which means that every time someone clicks on a li
 
 ### Github
 
-Syte has github integration, which means that every time someone clicks on a link that points to a user's github profile the profile is loaded within your site along with the user's repos.
+Syte has github integration, which means that every time someone clicks on a link that points to a user's github profile the profile is loaded within your site along with a list of the user's repos.
 
 ![Syte Github](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-3.png?raw=true)
 
@@ -62,14 +61,167 @@ For static compression and minification Syte uses some [Node.js](http://nodejs.o
 * [less](http://search.npmjs.org/#/less)
 * [uglify-js](http://search.npmjs.org/#/uglify-js) 
 
-For Deployment Syte uses [Heroku](http://www.heroku.com/) since its free for 750 dyno-hours per month. However it doesn't necessary needs to be deployed to Heroku, but the instructions provided are to be deployed there.
-
+For Deployment Syte uses [Heroku](http://www.heroku.com/) since it's free for 750 dyno-hours per month. However it doesn't necessary needs to be deployed to Heroku, but the instructions provided here are to be deployed there.
+	
 
 ## Setup Instructions
 
-[TODO] I'll put these instructions tomorrow...
+There are a few steps in order to get Syte configured, but don't worry they are pretty easy.
+
+### Base content changes
+
+There are a few things that are defaulted to have my information so you have the initial structure of the site. 
+
+To start off change the **pictures** to have your picture, navigate to `syte > static > imgs` and replace **pic.png** with your picture and **favicon.ico** with your favicon in this case I use my picture as well. Please make sure you keep the same sizes. **pic.png** is 84x84px and **favicon.ico** is 32x32px. 
+
+Then make some text and link changes. Open **base.html** located in `syte > templates > base.html` and make the following changes:
+
+1. Change the `meta="description"` content to have a description about you.
+2. Change the `meta="keywords"` content to have keywords about you. 
+3. Change the `title` tag to have your name.
+4. Inside the `header` tag change the `h1` tag to have your name.
+5. Inside the `header` tag change the `h2` tag to have a short description about you.
+6. Inside the `nav` tag change the **twitter-link** href to point to your twitter profile, if you don't have twitter just remove that whole line.
+7. Inside the `nav` tag change the **github-link** href to point to your github profile, if you don't have github just remove that whole line.
+8. Inside the `nav` tag change the **dribbble-link** href to point to your dribbble profile, if you don't have dribbble just remove that whole line.
+9. Inside the `nav` tag change the **contact-link** href to point to your email address. 
+
+Then pick your **adjacent color** and change the `@adjacent-color` hex value in variables.less located in `syte > static > less > variables.less` Make sure the color you chose is not used by anyone on the list up above. If you want blue pick a different shade of blue there are hundreds out there...
+  
+
+### Setting up you blog (Tumblr)
+
+If you already have a tumblr blog good! If you don't [signup for one here](https://www.tumblr.com/) it's really easy! Also I might eventually make so it integrates with wordpress as well, if you beat me to it please send a pull request.
+
+Once you have your tumblr blog you will need to get the `api_key` needed to call their APIs. In order to do that **register your site** with them by going to <http://www.tumblr.com/oauth/register>, fill in the information about your site, there is no need to enter a default callback url or an icon. Once you are done your website will be listed under <http://www.tumblr.com/oauth/apps>, save the `OAuth Consumer Key` value that's the `api_key` we need for Syte.
+
+Once you have the `api_key` from tumblr you have to enter it in **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the key under `TUMBLR_API_KEY`, also please enter your tumblr url under `TUMBLR_BLOG_URL` see the example on how it should be formatted.
+
+##### Small Note
+
+Since there is currently a bug with tags on tumblr's api you will have to change the tag url in some files to point to your tumblr url. Open the files `syte > templates > post.html` and `syte > static > templates > blog-post.html`, change where it says **blog.rigoneri.com** to your tumblr url.
 
 
-## Deploy Instructions
+### Setting up Twitter integration
 
-[TODO] I'll put these instructions tomorrow...
+Twitter has another level of security, therefore we need more information instead of just an api_key like tumblr. To get started create a new application on twitter for your website by going to <https://dev.twitter.com/apps/new>. Once you are done creating your application you will be taken to your application page on twitter, there you arleady have two pieces of the puzzle, the `Consumer key` and the `Consumer secret` make sure you save those.
+
+Next you will need your access tokens, on the bottom of that page there is a link called **Create my access token** click on that. Once you are done you will be given the other two pieces of the puzzle, the `Access token` and the `Access token secret` make sure you save those as well.
+
+Once you have those four items from twitter you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
+
+* `Consumer key` string you saved under `TWITTER_CONSUMER_KEY`
+* `Consumer secret` string you saved under  `TWITTER_CONSUMER_SECRET`
+* `Access token` string you saved under `TWITTER_USER_KEY`
+* `Access token secret` string you saved under `TWITTER_USER_SECRET`
+
+If you want to turn off the twitter integration just set `TWITTER_INTEGRATION_ENABLED` to False.
+
+### Setting up Github integration
+
+You don't have to do anything to setup the github integration. If you want to turn off this feature just set `GITHUB_INTEGRATION_ENABLED` setting to False in syte_settings.py.
+
+### Setting up Dribbble integration
+
+You don't have to do anything to setup the dribbble integration. If you want to turn off this feature just set `DRIBBBLE_INTEGRATION_ENABLED` setting to False in syte_settings.py.
+
+   
+    
+
+## Running & Deployment Instructions
+
+Now that you have everything setup and ready to go we will be able to run the project locally and deploy to heroku  with the instructions below. Please note that these instructions are based on running on a mac, which should be the same for linux systems, but if you are on Windows and is having problems, let me know or send a pull request so I can make the necessary instruction changes. 
+
+### Running Syte locally 
+
+Running locally is really easy if you are on a Mac since you already have some stuff installed out of the box. To start off install these too python packages.
+
+* [virtualenv](http://www.virtualenv.org/en/latest/index.html)
+* [virtualenvwrapper](http://www.doughellmann.com/projects/virtualenvwrapper/)
+
+Once you have those two installed got to your syte directory and run the following commands:
+
+```
+$ mkvirtualenv syte
+$ workon syte
+(syte)$ pip install --use-mirrors -r requirements.txt 
+```
+
+This will install all the project dependencies listed in requirements.txt including Django. Now all you have to do is run the django project and go to <http://127.0.0.1:8000>.
+
+```
+python manage.py runserver
+```
+
+### Compressing Statics
+
+Compressing static files like CSS and JS are done using [Node.js](http://nodejs.org/). This step is important since it will get all your static files and make tiny bit small so your site can be run faster when it's out there  on the so called World Wide Web :)
+
+In order to get there you need to first install [node.js](http://nodejs.org/), they have automatic installers which makes really easy. Then you need to install [Node Package Manager (npm)](http://npmjs.org/) to install run the following command:
+
+```
+curl http://npmjs.org/install.sh | sudo sh
+```
+
+After npm is installed you need to install two node packages `less` and `uglify-js` in order to do that run the following commands:
+
+```
+sudo npm install less -g
+sudo npm install uglify-js -g
+```
+
+Then whenever you want to release a new version of static update the `COMPRESS_REVISION_NUMBER` in **syte-settings.py** and run the compress python command from your syte directory:
+
+```
+python compress.py
+```
+
+This will create a minified version of your css and it will be located in `syte > static > css` as well as the minified version of your java script and it will be located in `syte > static > js > min`.
+
+
+### Deploying to Heroku
+
+Deploying to Heroku is extremely easy and free that's why I chose it over to deploying to Amazon or anywhere else (even though heroku itself deploys to Amazon). That's another fork I would love to see, different deployment instructions maybe to an Amazon micro instance.
+
+First signup to [Heroku](http://heroku.com) then follow these simple [Django deployement instructions](https://devcenter.heroku.com/articles/django) I already have the requirements.txt and the Procfile ready to go, but before you actually deploy there are two things you need to change:
+
+1. Change the ``DEPLOYMENT_MODE`` value to prod in **syte_settings.py** located in ``syte > syte_settings.py``
+2. Change the ``SITE_ROOT_URI`` value to your heroku app url in **syte_settings.py** see the available example to how it should be formatted.
+
+	
+	
+
+
+## Credit
+
+Syte was developed by **Rigo** (rodrigo neri). Check his personal site out at <http://rigoneri.com> and follow him on twitter [@rigoneri](http://twitter.com/#!/rigoneri)
+
+
+## License
+
+
+The MIT License
+
+Copyright (c) 2012, Rodrigo Neri <@rigoneri>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+####There is only one rule####
+
+You choose a different adjacent color as the ones used by the people listed up above. Once you have chosen your color and deployed your Syte based site, please send a pull request with an image of you containing the color on the border.

@@ -18,7 +18,7 @@
 <header class="main-header">
   <hgroup>
     <div class="picture">
-      <a href="/" title="Rodrigo Neri (Rigo)" rel="home"></a>
+      <a href="/" rel="home"></a>
     </div>
     <h1>Rodrigo Neri</h1>
     <h2>iOS & Web Developer + Designer + Entrepreneur Co-Founder of <a href="http://instin.com">Instin</a></h2>
@@ -69,16 +69,6 @@ var twitter_integration_enabled = {% if TWITTER_INTEGRATION_ENABLED %}true{% els
 <script type="text/javascript">
 /*<![CDATA[*/
 {% block extra_inline_js %}{% endblock %}
-{% if not DEV_DEPLOYMENT_MODE %}
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-17720218-1']);
-_gaq.push(['_trackPageview']);
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-{% endif %}
 /*]]>*/
 </script>
 </body>
