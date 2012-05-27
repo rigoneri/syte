@@ -6,7 +6,7 @@ Syte is a easy to setup and deploy personal site that has social integrations li
 
 You can use, reproduce and do whatever you want with syte as long as you choose a different adjacent color as the ones used by the people below:
 
-[![rigoneri](readme-imgs/rigoneri.png)](http://rigoneri.com)
+[![rigoneri](https://github.com/rigoneri/syte/blob/master/readme-imgs/rigoneri.png?raw=true)](http://rigoneri.com)
 
 Once you have chosen your color and deployed your syte based site, please send a pull request with an image containing the color on the border like the ones above.
 
@@ -17,32 +17,32 @@ Once you have chosen your color and deployed your syte based site, please send a
 
 Syte uses [tumblr](http://tumblr.com) for blogging and your blog will be the primary page of the site.
 
-![Syte Home](readme-imgs/f-1.png)
+![Syte Home](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-1.png?raw=true)
 
 ### Twitter
 
 Syte has twitter integration, which means that every time someone clicks on a link that points to a user's twitter profile the profile is loaded within your site along with the user's latest tweets.
 
-![Syte Twitter](readme-imgs/f-2.png)
+![Syte Twitter](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-2.png?raw=true)
 
 ### Github
 
 Syte has github integration, which means that every time someone clicks on a link that points to a user's github profile the profile is loaded within your site along with the user's repos.
 
-![Syte Github](readme-imgs/f-3.png)
+![Syte Github](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-3.png?raw=true)
 
 ### Dribbble
 
 Syte has dribbble integration, which means that every time someone clicks on a link that points to a user's dribbble profile the profile is loaded within your site along with the user's latest shots.
 
-![Syte Dribbble](readme-imgs/f-4.png)
+![Syte Dribbble](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-4.png?raw=true)
 
 
 ## Responsive UI
 
 Syte is also responsive, which means that it scales down to a mobile device screen size.
 
-![Syte Responsive 1](readme-imgs/f-r-1.png) ![Syte Responsive 1](readme-imgs/f-r-2.png)
+![Syte Responsive 1](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-r-1.png?raw=true) ![Syte Responsive 1](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-r-2.png?raw=true)
 
 ## Technologies Used
 
