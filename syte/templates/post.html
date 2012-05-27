@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+{% block main_section %}
+<section class="main-section blog-section">
+{% for post in posts %}
+<article id="{{ post.id }}">
+  <hgroup>
+    <h2><a href="#{{ post.id }}">{{ post.title }}</a></h2>
+    <h3><a href="#{{ post.id }}">{{ post.formated_date }}</a></h3>
+  </hgroup>
+  {{ post.body|safe }}
+  {% if post.tags %}
+    <footer>
+      <h4>Tags</h4>
+       <ul class="tags">
+         {% for t in post.tags %}
+         <li><a href="http://blog.rigoneri.com/tagged/{{ t }}">{{ t }}</a></li>
+         {% endfor %}
+      </ul>
+    </footer>
+  {% endif %}
+</article>
+{% endfor %}
+</section>
+{% endblock %}
+{% block extra_inline_js %}
+$(function() {
+  setupLinks();
+});
+{% endblock %}
+
+
+

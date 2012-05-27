@@ -1,0 +1,67 @@
+//Modals
+.modal-backdrop {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+
+  &.fade, &.fade-large {
+    .transition(e('opacity .2s linear'));
+    .opacity(0);
+  }
+}
+
+.modal-backdrop, .modal-backdrop.fade.in {
+  .opacity(50);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 240px;
+  z-index: 1050;
+  overflow: auto;
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  border-right: 1px solid @text-color;
+  .box-shadow(0 0 7px rgba(0,0,0,0.5));
+}
+
+.modal {
+  &.fade-large {
+    width: 700px;
+    .transition(e('left .4s ease-out'));
+    left: -1100px;
+  }
+
+  &.fade {
+    .transition(e('left .4s ease-out'));
+    left: -700px;
+  }
+
+  &.fade.in, &.fade-large.in { left: 240px; }
+}
+
+.close {
+  float: right;
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #000;
+  background-color: #fff;
+  text-shadow: 0 1px 0 rgba(255,255,255,1);
+
+  .opacity(20);
+
+  &:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    .opacity(40);
+  }
+}
+

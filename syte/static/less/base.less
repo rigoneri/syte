@@ -1,0 +1,60 @@
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: @text-color;
+}
+
+::selection, ::-moz-selection {
+  background: @adjacent-color;
+  color: #fff;
+  text-shadow: none;
+}
+
+h1, .h1 { font-size: 30px; line-height: 35px; font-weight: 500; }
+h2, .h2 { font-size: 24px; line-height: 30px; font-weight: 500; }
+h3, .h3 { font-size: 18px; line-height: 25px; font-weight: 500; }
+h4, .h4 { font-size: 16px; line-height: 20px; font-weight: 500; }
+h5, .h5 { font-size: 16px; line-height: 20px; font-weight: 500; }
+h6, .h6 { font-size: 14px; line-height: 20px; font-weight: 500; }
+
+ul { margin: 0 0 15px 15px; }
+ol { margin: 0 0 15px 20px;}
+li { margin-bottom: 5px;
+  ul, ol { margin-bottom: 0; }
+}
+
+p {
+  line-height: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+a {
+  color: @link-color;
+  text-decoration: none;
+  border-bottom: 1px solid @text-color;
+
+  &:hover {
+    color: @adjacent-color;
+    border-bottom: 1px solid @adjacent-color;
+  }
+}
+
+blockquote {
+  margin-top: 20px 0;
+  padding: 0 0 0 20px;
+  border-left: 5px solid @adjacent-color;
+
+  p:first-child {
+    margin-top: 5px; 
+  }
+}
+
+.descr {
+  display: block;
+  font-size: 12px;
+  line-height: 20px;
+  color: #7f7e7e;
+}
+

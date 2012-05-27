@@ -1,0 +1,46 @@
+<div class="profile github modal fade" id="github-profile">
+  {{#with user }}
+  <div class="profile-info">
+    <button class="close" data-dismiss="modal">×</button>
+    <a href="http://github.com/{{ login }}" class="profile-avatar">
+      <img src="http://gravatar.com/avatar/{{ gravatar_id }}" alt="{{name}}" />
+    </a>
+    <div class="profile-name">
+      <h2><a href="http://github.com/{{ login }}">{{ name }}</a></h2>
+      <h3><a href="http://github.com/{{ login }}">{{ login }}</a></h3>
+    </div>
+   <p class="profile-location-url">
+      {{#if location }}
+      <span>{{ location }}</span>
+      <span class="divider">·</span>
+      {{/if}}
+      {{#if blog }}
+      <span><a href="{{ blog }}">{{ blog }}</a></span>
+      {{/if}}
+    </p>
+  </div>
+  <ul class="profile-stats">
+    <li><a href="http://github.com/{{ login }}"><strong>{{ public_repo_count }}</strong> repos</a></li>
+    <li><a href="http://github.com/{{ login }}/following"><strong>{{ following_count }}</strong> following</a></li>
+    <li><a href="http://github.com/{{ login }}/followers"><strong>{{ followers_count }}</strong> followers</a></li>
+  </ul>
+  <div class="profile-info-footer">
+    <a href="http://github.com/{{ login }}" class="btn">Follow on Github</a>
+  </div>
+  {{/with}}
+  <ul class="profile-repos">
+    {{#each repositories}}
+    <li>
+    <a href="{{ url }}" class="profile-repo-name">{{ name }}</a>
+    <p class="profile-repo-text">
+      {{ description }}
+    </p>
+    <ul class="profile-repo-stats">
+      <li>{{ language }}</li>
+      <li><a href="{{ url }}/watchers" class="profile-watchers">{{ watchers }}</a></li>
+      <li><a href="{{ url }}/network" class="profile-forks">{{ forks }}</a></li>
+    </ul>
+    </li>
+    {{/each}}
+  </ul>
+</div>

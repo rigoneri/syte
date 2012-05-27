@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Personal website and blog of developer, designer and entrepreneur Rodrigo Neri also known as Rigo. Follow him at @rigoneri" />
+  <meta name="keywords" content="Rodrigo Neri, rigoneri, developer, designer, entrepreneur, instin, myhomework" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block pagetitle %}Rigo [Rodrigo Neri]{% endblock %}</title>
+  <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  {% if DEV_DEPLOYMENT_MODE %}
+  <link rel="stylesheet/less" type="text/css" href="{{ MEDIA_URL }}less/styles.less">
+  <script src="{{ MEDIA_URL }}less/less-1.1.5.min.js" type="text/javascript"></script>
+  {% else %}
+  <link rel="stylesheet" href="{{ MEDIA_URL }}css/styles-{{ COMPRESS_REVISION_NUMBER }}.min.css" type="text/css" media="screen, projection">
+  {% endif %}
+</head>
+<body>
+<header class="main-header">
+  <hgroup>
+    <div class="picture">
+      <a href="/" title="Rodrigo Neri (Rigo)" rel="home"></a>
+    </div>
+    <h1>Rodrigo Neri</h1>
+    <h2>iOS & Web Developer + Designer + Entrepreneur Co-Founder of <a href="http://instin.com">Instin</a></h2>
+  </hgroup>
+  <nav>
+    <ul class="main-nav">
+      <li><a href="/" id="home-link">Home</a></li>
+      <li><a href="http://twitter.com/#!/rigoneri" id="twitter-link">Twitter</a></li>
+      <li><a href="http://github.com/rigoneri" id="github-link">Github</a></li>
+      <li><a href="http://dribbble.com/rigoneri" id="dribbble-link">Dribbble</a></li>
+      <li><a href="mailto:contact@rigoneri.com?subject=Hello" id="contact-link">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+{% block main_section %}{% endblock %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+/*<![CDATA[*/
+var twitter_integration_enabled = {% if TWITTER_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
+    github_integration_enabled = {% if GITHUB_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
+    dribbble_integration_enabled = {% if DRIBBBLE_INTEGRATION_ENABLED %}true{% else %}false{% endif %};
+/*]]>*/
+</script>
+
+{% if DEV_DEPLOYMENT_MODE %}
+<script src="{{ MEDIA_URL }}js/libs/jquery.url.js"></script>
+<script src="{{ MEDIA_URL }}js/libs/require.js"></script>
+<script src="{{ MEDIA_URL }}js/libs/handlebars.js"></script>
+<script src="{{ MEDIA_URL }}js/libs/moment.min.js"></script>
+<script src="{{ MEDIA_URL }}js/libs/bootstrap-modal.js"></script>
+<script src="{{ MEDIA_URL }}js/libs/spin.min.js"></script>
+
+<script src="{{ MEDIA_URL }}js/components/base.js"></script>
+<script src="{{ MEDIA_URL }}js/components/mobile.js"></script>
+<script src="{{ MEDIA_URL }}js/components/blog-posts.js"></script>
+<script src="{{ MEDIA_URL }}js/components/links.js"></script>
+
+{% if TWITTER_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/twitter.js"></script>{% endif %}
+{% if GITHUB_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/github.js"></script>{% endif %}
+{% if DRIBBBLE_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/dribbble.js"></script>{% endif %}
+
+{% else %}
+<script src="{{ MEDIA_URL }}js/min/scripts-{{ COMPRESS_REVISION_NUMBER }}.min.js"></script>
+{% endif %}
+
+{% block extra_js %}{% endblock %}
+<script type="text/javascript">
+/*<![CDATA[*/
+{% block extra_inline_js %}{% endblock %}
+{% if not DEV_DEPLOYMENT_MODE %}
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-17720218-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+{% endif %}
+/*]]>*/
+</script>
+</body>
+
+
+
