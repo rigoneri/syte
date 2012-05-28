@@ -4,7 +4,6 @@ from django.shortcuts import redirect, render
 from django.template import Context, loader
 from django.http import HttpResponse, HttpResponseServerError, Http404
 from django.conf import settings
-from datetime import datetime
 
 import requests
 import json
@@ -62,50 +61,34 @@ def dribbble(request, username):
 
 
 def blog(request):
-    r = requests.get('{0}/posts/text?api_key={1}'.format(settings.TUMBLR_API_URL, 
+    r = requests.get('{0}/posts?api_key={1}'.format(settings.TUMBLR_API_URL, 
         settings.TUMBLR_API_KEY))
     return HttpResponse(content=r.text, status=r.status_code,
                         content_type=r.headers['content-type'])
 
 
 def blog_post(request, post_id):
-    r = requests.get('{0}/posts/text?api_key={1}&id={2}'.format(settings.TUMBLR_API_URL,
+    if request.is_ajax():
+        r = requests.get('{0}/posts?api_key={1}&id={2}'.format(settings.TUMBLR_API_URL,
             settings.TUMBLR_API_KEY, post_id))
-    return _render_blog_posts(request, r)
+        return HttpResponse(content=r.text, status=r.status_code,
+                        content_type=r.headers['content-type'])
+
+    return render(request, 'index.html', {'post_id': post_id})
 
 
 def blog_tags(request, tag_slug):
+    if request.is_ajax():
+        #Important!!! This request doesn't work for now. There is a bug filed with
+        #tumblr where the array of posts are always being returned empty. For now I'll
+        #point directly to tumblr's url.
+        #https://groups.google.com/d/topic/tumblr-api/9KfQZPKqcgA/discussion
+        r = requests.get('{0}/posts/text?api_key={1}&tag={2}'.format(settings.TUMBLR_API_URL,
+                settings.TUMBLR_API_KEY, tag_slug))
+        return HttpResponse(content=json.loads(r.text), status=r.status_code,
+                content_type=r.headers['content-type'])
 
-    #Important!!! This request doesn't work for now. There is a bug filed with
-    #tumblr where the array of posts are always being returned empty. For now I'll
-    #point directly to tumblr's url.
-    #https://groups.google.com/d/topic/tumblr-api/9KfQZPKqcgA/discussion
-    r = requests.get('{0}/posts/text?api_key={1}&tag={2}'.format(settings.TUMBLR_API_URL,
-            settings.TUMBLR_API_KEY, tag_slug))
-
-    print '{0}/posts/text?api_key={1}&tag={2}'.format(settings.TUMBLR_API_URL,
-            settings.TUMBLR_API_KEY, tag_slug)
-    return _render_blog_posts(request, r, tags=True)
-
-
-
-def _render_blog_posts(request, r, tags=False):
-    response = json.loads(r.text)
-    status_code = response['meta']['status']
-    if status_code != 200:
-        raise Http404
-
-    posts = response['response']['posts']
-    for p in posts:
-        date = datetime.strptime(p['date'], '%Y-%m-%d %H:%M:%S %Z')
-        p['formated_date'] = date.strftime('%B %d, %Y')
-
-    return render(request, 'post.html', {
-        'posts': posts,
-        'is_tag_view': tags
-     })
-
-
+    return render(request, 'index.html', {'tag_slug': tag_slug})
 
 
 

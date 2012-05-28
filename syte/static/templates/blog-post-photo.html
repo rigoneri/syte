@@ -1,9 +1,19 @@
 <article id="{{ id }}">
   <hgroup>
-    <h2><a href="/post/{{ id }}">{{ title }}</a></h2>
+    <h2><a href="/post/{{ id }}">Photo</a></h2>
     <h3><a href="#{{ id }}">{{ formated_date }}</a></h3>
   </hgroup>
-  {{{ body }}}
+  {{#each photos}}
+    {{#with original_size}}
+      <p><img src="{{url}}" /></p>
+    {{/with}}
+    {{#if caption}}
+       {{{ caption }}}
+    {{/if}}
+  {{/each}}
+  {{#if caption}}
+    {{{ caption }}}
+  {{/if}}
   {{#if tags }}
   <footer>
     <h4>Tags</h4>
@@ -15,5 +25,4 @@
   </footer>
   {{/if}}
 </article>
-
 
