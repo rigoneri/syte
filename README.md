@@ -89,6 +89,7 @@ Then make some text and link changes. Open **base.html** located in `syte > temp
 
 Then pick your **adjacent color** and change the `@adjacent-color` hex value in variables.less located in `syte > static > less > variables.less` Make sure the color you chose is not used by anyone on the list up above. If you want blue pick a different shade of blue there are hundreds out there...
   
+Next, open **mobile.js** located in `syte > static > js > components` and update `h3` tag to be your site's domain name.
 
 ### Setting up you blog (Tumblr)
 
