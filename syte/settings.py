@@ -63,4 +63,7 @@ INSTALLED_APPS = (
     'gunicorn',
 )
 
-from syte_settings import *
+try:
+    from rigoneri_settings import *
+except ImportError:
+    from syte_settings import *

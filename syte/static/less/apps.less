@@ -1,0 +1,33 @@
+
+.apps-section {
+  background: #E9E9E9 url('/static/imgs/b.png');
+  height: 1000px;
+}
+
+.apps {
+  h2 { padding-bottom: 15px; }
+
+  a {
+    display: block;
+    width: 700px;
+
+    border: 1px solid #C2C2C2;
+    background: #fff;
+    margin: 10px 0 20px;
+
+    .box-shadow();
+  }
+  a:hover {
+    border: 1px solid @adjacent-color;
+    .box-shadow(0 0 3px @adjacent-color);
+  }
+
+  img { width:100%; }
+}
+
+.profile.apps {
+  padding: 20px;
+
+  .close { background-color: transparent; }
+}
+

@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+{% block main_section %}
+<section class="main-section apps-section apps">
+  <h2>Applications</h2>
+  <a href="http://myhomeworkapp.com">
+    <img src="/static/imgs/a1.png" alt="myHomework" />
+  </a>
+  <a href="http://itunes.apple.com/us/app/touch-boom/id327876796?mt=8">
+    <img src="/static/imgs/a2.png" alt="Touch Boom!" />
+  </a>
+  <a href="http://itunes.apple.com/us/app/my-goal/id375722933?mt=8">
+    <img src="/static/imgs/a3.png" alt="my Goal" />
+  </a>
+  </section>
+{% endblock %}
+{% block extra_inline_js %}
+$(function() {
+  setupLinks();
+  adjustSelection('apps-link');
+});
+{% endblock %}
+
+
+
