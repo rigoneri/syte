@@ -99,7 +99,15 @@ Once you have the `api_key` from tumblr you have to enter it in **syte_settings.
 
 ##### Small Note
 
-Since there is currently a bug with tags on tumblr's api you will have to change the tag url in some files to point to your tumblr url. Open the files `syte > templates > post.html` and `syte > static > templates > blog-post.html`, change where it says **blog.rigoneri.com** to your tumblr url.
+Since there is currently a bug with tags on tumblr's api you will have to change the tag url in some files to point to your tumblr url. Open the files below and change where it says **blog.rigoneri.com** to your tumblr url:
+
+* `syte > templates > post.html`
+* `syte > static > templates > blog-post-audio.html`
+* `syte > static > templates > blog-post-link.html`
+* `syte > static > templates > blog-post-photo.html`
+* `syte > static > templates > blog-post-quote.html`
+* `syte > static > templates > blog-post-text.html`
+* `syte > static > templates > blog-post-video.html` 
 
 
 ### Setting up Twitter integration
