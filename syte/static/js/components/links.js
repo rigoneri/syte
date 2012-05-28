@@ -14,6 +14,25 @@ function setupLinks() {
          $('.modal-backdrop').remove();
          adjustSelection('home-link');
       }
+      else if (this.id == 'apps-link') {
+         $('#github-profile').remove();
+         $('#dribbble-profile').remove();
+         $('#twitter-profile').remove();
+         $('.modal-backdrop').remove();
+         adjustSelection('apps-link');
+
+         var spinner = new Spinner(spin_opts).spin();
+         $('#apps-link').append(spinner.el);
+
+         require(["text!templates/apps-view.html"],
+            function(apps_view) {
+              $(apps_view).modal().on('hidden', function () {
+                $(this).remove();
+                adjustSelection('home-link');
+              })
+              spinner.stop();
+            });
+      }
       else if (twitter_integration_enabled && (url.attr('host') == 'twitter.com' || url.attr('host') == 'www.twitter.com')) {
 
          $('#github-profile').remove();
