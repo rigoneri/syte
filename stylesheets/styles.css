@@ -613,6 +613,7 @@ strong {
 
 section img {
   max-width: 100%;
+  margin-right: 10px;
 }
 
 blockquote {
