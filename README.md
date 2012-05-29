@@ -85,6 +85,7 @@ Then make some text and link changes. Open **base.html** located in `syte > temp
 7. Inside the `nav` tag change the **github-link** href to point to your github profile, if you don't have github just remove that whole line.
 8. Inside the `nav` tag change the **dribbble-link** href to point to your dribbble profile, if you don't have dribbble just remove that whole line.
 9. Inside the `nav` tag change the **contact-link** href to point to your email address. 
+10. Under `class="mobile-nav"` div change the **h3** link text to have your domain name or your name.
 
 Then pick your **adjacent color** and change the `@adjacent-color` hex value in variables.less located in `syte > static > less > variables.less` Make sure the color you chose is not used by anyone on the list up above. If you want blue pick a different shade of blue there are hundreds out there...
   
@@ -96,18 +97,6 @@ If you already have a tumblr blog good! If you don't [signup for one here](https
 Once you have your tumblr blog you will need to get the `api_key` needed to call their APIs. In order to do that **register your site** with them by going to <http://www.tumblr.com/oauth/register>, fill in the information about your site, there is no need to enter a default callback url or an icon. Once you are done your website will be listed under <http://www.tumblr.com/oauth/apps>, save the `OAuth Consumer Key` value that's the `api_key` we need for Syte.
 
 Once you have the `api_key` from tumblr you have to enter it in **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the key under `TUMBLR_API_KEY`, also please enter your tumblr url under `TUMBLR_BLOG_URL` see the example on how it should be formatted.
-
-##### Small Note
-
-Since there is currently a bug with tags on tumblr's api you will have to change the tag url in some files to point to your tumblr url. Open the files below and change where it says **blog.rigoneri.com** to your tumblr url:
-
-* `syte > templates > post.html`
-* `syte > static > templates > blog-post-audio.html`
-* `syte > static > templates > blog-post-link.html`
-* `syte > static > templates > blog-post-photo.html`
-* `syte > static > templates > blog-post-quote.html`
-* `syte > static > templates > blog-post-text.html`
-* `syte > static > templates > blog-post-video.html` 
 
 
 ### Setting up Twitter integration
