@@ -103,13 +103,18 @@
 
     hgroup {
       h2, h1 { .h1; line-height: 40px; margin: 50px 0 25px 0;}
-      h2 a { border-bottom: 0; font-weight: 500; }
+      h2 a {
+        border-bottom: 0;
+        font-weight: 500;
+      }
       h3 a {
+        display: none;
+      }
+      h3 a.adjusted {
         display: block;
         position: absolute;
         top: auto;
         width: 100%;
-        margin-top: -140px;
         margin-left: -34px;
         padding: 12px 35px;
         border-bottom: 1px solid #C2C2C2;
@@ -118,25 +123,12 @@
         font-weight: 500;
 
         .alpha-background(#ffffff, 0.8);
-
-        .info-title {
-          padding-left: 5px;
-          font-weight: normal;
-          font-size: 13px;
-          color: @text-color;
-          .opacity(0);
-          .transition(all 0.1s linear 0s)
-        }
       }
       h3 a.active {
         position: fixed;
         top: 0;
         bottom: auto;
         margin-top: 0;
-
-        .info-title {
-          .opacity(100);
-        }
       }
     }
 

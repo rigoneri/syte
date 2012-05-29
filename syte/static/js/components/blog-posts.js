@@ -46,13 +46,25 @@ function fetchBlogPosts(post, tag) {
             });
 
             setupLinks();
-            setTimeout(setupBlogHeaderCells, 1000);
+            adjustBlogHeaders();
+            setTimeout(setupBlogHeaderScroll, 1000);
             adjustSelection('home-link');
          });
   });
 }
 
-function setupBlogHeaderCells() {
+function adjustBlogHeaders() {
+  if(isMobileView)
+    return;
+
+  $('.blog-section article hgroup').each(function(i, e) {
+    $(e).find('h3 a').css({
+       'margin-top': '-' + ($(e).height() + 100) + 'px' 
+    }).addClass('adjusted');
+  });
+}
+
+function setupBlogHeaderScroll() {
 
   if(isMobileView)
     return;
@@ -75,10 +87,18 @@ function setupBlogHeaderCells() {
 
     for (i; i--;) {
       if (activeTarget != targets[i] && scrollTop > offsets[i] && (!offsets[i + 1] || scrollTop < offsets[i + 1])) {
+
+          var hgroup = $(activeTarget).find("hgroup");
+          var margintop = '';
+          if (hgroup.length) {
+            margintop = '-' + ($(hgroup[0]).height() + 100) + 'px';
+          }
+
           //set current target to be absolute
           $("h3 a[href=" + activeTarget + "]").removeClass("active").css({
             position: "absolute",
-            top: "auto"
+            top: "auto",
+            'margin-top': margintop
           });
 
           //set new target to be fixed
@@ -87,12 +107,13 @@ function setupBlogHeaderCells() {
       }
 
       if (activeTarget && activeTarget != targets[i] && scrollTop + 50 >= offsets[i] && (!offsets[i + 1] || scrollTop + 50 <= offsets[i + 1])) {
+
           // if it's close to the new target scroll the current target up
           $("h3 a[href=" + activeTarget + "]")
               .removeClass("active")
               .css({
                   position: "absolute",
-                  top: $(activeTarget).outerHeight(true) + $(activeTarget).offset().top + 90 + "px",
+                  top: ($(activeTarget).outerHeight(true) + $(activeTarget).offset().top - 50) + "px",
                   bottom: "auto"
               });
       }
