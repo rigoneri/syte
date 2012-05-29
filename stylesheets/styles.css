@@ -623,17 +623,18 @@ blockquote {
 }
 
 code {
-  font-family: "Lucida Sans", Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
+  font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
   color: #efefef;
-  font-size: 13px;
+  font-size: 12px;
   margin: 0 4px;
-  padding: 4px 6px;
+  padding: 2px 4px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   -o-border-radius: 2px;
   -ms-border-radius: 2px;
   -khtml-border-radius: 2px;
   border-radius: 2px;
+  border: 1px solid #333;
 }
 
 pre {
@@ -653,11 +654,13 @@ pre {
   overflow: auto;
   overflow-y: hidden;
 }
+
 pre code {
   color: #efefef;
   text-shadow: 0px 1px 0px #000;
   margin: 0;
   padding: 0;
+  border: 0;
 }
 
 table {
