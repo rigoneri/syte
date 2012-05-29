@@ -121,6 +121,7 @@
 <li>Inside the <code>nav</code> tag change the <strong>github-link</strong> href to point to your github profile, if you don't have github just remove that whole line.</li>
 <li>Inside the <code>nav</code> tag change the <strong>dribbble-link</strong> href to point to your dribbble profile, if you don't have dribbble just remove that whole line.</li>
 <li>Inside the <code>nav</code> tag change the <strong>contact-link</strong> href to point to your email address. </li>
+<li>Under <code>class="mobile-nav"</code> div change the <strong>h3</strong> link text to have your domain name or your name.</li>
 </ol><p>Then pick your <strong>adjacent color</strong> and change the <code>@adjacent-color</code> hex value in variables.less located in <code>syte &gt; static &gt; less &gt; variables.less</code> Make sure the color you chose is not used by anyone on the list up above. If you want blue pick a different shade of blue there are hundreds out there...</p>
 
 <h3>Setting up you blog (Tumblr)</h3>
@@ -130,20 +131,6 @@
 <p>Once you have your tumblr blog you will need to get the <code>api_key</code> needed to call their APIs. In order to do that <strong>register your site</strong> with them by going to <a href="http://www.tumblr.com/oauth/register">http://www.tumblr.com/oauth/register</a>, fill in the information about your site, there is no need to enter a default callback url or an icon. Once you are done your website will be listed under <a href="http://www.tumblr.com/oauth/apps">http://www.tumblr.com/oauth/apps</a>, save the <code>OAuth Consumer Key</code> value that's the <code>api_key</code> we need for Syte.</p>
 
 <p>Once you have the <code>api_key</code> from tumblr you have to enter it in <strong>syte_settings.py</strong> located in <code>syte &gt; syte_settings.py</code>. Once you open that file enter the key under <code>TUMBLR_API_KEY</code>, also please enter your tumblr url under <code>TUMBLR_BLOG_URL</code> see the example on how it should be formatted.</p>
-
-<h5>Small Note</h5>
-
-<p>Since there is currently a bug with tags on tumblr’s api you will have to change the tag url in some files to point to your tumblr url. Open the files below and change where it says <strong>blog.rigoneri.com</strong> to your tumblr url:</p>
-
-<ul>
-<li><code>syte &gt; templates &gt; post.html</code></li>
-<li><code>syte &gt; static &gt; templates &gt; blog-post-audio.html</code></li>
-<li><code>syte &gt; static &gt; templates &gt; blog-post-link.html</code></li>
-<li><code>syte &gt; static &gt; templates &gt; blog-post-photo.html</code></li>
-<li><code>syte &gt; static &gt; templates &gt; blog-post-quote.html</code></li>
-<li><code>syte &gt; static &gt; templates &gt; blog-post-text.html</code></li>
-<li><code>syte &gt; static &gt; templates &gt; blog-post-video.html</code></li>
-</ul>
 
 <h3>Setting up Twitter integration</h3>
 
