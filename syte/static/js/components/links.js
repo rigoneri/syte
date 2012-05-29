@@ -12,6 +12,7 @@ function setupLinks() {
          $('#dribbble-profile').remove();
          $('#twitter-profile').remove();
          $('.modal-backdrop').remove();
+         $('#apps-modal').remove();
          adjustSelection('home-link');
       }
       else if (this.id == 'apps-link') {
@@ -38,6 +39,7 @@ function setupLinks() {
          $('#github-profile').remove();
          $('#dribbble-profile').remove();
          $('.modal-backdrop').remove();
+         $('#apps-modal').remove();
          adjustSelection('twitter-link');
 
          setupTwitter(url, this);
@@ -47,6 +49,7 @@ function setupLinks() {
         $('#twitter-profile').remove();
         $('#dribbble-profile').remove();
         $('.modal-backdrop').remove();
+        $('#apps-modal').remove();
         adjustSelection('github-link');
 
         setupGithub(url, this);
@@ -56,6 +59,7 @@ function setupLinks() {
          $('#twitter-profile').remove();
          $('#github-profile').remove();
          $('.modal-backdrop').remove();
+         $('#apps-modal').remove();
          adjustSelection('dribbble-link');
 
          setupDribbble(url, this);
