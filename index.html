@@ -91,7 +91,10 @@
 <li><a href="fgnass.github.com/spin.js">spin.js</a></li>
 <li><a href="http://twitter.github.com/bootstrap/javascript.html#modals">bootstrap-modal.js</a></li>
 <li><a href="https://github.com/allmarkedup/jQuery-URL-Parser">JQuery URL Parser</a></li>
-</ul><p>For static compression and minification Syte uses some <a href="http://nodejs.org/">Node.js</a> libraries:</p>
+<li><a href="http://google-code-prettify.googlecode.com/svn/trunk/README.html">google-code-prettify</a></li>
+</ul>
+
+<p>For static compression and minification Syte uses some <a href="http://nodejs.org/">Node.js</a> libraries:</p>
 
 <ul>
 <li><a href="http://search.npmjs.org/#/less">less</a></li>
@@ -124,6 +127,7 @@
 <li>Under <code>class="mobile-nav"</code> div change the <strong>h3</strong> link text to have your domain name or your name.</li>
 </ol><p>Then pick your <strong>adjacent color</strong> and change the <code>@adjacent-color</code> hex value in variables.less located in <code>syte &gt; static &gt; less &gt; variables.less</code> Make sure the color you chose is not used by anyone on the list up above. If you want blue pick a different shade of blue there are hundreds out there...</p>
 
+<br>
 <h3>Setting up you blog (Tumblr)</h3>
 
 <p>If you already have a tumblr blog good! If you don't <a href="https://www.tumblr.com/">signup for one here</a> it's really easy! Also I might eventually make so it integrates with wordpress as well, if you beat me to it please send a pull request.</p>
@@ -131,6 +135,8 @@
 <p>Once you have your tumblr blog you will need to get the <code>api_key</code> needed to call their APIs. In order to do that <strong>register your site</strong> with them by going to <a href="http://www.tumblr.com/oauth/register">http://www.tumblr.com/oauth/register</a>, fill in the information about your site, there is no need to enter a default callback url or an icon. Once you are done your website will be listed under <a href="http://www.tumblr.com/oauth/apps">http://www.tumblr.com/oauth/apps</a>, save the <code>OAuth Consumer Key</code> value that's the <code>api_key</code> we need for Syte.</p>
 
 <p>Once you have the <code>api_key</code> from tumblr you have to enter it in <strong>syte_settings.py</strong> located in <code>syte &gt; syte_settings.py</code>. Once you open that file enter the key under <code>TUMBLR_API_KEY</code>, also please enter your tumblr url under <code>TUMBLR_BLOG_URL</code> see the example on how it should be formatted.</p>
+
+<br>
 
 <h3>Setting up Twitter integration</h3>
 
@@ -155,10 +161,11 @@
 </li>
 </ul><p>If you want to turn off the twitter integration just set <code>TWITTER_INTEGRATION_ENABLED</code> to False.</p>
 
+<br>
 <h3>Setting up Github integration</h3>
 
 <p>You don't have to do anything to setup the github integration. If you want to turn off this feature just set <code>GITHUB_INTEGRATION_ENABLED</code> setting to False in syte_settings.py.</p>
-
+<br>
 <h3>Setting up Dribbble integration</h3>
 
 <p>You don't have to do anything to setup the dribbble integration. If you want to turn off this feature just set <code>DRIBBBLE_INTEGRATION_ENABLED</code> setting to False in syte_settings.py.</p>
@@ -186,6 +193,7 @@ $ workon syte
 <pre><code>python manage.py runserver
 </code></pre>
 
+<br>
 <h3>Compressing Statics</h3>
 
 <p>Compressing static files like CSS and JS are done using <a href="http://nodejs.org/">Node.js</a>. This step is important since it will get all your static files and make tiny bit small so your site can be run faster when it's out there  on the so called World Wide Web :)</p>
@@ -208,6 +216,7 @@ sudo npm install uglify-js -g
 
 <p>This will create a minified version of your css and it will be located in <code>syte &gt; static &gt; css</code> as well as the minified version of your java script and it will be located in <code>syte &gt; static &gt; js &gt; min</code>.</p>
 
+<br>
 <h3>Deploying to Heroku</h3>
 
 <p>Deploying to Heroku is extremely easy and free that's why I chose it over to deploying to Amazon or anywhere else (even though heroku itself deploys to Amazon). That's another fork I would love to see, different deployment instructions maybe to an Amazon micro instance.</p>
@@ -222,6 +231,7 @@ sudo npm install uglify-js -g
 
 <p>Syte was developed by <strong>Rigo</strong> (rodrigo neri). Check his personal site out at <a href="http://rigoneri.com">http://rigoneri.com</a> and follow him on twitter <a href="http://twitter.com/#!/rigoneri">@rigoneri</a></p>
 
+<br><br>
 <h2>License</h2>
 
 <p>The MIT License</p>
