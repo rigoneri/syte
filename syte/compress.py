@@ -27,8 +27,8 @@ def compress_styles():
     except Exception:
         exc_type, exc_value, exc_traceback = sys.exc_info()
         stack_trace = traceback.format_exception(exc_type, exc_value, exc_traceback)
-        print stack_trace    
-   
+        print stack_trace
+
 def compress_js():
     js_files = [
       'libs/jquery.url.js',
@@ -37,6 +37,7 @@ def compress_js():
       'libs/moment.min.js',
       'libs/bootstrap-modal.js',
       'libs/spin.min.js',
+      'libs/prettify.js',
 
       'components/base.js',
       'components/mobile.js',
@@ -52,7 +53,7 @@ def compress_js():
 
     if settings.DRIBBBLE_INTEGRATION_ENABLED:
         js_files.append('components/dribbble.js')
-    
+
     combined = ''
     for js in js_files:
         f = open('static/js/' + js, 'r')

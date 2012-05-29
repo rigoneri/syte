@@ -47,6 +47,7 @@ function fetchBlogPosts(post, tag) {
 
             setupLinks();
             adjustBlogHeaders();
+            prettyPrint();
             setTimeout(setupBlogHeaderScroll, 1000);
             adjustSelection('home-link');
          });
