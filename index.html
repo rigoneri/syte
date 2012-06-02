@@ -43,7 +43,10 @@
 
 <p>You can use, reproduce and do whatever you want with syte as long as you choose a different adjacent color as the ones used by the people below. Once you have chosen your color and deployed your Syte based site, please send a pull request with an image of you containing the color on the border like the ones above.</p>
 
-<p><a href="http://rigoneri.com"><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/rigoneri.png?raw=true" alt="rigoneri"></a></p>
+<p>
+<a href="http://rigoneri.com"><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/rigoneri.png?raw=true" alt="rigoneri"></a>
+<a href="http://sambao21.com"><img src="https://github.com/sambao21/syte/blob/master/readme-imgs/sambao21.png?raw=true" alt="sambao21"></a>    
+</p>
 
 <br><br>
 <h2>Social Integrations</h2>
@@ -108,6 +111,8 @@
 <h2>Setup Instructions</h2>
 
 <p>There are a few steps in order to get Syte configured, but don't worry they are pretty easy.</p>
+
+<p><code>Note</code> I recommend you branching your fork and not checking in senstive settings to github.</p>
 
 <h3>Base content changes</h3>
 
@@ -213,6 +218,8 @@ $ workon syte
 <pre><code>sudo npm install less -g
 sudo npm install uglify-js -g
 </code></pre>
+
+<p><code>Note</code> be sure to create the directories <code>syte &gt; static &gt; css</code> and <code>syte &gt; static &gt; js &gt; min</code> first if it doesn't already exist.</p>
 
 <p>Then whenever you want to release a new version of static update the <code>COMPRESS_REVISION_NUMBER</code> in <strong>syte-settings.py</strong> and run the compress python command from your syte directory:</p>
 
