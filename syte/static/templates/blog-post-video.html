@@ -1,19 +1,19 @@
 <article id="{{ id }}">
   <hgroup>
-    <h2><a href="/post/{{ id }}">{{ title }}</a></h2>
+    <h2><a href="/post/{{ id }}">Video</a></h2>
     <h3><a href="#{{ id }}">{{ formated_date }}</a></h3>
   </hgroup>
-  {{{ body }}}
+  <p>
+    <a href="{{ permalink_url }}" class="no-border"><img src="{{ thumbnail_url }}" /></a>
+  </p>
   {{#if tags }}
   <footer>
     <h4>Tags</h4>
     <ul class="tags">
       {{#each tags}}
-      <li><a href="http://blog.rigoneri.com/tagged/{{ this }}">{{ this }}</a></li>
+      <li><a href="/tags/{{ this }}">{{ this }}</a></li>
       {{/each}}
     </ul>
   </footer>
   {{/if}}
 </article>
-
-

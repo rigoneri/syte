@@ -32,10 +32,18 @@
       <li><a href="mailto:contact@rigoneri.com?subject=Hello" id="contact-link">Contact</a></li>
     </ul>
   </nav>
+  <a href="https://github.com/rigoneri/syte" class="fork-me">Fork me on Github</a>
 </header>
 {% block main_section %}{% endblock %}
+<div class="mobile-nav">
+  <span class="nav-btn" id="mobile-nav-btn">
+    <span class="nav-btn-bar"></span>
+    <span class="nav-btn-bar"></span>
+    <span class="nav-btn-bar"></span>
+  </span>
+  <h3><a href="/">rigoneri.com</a></h3>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-
 <script type="text/javascript">
 /*<![CDATA[*/
 var twitter_integration_enabled = {% if TWITTER_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
@@ -51,6 +59,7 @@ var twitter_integration_enabled = {% if TWITTER_INTEGRATION_ENABLED %}true{% els
 <script src="{{ MEDIA_URL }}js/libs/moment.min.js"></script>
 <script src="{{ MEDIA_URL }}js/libs/bootstrap-modal.js"></script>
 <script src="{{ MEDIA_URL }}js/libs/spin.min.js"></script>
+<script src="{{ MEDIA_URL }}js/libs/prettify.js"></script>
 
 <script src="{{ MEDIA_URL }}js/components/base.js"></script>
 <script src="{{ MEDIA_URL }}js/components/mobile.js"></script>

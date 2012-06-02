@@ -56,6 +56,7 @@ On the frontend Syte uses HTML5 and CSS3 while using the [LESS](http://lesscss.o
 * [spin.js](fgnass.github.com/spin.js)
 * [bootstrap-modal.js](http://twitter.github.com/bootstrap/javascript.html#modals)
 * [JQuery URL Parser](https://github.com/allmarkedup/jQuery-URL-Parser)
+* [google-code-prettify](http://google-code-prettify.googlecode.com/svn/trunk/README.html)
 
 For static compression and minification Syte uses some [Node.js](http://nodejs.org/) libraries:
 
@@ -86,10 +87,13 @@ Then make some text and link changes. Open **base.html** located in `syte > temp
 7. Inside the `nav` tag change the **github-link** href to point to your github profile, if you don't have github just remove that whole line.
 8. Inside the `nav` tag change the **dribbble-link** href to point to your dribbble profile, if you don't have dribbble just remove that whole line.
 9. Inside the `nav` tag change the **contact-link** href to point to your email address. 
+10. Under `class="mobile-nav"` div change the **h3** link text to have your domain name or your name.
 
 Then pick your **adjacent color** and change the `@adjacent-color` hex value in variables.less located in `syte > static > less > variables.less` Make sure the color you chose is not used by anyone on the list up above. If you want blue pick a different shade of blue there are hundreds out there...
-  
-Next, open **mobile.js** located in `syte > static > js > components` and update `h3` tag to be your site's domain name.
+
+
+
+
 
 ### Setting up you blog (Tumblr)
 
@@ -98,10 +102,9 @@ If you already have a tumblr blog good! If you don't [signup for one here](https
 Once you have your tumblr blog you will need to get the `api_key` needed to call their APIs. In order to do that **register your site** with them by going to <http://www.tumblr.com/oauth/register>, fill in the information about your site, there is no need to enter a default callback url or an icon. Once you are done your website will be listed under <http://www.tumblr.com/oauth/apps>, save the `OAuth Consumer Key` value that's the `api_key` we need for Syte.
 
 Once you have the `api_key` from tumblr you have to enter it in **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the key under `TUMBLR_API_KEY`, also please enter your tumblr url under `TUMBLR_BLOG_URL` see the example on how it should be formatted.
-
-##### Small Note
-
-Since there is currently a bug with tags on tumblr's api you will have to change the tag url in some files to point to your tumblr url. Open the files `syte > templates > post.html` and `syte > static > templates > blog-post.html`, change where it says **blog.rigoneri.com** to your tumblr url.
+  
+	
+	
 
 
 ### Setting up Twitter integration
@@ -118,10 +121,16 @@ Once you have those four items from twitter you have to enter them in your **syt
 * `Access token secret` string you saved under `TWITTER_USER_SECRET`
 
 If you want to turn off the twitter integration just set `TWITTER_INTEGRATION_ENABLED` to False.
+  
+	
+	
 
 ### Setting up Github integration
 
 You don't have to do anything to setup the github integration. If you want to turn off this feature just set `GITHUB_INTEGRATION_ENABLED` setting to False in syte_settings.py.
+  
+	
+	
 
 ### Setting up Dribbble integration
 
@@ -133,6 +142,9 @@ You don't have to do anything to setup the dribbble integration. If you want to 
 ## Running & Deployment Instructions
 
 Now that you have everything setup and ready to go we will be able to run the project locally and deploy to heroku  with the instructions below. Please note that these instructions are based on running on a mac, which should be the same for linux systems, but if you are on Windows and is having problems, let me know or send a pull request so I can make the necessary instruction changes. 
+  
+	
+	
 
 ### Running Syte locally 
 

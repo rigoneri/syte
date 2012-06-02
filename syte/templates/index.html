@@ -6,7 +6,13 @@
 {% endblock %}
 {% block extra_inline_js %}
 $(function() {
+  {% if post_id %}
+  fetchBlogPosts("{{post_id}}")
+  {% elif tag_slug %}
+  fetchBlogPosts(null, "{{tag_slug}}");
+  {% else %}
   fetchBlogPosts();
+  {% endif %}
 });
 {% endblock %}
 

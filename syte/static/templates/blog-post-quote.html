@@ -1,0 +1,22 @@
+<article id="{{ id }}">
+  <hgroup>
+    <h2><a href="/post/{{ id }}">Quote</a></h2>
+    <h3><a href="#{{ id }}">{{ formated_date }}</a></h3>
+  </hgroup>
+  <blockquote>
+    {{text}}
+  </blockquote>
+  {{#if source}}
+  <p>{{{ source }}}</p>
+  {{/if}}
+  {{#if tags }}
+  <footer>
+    <h4>Tags</h4>
+    <ul class="tags">
+      {{#each tags}}
+      <li><a href="/tags/{{ this }}">{{ this }}</a></li>
+      {{/each}}
+    </ul>
+  </footer>
+  {{/if}}
+</article>
