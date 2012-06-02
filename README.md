@@ -7,6 +7,7 @@ Syte is a really simple but powerful packaged personal site that has social inte
 You can use, reproduce and do whatever you want with syte as long as you choose a different adjacent color as the ones used by the people below. Once you have chosen your color and deployed your Syte based site, please send a pull request with an image of you containing the color on the border like the ones above.
 
 [![rigoneri](https://github.com/rigoneri/syte/blob/master/readme-imgs/rigoneri.png?raw=true)](http://rigoneri.com)
+[![sambao21](https://github.com/sambao21/syte/blob/master/readme-imgs/sambao21.png?raw=true)](http://sambao21.com)
 
 
 ## Social Integrations
@@ -89,9 +90,10 @@ Then make some text and link changes. Open **base.html** located in `syte > temp
 10. Under `class="mobile-nav"` div change the **h3** link text to have your domain name or your name.
 
 Then pick your **adjacent color** and change the `@adjacent-color` hex value in variables.less located in `syte > static > less > variables.less` Make sure the color you chose is not used by anyone on the list up above. If you want blue pick a different shade of blue there are hundreds out there...
-  
-	
-	
+
+
+
+
 
 ### Setting up you blog (Tumblr)
 
@@ -183,6 +185,8 @@ sudo npm install uglify-js -g
 ```
 
 Then whenever you want to release a new version of static update the `COMPRESS_REVISION_NUMBER` in **syte-settings.py** and run the compress python command from your syte directory:
+
+```Note``` be sure to create the directories `syte > static > css` and `syte > static > js > min` first.
 
 ```
 python compress.py
