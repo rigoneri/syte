@@ -70,6 +70,8 @@ For Deployment Syte uses [Heroku](http://www.heroku.com/) since it's free for 75
 
 There are a few steps in order to get Syte configured, but don't worry they are pretty easy.
 
+`Note` I recommend you branching your fork and not checking in senstive settings to github. 
+
 ### Base content changes
 
 There are a few things that are defaulted to have my information so you have the initial structure of the site. 
@@ -183,7 +185,7 @@ sudo npm install less -g
 sudo npm install uglify-js -g
 ```
 
-```Note``` be sure to create the directories `syte > static > css` and `syte > static > js > min` first if it doesn't already exist.
+`Note` be sure to create the directories `syte > static > css` and `syte > static > js > min` first if it doesn't already exist.
 
 Then whenever you want to release a new version of static update the `COMPRESS_REVISION_NUMBER` in **syte-settings.py** and run the compress python command from your syte directory:
 
