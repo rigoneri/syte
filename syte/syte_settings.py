@@ -33,6 +33,6 @@ if DEPLOYMENT_MODE == 'dev':
     DEBUG = True
 else:
     DEBUG = False
-    SITE_ROOT_URI = 'http://quiet-wind-9156.herokuapp.com/'
+    SITE_ROOT_URI = 'http://sambao21.com/'
 
 MEDIA_URL = SITE_ROOT_URI + 'static/'
