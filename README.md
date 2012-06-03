@@ -7,7 +7,8 @@ Syte is a really simple but powerful packaged personal site that has social inte
 You can use, reproduce and do whatever you want with syte as long as you choose a different adjacent color as the ones used by the people below. Once you have chosen your color and deployed your Syte based site, please send a pull request with an image of you containing the color on the border like the ones above.
 
 [![rigoneri](https://github.com/rigoneri/syte/blob/master/readme-imgs/rigoneri.png?raw=true)](http://rigoneri.com)
-
+[![sambao21](https://github.com/rigoneri/syte/blob/master/readme-imgs/sambao21.png?raw=true)](http://sambao21.com)
+[![keithentzeroth](https://github.com/rigoneri/syte/blob/master/readme-imgs/keithentzeroth.png?raw=true)](http://keithentzeroth.com)
 
 ## Social Integrations
 
@@ -69,6 +70,8 @@ For Deployment Syte uses [Heroku](http://www.heroku.com/) since it's free for 75
 
 There are a few steps in order to get Syte configured, but don't worry they are pretty easy.
 
+`Note` I recommend you branching your fork and not checking in senstive settings to github. 
+
 ### Base content changes
 
 There are a few things that are defaulted to have my information so you have the initial structure of the site. 
@@ -93,7 +96,7 @@ Then pick your **adjacent color** and change the `@adjacent-color` hex value in 
 	
 	
 
-### Setting up you blog (Tumblr)
+### Setting up your blog (Tumblr)
 
 If you already have a tumblr blog good! If you don't [signup for one here](https://www.tumblr.com/) it's really easy! Also I might eventually make so it integrates with wordpress as well, if you beat me to it please send a pull request.
 
@@ -181,6 +184,8 @@ After npm is installed you need to install two node packages `less` and `uglify-
 sudo npm install less -g
 sudo npm install uglify-js -g
 ```
+
+`Note` be sure to create the directories `syte > static > css` and `syte > static > js > min` first if it doesn't already exist.
 
 Then whenever you want to release a new version of static update the `COMPRESS_REVISION_NUMBER` in **syte-settings.py** and run the compress python command from your syte directory:
 
