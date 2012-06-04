@@ -37,7 +37,7 @@
 
         <h1>Syte</h1>
 
-<p>Syte is a really simple but powerful packaged personal site that has social integrations like tumblr, twitter, github and dribbble. You can start off by seeing an example of it on my personal   site <a href="http://rigoneri.com">http://rigoneri.com</a></p>
+<p>Syte is a really simple but powerful packaged personal site that has social integrations like tumblr, twitter, github and dribbble. You can see it in action on my personal site <a href="http://rigoneri.com">http://rigoneri.com</a></p>
 
 <h3>There is only one rule</h3>
 
@@ -60,35 +60,35 @@
 
 <h3>Twitter</h3>
 
-<p>Syte has twitter integration, which means that every time someone clicks on a link that points to a user's twitter profile the profile is loaded within your site along with the user's latest tweets.</p>
+<p>Syte has twitter integration, which means that when someone clicks on a link that points to a user's twitter profile the profile is loaded within your site along with the user's latest tweets.</p>
 
 <p><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/f-2.png?raw=true" alt="Syte Twitter"></p>
 
 <h3>Github</h3>
 
-<p>Syte has github integration, which means that every time someone clicks on a link that points to a user's github profile the profile is loaded within your site along with a list of the user's repos.</p>
+<p>Syte has github integration, which means that when someone clicks on a link that points to a user's github profile the profile is loaded within your site along with a list of the user's repos.</p>
 
 <p><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/f-3.png?raw=true" alt="Syte Github"></p>
 
 <h3>Dribbble</h3>
 
-<p>Syte has dribbble integration, which means that every time someone clicks on a link that points to a user's dribbble profile the profile is loaded within your site along with the user's latest shots.</p>
+<p>Syte has dribbble integration, which means that when someone clicks on a link that points to a user's dribbble profile the profile is loaded within your site along with the user's latest shots.</p>
 
 <p><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/f-4.png?raw=true" alt="Syte Dribbble"></p>
 
 <br><br>
 <h2>Responsive UI</h2>
 
-<p>Syte is also responsive, which means that it scales down to a mobile device screen size.</p>
+<p>Syte is responsive, which means that it scales down to a mobile device screen size.</p>
 
 <p><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/f-r-1.png?raw=true" alt="Syte Responsive 1"><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/f-r-2.png?raw=true" alt="Syte Responsive 1"></p>
 
 <br><br>
 <h2>Technologies Used</h2>
 
-<p>Syte uses the <a href="https://www.djangoproject.com/">Django</a> web framework to handle the requests and call the integration apis (with <a href="http://www.python.org/">python</a>). However it doesn't necessary needs to be in Django since the majority of the work is on the frontend (I would love to see a fork using <a href="http://nodejs.org/">Node.js</a>, maybe I'll put one together sometime.)</p>
+<p>Syte uses the <a href="https://www.djangoproject.com/">Django</a> web framework to handle requests and call the integration apis (with <a href="http://www.python.org/">python</a>). However it doesn't necessarily need to be in Django since the majority of the work is on the frontend (I would love to see a fork using <a href="http://nodejs.org/">Node.js</a>, maybe I'll put one together sometime.)</p>
 
-<p>On the frontend Syte uses HTML5 and CSS3 while using the <a href="http://lesscss.org">LESS</a> css preprocessor. Syte also uses several JS libraries listed below:</p>
+<p>On the frontend Syte uses HTML5 and CSS3 while using the <a href="http://lesscss.org">LESS</a> CSS preprocessor. Syte also uses several JS libraries listed below:</p>
 
 <ul>
 <li><a href="http://github.com/jrburke/requirejs">require.js</a></li>
@@ -106,14 +106,14 @@
 <li><a href="http://search.npmjs.org/#/less">less</a></li>
 <li>
 <a href="http://search.npmjs.org/#/uglify-js">uglify-js</a> </li>
-</ul><p>For Deployment Syte uses <a href="http://www.heroku.com/">Heroku</a> since it's free for 750 dyno-hours per month. However it doesn't necessary needs to be deployed to Heroku, but the instructions provided here are to be deployed there.</p>
+</ul><p>For deployment Syte uses <a href="http://www.heroku.com/">Heroku</a> since it's free for 750 dyno-hours per month. While the included instructions are for Heroku, Syte doesn't necessarily need to be deployed there.</p>
 
 <br><br>
 <h2>Setup Instructions</h2>
 
 <p>There are a few steps in order to get Syte configured, but don't worry they are pretty easy.</p>
 
-<p><code>Note</code> I recommend you branching your fork and not checking in senstive settings to github.</p>
+<p><code>Note</code> I recommend you branching your fork and not checking in senstive settings to github!</p>
 
 <h3>Base content changes</h3>
 
@@ -134,12 +134,12 @@
 <li>Inside the <code>nav</code> tag change the <strong>dribbble-link</strong> href to point to your dribbble profile, if you don't have dribbble just remove that whole line.</li>
 <li>Inside the <code>nav</code> tag change the <strong>contact-link</strong> href to point to your email address. </li>
 <li>Under <code>class="mobile-nav"</code> div change the <strong>h3</strong> link text to have your domain name or your name.</li>
-</ol><p>Then pick your <strong>adjacent color</strong> and change the <code>@adjacent-color</code> hex value in variables.less located in <code>syte &gt; static &gt; less &gt; variables.less</code> Make sure the color you chose is not used by anyone on the list up above. If you want blue pick a different shade of blue there are hundreds out there...</p>
+</ol><p>Then pick your <strong>adjacent color</strong> and change the <code>@adjacent-color</code> hex value in variables.less located in <code>syte &gt; static &gt; less &gt; variables.less</code> Make sure the color you chose is not used by anyone on the list up above. If you want blue pick a different shade of blue, there are hundreds out there...</p>
 
 <br>
 <h3>Setting up you blog (Tumblr)</h3>
 
-<p>If you already have a tumblr blog good! If you don't <a href="https://www.tumblr.com/">signup for one here</a> it's really easy! Also I might eventually make so it integrates with wordpress as well, if you beat me to it please send a pull request.</p>
+<p>If you already have a tumblr blog good! If you don't <a href="https://www.tumblr.com/">signup for one here</a> it's really easy! I might eventually make Syte integrate with wordpress as well, if you beat me to it please send a pull request.</p>
 
 <p>Once you have your tumblr blog you will need to get the <code>api_key</code> needed to call their APIs. In order to do that <strong>register your site</strong> with them by going to <a href="http://www.tumblr.com/oauth/register">http://www.tumblr.com/oauth/register</a>, fill in the information about your site, there is no need to enter a default callback url or an icon. Once you are done your website will be listed under <a href="http://www.tumblr.com/oauth/apps">http://www.tumblr.com/oauth/apps</a>, save the <code>OAuth Consumer Key</code> value that's the <code>api_key</code> we need for Syte.</p>
 
@@ -183,16 +183,16 @@
 
 <h2>Running &amp; Deployment Instructions</h2>
 
-<p>Now that you have everything setup and ready to go we will be able to run the project locally and deploy to heroku  with the instructions below. Please note that these instructions are based on running on a mac, which should be the same for linux systems, but if you are on Windows and is having problems, let me know or send a pull request so I can make the necessary instruction changes. </p>
+<p>Now that you have everything setup and ready to go we will be able to run the project locally and deploy to heroku with the instructions below. Please note that these instructions are for Mac, which should be the same for linux systems. If you have problems with these instructions on Windows, let me know or send a pull request.</p>
 
 <h3>Running Syte locally</h3>
 
-<p>Running locally is really easy if you are on a Mac since you already have some stuff installed out of the box. To start off install these too python packages.</p>
+<p>Running locally is really easy if you are on a Mac since you already have some stuff installed out of the box. To start off install these python packages.</p>
 
 <ul>
 <li><a href="http://www.virtualenv.org/en/latest/index.html">virtualenv</a></li>
 <li><a href="http://www.doughellmann.com/projects/virtualenvwrapper/">virtualenvwrapper</a></li>
-</ul><p>Once you have those two installed got to your syte directory and run the following commands:</p>
+</ul><p>Once you have those two installed go to your syte directory and run the following commands:</p>
 
 <pre><code>$ mkvirtualenv syte
 $ workon syte
@@ -209,12 +209,12 @@ $ workon syte
 
 <p>Compressing static files like CSS and JS are done using <a href="http://nodejs.org/">Node.js</a>. This step is important since it will get all your static files and make tiny bit small so your site can be run faster when it's out there  on the so called World Wide Web :)</p>
 
-<p>In order to get there you need to first install <a href="http://nodejs.org/">node.js</a>, they have automatic installers which makes really easy. Then you need to install <a href="http://npmjs.org/">Node Package Manager (npm)</a> to install run the following command:</p>
+<p>In order to get there you need to first install <a href="http://nodejs.org/">node.js</a>, they have automatic installers which makes installation really easy. Then you need to install <a href="http://npmjs.org/">Node Package Manager (npm)</a> by running the following command:</p>
 
 <pre><code>curl http://npmjs.org/install.sh | sudo sh
 </code></pre>
 
-<p>After npm is installed you need to install two node packages <code>less</code> and <code>uglify-js</code> in order to do that run the following commands:</p>
+<p>After npm is installed you need to install two node packages <code>less</code> and <code>uglify-js</code>. To do that run the following commands:</p>
 
 <pre><code>sudo npm install less -g
 sudo npm install uglify-js -g
@@ -227,12 +227,12 @@ sudo npm install uglify-js -g
 <pre><code>python compress.py
 </code></pre>
 
-<p>This will create a minified version of your css and it will be located in <code>syte &gt; static &gt; css</code> as well as the minified version of your java script and it will be located in <code>syte &gt; static &gt; js &gt; min</code>.</p>
+<p>This will create a minified version of your CSS in <code>syte &gt; static &gt; css</code> and the minified version of your JavaScript in <code>syte &gt; static &gt; js &gt; min</code>.</p>
 
 <br>
 <h3>Deploying to Heroku</h3>
 
-<p>Deploying to Heroku is extremely easy and free that's why I chose it over to deploying to Amazon or anywhere else (even though heroku itself deploys to Amazon). That's another fork I would love to see, different deployment instructions maybe to an Amazon micro instance.</p>
+<p>Deploying to Heroku is extremely easy and free, that's why I chose it over Amazon or similar. That's another fork I would love to see, different deployment instructions maybe to an Amazon EC2 micro instance.</p>
 
 <p>First signup to <a href="http://heroku.com">Heroku</a> then follow these simple <a href="https://devcenter.heroku.com/articles/django">Django deployement instructions</a> I already have the requirements.txt and the Procfile ready to go, but before you actually deploy there are two things you need to change:</p>
 
