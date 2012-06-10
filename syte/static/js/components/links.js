@@ -20,6 +20,7 @@ function setupLinks() {
          $('#github-profile').remove();
          $('#dribbble-profile').remove();
          $('#twitter-profile').remove();
+         $('#instagram-profile').remove();
          $('.modal-backdrop').remove();
          adjustSelection('apps-link');
 
@@ -39,6 +40,7 @@ function setupLinks() {
          $('#github-profile').remove();
          $('#dribbble-profile').remove();
          $('#twitter-profile').remove();
+         $('#apps-modal').remove();
          $('.modal-backdrop').remove();
          adjustSelection('instagram-link');
 
