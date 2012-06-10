@@ -1,6 +1,6 @@
 # Syte
 
-Syte is a really simple but powerful packaged personal site that has social integrations like tumblr, twitter, github and dribbble. You can start off by seeing an example of it on my personal   site <http://rigoneri.com>
+Syte is a really simple but powerful packaged personal site that has social integrations like tumblr, twitter, github, dribbble and instagram. You can see it in action on my personal site <http://rigoneri.com>
 
 ### There is only one rule
 
@@ -9,6 +9,7 @@ You can use, reproduce and do whatever you want with syte as long as you choose 
 [![rigoneri](https://github.com/rigoneri/syte/blob/master/readme-imgs/rigoneri.png?raw=true)](http://rigoneri.com)
 [![sambao21](https://github.com/rigoneri/syte/blob/master/readme-imgs/sambao21.png?raw=true)](http://sambao21.com)
 [![keithentzeroth](https://github.com/rigoneri/syte/blob/master/readme-imgs/keithentzeroth.png?raw=true)](http://keithentzeroth.com)
+[![garrypolley](https://github.com/rigoneri/syte/blob/master/readme-imgs/garrypolley.png?raw=true)](http://garrypolley.com)
 
 ## Social Integrations
 
@@ -21,34 +22,40 @@ Syte uses [tumblr](http://tumblr.com) for blogging and your blog will be the pri
 
 ### Twitter
 
-Syte has twitter integration, which means that every time someone clicks on a link that points to a user's twitter profile the profile is loaded within your site along with the user's latest tweets.
+Syte has twitter integration, which means that when someone clicks on a link that points to a user's twitter profile the profile is loaded within your site along with the user's latest tweets.
 
 ![Syte Twitter](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-2.png?raw=true)
 
 ### Github
 
-Syte has github integration, which means that every time someone clicks on a link that points to a user's github profile the profile is loaded within your site along with a list of the user's repos.
+Syte has github integration, which means that when someone clicks on a link that points to a user's github profile the profile is loaded within your site along with a list of the user's repos.
 
 ![Syte Github](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-3.png?raw=true)
 
 ### Dribbble
 
-Syte has dribbble integration, which means that every time someone clicks on a link that points to a user's dribbble profile the profile is loaded within your site along with the user's latest shots.
+Syte has dribbble integration, which means that when someone clicks on a link that points to a user's dribbble profile the profile is loaded within your site along with the user's latest shots.
 
 ![Syte Dribbble](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-4.png?raw=true)
 
 
+### Instagram
+
+Syte has instagram integration, which means that you can show your instagram pictures within your site like a profile. Currently the only way to display your pictures is through their iPhone and Android apps, this is not even possible through their website.
+
+![Syte Instagram](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-5.png?raw=true)
+
 ## Responsive UI
 
-Syte is also responsive, which means that it scales down to a mobile device screen size.
+Syte is responsive, which means that it scales down to a mobile device screen size.
 
 ![Syte Responsive 1](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-r-1.png?raw=true) ![Syte Responsive 1](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-r-2.png?raw=true)
 
 ## Technologies Used
 
-Syte uses the [Django](https://www.djangoproject.com/) web framework to handle the requests and call the integration apis (with [python](http://www.python.org/)). However it doesn't necessary needs to be in Django since the majority of the work is on the frontend (I would love to see a fork using [Node.js](http://nodejs.org/), maybe I'll put one together sometime.)
+Syte uses the [Django](https://www.djangoproject.com/) web framework to handle requests and call the integration apis (with [python](http://www.python.org/)). However it doesn't necessarily need to be in Django since the majority of the work is on the frontend (I would love to see a fork using [Node.js](http://nodejs.org/), maybe I'll put one together sometime.)
 
-On the frontend Syte uses HTML5 and CSS3 while using the [LESS](http://lesscss.org) css preprocessor. Syte also uses several JS libraries listed below:
+On the frontend Syte uses HTML5 and CSS3 while using the [LESS](http://lesscss.org) CSS preprocessor. Syte also uses several JS libraries listed below:
 
 * [require.js](http://github.com/jrburke/requirejs)
 * [handlebars.js](http://handlebarsjs.com/)
@@ -63,14 +70,14 @@ For static compression and minification Syte uses some [Node.js](http://nodejs.o
 * [less](http://search.npmjs.org/#/less)
 * [uglify-js](http://search.npmjs.org/#/uglify-js) 
 
-For Deployment Syte uses [Heroku](http://www.heroku.com/) since it's free for 750 dyno-hours per month. However it doesn't necessary needs to be deployed to Heroku, but the instructions provided here are to be deployed there.
+For deployment Syte uses [Heroku](http://www.heroku.com/) since it's free for 750 dyno-hours per month. While the included instructions are for Heroku, Syte doesn't necessarily need to be deployed there.
 	
 
 ## Setup Instructions
 
 There are a few steps in order to get Syte configured, but don't worry they are pretty easy.
 
-`Note` I recommend you branching your fork and not checking in senstive settings to github. 
+`Note` I recommend you branching your fork and not checking in senstive settings to github!
 
 ### Base content changes
 
@@ -91,14 +98,14 @@ Then make some text and link changes. Open **base.html** located in `syte > temp
 9. Inside the `nav` tag change the **contact-link** href to point to your email address. 
 10. Under `class="mobile-nav"` div change the **h3** link text to have your domain name or your name.
 
-Then pick your **adjacent color** and change the `@adjacent-color` hex value in variables.less located in `syte > static > less > variables.less` Make sure the color you chose is not used by anyone on the list up above. If you want blue pick a different shade of blue there are hundreds out there...
+Then pick your **adjacent color** and change the `@adjacent-color` hex value in variables.less located in `syte > static > less > variables.less` Make sure the color you chose is not used by anyone on the list up above. If you want blue pick a different shade of blue, there are hundreds out there...
   
 	
 	
 
 ### Setting up your blog (Tumblr)
 
-If you already have a tumblr blog good! If you don't [signup for one here](https://www.tumblr.com/) it's really easy! Also I might eventually make so it integrates with wordpress as well, if you beat me to it please send a pull request.
+If you already have a tumblr blog good! If you don't [signup for one here](https://www.tumblr.com/) it's really easy! I might eventually make Syte integrate with wordpress as well, if you beat me to it please send a pull request.
 
 Once you have your tumblr blog you will need to get the `api_key` needed to call their APIs. In order to do that **register your site** with them by going to <http://www.tumblr.com/oauth/register>, fill in the information about your site, there is no need to enter a default callback url or an icon. Once you are done your website will be listed under <http://www.tumblr.com/oauth/apps>, save the `OAuth Consumer Key` value that's the `api_key` we need for Syte.
 
@@ -138,23 +145,48 @@ You don't have to do anything to setup the github integration. If you want to tu
 You don't have to do anything to setup the dribbble integration. If you want to turn off this feature just set `DRIBBBLE_INTEGRATION_ENABLED` setting to False in syte_settings.py.
 
    
-    
+   
+   
+### Setting up Instagram integration
+
+Instagram has the same level of security as twitter, but they don't provide a button that makes it easy to get the access token, so instead we have to get the access token ourselves. To get started go to <http://instagram.com/developer/>, sign in and crate a new client by clicking on the ***Manage Clients*** link on the top right side.
+
+Enter the ***Application Name***, ***Description***, ***Website*** and ***OAuth redirect_uri***. For the OAuth redirect_uri enter `http://127.0.0.1:8000/instagram/auth` for now since we will get the access token while running it locally. Once you are done regestering your client you will be given the ***Client ID*** and ***Client Secret***. 
+
+Once you have those two items from Instagram you have to enter them in your **syte_settings.py** located in `syte > syste_settings.py`. Once you open that file enter the following:
+
+* ***Client ID*** under `INSTAGRAM_CLIENT_ID`	
+* ***Client Secret*** under `INSTAGRAM_CLIENT_SECRET`
+   
+After you have entered those two items, folow the steps below for running your Syte locally on your machine. Once you have your Syte running navigate to `http://127.0.0.1:8000/instagram/auth`, you will be taken to Instagram's website and will be asked to sign in and authorize your application. After you authorized your application you will be taken back to your Syte and you will be given your ***Access Token*** and your ***User ID***
+
+Once you have those two items from Instagram you have to enter them in your **syte_settings.py** located in `syte > syste_settings.py`. Once you open that file enter the following:
+
+* ***Access Token*** under `INSTAGRAM_ACCESS_TOKEN`
+* ***User ID*** under `INSTAGRAM_USER_ID`
+
+After you validated that your instagram integration worked go back to Instragam page and change the ***OAuth redirect_uri*** field to have your domain info (this is not required), then make sure you turn off the instagram oauth interation setting so you don't make that available to everyone in the internet. You can do that by setting `INSTAGRAM_OAUTH_ENABLED` to False.
+
+If you want to turn off instagram integration just set `INSTAGRAM_INTEGRATION_ENABLED` to False.
+
+
+
 
 ## Running & Deployment Instructions
 
-Now that you have everything setup and ready to go we will be able to run the project locally and deploy to heroku  with the instructions below. Please note that these instructions are based on running on a mac, which should be the same for linux systems, but if you are on Windows and is having problems, let me know or send a pull request so I can make the necessary instruction changes. 
+Now that you have everything setup and ready to go we will be able to run the project locally and deploy to heroku with the instructions below. Please note that these instructions are for Mac, which should be the same for linux systems. If you have problems with these instructions on Windows, let me know or send a pull request. 
   
 	
 	
 
 ### Running Syte locally 
 
-Running locally is really easy if you are on a Mac since you already have some stuff installed out of the box. To start off install these too python packages.
+Running locally is really easy if you are on a Mac since you already have some stuff installed out of the box. To start off install these python packages:
 
 * [virtualenv](http://www.virtualenv.org/en/latest/index.html)
 * [virtualenvwrapper](http://www.doughellmann.com/projects/virtualenvwrapper/)
 
-Once you have those two installed got to your syte directory and run the following commands:
+Once you have those two installed go to your syte directory and run the following commands:
 
 ```
 $ mkvirtualenv syte
@@ -170,15 +202,15 @@ python manage.py runserver
 
 ### Compressing Statics
 
-Compressing static files like CSS and JS are done using [Node.js](http://nodejs.org/). This step is important since it will get all your static files and make tiny bit small so your site can be run faster when it's out there  on the so called World Wide Web :)
+Compressing static files like CSS and JS are done using [Node.js](http://nodejs.org/). This step is important since it will get all your static files and make tiny bit small so your site can be run faster when it's out there on the so called World Wide Web :)
 
-In order to get there you need to first install [node.js](http://nodejs.org/), they have automatic installers which makes really easy. Then you need to install [Node Package Manager (npm)](http://npmjs.org/) to install run the following command:
+In order to get there you need to first install [node.js](http://nodejs.org/), they have automatic installers which makes installation really easy. Then you need to install [Node Package Manager (npm)](http://npmjs.org/) by running the following command:
 
 ```
 curl http://npmjs.org/install.sh | sudo sh
 ```
 
-After npm is installed you need to install two node packages `less` and `uglify-js` in order to do that run the following commands:
+After npm is installed you need to install two node packages `less` and `uglify-js`. To do that run the following commands:
 
 ```
 sudo npm install less -g
@@ -193,12 +225,12 @@ Then whenever you want to release a new version of static update the `COMPRESS_R
 python compress.py
 ```
 
-This will create a minified version of your css and it will be located in `syte > static > css` as well as the minified version of your java script and it will be located in `syte > static > js > min`.
+This will create a minified version of your CSS in `syte > static > css` and the minified version of your JavaScript in `syte > static > js > min`.
 
 
 ### Deploying to Heroku
 
-Deploying to Heroku is extremely easy and free that's why I chose it over to deploying to Amazon or anywhere else (even though heroku itself deploys to Amazon). That's another fork I would love to see, different deployment instructions maybe to an Amazon micro instance.
+Deploying to Heroku is extremely easy and free, that's why I chose it over Amazon or similar. That's another fork I would love to see, different deployment instructions maybe to an Amazon EC2 micro instance.
 
 First signup to [Heroku](http://heroku.com) then follow these simple [Django deployement instructions](https://devcenter.heroku.com/articles/django) I already have the requirements.txt and the Procfile ready to go, but before you actually deploy there are two things you need to change:
 

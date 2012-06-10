@@ -205,10 +205,33 @@
   display: none;
 }
 
+.load-more-button {
+  display: inline-block;
+  margin: 0 20px 50px 20px;
+  padding: 10px 30px;
+  background-color: @adjacent-color;
+  color: #fff;
+
+  &:hover {
+    border: 1px solid @adjacent-color;
+    background: #fff;
+    color: @adjacent-color;
+  }
+
+  .spinner {
+    left: 140px;
+    top: -8px;
+  }
+}
+
 @media (max-width: 767px) {
 
+  header.main-header {
+    hgroup .picture a, nav { margin-top: 30px; }
+  }
+
   .blog-section article {
-      width: 440px;
+      width: 400px;
 
       img { max-width: 400px; }
   }

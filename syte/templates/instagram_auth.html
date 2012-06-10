@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block pagetitle %}Instagram Auth{% endblock %}
+{% block main_section %}
+<section class="main-section">
+  <article>
+    {% if error %}
+      <h2>Unable to get Access Token</h2>
+      <p>{{ error }}</p>
+    {% else %}
+      <h2>Instagram Access Token</h2>
+      <p>Go to your syte_settings.py and enter the token under <code>INSTAGRAM_ACCESS_TOKEN</code> and the user id under <code>INSTAGRAM_USER_ID</code>.</p>
+      <dl>
+        <dt>User Name</dt><dd> {{ user_name }}</dd>
+        <dt>User ID</dt><dd>{{ user_id }}</dd>
+        <dt>Access Token</dt><dd>{{ token }}</dd>
+      </dl>
+    {% endif %}
+  </article>
+</section>
+{% endblock %}
+

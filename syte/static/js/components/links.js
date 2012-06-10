@@ -11,6 +11,7 @@ function setupLinks() {
          $('#github-profile').remove();
          $('#dribbble-profile').remove();
          $('#twitter-profile').remove();
+         $('#instagram-profile').remove();
          $('.modal-backdrop').remove();
          $('#apps-modal').remove();
          adjustSelection('home-link');
@@ -34,10 +35,20 @@ function setupLinks() {
               spinner.stop();
             });
       }
+      else if(this.id == 'instagram-link' && instagram_integration_enabled) {
+         $('#github-profile').remove();
+         $('#dribbble-profile').remove();
+         $('#twitter-profile').remove();
+         $('.modal-backdrop').remove();
+         adjustSelection('instagram-link');
+
+         setupInstagram(this);
+      }
       else if (twitter_integration_enabled && (url.attr('host') == 'twitter.com' || url.attr('host') == 'www.twitter.com')) {
 
          $('#github-profile').remove();
          $('#dribbble-profile').remove();
+         $('#instagram-profile').remove();
          $('.modal-backdrop').remove();
          $('#apps-modal').remove();
          adjustSelection('twitter-link');
@@ -48,6 +59,7 @@ function setupLinks() {
 
         $('#twitter-profile').remove();
         $('#dribbble-profile').remove();
+        $('#instagram-profile').remove();
         $('.modal-backdrop').remove();
         $('#apps-modal').remove();
         adjustSelection('github-link');
@@ -58,6 +70,7 @@ function setupLinks() {
 
          $('#twitter-profile').remove();
          $('#github-profile').remove();
+         $('#instagram-profile').remove();
          $('.modal-backdrop').remove();
          $('#apps-modal').remove();
          adjustSelection('dribbble-link');
