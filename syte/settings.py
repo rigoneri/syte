@@ -64,3 +64,5 @@ INSTALLED_APPS = (
 )
 
 from syte_settings import *
+
+from rigoneri_settings import *

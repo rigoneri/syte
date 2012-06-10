@@ -32,6 +32,20 @@ if settings.DRIBBBLE_INTEGRATION_ENABLED:
         url(r'^dribbble/(?P<username>\w+)/?$', 'syte.views.dribbble'),
     )
 
+#Instagram Oauth
+if settings.INSTAGRAM_OAUTH_ENABLED:
+    urlpatterns += patterns('',
+        url(r'^instagram/auth/?$', 'syte.views.instagram_auth'),
+    )
+
+if settings.INSTAGRAM_INTEGRATION_ENABLED:
+    urlpatterns += patterns('',
+        url(r'^instagram/(?P<max_id>\w+)/?$', 'syte.views.instagram_next'),
+        url(r'^instagram/?$', 'syte.views.instagram'),
+    )
+
+
+
 #Statics: Hacky for now... fix this later...
 urlpatterns += patterns('',
     (r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {'url':
@@ -39,6 +53,7 @@ urlpatterns += patterns('',
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': settings.MEDIA_ROOT}),
 )
+
 
 
 
