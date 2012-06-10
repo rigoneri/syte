@@ -1,6 +1,6 @@
 # Syte
 
-Syte is a really simple but powerful packaged personal site that has social integrations like tumblr, twitter, github and dribbble. You can see it in action on my personal site <http://rigoneri.com>
+Syte is a really simple but powerful packaged personal site that has social integrations like tumblr, twitter, github, dribbble and instagram. You can see it in action on my personal site <http://rigoneri.com>
 
 ### There is only one rule
 
@@ -38,6 +38,12 @@ Syte has dribbble integration, which means that when someone clicks on a link th
 
 ![Syte Dribbble](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-4.png?raw=true)
 
+
+### Instagram
+
+Syte has instagram integration, which means that you can show your instagram pictures within your site like a profile. Currently the only way to display your pictures is through their iPhone and Android apps, this is not even possible through their website.
+
+![Syte Instagram](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-5.png?raw=true)
 
 ## Responsive UI
 
@@ -139,7 +145,32 @@ You don't have to do anything to setup the github integration. If you want to tu
 You don't have to do anything to setup the dribbble integration. If you want to turn off this feature just set `DRIBBBLE_INTEGRATION_ENABLED` setting to False in syte_settings.py.
 
    
-    
+   
+   
+### Setting up Instagram integration
+
+Instagram has the same level of security as twitter, but they don't provide a button that makes it easy to get the access token, so instead we have to get the access token ourselves. To get started go to <http://instagram.com/developer/>, sign in and crate a new client by clicking on the ***Manage Clients*** link on the top right side.
+
+Enter the ***Application Name***, ***Description***, ***Website*** and ***OAuth redirect_uri***. For the OAuth redirect_uri enter `http://127.0.0.1:8000/instagram/auth` for now since we will get the access token while running it locally. Once you are done regestering your client you will be given the ***Client ID*** and ***Client Secret***. 
+
+Once you have those two items from Instagram you have to enter them in your **syte_settings.py** located in `syte > syste_settings.py`. Once you open that file enter the following:
+
+* ***Client ID*** under `INSTAGRAM_CLIENT_ID`	
+* ***Client Secret*** under `INSTAGRAM_CLIENT_SECRET`
+   
+After you have entered those two items, folow the steps below for running your Syte locally on your machine. Once you have your Syte running navigate to `http://127.0.0.1:8000/instagram/auth`, you will be taken to Instagram's website and will be asked to sign in and authorize your application. After you authorized your application you will be taken back to your Syte and you will be given your ***Access Token*** and your ***User ID***
+
+Once you have those two items from Instagram you have to enter them in your **syte_settings.py** located in `syte > syste_settings.py`. Once you open that file enter the following:
+
+* ***Access Token*** under `INSTAGRAM_ACCESS_TOKEN`
+* ***User ID*** under `INSTAGRAM_USER_ID`
+
+After you validated that your instagram integration worked go back to Instragam page and change the ***OAuth redirect_uri*** field to have your domain info (this is not required), then make sure you turn off the instagram oauth interation setting so you don't make that available to everyone in the internet. You can do that by setting `INSTAGRAM_OAUTH_ENABLED` to False.
+
+If you want to turn off instagram integration just set `INSTAGRAM_INTEGRATION_ENABLED` to False.
+
+
+
 
 ## Running & Deployment Instructions
 
