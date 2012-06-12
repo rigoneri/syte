@@ -4,7 +4,6 @@ from django.shortcuts import redirect, render
 from django.template import Context, loader
 from django.http import HttpResponse, HttpResponseServerError, Http404
 from django.conf import settings
-from urlparse import parse_qs
 
 import requests
 import json
