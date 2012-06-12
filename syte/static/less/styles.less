@@ -224,14 +224,26 @@
   }
 }
 
-@media (max-width: 767px) {
-
+@media (max-width: 800px) {
   header.main-header {
     hgroup .picture a, nav { margin-top: 30px; }
   }
 
   .blog-section article {
       width: 400px;
+
+      img { max-width: 400px; }
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1024px) {
+
+  header.main-header {
+    hgroup .picture a, nav { margin-top: 30px; }
+  }
+
+  .blog-section article {
+      width: 700px;
 
       img { max-width: 400px; }
   }
