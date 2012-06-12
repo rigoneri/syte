@@ -10,6 +10,7 @@ You can use, reproduce and do whatever you want with syte as long as you choose 
 [![sambao21](https://github.com/rigoneri/syte/blob/master/readme-imgs/sambao21.png?raw=true)](http://sambao21.com)
 [![keithentzeroth](https://github.com/rigoneri/syte/blob/master/readme-imgs/keithentzeroth.png?raw=true)](http://keithentzeroth.com)
 [![garrypolley](https://github.com/rigoneri/syte/blob/master/readme-imgs/garrypolley.png?raw=true)](http://garrypolley.com)
+[![mithrandiragain](https://github.com/rigoneri/syte/blob/master/readme-imgs/mithrandiragain.png?raw=true)](http://blog.atomitware.tk)
 
 ## Social Integrations
 
@@ -117,7 +118,7 @@ Once you have the `api_key` from tumblr you have to enter it in **syte_settings.
 
 ### Setting up Twitter integration
 
-Twitter has another level of security, therefore we need more information instead of just an api_key like tumblr. To get started create a new application on twitter for your website by going to <https://dev.twitter.com/apps/new>. Once you are done creating your application you will be taken to your application page on twitter, there you arleady have two pieces of the puzzle, the `Consumer key` and the `Consumer secret` make sure you save those.
+Twitter has another level of security, therefore we need more information instead of just an api_key like tumblr. To get started create a new application on twitter for your website by going to <https://dev.twitter.com/apps/new>. Once you are done creating your application you will be taken to your application page on twitter, there you already have two pieces of the puzzle, the `Consumer key` and the `Consumer secret` make sure you save those.
 
 Next you will need your access tokens, on the bottom of that page there is a link called **Create my access token** click on that. Once you are done you will be given the other two pieces of the puzzle, the `Access token` and the `Access token secret` make sure you save those as well.
 
