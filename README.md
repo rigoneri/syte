@@ -10,6 +10,8 @@ You can use, reproduce and do whatever you want with syte but I would like you t
 [![sambao21](https://github.com/rigoneri/syte/blob/master/readme-imgs/sambao21.png?raw=true)](http://sambao21.com)
 [![keithentzeroth](https://github.com/rigoneri/syte/blob/master/readme-imgs/keithentzeroth.png?raw=true)](http://keithentzeroth.com)
 [![garrypolley](https://github.com/rigoneri/syte/blob/master/readme-imgs/garrypolley.png?raw=true)](http://garrypolley.com)
+[![snooze82](https://github.com/rigoneri/syte/blob/master/readme-imgs/snooze82.png?raw=true)](http://www.henklein.com)
+
 
 ## Social Integrations
 
