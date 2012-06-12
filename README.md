@@ -10,6 +10,7 @@ You can use, reproduce and do whatever you want with syte as long as you choose 
 [![sambao21](https://github.com/rigoneri/syte/blob/master/readme-imgs/sambao21.png?raw=true)](http://sambao21.com)
 [![keithentzeroth](https://github.com/rigoneri/syte/blob/master/readme-imgs/keithentzeroth.png?raw=true)](http://keithentzeroth.com)
 [![garrypolley](https://github.com/rigoneri/syte/blob/master/readme-imgs/garrypolley.png?raw=true)](http://garrypolley.com)
+[![aureax](https://github.com/rigoneri/syte/blob/master/readme-imgs/aureax.png?raw=true)](http://aureax.≖‿≖.ws)
 
 ## Social Integrations
 
