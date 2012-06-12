@@ -186,7 +186,27 @@
 <br>
 <h3>Setting up Github integration</h3>
 
-<p>You don't have to do anything to setup the github integration. If you want to turn off this feature just set <code>GITHUB_INTEGRATION_ENABLED</code> setting to False in syte_settings.py.</p>
+<p>Github has the same level of security as Twitter, but they don't provide a button that makes it easy to get the access token, so instead we have to get the access token ourselves. To get started sign in to github and go to <a href="https://github.com/settings/applications/new">https://github.com/settings/applications/new</a> to register your application.</p>
+
+<p>Enter the <strong><em>Application Name</em></strong>, <strong><em>Main URL</em></strong> and <strong><em>Callback URL</em></strong>. For the Callback URL enter <code>http://127.0.0.1:8000/github/auth</code> for now since we will get the access token while running it locally. Once you are done regestering your application you will be given the <strong><em>Client ID</em></strong> and <strong><em>Client Secret</em></strong>.</p>
+
+<p>Once you have those two items from Github you have to enter them in your <strong>syte_settings.py</strong> located in <code>syte &gt; syste_settings.py</code>. Once you open that file enter the following:</p>
+
+<ul>
+<li>
+<strong><em>Client ID</em></strong> under <code>GITHUB_CLIENT_ID</code>
+</li>
+<li>
+<strong><em>Client Secret</em></strong> under <code>GITHUB_CLIENT_SECRET</code>
+</li>
+</ul><p>After you have entered those two items, folow the steps below for running your Syte locally on your machine. Once you have your Syte running navigate to <code>http://127.0.0.1:8000/github/auth</code>, you will be taken to Github's website and will be asked to sign in and authorize your application. After you authorized your application you will be taken back to your Syte and you will be given your <strong><em>Access Token</em></strong></p>
+
+<p>Once you have your access token from Github you have to enter them in your <strong>syte_settings.py</strong> located in <code>syte &gt; syste_settings.py</code>. Once you open that file enter it under <code>GITHUB_ACCESS_TOKEN</code></p>
+
+<p>After you validated that your github integration worked go back to Github page and change the <strong><em>Callback URL</em></strong> field to have your domain info (this is not required), then make sure you turn off the github oauth interation setting so you don't make that available to everyone in the internet. You can do that by setting <code>GITHUB_OAUTH_ENABLED</code> to False.</p>
+
+<p>If you want to turn off github integration just set <code>GITHUB_INTEGRATION_ENABLED</code> to False.</p>
+
 <br>
 <h3>Setting up Dribbble integration</h3>
 
@@ -195,7 +215,7 @@
 
 <h3>Setting up Instagram integration</h3>
 
-<p>Instagram has the same level of security as twitter, but they don't provide a button that makes it easy to get the access token, so instead we have to get the access token ourselves. To get started go to <a href="http://instagram.com/developer/">http://instagram.com/developer/</a>, sign in and crate a new client by clicking on the <strong><em>Manage Clients</em></strong> link on the top right side.</p>
+<p>Instagram has the same level of security as Github and similar steps on getting the access token ourselves. To get started go to <a href="http://instagram.com/developer/">http://instagram.com/developer/</a>, sign in and crate a new client by clicking on the <strong><em>Manage Clients</em></strong> link on the top right side.</p>
 
 <p>Enter the <strong><em>Application Name</em></strong>, <strong><em>Description</em></strong>, <strong><em>Website</em></strong> and <strong><em>OAuth redirect_uri</em></strong>. For the OAuth redirect_uri enter <code>http://127.0.0.1:8000/instagram/auth</code> for now since we will get the access token while running it locally. Once you are done regestering your client you will be given the <strong><em>Client ID</em></strong> and <strong><em>Client Secret</em></strong>. </p>
 
