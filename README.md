@@ -141,7 +141,22 @@ If you want to turn off the twitter integration just set `TWITTER_INTEGRATION_EN
 
 ### Setting up Github integration
 
-You don't have to do anything to setup the github integration. If you want to turn off this feature just set `GITHUB_INTEGRATION_ENABLED` setting to False in syte_settings.py.
+Github has the same level of security as Twitter, but they don't provide a button that makes it easy to get the access token, so instead we have to get the access token ourselves. To get started sign in to github and go to <https://github.com/settings/applications/new> to register your application.
+
+Enter the ***Application Name***, ***Main URL*** and ***Callback URL***. For the Callback URL enter `http://127.0.0.1:8000/github/auth` for now since we will get the access token while running it locally. Once you are done regestering your application you will be given the ***Client ID*** and ***Client Secret***.
+
+Once you have those two items from Github you have to enter them in your **syte_settings.py** located in `syte > syste_settings.py`. Once you open that file enter the following:
+
+* ***Client ID*** under `GITHUB_CLIENT_ID`
+* ***Client Secret*** under `GITHUB_CLIENT_SECRET`
+
+After you have entered those two items, folow the steps below for running your Syte locally on your machine. Once you have your Syte running navigate to `http://127.0.0.1:8000/github/auth`, you will be taken to Github's website and will be asked to sign in and authorize your application. After you authorized your application you will be taken back to your Syte and you will be given your ***Access Token***
+
+Once you have your access token from Github you have to enter them in your **syte_settings.py** located in `syte > syste_settings.py`. Once you open that file enter it under `GITHUB_ACCESS_TOKEN`
+
+After you validated that your github integration worked go back to Github page and change the ***Callback URL*** field to have your domain info (this is not required), then make sure you turn off the github oauth interation setting so you don't make that available to everyone in the internet. You can do that by setting `GITHUB_OAUTH_ENABLED` to False.
+
+If you want to turn off github integration just set `GITHUB_INTEGRATION_ENABLED` to False.
 
 
 
@@ -155,7 +170,7 @@ You don't have to do anything to setup the dribbble integration. If you want to 
 
 ### Setting up Instagram integration
 
-Instagram has the same level of security as twitter, but they don't provide a button that makes it easy to get the access token, so instead we have to get the access token ourselves. To get started go to <http://instagram.com/developer/>, sign in and crate a new client by clicking on the ***Manage Clients*** link on the top right side.
+Instagram has the same level of security as Github and similar steps on getting the access token ourselves. To get started go to <http://instagram.com/developer/>, sign in and crate a new client by clicking on the ***Manage Clients*** link on the top right side.
 
 Enter the ***Application Name***, ***Description***, ***Website*** and ***OAuth redirect_uri***. For the OAuth redirect_uri enter `http://127.0.0.1:8000/instagram/auth` for now since we will get the access token while running it locally. Once you are done regestering your client you will be given the ***Client ID*** and ***Client Secret***.
 

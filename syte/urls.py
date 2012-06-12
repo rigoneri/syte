@@ -22,10 +22,16 @@ if settings.TWITTER_INTEGRATION_ENABLED:
     )
 
 #Github Integration
+if settings.GITHUB_OAUTH_ENABLED:
+    urlpatterns += patterns('',
+        url(r'^github/auth/?$', 'syte.views.github_auth'),
+    )
+
 if settings.GITHUB_INTEGRATION_ENABLED:
     urlpatterns += patterns('',
         url(r'^github/(?P<username>\w+)/?$', 'syte.views.github'),
     )
+
 
 #Dribbble Integration
 if settings.DRIBBBLE_INTEGRATION_ENABLED:

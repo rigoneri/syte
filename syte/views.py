@@ -4,11 +4,11 @@ from django.shortcuts import redirect, render
 from django.template import Context, loader
 from django.http import HttpResponse, HttpResponseServerError, Http404
 from django.conf import settings
+from urlparse import parse_qs
 
 import requests
 import json
 import oauth2 as oauth
-
 
 def server_error(request, template_name='500.html'):
     t = loader.get_template(template_name)
@@ -26,7 +26,7 @@ def home(request):
 
 
 def twitter(request, username):
-    consumer = oauth.Consumer(key=settings.TWITTER_CONSUMER_KEY, 
+    consumer = oauth.Consumer(key=settings.TWITTER_CONSUMER_KEY,
             secret=settings.TWITTER_CONSUMER_SECRET)
     token = oauth.Token(key=settings.TWITTER_USER_KEY,
             secret=settings.TWITTER_USER_SECRET)
@@ -43,15 +43,54 @@ def twitter(request, username):
              content_type=resp['content-type'])
 
 def github(request, username):
+    user_r = requests.get('{0}users/{1}?access_token={2}'.format(
+        settings.GITHUB_API_URL,
+        username,
+        settings.GITHUB_ACCESS_TOKEN))
 
-    user_r = requests.get('{0}{1}'.format(settings.GITHUB_USER_API_URL, username))
-    repos_r = requests.get('{0}{1}'.format(settings.GITHUB_REPOS_API_URL, username))
+    repos_r = requests.get('{0}users/{1}/repos?access_token={2}'.format(
+        settings.GITHUB_API_URL,
+        username,
+        settings.GITHUB_ACCESS_TOKEN))
 
-    context = json.loads(user_r.text)
-    context.update(json.loads(repos_r.text))
+    context = {'user': user_r.json}
+    context.update({'repos': repos_r.json})
 
     return HttpResponse(content=json.dumps(context), status=repos_r.status_code,
                         content_type=repos_r.headers['content-type'])
+
+def github_auth(request):
+    context = dict()
+    code = request.GET.get('code', None)
+    error = request.GET.get('error_description', None)
+
+    if not code and not error:
+        return redirect('{0}?client_id={1}&redirect_uri={2}github/auth/&response_type=code'.format(
+            settings.GITHUB_OAUTH_AUTHORIZE_URL,
+            settings.GITHUB_CLIENT_ID,
+            settings.SITE_ROOT_URI))
+
+    if code:
+        r = requests.post(settings.GITHUB_OAUTH_ACCESS_TOKEN_URL, data = {
+              'client_id': settings.GITHUB_CLIENT_ID,
+              'client_secret': settings.GITHUB_CLIENT_SECRET,
+              'redirect_uri': '{0}github/auth/'.format(settings.SITE_ROOT_URI),
+              'code': code,
+            }, headers={'Accept': 'application/json'});
+
+        try:
+            data = r.json
+            error = data.get('error', None)
+        except:
+            error = r.text
+
+        if not error:
+            context['token'] = data['access_token']
+
+    if error:
+        context['error'] = error
+
+    return render(request, 'github_auth.html', context)
 
 
 def dribbble(request, username):
