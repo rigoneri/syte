@@ -3,7 +3,7 @@ function fetchBlogPosts(post, tag) {
   var blog_fetch_url = '/blog.json';
 
   if (post)
-      blog_fetch_url = '/post/' + post;
+      blog_fetch_url = '/post/ajax/' + post;
   else if (tag)
       blog_fetch_url = '/tags/' + tag;
 

@@ -7,6 +7,7 @@ handler500 = 'syte.views.server_error'
 
 urlpatterns = patterns('',
     url(r'^post/(?P<post_id>\w+)/?$', 'syte.views.blog_post'),
+    url(r'^post/ajax/(?P<post_id>\w+)/?$', 'syte.views.blog_post_ajax'),
     url(r'^tags/(?P<tag_slug>\w+)/?$', 'syte.views.blog_tags'),
     url(r'^blog.json/?$', 'syte.views.blog'),
 
