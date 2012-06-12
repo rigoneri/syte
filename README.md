@@ -77,7 +77,7 @@ For deployment Syte uses [Heroku](http://www.heroku.com/) since it's free for 75
 
 There are a few steps in order to get Syte configured, but don't worry they are pretty easy.
 
-`Note` I recommend you branching your fork and not checking in senstive settings to github!
+`Note` I recommend you branching your fork and not checking in sensitive settings to github!
 
 ### Base content changes
 
