@@ -20,16 +20,16 @@
     </p>
   </div>
   <ul class="profile-stats">
-    <li><a href="http://github.com/{{ login }}"><strong>{{ public_repo_count }}</strong> repos</a></li>
-    <li><a href="http://github.com/{{ login }}/following"><strong>{{ following_count }}</strong> following</a></li>
-    <li><a href="http://github.com/{{ login }}/followers"><strong>{{ followers_count }}</strong> followers</a></li>
+    <li><a href="http://github.com/{{ login }}"><strong>{{ public_repos }}</strong> repos</a></li>
+    <li><a href="http://github.com/{{ login }}/following"><strong>{{ following }}</strong> following</a></li>
+    <li><a href="http://github.com/{{ login }}/followers"><strong>{{ followers }}</strong> followers</a></li>
   </ul>
   <div class="profile-info-footer">
     <a href="http://github.com/{{ login }}" class="btn">Follow on Github</a>
   </div>
   {{/with}}
   <ul class="profile-repos">
-    {{#each repositories}}
+    {{#each repos}}
     <li>
     <a href="{{ url }}" class="profile-repo-name">{{ name }}</a>
     <p class="profile-repo-text">
