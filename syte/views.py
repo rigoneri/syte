@@ -68,6 +68,10 @@ def blog(request):
 
 
 def blog_post(request, post_id):
+    return render(request, 'index.html', {'post_id': post_id})
+
+
+def blog_post_ajax(request, post_id):
     if request.is_ajax():
         r = requests.get('{0}/posts?api_key={1}&id={2}'.format(settings.TUMBLR_API_URL,
             settings.TUMBLR_API_KEY, post_id))
@@ -75,6 +79,8 @@ def blog_post(request, post_id):
                         content_type=r.headers['content-type'])
 
     return render(request, 'index.html', {'post_id': post_id})
+
+
 
 
 def blog_tags(request, tag_slug):
