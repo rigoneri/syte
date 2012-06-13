@@ -18,7 +18,9 @@ You can use, reproduce and do whatever you want with syte but I would like you t
 [![aureax](https://github.com/rigoneri/syte/blob/master/readme-imgs/aureax.png?raw=true)](http://aureax.xn--hwg34fba.ws)
 [![evilfaeton](https://github.com/rigoneri/syte/blob/master/readme-imgs/evilfaeton.png?raw=true)](http://evilfaeton.com)
 [![eveiga](https://github.com/rigoneri/syte/blob/master/readme-imgs/eveiga.png?raw=true)](http://eveiga.herokuapp.com)
-[![mikaelo](https://github.com/rigoneri/syte/blob/master/readme-imgs/mikaelo.png?raw=true)](http://mikaelo.herokuapp.com/)
+[![mikaelo](https://github.com/rigoneri/syte/blob/master/readme-imgs/mikaelo.png?raw=true)](http://mikaelo.herokuapp.com)
+[![mikehodgson](https://github.com/rigoneri/syte/blob/master/readme-imgs/mikehodgson.png?raw=true)](http://mikehodgson.com)
+
 
 
 ## Social Integrations
