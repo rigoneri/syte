@@ -21,6 +21,7 @@ You can use, reproduce and do whatever you want with syte but I would like you t
 [![mikaelo](https://github.com/rigoneri/syte/blob/master/readme-imgs/mikaelo.png?raw=true)](http://mikaelo.herokuapp.com)
 [![mikehodgson](https://github.com/rigoneri/syte/blob/master/readme-imgs/mikehodgson.png?raw=true)](http://mikehodgson.com)
 [![charliekey](https://github.com/rigoneri/syte/blob/master/readme-imgs/charliekey.png?raw=true)](http://charliekey.me)
+[![nurihodges](https://github.com/rigoneri/syte/blob/master/readme-imgs/nurihodges.png?raw=true)](http://nurihodges.herokuapp.com)
 
 
 
@@ -152,7 +153,7 @@ Github has the same level of security as Twitter, but they don't provide a butto
 
 Enter the ***Application Name***, ***Main URL*** and ***Callback URL***. For the Callback URL enter `http://127.0.0.1:8000/github/auth` for now since we will get the access token while running it locally. Once you are done regestering your application you will be given the ***Client ID*** and ***Client Secret***.
 
-Once you have those two items from Github you have to enter them in your **syte_settings.py** located in `syte > syste_settings.py`. Once you open that file enter the following:
+Once you have those two items from Github you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
 
 * ***Client ID*** under `GITHUB_CLIENT_ID`
 * ***Client Secret*** under `GITHUB_CLIENT_SECRET`
