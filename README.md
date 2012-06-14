@@ -22,7 +22,7 @@ You can use, reproduce and do whatever you want with syte but I would like you t
 [![mikehodgson](https://github.com/rigoneri/syte/blob/master/readme-imgs/mikehodgson.png?raw=true)](http://mikehodgson.com)
 [![charliekey](https://github.com/rigoneri/syte/blob/master/readme-imgs/charliekey.png?raw=true)](http://charliekey.me)
 [![andrewthebold](https://github.com/rigoneri/syte/blob/master/readme-imgs/andrewthebold.png?raw=true)](http://atb.herokuapp.com/)
-
+[![BobuSumisu](https://github.com/rigoneri/syte/blob/master/readme-imgs/oyvind-ingvaldsen.png?raw=true)](http://oyvind-ingvaldsen.net)
 
 
 ## Social Integrations
