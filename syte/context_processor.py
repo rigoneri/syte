@@ -8,7 +8,9 @@ def site_pages(request):
 
     context['COMPRESS_REVISION_NUMBER'] = settings.COMPRESS_REVISION_NUMBER
     context['MEDIA_URL'] = settings.MEDIA_URL
+    context['RSS_FEED_URL'] = settings.RSS_FEED_URL
 
+    context['RSS_FEED_ENABLED'] = settings.RSS_FEED_ENABLED
     context['TWITTER_INTEGRATION_ENABLED'] = settings.TWITTER_INTEGRATION_ENABLED
     context['GITHUB_INTEGRATION_ENABLED'] = settings.GITHUB_INTEGRATION_ENABLED
     context['DRIBBBLE_INTEGRATION_ENABLED'] = settings.DRIBBBLE_INTEGRATION_ENABLED
