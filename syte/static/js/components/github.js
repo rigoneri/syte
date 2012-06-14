@@ -19,7 +19,7 @@ function setupGithub(url, el) {
      var spinner = new Spinner(spin_opts).spin();
      $('#github-link').append(spinner.el);
 
-     require(["json!/github/" + username, "text!templates/github-profile-view.html"],
+     require(["json!/github/" + username, "text!templates/github-profile.html"],
         function(github_data, github_view) {
             if (github_data.error || github_data.length == 0) {
                 window.location = href;
