@@ -31,14 +31,14 @@
   <ul class="profile-repos">
     {{#each repos}}
     <li>
-    <a href="{{ url }}" class="profile-repo-name">{{ name }}</a>
+    <a href="{{ html_url }}" class="profile-repo-name">{{ name }}</a>
     <p class="profile-repo-text">
       {{ description }}
     </p>
     <ul class="profile-repo-stats">
       <li>{{ language }}</li>
-      <li><a href="{{ url }}/watchers" class="profile-watchers">{{ watchers }}</a></li>
-      <li><a href="{{ url }}/network" class="profile-forks">{{ forks }}</a></li>
+      <li><a href="{{ html_url }}/watchers" class="profile-watchers">{{ watchers }}</a></li>
+      <li><a href="{{ html_url }}/network" class="profile-forks">{{ forks }}</a></li>
     </ul>
     </li>
     {{/each}}
