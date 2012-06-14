@@ -4,7 +4,7 @@ Syte is a really simple but powerful packaged personal site that has social inte
 
 ### There is only one rule
 
-You can use, reproduce and do whatever you want with syte but I would like you to choose a different adjacent color as the ones used by the people below. Once you have chosen your color and deployed your Syte based site, please send a pull request with an image of you containing the color on the border like the ones below. The image needs to bee 60x60 px.
+You can use, reproduce and do whatever you want with syte but I would like you to choose a different adjacent color as the ones used by the people below. Once you have chosen your color and deployed your Syte based site, please send a pull request with an image of you containing the color on the border like the ones below. The image needs to be 60x60 px.
 
 [![rigoneri](https://github.com/rigoneri/syte/blob/master/readme-imgs/rigoneri.png?raw=true)](http://rigoneri.com)
 [![sambao21](https://github.com/rigoneri/syte/blob/master/readme-imgs/sambao21.png?raw=true)](http://sambao21.com)
@@ -24,6 +24,8 @@ You can use, reproduce and do whatever you want with syte but I would like you t
 [![andrewthebold](https://github.com/rigoneri/syte/blob/master/readme-imgs/andrewthebold.png?raw=true)](http://atb.herokuapp.com/)
 [![BobuSumisu](https://github.com/rigoneri/syte/blob/master/readme-imgs/oyvind-ingvaldsen.png?raw=true)](http://oyvind-ingvaldsen.net)
 [![nurihodges](https://github.com/rigoneri/syte/blob/master/readme-imgs/nurihodges.png?raw=true)](http://nurihodges.herokuapp.com)
+[![markwatson](https://github.com/rigoneri/syte/blob/master/readme-imgs/mrkrwtsn.png?raw=true)](http://markwatson.us)
+[![manavo](https://github.com/rigoneri/syte/blob/master/readme-imgs/manavo.png?raw=true)](http://manavo.com)
 
 
 ## Social Integrations
