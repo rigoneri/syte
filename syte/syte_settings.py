@@ -7,6 +7,9 @@ TUMBLR_BLOG_URL = '[ENTER TUMBLR BLOG URL] ex. rigoneri.tumblr.com'
 TUMBLR_API_URL = 'http://api.tumblr.com/v2/blog/{0}'.format(TUMBLR_BLOG_URL)
 TUMBLR_API_KEY = '[ENTER TUMBLR API KEY HERE, SEE TUMBLR SETUP INSTRUCTIONS]'
 
+#RSS Feed Integration: (by default use Tumbrl rss feed)
+RSS_FEED_ENABLED = True
+RSS_FEED_URL = 'http://{0}/rss'.format(TUMBLR_BLOG_URL)
 
 #Twitter Integration
 TWITTER_INTEGRATION_ENABLED = True

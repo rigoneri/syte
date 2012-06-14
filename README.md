@@ -4,7 +4,7 @@ Syte is a really simple but powerful packaged personal site that has social inte
 
 ### There is only one rule
 
-You can use, reproduce and do whatever you want with syte but I would like you to choose a different adjacent color as the ones used by the people below. Once you have chosen your color and deployed your Syte based site, please send a pull request with an image of you containing the color on the border like the ones below. The image needs to bee 60x60 px.
+You can use, reproduce and do whatever you want with syte but I would like you to choose a different adjacent color as the ones used by the people below. Once you have chosen your color and deployed your Syte based site, please send a pull request with an image of you containing the color on the border like the ones below. The image needs to be 60x60 px.
 
 [![rigoneri](https://github.com/rigoneri/syte/blob/master/readme-imgs/rigoneri.png?raw=true)](http://rigoneri.com)
 [![sambao21](https://github.com/rigoneri/syte/blob/master/readme-imgs/sambao21.png?raw=true)](http://sambao21.com)
@@ -21,8 +21,11 @@ You can use, reproduce and do whatever you want with syte but I would like you t
 [![mikaelo](https://github.com/rigoneri/syte/blob/master/readme-imgs/mikaelo.png?raw=true)](http://mikaelo.herokuapp.com)
 [![mikehodgson](https://github.com/rigoneri/syte/blob/master/readme-imgs/mikehodgson.png?raw=true)](http://mikehodgson.com)
 [![charliekey](https://github.com/rigoneri/syte/blob/master/readme-imgs/charliekey.png?raw=true)](http://charliekey.me)
+[![andrewthebold](https://github.com/rigoneri/syte/blob/master/readme-imgs/andrewthebold.png?raw=true)](http://atb.herokuapp.com/)
+[![BobuSumisu](https://github.com/rigoneri/syte/blob/master/readme-imgs/oyvind-ingvaldsen.png?raw=true)](http://oyvind-ingvaldsen.net)
+[![nurihodges](https://github.com/rigoneri/syte/blob/master/readme-imgs/nurihodges.png?raw=true)](http://nurihodges.herokuapp.com)
+[![markwatson](https://github.com/rigoneri/syte/blob/master/readme-imgs/mrkrwtsn.png?raw=true)](http://markwatson.us)
 [![manavo](https://github.com/rigoneri/syte/blob/master/readme-imgs/manavo.png?raw=true)](http://manavo.com)
-
 
 
 ## Social Integrations
@@ -153,7 +156,7 @@ Github has the same level of security as Twitter, but they don't provide a butto
 
 Enter the ***Application Name***, ***Main URL*** and ***Callback URL***. For the Callback URL enter `http://127.0.0.1:8000/github/auth` for now since we will get the access token while running it locally. Once you are done regestering your application you will be given the ***Client ID*** and ***Client Secret***.
 
-Once you have those two items from Github you have to enter them in your **syte_settings.py** located in `syte > syste_settings.py`. Once you open that file enter the following:
+Once you have those two items from Github you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
 
 * ***Client ID*** under `GITHUB_CLIENT_ID`
 * ***Client Secret*** under `GITHUB_CLIENT_SECRET`
