@@ -1,6 +1,6 @@
+var $url;
 
 function setupLinks() {
-  var $url;
 
   $('a').click(function(e) {
       if (e.which == 2)
@@ -71,5 +71,8 @@ function setupLinks() {
 function adjustSelection(el) {
   $('.main-nav').children('li').removeClass('sel');
   $('#' + el).parent().addClass('sel');
+
+  if (el == 'home-link')
+    $url = null;
 }
 
