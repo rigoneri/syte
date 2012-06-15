@@ -2,6 +2,9 @@
 function setupLinks() {
 
   $('a').click(function(e) {
+      if (e.which == 2)
+          return;
+
       e.preventDefault();
       e.stopPropagation();
 
