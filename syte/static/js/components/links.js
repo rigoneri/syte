@@ -1,5 +1,6 @@
 
 function setupLinks() {
+  var $url;
 
   $('a').click(function(e) {
       if (e.which == 2)
@@ -8,7 +9,11 @@ function setupLinks() {
       e.preventDefault();
       e.stopPropagation();
 
+      if (this.href == $url)
+          return;
+
       var url = $.url(this.href.replace('/#!', ''));
+      $url = this.href;
 
       if (this.id == 'home-link' && window.location.pathname == '/') {
          $('#github-profile').remove();
