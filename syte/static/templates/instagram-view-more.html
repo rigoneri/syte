@@ -1,0 +1,25 @@
+{{#each media}}
+<li>
+  <a href="{{ link }}" class="profile-shot">
+    {{#with images}}
+     {{#with low_resolution }}
+     <img src="{{ url }}" alt="Instagram Picture" />
+     {{/with}}
+    {{/with}}
+  </a>
+   <span class="profile-shot-title">
+  {{#if caption}}
+  {{#with caption}}
+    {{ text }}
+  {{/with}}
+  {{else}}
+  Untitled
+  {{/if}}
+  </span>
+  <ul class="profile-shot-stats">
+    {{#with likes}}<li><span class="profile-likes">{{ count }}</span></li>{{/with}}
+    <li class="profile-shot-date">{{ formated_date }}</li>
+  </ul>
+</li>
+{{/each}}
+

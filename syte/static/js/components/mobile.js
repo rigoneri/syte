@@ -1,6 +1,6 @@
 
 var isMobileView = false;
-var mediaQuery = window.matchMedia("(max-width:600px)");
+var mediaQuery = window.matchMedia("(max-width:799px)");
 
 if (mediaQuery.matches) {
     isMobileView = true;

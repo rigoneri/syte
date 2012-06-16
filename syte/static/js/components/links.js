@@ -1,23 +1,42 @@
+var $url;
 
 function setupLinks() {
 
   $('a').click(function(e) {
+      if (e.which == 2)
+          return;
+
       e.preventDefault();
       e.stopPropagation();
 
+      if (this.href == $url)
+          return;
+
       var url = $.url(this.href.replace('/#!', ''));
+      $url = this.href;
 
       if (this.id == 'home-link' && window.location.pathname == '/') {
          $('#github-profile').remove();
          $('#dribbble-profile').remove();
          $('#twitter-profile').remove();
+         $('#instagram-profile').remove();
          $('.modal-backdrop').remove();
          adjustSelection('home-link');
+      }
+      else if(this.id == 'instagram-link' && instagram_integration_enabled) {
+         $('#github-profile').remove();
+         $('#dribbble-profile').remove();
+         $('#twitter-profile').remove();
+         $('.modal-backdrop').remove();
+         adjustSelection('instagram-link');
+
+         setupInstagram(this);
       }
       else if (twitter_integration_enabled && (url.attr('host') == 'twitter.com' || url.attr('host') == 'www.twitter.com')) {
 
          $('#github-profile').remove();
          $('#dribbble-profile').remove();
+         $('#instagram-profile').remove();
          $('.modal-backdrop').remove();
          adjustSelection('twitter-link');
 
@@ -27,6 +46,7 @@ function setupLinks() {
 
         $('#twitter-profile').remove();
         $('#dribbble-profile').remove();
+        $('#instagram-profile').remove();
         $('.modal-backdrop').remove();
         adjustSelection('github-link');
 
@@ -36,6 +56,7 @@ function setupLinks() {
 
          $('#twitter-profile').remove();
          $('#github-profile').remove();
+         $('#instagram-profile').remove();
          $('.modal-backdrop').remove();
          adjustSelection('dribbble-link');
 
@@ -50,5 +71,8 @@ function setupLinks() {
 function adjustSelection(el) {
   $('.main-nav').children('li').removeClass('sel');
   $('#' + el).parent().addClass('sel');
+
+  if (el == 'home-link')
+    $url = null;
 }
 

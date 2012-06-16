@@ -102,7 +102,7 @@
   li {
     display: inline;
 
-    a {
+    a, span {
       float: left;
       padding: 7px 15px;
       color: #777;
@@ -272,7 +272,7 @@
   }
 }
 
-//Dribbble Profile
+//Dribbble & Instagram Profiles
 .profile-shots {
   list-style: none;
   margin: 0;
@@ -308,6 +308,9 @@
   font-size: 13px;
   line-height: 18px;
   color: @alternate-text-color;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .profile-shot-stats {
@@ -326,6 +329,9 @@
     zoom: 1;
     *display: inline;
   }
+  li:first-child a, li:first-child span {
+    margin-left: 0;
+  }
 
   a {
     border-bottom: 0;
@@ -335,8 +341,14 @@
     border-bottom: 0;
     color: @adjacent-color;
   }
+}
 
-  .profile-watchers {
-    margin-left: 0;
-  }
+.profile-shot-date {
+  float: right;
+  color: #999;
+}
+
+.instagram .profile-shot img {
+  width: 300px;
+  height: 300px;
 }

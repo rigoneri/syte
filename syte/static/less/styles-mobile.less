@@ -1,4 +1,4 @@
-@media (max-width: 600px) {
+@media (max-width: 799px) {
 
   body {
     background: #E9E9E9 url('/static/imgs/b.png');
@@ -50,7 +50,7 @@
      }
   }
 
-  .main-header {
+  header.main-header {
     position: absolute;
 
 
@@ -101,6 +101,7 @@
          padding: 5px 0;
          border: 0;
          font-weight: 300;
+         display: block;
       }
     }
 
@@ -133,7 +134,7 @@
     &.fade.in, &.fade-large.in { left: 0; }
   }
 
-  .profile.twitter, .profile.github, .profile.dribbble {
+  .profile.twitter, .profile.github, .profile.dribbble, .profile.instagram {
     overflow: scroll;
   }
 
@@ -155,6 +156,11 @@
       width: 280px;
       height: 210px;
     }
+  }
+
+  .instagram .profile-shot img {
+     width: 280px;
+     height: 280px;
   }
 
 }

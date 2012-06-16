@@ -7,6 +7,7 @@ handler500 = 'syte.views.server_error'
 
 urlpatterns = patterns('',
     url(r'^post/(?P<post_id>\w+)/?$', 'syte.views.blog_post'),
+    url(r'^post/ajax/(?P<post_id>\w+)/?$', 'syte.views.blog_post_ajax'),
     url(r'^tags/(?P<tag_slug>\w+)/?$', 'syte.views.blog_tags'),
     url(r'^blog.json/?$', 'syte.views.blog'),
 
@@ -21,16 +22,36 @@ if settings.TWITTER_INTEGRATION_ENABLED:
     )
 
 #Github Integration
+if settings.GITHUB_OAUTH_ENABLED:
+    urlpatterns += patterns('',
+        url(r'^github/auth/?$', 'syte.views.github_auth'),
+    )
+
 if settings.GITHUB_INTEGRATION_ENABLED:
     urlpatterns += patterns('',
         url(r'^github/(?P<username>\w+)/?$', 'syte.views.github'),
     )
+
 
 #Dribbble Integration
 if settings.DRIBBBLE_INTEGRATION_ENABLED:
     urlpatterns += patterns('',
         url(r'^dribbble/(?P<username>\w+)/?$', 'syte.views.dribbble'),
     )
+
+#Instagram Oauth
+if settings.INSTAGRAM_OAUTH_ENABLED:
+    urlpatterns += patterns('',
+        url(r'^instagram/auth/?$', 'syte.views.instagram_auth'),
+    )
+
+if settings.INSTAGRAM_INTEGRATION_ENABLED:
+    urlpatterns += patterns('',
+        url(r'^instagram/(?P<max_id>\w+)/?$', 'syte.views.instagram_next'),
+        url(r'^instagram/?$', 'syte.views.instagram'),
+    )
+
+
 
 #Statics: Hacky for now... fix this later...
 urlpatterns += patterns('',
@@ -39,6 +60,7 @@ urlpatterns += patterns('',
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': settings.MEDIA_ROOT}),
 )
+
 
 
 
