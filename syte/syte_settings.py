@@ -55,6 +55,6 @@ if DEPLOYMENT_MODE == 'dev':
     DEBUG = True
 else:
     DEBUG = False
-    SITE_ROOT_URI = 'http://quiet-galaxy-5475.herokuapp.com/'
+    SITE_ROOT_URI = 'http://simple-spring-5545.herokuapp.com/'
 
 MEDIA_URL = SITE_ROOT_URI + 'static/'
