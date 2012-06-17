@@ -30,10 +30,6 @@ function setupTwitter(url, el) {
 
             var tweets = [];
             $.each(twitter_data, function(i, t) {
-              if (i > 3)
-                return;
-
-              //'ddd MMM DD HH:mm:ss ZZ YYYY'
               t.formated_date = moment(t.created_at).fromNow();
               t.f_text = twitterLinkify(t.text);
               tweets.push(t);
