@@ -253,7 +253,7 @@ sudo npm install less -g
 sudo npm install uglify-js -g
 ```
 
-`Note` be sure to create the directories `syte > static > css` and `syte > static > js > min` first if it doesn't already exist.
+`Note` windows users be sure to create the directories `syte > static > css` and `syte > static > js > min` first if it doesn't already exist.
 
 Then whenever you want to release a new version of static update the `COMPRESS_REVISION_NUMBER` in **syte-settings.py** and run the compress python command from your syte directory:
 
