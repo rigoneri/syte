@@ -49,12 +49,10 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript">
-/*<![CDATA[*/
 var twitter_integration_enabled = {% if TWITTER_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
     github_integration_enabled = {% if GITHUB_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
     dribbble_integration_enabled = {% if DRIBBBLE_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
     instagram_integration_enabled = {% if INSTAGRAM_INTEGRATION_ENABLED %}true{% else %}false{% endif %};
-/*]]>*/
 </script>
 
 {% if DEV_DEPLOYMENT_MODE %}
@@ -82,9 +80,18 @@ var twitter_integration_enabled = {% if TWITTER_INTEGRATION_ENABLED %}true{% els
 
 {% block extra_js %}{% endblock %}
 <script type="text/javascript">
-/*<![CDATA[*/
 {% block extra_inline_js %}{% endblock %}
-/*]]>*/
+
+{% if GOOGLE_ANALYTICS_TRACKING_ID %}
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', '{{GOOGLE_ANALYTICS_TRACKING_ID}}']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+{% endif %}
 </script>
 </body>
 
