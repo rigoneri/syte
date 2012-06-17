@@ -1,10 +1,8 @@
 
-function fetchBlogPosts(post, tag) {
+function fetchBlogPosts(tag) {
   var blog_fetch_url = '/blog.json';
 
-  if (post)
-      blog_fetch_url = '/post/ajax/' + post;
-  else if (tag)
+  if (tag)
       blog_fetch_url = '/tags/' + tag;
 
   $.getJSON(blog_fetch_url, function(blog_posts) {

@@ -4,7 +4,10 @@ from django.shortcuts import redirect, render
 from django.template import Context, loader
 from django.http import HttpResponse, HttpResponseServerError, Http404
 from django.conf import settings
+from pybars import Compiler
+from datetime import datetime
 
+import os
 import requests
 import json
 import oauth2 as oauth
@@ -106,19 +109,31 @@ def blog(request):
 
 
 def blog_post(request, post_id):
-    return render(request, 'index.html', {'post_id': post_id})
+    context = dict()
 
-
-def blog_post_ajax(request, post_id):
-    if request.is_ajax():
-        r = requests.get('{0}/posts?api_key={1}&id={2}'.format(settings.TUMBLR_API_URL,
+    r = requests.get('{0}/posts?api_key={1}&id={2}'.format(settings.TUMBLR_API_URL,
             settings.TUMBLR_API_KEY, post_id))
-        return HttpResponse(content=r.text, status=r.status_code,
-                        content_type=r.headers['content-type'])
 
-    return render(request, 'index.html', {'post_id': post_id})
+    if r.status_code == 200:
+        post_response = r.json.get('response', {})
+        posts = post_response.get('posts', [])
 
+        if posts:
+            post = posts[0]
+            f_date = datetime.strptime(post['date'], '%Y-%m-%d %H:%M:%S %Z')
+            post['formated_date'] = f_date.strftime('%B %d, %Y')
 
+            path_to_here = os.path.abspath(os.path.dirname(__file__))
+            f = open('{0}/static/templates/blog-post-{1}.html'.format(path_to_here, post['type']), 'r')
+            f_data = f.read()
+            f.close()
+
+            compiler = Compiler()
+            template = compiler.compile(unicode(f_data))
+            context['post_data'] = template(post)
+            context['post_title'] = post['title']
+
+    return render(request, 'blog-post.html', context)
 
 
 def blog_tags(request, tag_slug):
