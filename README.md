@@ -27,6 +27,9 @@ You can use, reproduce and do whatever you want with syte but I would like you t
 [![markwatson](https://github.com/rigoneri/syte/blob/master/readme-imgs/mrkrwtsn.png?raw=true)](http://markwatson.us)
 [![manavo](https://github.com/rigoneri/syte/blob/master/readme-imgs/manavo.png?raw=true)](http://manavo.com)
 [![rshepherd](https://github.com/rigoneri/syte/blob/master/readme-imgs/rshepherd.png?raw=true)](http://rshepherd.org)
+[![wavendano](https://github.com/rigoneri/syte/blob/master/readme-imgs/wavendano.png?raw=true)](http://willieavendano.me)
+[![yurytsukerman](https://github.com/rigoneri/syte/blob/master/readme-imgs/yurytsukerman.png?raw=true)](http://yurytsukerman.com)
+[![javisoto](https://github.com/rigoneri/syte/blob/master/readme-imgs/javisoto.png?raw=true)](http://www.javisoto.es)
 
 
 ## Social Integrations
