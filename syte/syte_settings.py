@@ -1,6 +1,6 @@
 
 DEPLOYMENT_MODE = 'dev'
-COMPRESS_REVISION_NUMBER = '1.2'
+COMPRESS_REVISION_NUMBER = '1.3'
 
 #Blog Integration: Tumblr
 TUMBLR_BLOG_URL = 'arnonate.tumblr.com'
