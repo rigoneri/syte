@@ -51,7 +51,7 @@ INSTAGRAM_OAUTH_ACCESS_TOKEN_URL = 'https://api.instagram.com/oauth/access_token
 
 
 #Google Analytics
-GOOGLE_ANALYTICS_TRACKING_ID = ''
+GOOGLE_ANALYTICS_TRACKING_ID = 'UA-28905768-1'
 
 
 if DEPLOYMENT_MODE == 'prod':
