@@ -64,4 +64,3 @@ INSTALLED_APPS = (
 )
 
 from syte_settings import *
-
