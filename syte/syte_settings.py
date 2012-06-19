@@ -1,5 +1,5 @@
 
-DEPLOYMENT_MODE = 'dev'
+DEPLOYMENT_MODE = 'prod'
 COMPRESS_REVISION_NUMBER = '1.3'
 
 #Blog Integration: Tumblr
@@ -54,11 +54,11 @@ INSTAGRAM_OAUTH_ACCESS_TOKEN_URL = 'https://api.instagram.com/oauth/access_token
 GOOGLE_ANALYTICS_TRACKING_ID = 'UA-28905768-1'
 
 
-if DEPLOYMENT_MODE == 'prod':
+if DEPLOYMENT_MODE == 'dev':
     SITE_ROOT_URI = 'http://127.0.0.1:8000/'
     DEBUG = True
 else:
     DEBUG = False
-    SITE_ROOT_URI = 'http://this.natearnold.me/'
+    SITE_ROOT_URI = 'http://arnonate.herokuapp.com/'
 
 MEDIA_URL = SITE_ROOT_URI + 'static/'
