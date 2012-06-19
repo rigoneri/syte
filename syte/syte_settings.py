@@ -59,6 +59,6 @@ if DEPLOYMENT_MODE == 'prod':
     DEBUG = True
 else:
     DEBUG = False
-    SITE_ROOT_URI = 'http://natearnold.me/'
+    SITE_ROOT_URI = 'http://arnonate.herokuapp.com/'
 
 MEDIA_URL = SITE_ROOT_URI + 'static/'
