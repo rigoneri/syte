@@ -11,10 +11,21 @@ var _embed_disqus_count = function () {
     (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
 }
 
+var on_element_ready = function(selector, fn) {
+    // since the blog templates may be loaded dynamically we need to
+    // wait for the selectors to appear before running disqus code
+    var check = function() {
+        if ($(selector).length > 0) return fn();
+        setTimeout(check, 100);
+    }
+    
+    check();
+}
+
 var embed_disqus = function() {
-    setTimeout(_embed_disqus, 500);
+    on_element_ready('#disqus_thread', _embed_disqus);
 }
 
 var embed_disqus_count = function() {
-    setTimeout(_embed_disqus_count, 500);
+    on_element_ready('.comments', _embed_disqus_count);
 }
