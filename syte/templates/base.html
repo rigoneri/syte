@@ -53,6 +53,7 @@ var twitter_integration_enabled = {% if TWITTER_INTEGRATION_ENABLED %}true{% els
     github_integration_enabled = {% if GITHUB_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
     dribbble_integration_enabled = {% if DRIBBBLE_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
     instagram_integration_enabled = {% if INSTAGRAM_INTEGRATION_ENABLED %}true{% else %}false{% endif %};
+{% if DISQUS_INTEGRATION_ENABLED %}var disqus_shortname = '{{ DISQUS_SHORTNAME }}';{% endif %}
 </script>
 
 {% if DEV_DEPLOYMENT_MODE %}
@@ -73,6 +74,7 @@ var twitter_integration_enabled = {% if TWITTER_INTEGRATION_ENABLED %}true{% els
 {% if GITHUB_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/github.js"></script>{% endif %}
 {% if DRIBBBLE_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/dribbble.js"></script>{% endif %}
 {% if INSTAGRAM_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/instagram.js"></script>{% endif %}
+{% if DISQUS_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/disqus.js"></script>{% endif %}
 
 {% else %}
 <script src="{{ MEDIA_URL }}js/min/scripts-{{ COMPRESS_REVISION_NUMBER }}.min.js"></script>
