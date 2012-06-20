@@ -8,5 +8,8 @@
 {% block extra_inline_js %}
 $(function() {
   adjustBlogHeaders();
+  {% if DISQUS_INTEGRATION_ENABLED %}
+  embed_disqus();
+  {% endif %}
 });
 {% endblock %}

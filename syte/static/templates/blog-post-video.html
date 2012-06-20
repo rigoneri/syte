@@ -6,14 +6,17 @@
   <p>
     <a href="{{ permalink_url }}" class="no-border"><img src="{{ thumbnail_url }}" /></a>
   </p>
-  {{#if tags }}
   <footer>
+    {{#if tags }}
     <h4>Tags</h4>
     <ul class="tags">
       {{#each tags}}
       <li><a href="/tags/{{ this }}">{{ this }}</a></li>
       {{/each}}
     </ul>
+    {{/if}}
+    
+    <a href="/post/{{ id }}#disqus_thread"></a>
+    <div id="disqus_thread"></div>
   </footer>
-  {{/if}}
 </article>

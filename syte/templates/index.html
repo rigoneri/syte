@@ -11,6 +11,9 @@ $(function() {
   {% else %}
   fetchBlogPosts();
   {% endif %}
+  {% if DISQUS_INTEGRATION_ENABLED %}
+  embed_disqus_count();
+  {% endif %}
 });
 {% endblock %}
 

@@ -63,7 +63,8 @@ def compress_js():
     if settings.INSTAGRAM_INTEGRATION_ENABLED:
         js_files.append('components/instagram.js')
 
-
+    if settings.DISQUS_INTEGRATION_ENABLED:
+        js_files.append('components/disqus.js')
 
     combined = ''
     for js in js_files:
