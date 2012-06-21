@@ -123,6 +123,9 @@ def blog_post(request, post_id):
             f_date = datetime.strptime(post['date'], '%Y-%m-%d %H:%M:%S %Z')
             post['formated_date'] = f_date.strftime('%B %d, %Y')
 
+            if settings.DISQUS_INTEGRATION_ENABLED:
+                post['disqus_enabled'] = True
+
             path_to_here = os.path.abspath(os.path.dirname(__file__))
             f = open('{0}/static/templates/blog-post-{1}.html'.format(path_to_here, post['type']), 'r')
             f_data = f.read()

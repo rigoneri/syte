@@ -11,7 +11,10 @@ $(function() {
   {% else %}
   fetchBlogPosts();
   {% endif %}
+  {% if DISQUS_INTEGRATION_ENABLED %}
+  $('body').bind('blog-post-loaded', function() {
+    embedDisqus(true);
+  });
+  {% endif %}
 });
 {% endblock %}
-
-
