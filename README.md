@@ -33,6 +33,7 @@ You can use, reproduce and do whatever you want with syte but I would like you t
 [![joneisen](https://github.com/rigoneri/syte/blob/master/readme-imgs/joneisen.png?raw=true)](http://www.joneisen.me)
 [![natetarrh](https://github.com/rigoneri/syte/blob/master/readme-imgs/natetarrh.png?raw=true)](http://www.natetarrh.com)
 [![arnonate](https://github.com/rigoneri/syte/blob/master/readme-imgs/arnonate.png?raw=true)](http://natearnold.me)
+[![martindale](https://github.com/rigoneri/syte/blob/master/readme-imgs/eric-martindale.png?raw=true)](http://www.ericmartindale.com)
 
 
 ## Social Integrations
