@@ -144,6 +144,7 @@
         padding: 2px;
         border: 1px solid #C2C2C2;
         margin: 0px 15px 5px 0px;
+        max-width: 700px;
       }
 
       a.img-link {
@@ -176,7 +177,7 @@
 
 .tags {
   list-style: none;
-  margin: 0;
+  margin: 0 0 10px 0;
 
   li {
     display: inline-block;
@@ -199,6 +200,10 @@
     text-shadow: none;
     border: 1px solid @adjacent-color;
   }
+}
+
+.disqus-thread a {
+  border-bottom: 0;
 }
 
 .mobile-nav {
@@ -237,7 +242,7 @@
     nav { margin-top: 15px; }
 
     .picture {
-        display: none;
+      display: none;
     }
   }
 
@@ -245,18 +250,17 @@
 
 @media (max-width: 800px) {
   .blog-section article {
-      width: 400px;
+    width: 400px;
 
-      img { max-width: 400px; }
+    img { max-width: 400px; }
   }
 }
 
-
 @media (min-width: 801px) and (max-width: 1024px) {
   .blog-section article {
-      width: 500px;
+    width: 500px;
 
-      img { max-width: 400px; }
+    img { max-width: 400px; }
   }
 }
 

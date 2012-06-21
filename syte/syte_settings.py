@@ -13,7 +13,7 @@ RSS_FEED_URL = 'http://{0}/rss'.format(TUMBLR_BLOG_URL)
 
 #Twitter Integration
 TWITTER_INTEGRATION_ENABLED = True
-TWITTER_API_URL = 'http://api.twitter.com/1/statuses/user_timeline.json?include_rts=false&exclude_replies=true&screen_name='
+TWITTER_API_URL = 'http://api.twitter.com/1/statuses/user_timeline.json?include_rts=false&exclude_replies=true&count=50&screen_name='
 TWITTER_CONSUMER_KEY = '[ENTER TWITTER CONSUMER KEY HERE, SEE TWITTER SETUP INSTRUCTIONS]'
 TWITTER_CONSUMER_SECRET = '[ENTER TWITTER CONSUMER SECRET HERE, SEE TWITTER SETUP INSTRUCTIONS]'
 TWITTER_USER_KEY = '[ENTER TWITTER USER KEY HERE, SEE TWITTER SETUP INSTRUCTIONS]'
@@ -48,6 +48,16 @@ INSTAGRAM_CLIENT_ID = '[ENTER INSTAGRAM CLIENT_ID HERE, SEE INSTAGRAM SETUP INST
 INSTAGRAM_CLIENT_SECRET = '[ENTER INSTAGRAM CLIENT_SECRET HERE, SEE INSTAGRAM SETUP INSTRUCTIONS]'
 INSTAGRAM_OAUTH_AUTHORIZE_URL = 'https://api.instagram.com/oauth/authorize'
 INSTAGRAM_OAUTH_ACCESS_TOKEN_URL = 'https://api.instagram.com/oauth/access_token'
+
+
+#Google Analytics
+GOOGLE_ANALYTICS_TRACKING_ID = ''
+
+
+#Disqus Integration
+DISQUS_INTEGRATION_ENABLED = False
+DISQUS_SHORTNAME = ''
+
 
 
 if DEPLOYMENT_MODE == 'dev':

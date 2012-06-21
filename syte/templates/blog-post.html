@@ -1,20 +1,16 @@
 {% extends 'base.html' %}
+{% block pagetitle %}{{ post_title }}{% endblock %}
 {% block main_section %}
 <section class="main-section blog-section" id="blog-posts">
-  <span class="loading">loading blog posts ...</span>
+  {{ post_data|safe }}
 </section>
 {% endblock %}
 {% block extra_inline_js %}
 $(function() {
-  {% if tag_slug %}
-  fetchBlogPosts("{{tag_slug}}");
-  {% else %}
-  fetchBlogPosts();
-  {% endif %}
+  setupLinks();
+  adjustBlogHeaders();
   {% if DISQUS_INTEGRATION_ENABLED %}
-  $('body').bind('blog-post-loaded', function() {
-    embedDisqus(true);
-  });
+  embedDisqus();
   {% endif %}
 });
 {% endblock %}

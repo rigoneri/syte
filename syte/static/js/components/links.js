@@ -1,11 +1,19 @@
+var $url;
 
 function setupLinks() {
 
   $('a').click(function(e) {
+      if (e.which == 2)
+          return;
+
       e.preventDefault();
       e.stopPropagation();
 
+      if (this.href == $url)
+          return;
+
       var url = $.url(this.href.replace('/#!', ''));
+      $url = this.href;
 
       if (this.id == 'home-link' && window.location.pathname == '/') {
          $('#github-profile').remove();
@@ -63,5 +71,8 @@ function setupLinks() {
 function adjustSelection(el) {
   $('.main-nav').children('li').removeClass('sel');
   $('#' + el).parent().addClass('sel');
+
+  if (el == 'home-link')
+    $url = null;
 }
 

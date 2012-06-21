@@ -13,6 +13,12 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'syte.settings'
 from django.conf import settings
 
 def compress_statics():
+    try:
+        #This won't work on windows.
+        subprocess.check_call(shlex.split('mkdir -p static/css static/js/min'))
+    except Exception:
+        print 'Make sure to create "syte > static > css" and "syte > static > js > min" before compressing statics.'
+
     compress_styles()
     compress_js()
 
@@ -57,7 +63,8 @@ def compress_js():
     if settings.INSTAGRAM_INTEGRATION_ENABLED:
         js_files.append('components/instagram.js')
 
-
+    if settings.DISQUS_INTEGRATION_ENABLED:
+        js_files.append('components/disqus.js')
 
     combined = ''
     for js in js_files:

@@ -26,6 +26,13 @@ You can use, reproduce and do whatever you want with syte but I would like you t
 [![nurihodges](https://github.com/rigoneri/syte/blob/master/readme-imgs/nurihodges.png?raw=true)](http://nurihodges.herokuapp.com)
 [![markwatson](https://github.com/rigoneri/syte/blob/master/readme-imgs/mrkrwtsn.png?raw=true)](http://markwatson.us)
 [![manavo](https://github.com/rigoneri/syte/blob/master/readme-imgs/manavo.png?raw=true)](http://manavo.com)
+[![rshepherd](https://github.com/rigoneri/syte/blob/master/readme-imgs/rshepherd.png?raw=true)](http://rshepherd.org)
+[![wavendano](https://github.com/rigoneri/syte/blob/master/readme-imgs/wavendano.png?raw=true)](http://willieavendano.me)
+[![yurytsukerman](https://github.com/rigoneri/syte/blob/master/readme-imgs/yurytsukerman.png?raw=true)](http://yurytsukerman.com)
+[![javisoto](https://github.com/rigoneri/syte/blob/master/readme-imgs/javisoto.png?raw=true)](http://www.javisoto.es)
+[![joneisen](https://github.com/rigoneri/syte/blob/master/readme-imgs/joneisen.png?raw=true)](http://www.joneisen.me)
+[![natetarrh](https://github.com/rigoneri/syte/blob/master/readme-imgs/natetarrh.png?raw=true)](http://www.natetarrh.com)
+[![arnonate](https://github.com/rigoneri/syte/blob/master/readme-imgs/arnonate.png?raw=true)](http://natearnold.me)
 
 
 ## Social Integrations
@@ -127,6 +134,10 @@ If you already have a tumblr blog good! If you don't [signup for one here](https
 Once you have your tumblr blog you will need to get the `api_key` needed to call their APIs. In order to do that **register your site** with them by going to <http://www.tumblr.com/oauth/register>, fill in the information about your site, there is no need to enter a default callback url or an icon. Once you are done your website will be listed under <http://www.tumblr.com/oauth/apps>, save the `OAuth Consumer Key` value that's the `api_key` we need for Syte.
 
 Once you have the `api_key` from tumblr you have to enter it in **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the key under `TUMBLR_API_KEY`, also please enter your tumblr url under `TUMBLR_BLOG_URL` see the example on how it should be formatted.
+
+#### Comments
+
+Comments are available through [Disqus](http://disqus.com/) in order to get yours setup, make sure to signup through their website. Once you are done you will be given a disqus shortname. Grab the shortname and enter it in **syte_settings.py** under `DISQUS_SHORTNAME`, also make sure to have `DISQUS_INTEGRATION_ENABLED` set to True in order to work.
 
 
 
@@ -249,7 +260,7 @@ sudo npm install less -g
 sudo npm install uglify-js -g
 ```
 
-`Note` be sure to create the directories `syte > static > css` and `syte > static > js > min` first if it doesn't already exist.
+`Note` windows users be sure to create the directories `syte > static > css` and `syte > static > js > min` first if it doesn't already exist.
 
 Then whenever you want to release a new version of static update the `COMPRESS_REVISION_NUMBER` in **syte-settings.py** and run the compress python command from your syte directory:
 
