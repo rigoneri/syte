@@ -135,6 +135,10 @@ Once you have your tumblr blog you will need to get the `api_key` needed to call
 
 Once you have the `api_key` from tumblr you have to enter it in **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the key under `TUMBLR_API_KEY`, also please enter your tumblr url under `TUMBLR_BLOG_URL` see the example on how it should be formatted.
 
+#### Comments
+
+Comments are available through [Disqus](http://disqus.com/) in order to get yours setup, make sure to signup through their website. Once you are done you will be given a disqus shortname. Grab the shortname and enter it in **syte_settings.py** under `DISQUS_SHORTNAME`, also make sure to have `DISQUS_INTEGRATION_ENABLED` set to True in order to work.
+
 
 
 

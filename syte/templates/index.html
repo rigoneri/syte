@@ -12,9 +12,9 @@ $(function() {
   fetchBlogPosts();
   {% endif %}
   {% if DISQUS_INTEGRATION_ENABLED %}
-  embed_disqus_count();
+  $('body').bind('blog-post-loaded', function() {
+    embedDisqus(true);
+  });
   {% endif %}
 });
 {% endblock %}
-
-

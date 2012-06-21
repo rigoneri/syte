@@ -7,9 +7,10 @@
 {% endblock %}
 {% block extra_inline_js %}
 $(function() {
+  setupLinks();
   adjustBlogHeaders();
   {% if DISQUS_INTEGRATION_ENABLED %}
-  embed_disqus();
+  embedDisqus();
   {% endif %}
 });
 {% endblock %}

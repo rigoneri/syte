@@ -52,7 +52,9 @@
 var twitter_integration_enabled = {% if TWITTER_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
     github_integration_enabled = {% if GITHUB_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
     dribbble_integration_enabled = {% if DRIBBBLE_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
-    instagram_integration_enabled = {% if INSTAGRAM_INTEGRATION_ENABLED %}true{% else %}false{% endif %};
+    instagram_integration_enabled = {% if INSTAGRAM_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
+    disqus_integration_enabled = {% if DISQUS_INTEGRATION_ENABLED %}true{% else %}false{% endif %};
+
 {% if DISQUS_INTEGRATION_ENABLED %}var disqus_shortname = '{{ DISQUS_SHORTNAME }}';{% endif %}
 </script>
 

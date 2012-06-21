@@ -54,9 +54,11 @@ INSTAGRAM_OAUTH_ACCESS_TOKEN_URL = 'https://api.instagram.com/oauth/access_token
 GOOGLE_ANALYTICS_TRACKING_ID = ''
 
 
-#Disqus
+#Disqus Integration
 DISQUS_INTEGRATION_ENABLED = False
 DISQUS_SHORTNAME = ''
+
+
 
 if DEPLOYMENT_MODE == 'dev':
     SITE_ROOT_URI = 'http://127.0.0.1:8000/'
