@@ -68,3 +68,4 @@ else:
     SITE_ROOT_URI = '[ENTER PROD URL HERE] ex. http://rigoneri.herokuapp.com/'
 
 MEDIA_URL = SITE_ROOT_URI + 'static/'
+STATIC_URL = SITE_ROOT_URI + 'static/' #specify url for static files

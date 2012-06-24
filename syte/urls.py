@@ -53,12 +53,18 @@ if settings.INSTAGRAM_INTEGRATION_ENABLED:
 
 
 #Statics: Hacky for now... fix this later...
+#Statics Fixed by added the correct template context preprocessor you can now call {{STATIC_URL}} in your templates e.g. {{STATIC_URL}}image.png
 urlpatterns += patterns('',
     (r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {'url':
         '/static/imgs/favicon.ico'}),
-    (r'^static/(?P<path>.*)$', 'django.views.static.serve',
-        {'document_root': settings.MEDIA_ROOT}),
 )
+
+urlpatterns += patterns('',
+        (r'^media/(?P<path>.*)$', 'django.views.static.serve',
+         {'document_root': settings.MEDIA_ROOT}),
+        (r'^static/(?P<path>.*)$', 'django.views.static.serve',
+         {'document_root': settings.STATIC_ROOT}),
+    )
 
 
 

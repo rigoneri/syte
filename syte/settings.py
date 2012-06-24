@@ -24,6 +24,7 @@ USE_L10N = False
 USE_TZ = True
 
 MEDIA_ROOT = os.path.join(SITE_ROOT, 'static')
+STATIC_ROOT = os.path.join(SITE_ROOT, 'static') #Specify folder for static files
 
 SECRET_KEY = '5c^pml#7e3d$zor%*_7y098(l0i=d3$+y_((11-_j0&amp;f9rw9%)'
 
@@ -50,6 +51,7 @@ TEMPLATE_DIRS = (
 TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.debug",
     "django.core.context_processors.media",
+    "django.core.context_processors.static", # Added Static Files Preprocessor
     "django.core.context_processors.request",
     "django.contrib.messages.context_processors.messages",
     "syte.context_processor.site_pages",
