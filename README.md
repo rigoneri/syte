@@ -272,6 +272,8 @@ python compress.py
 
 This will create a minified version of your CSS in `syte > static > css` and the minified version of your JavaScript in `syte > static > js > min`.
 
+`Note` If you are using Windows and is having problems on compressing statics checkout issue [#14](https://github.com/rigoneri/syte/issues/14) to see if it helps.
+
 
 ### Deploying to Heroku
 
