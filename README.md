@@ -35,6 +35,7 @@ You can use, reproduce and do whatever you want with syte but I would like you t
 [![arnonate](https://github.com/rigoneri/syte/blob/master/readme-imgs/arnonate.png?raw=true)](http://natearnold.me)
 [![mobileiteration](https://github.com/rigoneri/syte/blob/master/readme-imgs/mobileiteration.png?raw=true)](http://mobileiteration.com)
 [![owen](https://github.com/rigoneri/syte/blob/master/readme-imgs/owen.png?raw=true)](http://owened.co.nz)
+[![votive](https://github.com/rigoneri/syte/blob/master/readme-imgs/votive.png?raw=true)](http://www.paulyarrow.com)
 
 
 ## Social Integrations
