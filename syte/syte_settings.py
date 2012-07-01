@@ -7,10 +7,13 @@ TUMBLR_BLOG_URL = '[ENTER TUMBLR BLOG URL] ex. rigoneri.tumblr.com'
 TUMBLR_API_URL = 'http://api.tumblr.com/v2/blog/{0}'.format(TUMBLR_BLOG_URL)
 TUMBLR_API_KEY = '[ENTER TUMBLR API KEY HERE, SEE TUMBLR SETUP INSTRUCTIONS]'
 
+#RSS Feed Integration: (by default use Tumbrl rss feed)
+RSS_FEED_ENABLED = True
+RSS_FEED_URL = 'http://{0}/rss'.format(TUMBLR_BLOG_URL)
 
 #Twitter Integration
 TWITTER_INTEGRATION_ENABLED = True
-TWITTER_API_URL = 'http://api.twitter.com/1/statuses/user_timeline.json?include_rts=false&exclude_replies=true&screen_name='
+TWITTER_API_URL = 'http://api.twitter.com/1/statuses/user_timeline.json?include_rts=false&exclude_replies=true&count=50&screen_name='
 TWITTER_CONSUMER_KEY = '[ENTER TWITTER CONSUMER KEY HERE, SEE TWITTER SETUP INSTRUCTIONS]'
 TWITTER_CONSUMER_SECRET = '[ENTER TWITTER CONSUMER SECRET HERE, SEE TWITTER SETUP INSTRUCTIONS]'
 TWITTER_USER_KEY = '[ENTER TWITTER USER KEY HERE, SEE TWITTER SETUP INSTRUCTIONS]'
@@ -19,13 +22,20 @@ TWITTER_USER_SECRET = '[ENTER TWITTER USER SECRET HERE, SEE TWITTER SETUP INSTRU
 
 #Github Integration
 GITHUB_INTEGRATION_ENABLED = True
-GITHUB_USER_API_URL = 'https://github.com/api/v2/json/user/show/'
-GITHUB_REPOS_API_URL = 'https://github.com/api/v2/json/repos/show/'
+GITHUB_API_URL = 'https://api.github.com/'
+GITHUB_ACCESS_TOKEN = '[ENTER GITHUB ACCESS TOKEN HERE, SEE GITHUB SETUP INSTRUCTIONS]'
+
+GITHUB_OAUTH_ENABLED = True
+GITHUB_CLIENT_ID = '[ENTER GITHUB CLIENT ID HERE, SEE GITHUB SETUP INSTRUCTIONS]'
+GITHUB_CLIENT_SECRET = '[ENTER GITHUB CLIENT SECRET HERE, SEE GITHUB SETUP INSTRUCTIONS]'
+GITHUB_OAUTH_AUTHORIZE_URL = 'https://github.com/login/oauth/authorize'
+GITHUB_OAUTH_ACCESS_TOKEN_URL = 'https://github.com/login/oauth/access_token'
 
 
 #Dribbble Integration
 DRIBBBLE_INTEGRATION_ENABLED = True
 DRIBBBLE_API_URL = 'http://api.dribbble.com/players/'
+
 
 #Instagram Integration
 INSTAGRAM_INTEGRATION_ENABLED = True
@@ -38,6 +48,16 @@ INSTAGRAM_CLIENT_ID = '[ENTER INSTAGRAM CLIENT_ID HERE, SEE INSTAGRAM SETUP INST
 INSTAGRAM_CLIENT_SECRET = '[ENTER INSTAGRAM CLIENT_SECRET HERE, SEE INSTAGRAM SETUP INSTRUCTIONS]'
 INSTAGRAM_OAUTH_AUTHORIZE_URL = 'https://api.instagram.com/oauth/authorize'
 INSTAGRAM_OAUTH_ACCESS_TOKEN_URL = 'https://api.instagram.com/oauth/access_token'
+
+
+#Google Analytics
+GOOGLE_ANALYTICS_TRACKING_ID = ''
+
+
+#Disqus Integration
+DISQUS_INTEGRATION_ENABLED = False
+DISQUS_SHORTNAME = ''
+
 
 
 if DEPLOYMENT_MODE == 'dev':

@@ -1,10 +1,8 @@
 
-function fetchBlogPosts(post, tag) {
+function fetchBlogPosts(tag) {
   var blog_fetch_url = '/blog.json';
 
-  if (post)
-      blog_fetch_url = '/post/ajax/' + post;
-  else if (tag)
+  if (tag)
       blog_fetch_url = '/tags/' + tag;
 
   $.getJSON(blog_fetch_url, function(blog_posts) {
@@ -15,9 +13,9 @@ function fetchBlogPosts(post, tag) {
               "text!templates/blog-post-audio.html",
               "text!templates/blog-post-quote.html"],
 
-         function(text_post_template, photo_post_template, 
-                  link_post_template, video_post_template, audio_post_template,
-                  quote_post_template) {
+         function(text_post_template, photo_post_template,
+                  link_post_template, video_post_template,
+                  audio_post_template, quote_post_template) {
 
             var text_template = Handlebars.compile(text_post_template);
             var photo_template = Handlebars.compile(photo_post_template);
@@ -29,6 +27,9 @@ function fetchBlogPosts(post, tag) {
             $('.loading').remove();
             $.each(blog_posts.response.posts, function(i, p) {
                 p.formated_date = moment(p.date).format('MMMM DD, YYYY')
+
+                if (disqus_integration_enabled)
+                    p.disqus_enabled = true;
 
                 if (p.type == 'text')
                     $('#blog-posts').append(text_template(p));
@@ -50,6 +51,8 @@ function fetchBlogPosts(post, tag) {
             prettyPrint();
             setTimeout(setupBlogHeaderScroll, 1000);
             adjustSelection('home-link');
+
+            $('body').trigger("blog-post-loaded");
          });
   });
 }
