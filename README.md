@@ -10,6 +10,7 @@ You can use, reproduce and do whatever you want with syte but I would like you t
 [![sambao21](https://github.com/rigoneri/syte/blob/master/readme-imgs/sambao21.png?raw=true)](http://sambao21.com)
 [![keithentzeroth](https://github.com/rigoneri/syte/blob/master/readme-imgs/keithentzeroth.png?raw=true)](http://keithentzeroth.com)
 [![garrypolley](https://github.com/rigoneri/syte/blob/master/readme-imgs/garrypolley.png?raw=true)](http://garrypolley.com)
+[![defaude](https://github.com/rigoneri/syte/blob/master/readme-imgs/defaude.png?raw=true)](http://rolandhummel.de)
 [![snooze82](https://github.com/rigoneri/syte/blob/master/readme-imgs/snooze82.png?raw=true)](http://www.henklein.com)
 [![johncoogan](https://github.com/rigoneri/syte/blob/master/readme-imgs/johncoogan.png?raw=true)](http://johncoogan.com)
 [![mithrandiragain](https://github.com/rigoneri/syte/blob/master/readme-imgs/mithrandiragain.png?raw=true)](http://blog.atomitware.tk)
