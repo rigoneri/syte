@@ -1,0 +1,13 @@
+<div class="profile lastfm modal fade" id="lastfm-profile">
+  {{#with recenttracks }}
+  <div class="profile-info">
+    <div class="profile-name">
+      <h2><a href="http://lastfm.com/user/{{ username }}">{{ username }}</a></h2>
+    </div>
+  <ul class="profile-repos">
+    {{#each track}}
+    <li> {{text album}} </li>
+    {{/each}}
+  </ul>
+  {{/with}}
+</div>
