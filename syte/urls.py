@@ -50,6 +50,11 @@ if settings.INSTAGRAM_INTEGRATION_ENABLED:
         url(r'^instagram/?$', 'syte.views.instagram'),
     )
 
+#LastFM Integration
+if settings.LASTFM_INTEGRATION_ENABLED:
+    urlpatterns += patterns('',
+        url(r'^lastfm/(?P<username>\S+)/?$', 'syte.views.lastfm'),
+    )
 
 
 #Statics: Hacky for now... fix this later...

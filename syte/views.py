@@ -233,4 +233,11 @@ def instagram_next(request, max_id):
                         content_type=media_r.headers['content-type'])
 
 
-
+def lastfm(request, username):
+    url = '{0}?method=user.getrecenttracks&user={1}&api_key={2}&format=json'.format(
+                                                    settings.LASTFM_API_URL,
+                                                    settings.LASTFM_USERNAME,
+                                                    settings.LASTFM_API_KEY)
+    r = requests.get(url)
+    return HttpResponse(content=r.text, status=r.status_code,
+                        content_type=r.headers['content-type'])
