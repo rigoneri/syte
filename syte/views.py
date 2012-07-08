@@ -169,7 +169,6 @@ def blog_post(request, post_id):
                 post["formatted_date"] = tdate.strftime('%B %d, %Y')
 
     if post:
-
         if settings.DISQUS_INTEGRATION_ENABLED:
             post['disqus_enabled'] = True
 
