@@ -16,6 +16,7 @@ urlpatterns = patterns('',
 
 if settings.BUILTIN_POST_ENABLED:
     urlpatterns += patterns('',
+        url(r'^p/(?P<post_slug>\w+)$','syte.views.post_slug'),
         url(r'^admin/?$','syte.views.adminindex'),
         url(r'^admin/(?P<post_id>\d+)$','syte.views.editpost'),
         url(r'^admin/(?P<post_id>\d+)/delete$','syte.views.deletepost'),

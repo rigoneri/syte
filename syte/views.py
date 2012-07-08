@@ -104,8 +104,6 @@ def dribbble(request, username):
                         content_type=r.headers['content-type'])
 
 
-
-
 def blog(request):
     if settings.BUILTIN_POST_ENABLED:
 
@@ -188,6 +186,7 @@ def blog_post(request, post_id):
 def blog_tags(request, tag_slug):
     #Due to the issue with the tumblr api described below we will redirect to the
     #users tumblr tags page for now.
+
     if settings.BUILTIN_POST_ENABLED:
         raise Http404
     return redirect('http://{0}/tagged/{1}'.format(
@@ -280,6 +279,9 @@ def instagram_next(request, max_id):
     return HttpResponse(content=json.dumps(context), status=media_r.status_code,
                         content_type=media_r.headers['content-type'])
 
+
+def post_slug(request, post_slug):
+    return blog_post(request, get_object_or_404(models.Post, slug=post_slug).id)
 
 @auth_decorator.logged_in_or_basicauth()
 def adminindex(request):
