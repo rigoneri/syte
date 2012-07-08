@@ -16,8 +16,8 @@ BUILTIN_POST_DATABASE_SETTINGS =  {
     'PASSWORD':'',
     'HOST':'',
 }
-BUILTIN_POST_USERNAME = "tom"
-BUILTIN_POST_PASSWORD = "password"
+BUILTIN_POST_USERNAME = ""
+BUILTIN_POST_PASSWORD = ""
 
 #RSS Feed Integration: (by default use Tumbrl rss feed)
 RSS_FEED_ENABLED = True

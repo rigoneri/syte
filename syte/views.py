@@ -2,7 +2,7 @@
 from context_processor import site_pages
 from django.shortcuts import redirect, render, get_object_or_404
 from django.template import Context, loader
-from django.http import HttpResponse, HttpResponseServerError
+from django.http import HttpResponse, HttpResponseServerError, Http404
 from django.conf import settings
 from pybars import Compiler
 from datetime import datetime
@@ -29,7 +29,6 @@ def page_not_found_error(request, template_name='404.html'):
 
 def home(request):
     return render(request, 'index.html', {})
-
 
 def twitter(request, username):
     consumer = oauth.Consumer(key=settings.TWITTER_CONSUMER_KEY,
@@ -189,6 +188,8 @@ def blog_post(request, post_id):
 def blog_tags(request, tag_slug):
     #Due to the issue with the tumblr api described below we will redirect to the
     #users tumblr tags page for now.
+    if settings.BUILTIN_POST_ENABLED:
+        raise Http404
     return redirect('http://{0}/tagged/{1}'.format(
         settings.TUMBLR_BLOG_URL, tag_slug))
 

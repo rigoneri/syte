@@ -55,7 +55,7 @@
 
 {% block admincontent %}
     <div class="row-fluid">
-        <div class="span8">
+        <div class="span10">
             <form id="post_form" method="POST">
                 {% csrf_token %}
                 <input value="{{ post.title }}" type="text" id="title_text" name="title" style="height: 50px; font-size: 30px" class="span12">
