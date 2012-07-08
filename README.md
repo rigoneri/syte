@@ -34,6 +34,7 @@ You can use, reproduce and do whatever you want with syte but I would like you t
 [![natetarrh](https://github.com/rigoneri/syte/blob/master/readme-imgs/natetarrh.png?raw=true)](http://www.natetarrh.com)
 [![arnonate](https://github.com/rigoneri/syte/blob/master/readme-imgs/arnonate.png?raw=true)](http://natearnold.me)
 [![mobileiteration](https://github.com/rigoneri/syte/blob/master/readme-imgs/mobileiteration.png?raw=true)](http://mobileiteration.com)
+[![tachang](https://github.com/rigoneri/syte/blob/master/readme-imgs/jeff-tchang.png?raw=true)](http://www.returnbooleantrue.com)
 
 
 ## Social Integrations
