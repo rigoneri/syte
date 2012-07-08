@@ -238,6 +238,16 @@ def lastfm(request, username):
                                                     settings.LASTFM_API_URL,
                                                     settings.LASTFM_USERNAME,
                                                     settings.LASTFM_API_KEY)
-    r = requests.get(url)
-    return HttpResponse(content=r.text, status=r.status_code,
-                        content_type=r.headers['content-type'])
+    tracks = requests.get(url)
+    url = '{0}?method=user.getinfo&user={1}&api_key={2}&format=json'.format(
+                                                    settings.LASTFM_API_URL,
+                                                    settings.LASTFM_USERNAME,
+                                                    settings.LASTFM_API_KEY)
+    user = requests.get(url)
+    context = {
+        'user_info': user.json,
+        'recenttracks': tracks.json,
+    }
+
+    return HttpResponse(content=json.dumps(context), status=user.status_code,
+                        content_type=user.headers['content-type'])

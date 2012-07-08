@@ -1,7 +1,7 @@
 function setupLastfm(url, el) {
   var href = el.href;
 
-  if ($('#github-profile').length > 0) {
+  if ($('#lastfm-profile').length > 0) {
     window.location = href;
     return;
   }
@@ -25,6 +25,10 @@ function setupLastfm(url, el) {
         return obj['#text'];
      });
 
+     Handlebars.registerHelper('image_url', function(obj) {
+        return obj[0]['#text'];
+     });
+
      require(["json!/lastfm/" + username, "text!templates/lastfm-profile.html"],
         function(lastfm_data, lastfm_view) {
             if (lastfm_data.error || lastfm_data.length == 0) {
@@ -33,8 +37,7 @@ function setupLastfm(url, el) {
             }
 
             var template = Handlebars.compile(lastfm_view);
-            lastfm_data.username = username;
-
+            lastfm_data.user_info.user.formatted_register_date = moment(lastfm_data.user_info.user.registered['#text']).fromNow();
             $(template(lastfm_data)).modal().on('hidden', function () {
                 $(this).remove();
                 adjustSelection('home-link');
