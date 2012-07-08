@@ -150,7 +150,7 @@ def blog_post(request, post_id):
         post = dict()
         post["id"] = _post.id
         post["title"] = _post.title
-        post["formatted_date"] = _post.publish_date.strftime('%B %d, %Y')
+        post["formated_date"] = _post.publish_date.strftime('%B %d, %Y')
         post["type"] = "text"
         post["body"] = _post.text
         post["tags"] = [tag.name for tag in _post.tags.all()]
@@ -166,7 +166,7 @@ def blog_post(request, post_id):
             else:
                 post = posts[0]
                 tdate = datetime.strptime(post['date'], '%Y-%m-%d %H:%M:%S %Z')
-                post["formatted_date"] = tdate.strftime('%B %d, %Y')
+                post["formated_date"] = tdate.strftime('%B %d, %Y')
 
     if post:
         if settings.DISQUS_INTEGRATION_ENABLED:
