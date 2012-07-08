@@ -118,7 +118,7 @@ def blog(request):
                 "timestamp":time.mktime(post.publish_date.timetuple()),
                 "title":post.title,
                 "type":"text"
-            } for count,post in enumerate(models.Post.objects.select_related("tags").all())
+            } for count,post in enumerate(models.Post.objects.filter(published=True).select_related("tags").all())
         }
 
         blog_data = {
@@ -281,7 +281,7 @@ def instagram_next(request, max_id):
 
 
 def post_slug(request, post_slug):
-    return blog_post(request, get_object_or_404(models.Post, slug=post_slug).id)
+    return blog_post(request, get_object_or_404(models.Post, published=True, slug=post_slug).id)
 
 @auth_decorator.logged_in_or_basicauth()
 def adminindex(request):
