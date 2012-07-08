@@ -1,0 +1,57 @@
+{% extends "admintemplate.html" %}
+
+{% block admintitle %}
+    List
+{% endblock %}
+
+{% block navmain %}
+    <li><a href="/admin/create" id="new_post">New Post</a></li>
+{% endblock %}
+
+{% block admincontent %}
+
+    {% if draft_posts|length %}
+    <div class="row">
+        <div class="span6">
+            <h3>Drafts</h3>
+            <table class="table table-striped table-bordered table-condensed">
+                <thead>
+                <tr>
+                    <th>Title</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for post in draft_posts %}
+                    <tr>
+                        <td><a href="/admin/{{ post.id }}">{{ post.title }}</a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="row">
+        <div class="span6">
+            <h3>Published Posts</h3>
+            <table class="table table-striped table-bordered table-condensed">
+                <thead>
+                <tr>
+                    <th class="span1">#</th>
+                    <th>Title</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for post in published_posts %}
+                    <tr>
+                        <td><a href="/admin/{{ post.id }}">{{ post.id }}</a></td>
+                        <td><a href="/admin/{{ post.id }}">{{ post.title }}</a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

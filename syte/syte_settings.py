@@ -2,10 +2,22 @@
 DEPLOYMENT_MODE = 'dev'
 COMPRESS_REVISION_NUMBER = '1.0'
 
-#Blog Integration: Tumblr
+#Tumblr blog integration
+TUMBLR_INTEGRATION_ENABLED = False
 TUMBLR_BLOG_URL = '[ENTER TUMBLR BLOG URL] ex. rigoneri.tumblr.com'
 TUMBLR_API_URL = 'http://api.tumblr.com/v2/blog/{0}'.format(TUMBLR_BLOG_URL)
 TUMBLR_API_KEY = '[ENTER TUMBLR API KEY HERE, SEE TUMBLR SETUP INSTRUCTIONS]'
+
+BUILTIN_POST_ENABLED = True
+BUILTIN_POST_DATABASE_SETTINGS =  {
+    'ENGINE': 'django.db.backends.sqlite3',
+    'NAME': 'posts.db',
+    'USER': '',
+    'PASSWORD':'',
+    'HOST':'',
+}
+BUILTIN_POST_USERNAME = "tom"
+BUILTIN_POST_PASSWORD = "password"
 
 #RSS Feed Integration: (by default use Tumbrl rss feed)
 RSS_FEED_ENABLED = True

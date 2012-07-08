@@ -65,3 +65,10 @@ INSTALLED_APPS = (
 
 from syte_settings import *
 
+if BUILTIN_POST_ENABLED:
+
+    INSTALLED_APPS += ("syte",)
+
+    DATABASES = {
+        'default': BUILTIN_POST_DATABASE_SETTINGS
+    }

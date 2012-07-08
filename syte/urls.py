@@ -14,6 +14,16 @@ urlpatterns = patterns('',
     url(r'^/?$', 'syte.views.home'),
 )
 
+if settings.BUILTIN_POST_ENABLED:
+    urlpatterns += patterns('',
+        url(r'^admin/?$','syte.views.adminindex'),
+        url(r'^admin/(?P<post_id>\d+)$','syte.views.editpost'),
+        url(r'^admin/(?P<post_id>\d+)/delete$','syte.views.deletepost'),
+        url(r'^admin/(?P<post_id>\d+)/publish','syte.views.publishpost'),
+        url(r'^admin/(?P<post_id>\d+)/unpublish','syte.views.unpublishpost'),
+        url(r'^admin/create/?$','syte.views.createpost'),
+    )
+
 #Twitter Integration
 if settings.TWITTER_INTEGRATION_ENABLED:
     urlpatterns += patterns('',
