@@ -3,7 +3,7 @@ DEPLOYMENT_MODE = 'prod'
 COMPRESS_REVISION_NUMBER = '1.0'
 
 #Blog Integration: Tumblr
-TUMBLR_BLOG_URL = 'http://junseki.tumblr.com/'
+TUMBLR_BLOG_URL = 'junseki.tumblr.com/'
 TUMBLR_API_URL = 'http://api.tumblr.com/v2/blog/{0}'.format(TUMBLR_BLOG_URL)
 TUMBLR_API_KEY = 'ySu1LivIWeq7qCvxMzA7ztC8Y0QSD51aTCifUoh3v0tVKdWKn0'
 
