@@ -291,6 +291,25 @@ First signup to [Heroku](http://heroku.com) then follow these simple [Django dep
 
 
 
+## Contributing
+
+There are plans for several services to be added in the
+[TODO file](https://github.com/rigoneri/syte/blob/master/TODO.md).  One of
+these services is a good place to start when looking for ways to help.  Also
+posting/fixing [issues](https://github.com/rigoneri/syte/issues) is always
+helpful.
+
+If you would like to add support for a new service you might find the [HELP
+file](https://github.com/rigoneri/syte/blob/master/HELP.md) useful on how to
+get started and where your new code might go, etc.
+
+Also, the [DESIGN file](https://github.com/rigoneri/syte/blob/master/DESIGN.md)
+can be a useful resource when starting out with the project and trying to
+understand roughly how it all fits together.
+
+
+
+
 ## Credit
 
 Syte was developed by **Rigo** (rodrigo neri). Check his personal site out at <http://rigoneri.com> and follow him on twitter [@rigoneri](http://twitter.com/#!/rigoneri)
