@@ -1,5 +1,5 @@
 
-DEPLOYMENT_MODE = 'dev'
+DEPLOYMENT_MODE = 'prod'
 COMPRESS_REVISION_NUMBER = '1.1'
 
 #Blog Integration: Tumblr
