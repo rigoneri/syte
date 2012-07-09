@@ -1,10 +1,19 @@
 Basic steps to add support for a particular service:
 
-    1. Add information to README
-    2. Add setting to turn service on/off (syte/syte_settings.py)
-    3. Add above setting to site_pages context processor (syte/context_processor.py)
-    4. Add django view to get info and return json (syte/views.py)
-    5. Add js to query django view
-    6. Add above js to list of js to compress (syte/compress.py)
-    7. Add link for service to base view (syte/templates/base.html)
-    8. Add html template in static/templates/ to be rendered from js
+1. Add information to
+    [README](https://github.com/rigoneri/syte/blob/master/README.md)
+2. Add setting to turn service on/off
+    in [syte_settings.py](https://github.com/rigoneri/syte/blob/master/syte/syte_settings.py)
+3. Add above setting to site_pages context processor in
+    [context_processor.py](https://github.com/rigoneri/syte/blob/master/syte/context_processor.py)
+4. Add django view in
+    [views.py](https://github.com/rigoneri/syte/blob/master/syte/views.py)
+    to get info and return json
+5. Add js file/function to query django view
+    [js components](https://github.com/rigoneri/syte/tree/master/syte/static/js/components)
+6. Add above js to list of js to
+    [compress.py](https://github.com/rigoneri/syte/blob/master/syte/compress.py)
+7. Add link for service to
+    [base view template](https://github.com/rigoneri/syte/blob/master/syte/templates/base.html)
+8. Add html template to
+    [templates directory](https://github.com/rigoneri/syte/tree/master/syte/static/templates) to be rendered js file/function that queries django view for service.
