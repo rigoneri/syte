@@ -1,6 +1,6 @@
 
 DEPLOYMENT_MODE = 'prod'
-COMPRESS_REVISION_NUMBER = '1.1'
+COMPRESS_REVISION_NUMBER = '1.0'
 
 #Blog Integration: Tumblr
 TUMBLR_BLOG_URL = 'http://junseki.tumblr.com/'
@@ -33,7 +33,7 @@ GITHUB_OAUTH_ACCESS_TOKEN_URL = 'https://github.com/login/oauth/access_token'
 
 
 #Dribbble Integration
-DRIBBBLE_INTEGRATION_ENABLED = False
+DRIBBBLE_INTEGRATION_ENABLED = True
 DRIBBBLE_API_URL = 'http://api.dribbble.com/players/'
 
 
@@ -55,8 +55,8 @@ GOOGLE_ANALYTICS_TRACKING_ID = ''
 
 
 #Disqus Integration
-DISQUS_INTEGRATION_ENABLED = False
-DISQUS_SHORTNAME = ''
+DISQUS_INTEGRATION_ENABLED = True
+DISQUS_SHORTNAME = 'jseki'
 
 
 
