@@ -22,7 +22,11 @@ function setupLastfm(url, el) {
      * handlebars.  The '#' character is reserved by the handlebars templating
      * language itself so cannot reference '#text' easily in the template. */
      Handlebars.registerHelper('text', function(obj) {
-        return obj['#text'];
+        try {
+          return obj['#text'];
+        } catch (err) {
+            return '';
+        }
      });
 
      Handlebars.registerHelper('image_url', function(obj) {
@@ -37,7 +41,7 @@ function setupLastfm(url, el) {
             }
 
             var template = Handlebars.compile(lastfm_view);
-            lastfm_data.user_info.user.formatted_register_date = moment(lastfm_data.user_info.user.registered['#text']).fromNow();
+            lastfm_data.user_info.user.formatted_register_date = moment(lastfm_data.user_info.user.registered['#text']);
             $(template(lastfm_data)).modal().on('hidden', function () {
                 $(this).remove();
                 adjustSelection('home-link');
