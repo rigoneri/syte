@@ -34,17 +34,13 @@ You can use, reproduce and do whatever you want with syte but I would like you t
 [![natetarrh](https://github.com/rigoneri/syte/blob/master/readme-imgs/natetarrh.png?raw=true)](http://www.natetarrh.com)
 [![arnonate](https://github.com/rigoneri/syte/blob/master/readme-imgs/arnonate.png?raw=true)](http://natearnold.me)
 [![mobileiteration](https://github.com/rigoneri/syte/blob/master/readme-imgs/mobileiteration.png?raw=true)](http://mobileiteration.com)
-<<<<<<< HEAD
 [![owen](https://github.com/rigoneri/syte/blob/master/readme-imgs/owen.png?raw=true)](http://owened.co.nz)
 [![danielcampo](https://github.com/rigoneri/syte/blob/master/readme-imgs/danielcampo.png?raw=true)](http://danielcampo.com)
 [![bhashkar](https://github.com/rigoneri/syte/blob/master/readme-imgs/bhashkar.png?raw=true)](http://bhashkar.me)
 [![lukelee](https://github.com/rigoneri/syte/blob/master/readme-imgs/lukelee.png?raw=true)](http://lukelee-syte.herokuapp.com)
 [![dannycochran](https://github.com/rigoneri/syte/blob/master/readme-imgs/dannycochran.png?raw=true)](http://dcochran.com)
 [![srir](https://github.com/rigoneri/syte/blob/master/readme-imgs/srir.png?raw=true)](http://sraghavan.net)
-=======
 [![tachang](https://github.com/rigoneri/syte/blob/master/readme-imgs/jeff-tchang.png?raw=true)](http://www.returnbooleantrue.com)
-
->>>>>>> ab457912b36e6b2ac32e74acd518dfc73640fb0f
 
 ## Social Integrations
 
