@@ -116,6 +116,12 @@
 
 <p><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/f-5.png?raw=true" alt="Syte Instagram"></p>
 
+<h3>Last.fm</h3>
+
+<p>Syte has Last.fm integration, which means that when someone clicks on a link that points to a user's Last.fm profile the profile information will be loaded directly in the site along with a listing of the most recently scrobbled tracks.</p>
+
+<p><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/f-6.png?raw=true" alt="Syte Lastfm"></p>
+
 <br><br>
 <h2>Responsive UI</h2>
 
@@ -270,6 +276,24 @@
 
 <p>If you want to turn off instagram integration just set <code>INSTAGRAM_INTEGRATION_ENABLED</code> to False.</p>
 
+<h3>Setting up Last.fm integration</h3>
+
+<p>The Last.fm integration does not make any authenticated calls so setting it up only requires that you register an application with Lastfm and get an API key.</p>
+
+<p>To get an API key simply follow the <a href="http://www.last.fm/api">Getting started instructions</a>.  You can then view your API Key from <a href="http://www.last.fm/api/account">your api account page</a>.</p>
+
+<p>Once you have your API Key from Lastfm you have to enter it in your <strong>syte_settings.py</strong> located in <code>syte &gt; syte_settings.py</code>. Once you open that file enter the following:</p>
+
+<ul>
+<li>
+<strong><em>API_KEY</em></strong> under <code>LASTFM_API_KEY</code>
+</li>
+<li>
+<strong><em>USERNAME</em></strong> under <code>LASTFM_USERNAME</code>
+</li>
+</ul>
+
+<p>If you want to turn off Last.fm integration just set <code>LASTFM_INTEGRATION_ENABLED</code> to False.</p>
 
 <br><br>
 
