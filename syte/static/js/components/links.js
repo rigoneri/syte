@@ -20,6 +20,7 @@ function setupLinks() {
          $('#dribbble-profile').remove();
          $('#twitter-profile').remove();
          $('#instagram-profile').remove();
+         $('#lastfm-profile').remove();
          $('.modal-backdrop').remove();
          $('#apps-modal').remove();
          adjustSelection('home-link');
@@ -29,6 +30,7 @@ function setupLinks() {
          $('#dribbble-profile').remove();
          $('#twitter-profile').remove();
          $('#instagram-profile').remove();
+         $('#lastfm-profile').remove();
          $('.modal-backdrop').remove();
          adjustSelection('apps-link');
 
@@ -49,6 +51,7 @@ function setupLinks() {
          $('#dribbble-profile').remove();
          $('#twitter-profile').remove();
          $('#apps-modal').remove();
+         $('#lastfm-profile').remove();
          $('.modal-backdrop').remove();
          adjustSelection('instagram-link');
 
@@ -59,6 +62,7 @@ function setupLinks() {
          $('#github-profile').remove();
          $('#dribbble-profile').remove();
          $('#instagram-profile').remove();
+         $('#lastfm-profile').remove();
          $('.modal-backdrop').remove();
          $('#apps-modal').remove();
          adjustSelection('twitter-link');
@@ -70,6 +74,7 @@ function setupLinks() {
         $('#twitter-profile').remove();
         $('#dribbble-profile').remove();
         $('#instagram-profile').remove();
+        $('#lastfm-profile').remove();
         $('.modal-backdrop').remove();
         $('#apps-modal').remove();
         adjustSelection('github-link');
@@ -81,11 +86,24 @@ function setupLinks() {
          $('#twitter-profile').remove();
          $('#github-profile').remove();
          $('#instagram-profile').remove();
+         $('#lastfm-profile').remove();
          $('.modal-backdrop').remove();
          $('#apps-modal').remove();
          adjustSelection('dribbble-link');
 
          setupDribbble(url, this);
+      }
+      else if (lastfm_integration_enabled && (url.attr('host') == 'lastfm.com' || url.attr('host') == 'www.lastfm.com')) {
+
+        $('#twitter-profile').remove();
+        $('#github-profile').remove();
+        $('#dribbble-profile').remove();
+        $('#instagram-profile').remove();
+        $('.modal-backdrop').remove();
+        $('#apps-modal').remove();
+        adjustSelection('lastfm-link');
+
+        setupLastfm(url, this);
       }
       else {
          window.location = this.href;

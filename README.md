@@ -33,6 +33,16 @@ You can use, reproduce and do whatever you want with syte but I would like you t
 [![joneisen](https://github.com/rigoneri/syte/blob/master/readme-imgs/joneisen.png?raw=true)](http://www.joneisen.me)
 [![natetarrh](https://github.com/rigoneri/syte/blob/master/readme-imgs/natetarrh.png?raw=true)](http://www.natetarrh.com)
 [![arnonate](https://github.com/rigoneri/syte/blob/master/readme-imgs/arnonate.png?raw=true)](http://natearnold.me)
+[![mobileiteration](https://github.com/rigoneri/syte/blob/master/readme-imgs/mobileiteration.png?raw=true)](http://mobileiteration.com)
+[![owen](https://github.com/rigoneri/syte/blob/master/readme-imgs/owen.png?raw=true)](http://owened.co.nz)
+[![danielcampo](https://github.com/rigoneri/syte/blob/master/readme-imgs/danielcampo.png?raw=true)](http://danielcampo.com)
+[![bhashkar](https://github.com/rigoneri/syte/blob/master/readme-imgs/bhashkar.png?raw=true)](http://bhashkar.me)
+[![lukelee](https://github.com/rigoneri/syte/blob/master/readme-imgs/lukelee.png?raw=true)](http://lukelee-syte.herokuapp.com)
+[![dannycochran](https://github.com/rigoneri/syte/blob/master/readme-imgs/dannycochran.png?raw=true)](http://dcochran.com)
+[![srir](https://github.com/rigoneri/syte/blob/master/readme-imgs/srir.png?raw=true)](http://sraghavan.net)
+[![tachang](https://github.com/rigoneri/syte/blob/master/readme-imgs/jeff-tchang.png?raw=true)](http://www.returnbooleantrue.com)
+[![junseki](https://github.com/rigoneri/syte/blob/master/readme-imgs/junseki.png?raw=true)](http://junseki.com)
+[![allydimg](https://github.com/rigoneri/syte/blob/master/readme-imgs/allydimg.png?raw=true)](http://allyd.herokuapp.com)
 
 
 ## Social Integrations
@@ -68,6 +78,14 @@ Syte has dribbble integration, which means that when someone clicks on a link th
 Syte has instagram integration, which means that you can show your instagram pictures within your site like a profile. Currently the only way to display your pictures is through their iPhone and Android apps, this is not even possible through their website.
 
 ![Syte Instagram](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-5.png?raw=true)
+
+
+### Last.fm
+
+Syte has Last.fm integration, which means that when someone clicks on a link that points to a user's Last.fm profile the profile information will be loaded directly in the site along with a listing of the most recently scrobbled tracks.
+
+![Syte Lastfm](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-6.png?raw=true)
+
 
 ## Responsive UI
 
@@ -215,6 +233,22 @@ If you want to turn off instagram integration just set `INSTAGRAM_INTEGRATION_EN
 
 
 
+### Setting up Last.fm integration
+
+The Last.fm integration does not make any authenticated calls so setting it up only requires that you register an application with Lastfm and get an API key.
+
+To get an API key simply follow the [Getting started instructions](http://www.last.fm/api).  You can then view your API Key from [your api account page](http://www.last.fm/api/account).
+
+Once you have your API Key from Lastfm you have to enter it in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
+
+* ***API_KEY*** under `LASTFM_API_KEY`
+* ***USERNAME*** under `LASTFM_USERNAME`
+
+If you want to turn off Last.fm integration just set `LASTFM_INTEGRATION_ENABLED` to False.
+
+
+
+
 ## Running & Deployment Instructions
 
 Now that you have everything setup and ready to go we will be able to run the project locally and deploy to heroku with the instructions below. Please note that these instructions are for Mac, which should be the same for linux systems. If you have problems with these instructions on Windows, let me know or send a pull request.
@@ -269,6 +303,8 @@ python compress.py
 ```
 
 This will create a minified version of your CSS in `syte > static > css` and the minified version of your JavaScript in `syte > static > js > min`.
+
+`Note` If you are using Windows and is having problems on compressing statics checkout issue [#14](https://github.com/rigoneri/syte/issues/14) to see if it helps.
 
 
 ### Deploying to Heroku
