@@ -1,6 +1,6 @@
 
 from context_processor import site_pages
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect, render, get_object_or_404
 from django.template import Context, loader
 from django.http import HttpResponse, HttpResponseServerError, Http404
 from django.conf import settings
@@ -11,6 +11,10 @@ import os
 import requests
 import json
 import oauth2 as oauth
+import time
+from syte import auth_decorator
+if settings.BUILTIN_POST_ENABLED:
+    from syte import models
 
 def server_error(request, template_name='500.html'):
     t = loader.get_template(template_name)
@@ -25,7 +29,6 @@ def page_not_found_error(request, template_name='404.html'):
 
 def home(request):
     return render(request, 'index.html', {})
-
 
 def twitter(request, username):
     consumer = oauth.Consumer(key=settings.TWITTER_CONSUMER_KEY,
@@ -102,39 +105,80 @@ def dribbble(request, username):
 
 
 def blog(request):
-    r = requests.get('{0}/posts?api_key={1}'.format(settings.TUMBLR_API_URL,
-        settings.TUMBLR_API_KEY))
-    return HttpResponse(content=r.text, status=r.status_code,
-                        content_type=r.headers['content-type'])
+    if settings.BUILTIN_POST_ENABLED:
+
+        posts = {
+            count:{
+                "body":post.text,
+                "date":post.publish_date.isoformat(),
+                "format":"html",
+                "id":post.id,
+                "slug":post.slug,
+                "tags":[tag.name for tag in post.tags.all()],
+                "timestamp":time.mktime(post.publish_date.timetuple()),
+                "title":post.title,
+                "type":"text"
+            } for count,post in enumerate(models.Post.objects.filter(published=True).select_related("tags").all())
+        }
+
+        blog_data = {
+            "meta":{"msg":"OK","status":200},
+            "response":{
+                "posts": posts,
+                "total_posts":len(posts),
+            }
+        }
+
+        return HttpResponse(content=json.dumps(blog_data), status=200,
+                            content_type="application/json")
+
+    else:
+        r = requests.get('{0}/posts?api_key={1}'.format(settings.TUMBLR_API_URL,
+            settings.TUMBLR_API_KEY))
+        return HttpResponse(content=r.text, status=r.status_code,
+                            content_type=r.headers['content-type'])
 
 
 def blog_post(request, post_id):
     context = dict()
 
-    r = requests.get('{0}/posts?api_key={1}&id={2}'.format(settings.TUMBLR_API_URL,
-            settings.TUMBLR_API_KEY, post_id))
+    if settings.BUILTIN_POST_ENABLED:
+        _post = get_object_or_404(models.Post,id=post_id,published=True)
+        post = dict()
+        post["id"] = _post.id
+        post["title"] = _post.title
+        post["formated_date"] = _post.publish_date.strftime('%B %d, %Y')
+        post["type"] = "text"
+        post["body"] = _post.text
+        post["tags"] = [tag.name for tag in _post.tags.all()]
+    else:
+        r = requests.get('{0}/posts?api_key={1}&id={2}'.format(settings.TUMBLR_API_URL,
+                settings.TUMBLR_API_KEY, post_id))
+        if r.status_code != 200:
+            post = None
+        else:
+            posts = r.json.get('response', {}).get("posts",[])
+            if not posts:
+                post = None
+            else:
+                post = posts[0]
+                tdate = datetime.strptime(post['date'], '%Y-%m-%d %H:%M:%S %Z')
+                post["formated_date"] = tdate.strftime('%B %d, %Y')
 
-    if r.status_code == 200:
-        post_response = r.json.get('response', {})
-        posts = post_response.get('posts', [])
+    if post:
+        if settings.DISQUS_INTEGRATION_ENABLED:
+            post['disqus_enabled'] = True
 
-        if posts:
-            post = posts[0]
-            f_date = datetime.strptime(post['date'], '%Y-%m-%d %H:%M:%S %Z')
-            post['formated_date'] = f_date.strftime('%B %d, %Y')
+        path_to_here = os.path.abspath(os.path.dirname(__file__))
+        f = open('{0}/static/templates/blog-post-{1}.html'.format(path_to_here, post['type']), 'r')
+        f_data = f.read()
+        f.close()
 
-            if settings.DISQUS_INTEGRATION_ENABLED:
-                post['disqus_enabled'] = True
-
-            path_to_here = os.path.abspath(os.path.dirname(__file__))
-            f = open('{0}/static/templates/blog-post-{1}.html'.format(path_to_here, post['type']), 'r')
-            f_data = f.read()
-            f.close()
-
-            compiler = Compiler()
-            template = compiler.compile(unicode(f_data))
-            context['post_data'] = template(post)
-            context['post_title'] = post['title']
+        compiler = Compiler()
+        print post
+        template = compiler.compile(unicode(f_data))
+        context['post_data'] = template(post)
+        context['post_title'] = post['title']
 
     return render(request, 'blog-post.html', context)
 
@@ -142,6 +186,9 @@ def blog_post(request, post_id):
 def blog_tags(request, tag_slug):
     #Due to the issue with the tumblr api described below we will redirect to the
     #users tumblr tags page for now.
+
+    if settings.BUILTIN_POST_ENABLED:
+        raise Http404
     return redirect('http://{0}/tagged/{1}'.format(
         settings.TUMBLR_BLOG_URL, tag_slug))
 
@@ -233,4 +280,64 @@ def instagram_next(request, max_id):
                         content_type=media_r.headers['content-type'])
 
 
+def post_slug(request, post_slug):
+    return blog_post(request, get_object_or_404(models.Post, published=True, slug=post_slug).id)
 
+@auth_decorator.logged_in_or_basicauth()
+def adminindex(request):
+    return render(request, "admin.html", {"published_posts":models.Post.objects.filter(published=True).all(),
+                                          "draft_posts":models.Post.objects.filter(published=False).all()})
+
+@auth_decorator.logged_in_or_basicauth()
+def createpost(request):
+    if request.method == "POST":
+        title = request.POST.get("title","")
+        content = request.POST.get("content","")
+
+        post = models.Post()
+        post.title = title
+        post.text = content
+        post.save()
+        return redirect("/admin/%s"%post.id)
+
+    return render(request, "posteditor.html", {"post":None})
+
+@auth_decorator.logged_in_or_basicauth()
+def editpost(request, post_id):
+    post = get_object_or_404(models.Post,id=post_id)
+
+    if request.method == "POST":
+        title = request.POST.get("title","")
+        content = request.POST.get("content","")
+        post.title = title
+        post.text = content
+        post.save()
+
+    return render(request, "posteditor.html",{"post":post})
+
+@auth_decorator.logged_in_or_basicauth()
+def publishpost(request, post_id):
+    if not request.method == "POST": return redirect("/admin")
+    post = get_object_or_404(models.Post, id=post_id)
+    post.published = True
+    post.publish_date = datetime.now()
+    post.save()
+    return redirect("/admin/%s"%post.id)
+
+@auth_decorator.logged_in_or_basicauth()
+def unpublishpost(request, post_id):
+    if not request.method == "POST": return redirect("/admin")
+
+    post = get_object_or_404(models.Post, id=post_id)
+    post.published = False
+    post.publish_date = None
+    post.save()
+    return redirect("/admin/%s"%post.id)
+
+@auth_decorator.logged_in_or_basicauth()
+def deletepost(request, post_id):
+    if not request.method == "POST": return redirect("/admin")
+
+    post = get_object_or_404(models.Post, id=post_id)
+    post.delete()
+    return redirect("/admin")

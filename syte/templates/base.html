@@ -10,8 +10,10 @@
   {% if RSS_FEED_ENABLED %}
   <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ RSS_FEED_URL }}" />
   {% endif %}
+  {% block extra_css %}{% endblock %}
   {% if DEV_DEPLOYMENT_MODE %}
   <link rel="stylesheet/less" type="text/css" href="{{ MEDIA_URL }}less/styles.less">
+  <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/bootstrap.css">
   <script src="{{ MEDIA_URL }}less/less-1.1.5.min.js" type="text/javascript"></script>
   {% else %}
   <link rel="stylesheet" href="{{ MEDIA_URL }}css/styles-{{ COMPRESS_REVISION_NUMBER }}.min.css" type="text/css" media="screen, projection">
@@ -28,12 +30,14 @@
   </hgroup>
   <nav>
     <ul class="main-nav">
+        {% block navmain %}
       <li><a href="/" id="home-link">Home</a></li>
       <li><a href="http://twitter.com/#!/rigoneri" id="twitter-link">Twitter</a></li>
       <li><a href="http://github.com/rigoneri" id="github-link">Github</a></li>
       <li><a href="http://dribbble.com/rigoneri" id="dribbble-link">Dribbble</a></li>
       <li><a href="http://instagr.am/p/Lau1VrEPbt" id="instagram-link">Instagram</a></li>
       <li><a href="mailto:contact@rigoneri.com?subject=Hello" id="contact-link">Contact</a></li>
+        {% endblock %}
     </ul>
   </nav>
   <a href="https://github.com/rigoneri/syte" class="fork-me">Fork me on Github</a>

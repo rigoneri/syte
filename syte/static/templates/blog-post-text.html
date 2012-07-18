@@ -1,22 +1,22 @@
 <article id="{{ id }}">
-  <hgroup>
-    <h2><a href="/post/{{ id }}">{{ title }}&nbsp;</a></h2>
-    <h3><a href="#{{ id }}">{{ formated_date }}</a></h3>
-  </hgroup>
-  {{{ body }}}
-  <footer>
-    {{#if tags}}
-    <h4>Tags</h4>
-    <ul class="tags">
-      {{#each tags}}
-      <li><a href="/tags/{{ this }}">{{ this }}</a></li>
-      {{/each}}
-    </ul>
-    {{/if}}
-    {{#if disqus_enabled }}
-    <div id="disqus_thread" class="disqus-thread">
-      <a href="/post/{{ id }}#disqus_thread" class="comments"></a>
-    </div>
-    {{/if}}
-  </footer>
+    <hgroup>
+        <h2><a href="/post/{{ id }}">{{ title }}&nbsp;</a></h2>
+        <h3><a href="#{{ id }}">{{ formated_date }}</a></h3>
+    </hgroup>
+    {{{ body }}}
+    <footer>
+        {{#if tags}}
+        <h4>Tags</h4>
+        <ul class="tags">
+            {{#each tags}}
+            <li><a href="/tags/{{ this }}">{{ this }}</a></li>
+            {{/each}}
+        </ul>
+        {{/if}}
+        {{#if disqus_enabled }}
+        <div id="disqus_thread" class="disqus-thread">
+            <a href="/post/{{ id }}#disqus_thread" class="comments"></a>
+        </div>
+        {{/if}}
+    </footer>
 </article>

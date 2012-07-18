@@ -1,0 +1,68 @@
+{% extends "admintemplate.html" %}
+
+{% block extra_css %}<link rel="stylesheet" href="{{ MEDIA_URL }}js/libs/redactor/css/redactor.css">{% endblock %}
+
+
+{% block extra_js %}
+    <script src="{{ MEDIA_URL }}js/libs/redactor/redactor.js"></script>
+<script type="text/javascript">
+    // I would use the inline_js block here, but my editor doesn't know its JS and I like its tooltips.
+    $(document).ready(function(){
+            $("#redactor_content").redactor({ autoresize: true, fixed:true });
+            $("#save_post").click(function(e){
+                e.preventDefault();
+                $("#post_form").submit()
+            });
+        }
+    );
+</script>
+{% endblock %}
+
+{% block navmain %}
+    <li><a href="#" id="save_post">Save Post</a></li>
+    {% if post %}
+        <li>
+            <form method="POST" id="delete_form" action="/admin/{{ post.id }}/delete">
+                {% csrf_token %}
+                <a href="#" id="delete_post"
+                   onclick="$('#delete_form').submit()">Delete Post</a>
+            </form>
+        </li>
+        {% if post.published %}
+            <li>
+                <form method="POST" id="unpublish" action="/admin/{{ post.id }}/unpublish">
+                    {% csrf_token %}
+                    <a href="#" id="unpublish_post"
+                       onclick="$('#unpublish').submit()">Unpublish Post</a>
+                </form>
+            </li>
+            <li><a href="/post/{{ post.id }}" id="view_live">View Live</a></li>
+        {% else %}
+            <li>
+                <form method="POST" id="publish" action="/admin/{{ post.id }}/publish">
+                    {% csrf_token %}
+                    <a href="#" id="publish_post"
+                        onclick="$('#publish').submit()">Publish Post</a>
+                </form>
+            </li>
+        {% endif %}
+    {% endif %}
+{% endblock %}
+
+{% block admintitle %}
+    {% if not post %}Create{% else %}Edit{% endif %}
+{% endblock %}
+
+{% block admincontent %}
+    <div class="row-fluid">
+        <div class="span10">
+            <form id="post_form" method="POST">
+                {% csrf_token %}
+                <input value="{{ post.title }}" type="text" id="title_text" name="title" style="height: 50px; font-size: 30px" class="span12">
+                <textarea id="redactor_content" name="content" style="height: 100%;">{{ post.text }}</textarea>
+            </form>
+
+        </div>
+    </div>
+
+{% endblock %}
