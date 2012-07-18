@@ -58,6 +58,7 @@ GOOGLE_ANALYTICS_TRACKING_ID = ''
 DISQUS_INTEGRATION_ENABLED = False
 DISQUS_SHORTNAME = ''
 
+
 #Lastfm Integration
 LASTFM_INTEGRATION_ENABLED = True
 LASTFM_API_URL = 'http://ws.audioscrobbler.com/2.0/'

@@ -70,6 +70,7 @@ function setupLinks() {
       else if (lastfm_integration_enabled && (url.attr('host') == 'lastfm.com' || url.attr('host') == 'www.lastfm.com')) {
 
         $('#twitter-profile').remove();
+        $('#github-profile').remove();
         $('#dribbble-profile').remove();
         $('#instagram-profile').remove();
         $('.modal-backdrop').remove();

@@ -80,9 +80,9 @@ Syte has instagram integration, which means that you can show your instagram pic
 ![Syte Instagram](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-5.png?raw=true)
 
 
-### Lastfm
+### Last.fm
 
-Syte has lastfm integration, which means that when someone clicks on a link that points to a user's lastfm profile the profile information will be loaded directly in the site along with a listing of the most recently scrobbled tracks.
+Syte has Last.fm integration, which means that when someone clicks on a link that points to a user's Last.fm profile the profile information will be loaded directly in the site along with a listing of the most recently scrobbled tracks.
 
 ![Syte Lastfm](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-6.png?raw=true)
 
@@ -233,10 +233,9 @@ If you want to turn off instagram integration just set `INSTAGRAM_INTEGRATION_EN
 
 
 
-### Setting up Lastfm integration
+### Setting up Last.fm integration
 
-The lastfm integration does not make any authenticated calls so setting it up
-only requires that you register an application with Lastfm and get an API key.
+The Last.fm integration does not make any authenticated calls so setting it up only requires that you register an application with Lastfm and get an API key.
 
 To get an API key simply follow the [Getting started instructions](http://www.last.fm/api).  You can then view your API Key from [your api account page](http://www.last.fm/api/account).
 
@@ -245,7 +244,9 @@ Once you have your API Key from Lastfm you have to enter it in your **syte_setti
 * ***API_KEY*** under `LASTFM_API_KEY`
 * ***USERNAME*** under `LASTFM_USERNAME`
 
-If you want to turn off lastfm integration just set `LASTFM_INTEGRATION_ENABLED` to False.
+If you want to turn off Last.fm integration just set `LASTFM_INTEGRATION_ENABLED` to False.
+
+
 
 
 ## Running & Deployment Instructions

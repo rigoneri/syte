@@ -33,6 +33,10 @@ function setupLastfm(url, el) {
         return obj[0]['#text'];
      });
 
+     Handlebars.registerHelper('avatar_url', function(obj) {
+        return obj[1]['#text'];
+     });
+
      require(["json!/lastfm/" + username, "text!templates/lastfm-profile.html"],
         function(lastfm_data, lastfm_view) {
             if (lastfm_data.error || lastfm_data.length == 0) {
@@ -41,7 +45,15 @@ function setupLastfm(url, el) {
             }
 
             var template = Handlebars.compile(lastfm_view);
-            lastfm_data.user_info.user.formatted_register_date = moment(lastfm_data.user_info.user.registered['#text']);
+            
+            lastfm_data.user_info.user.formatted_plays = numberWithCommas(lastfm_data.user_info.user.playcount);
+            lastfm_data.user_info.user.formatted_playlists = numberWithCommas(lastfm_data.user_info.user.playlists);
+            lastfm_data.user_info.user.formatted_register_date = moment(lastfm_data.user_info.user.registered['#text'], 'YYYY-MM-DD HH:mm').format('MM/DD/YYYY');
+            
+            $.each(lastfm_data.recenttracks.recenttracks.track, function(i, t) {
+                t.formatted_date = moment.utc(t.date['#text'], 'DD MMM YYYY, HH:mm').fromNow();
+            });
+
             $(template(lastfm_data)).modal().on('hidden', function () {
                 $(this).remove();
                 adjustSelection('home-link');
