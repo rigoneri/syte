@@ -41,6 +41,8 @@ You can use, reproduce and do whatever you want with syte but I would like you t
 [![dannycochran](https://github.com/rigoneri/syte/blob/master/readme-imgs/dannycochran.png?raw=true)](http://dcochran.com)
 [![srir](https://github.com/rigoneri/syte/blob/master/readme-imgs/srir.png?raw=true)](http://sraghavan.net)
 [![tachang](https://github.com/rigoneri/syte/blob/master/readme-imgs/jeff-tchang.png?raw=true)](http://www.returnbooleantrue.com)
+[![junseki](https://github.com/rigoneri/syte/blob/master/readme-imgs/junseki.png?raw=true)](http://junseki.com)
+
 
 ## Social Integrations
 
