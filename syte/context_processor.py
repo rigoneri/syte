@@ -20,6 +20,8 @@ def site_pages(request):
     context['DISQUS_INTEGRATION_ENABLED'] = settings.DISQUS_INTEGRATION_ENABLED
     context['DISQUS_SHORTNAME'] = settings.DISQUS_SHORTNAME
 
+    context['LASTFM_INTEGRATION_ENABLED'] = settings.LASTFM_INTEGRATION_ENABLED
+
     context['GOOGLE_ANALYTICS_TRACKING_ID'] = settings.GOOGLE_ANALYTICS_TRACKING_ID
 
     return context

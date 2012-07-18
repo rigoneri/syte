@@ -1,0 +1,42 @@
+{{#with user_info.user}}
+<div class="profile lastfm modal fade" id="lastfm-profile">
+  <div class="profile-info">
+    <button class="close" data-dismiss="modal">×</button>
+    <div class="profile-name">
+      <h2><a href="http://lastfm.com/user/{{ name }}">{{ realname }}</a></h2>
+      <h3><a href="http://lastfm.com/user/{{ name }}">{{ name }}</a></h3>
+    </div>
+    <p class="profile-location-url">
+        {{#if country }}
+        <span>Country - {{ country }}</span>
+        {{/if}}
+    </p>
+  </div>
+  <ul class="profile-stats">
+    <li><a href="http://lastfm.com/user/{{ name }}"><strong>{{ playcount }}</strong> plays</a></li>
+    <li><a href="http://lastfm.com/user/{{ name }}/playlists"><strong>{{ playlists }}</strong> play lists</a></li>
+    <li><a href="http://lastfm.com/user/{{ name }}"><strong>{{ formatted_register_date }}</strong> registered</a></li>
+  </ul>
+  <div class="profile-info-footer">
+    <a href="http://lastfm.com/user/{{ name }}" class="btn">Follow on Last.fm</a>
+  </div>
+{{/with}}
+{{#with recenttracks.recenttracks}}
+  <ul class="profile-tracks">
+    {{#each track}}
+      <li>
+        <a href="{{ url }}" class="track-image">
+          <img src="{{ image_url image }}" alt="{{ text artist }} - {{ name }}" />
+        </a>
+
+        <p class="track-detail">
+            <a href="{{ url }}">{{ text artist }} - {{ name }}</a>
+        </p>
+        <p class="track-date">
+          {{ text date }}
+        </p>
+      </li>
+    {{/each}}
+  </ul>
+{{/with}}
+</div>
