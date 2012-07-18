@@ -79,6 +79,14 @@ Syte has instagram integration, which means that you can show your instagram pic
 
 ![Syte Instagram](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-5.png?raw=true)
 
+
+### Lastfm
+
+Syte has lastfm integration, which means that when someone clicks on a link that points to a user's lastfm profile the profile information will be loaded directly in the site along with a listing of the most recently scrobbled tracks.
+
+![Syte Lastfm](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-6.png?raw=true)
+
+
 ## Responsive UI
 
 Syte is responsive, which means that it scales down to a mobile device screen size.
@@ -223,6 +231,21 @@ After you validated that your instagram integration worked go back to Instragam 
 If you want to turn off instagram integration just set `INSTAGRAM_INTEGRATION_ENABLED` to False.
 
 
+
+
+### Setting up Lastfm integration
+
+The lastfm integration does not make any authenticated calls so setting it up
+only requires that you register an application with Lastfm and get an API key.
+
+To get an API key simply follow the [Getting started instructions](http://www.last.fm/api).  You can then view your API Key from [your api account page](http://www.last.fm/api/account).
+
+Once you have your API Key from Lastfm you have to enter it in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
+
+* ***API_KEY*** under `LASTFM_API_KEY`
+* ***USERNAME*** under `LASTFM_USERNAME`
+
+If you want to turn off lastfm integration just set `LASTFM_INTEGRATION_ENABLED` to False.
 
 
 ## Running & Deployment Instructions
