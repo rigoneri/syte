@@ -2,12 +2,14 @@
 
 {% load markup %}
 
-{% block pagetitle %}{{ post_title }}{% endblock %}
+{% block pagetitle %}{{ article.title }}{% endblock %}
 
 {% block body %}
     {% block main_section %}
         <section class="main-section blog-section" id="blog-posts">
-            {{ article.source|markdown }}
+            <article>
+                {{ article.source|markdown }}
+            </article>
         </section>
     {% endblock %}
 {% endblock %}
