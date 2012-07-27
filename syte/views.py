@@ -107,6 +107,11 @@ def blog(request):
     return HttpResponse(content=r.text, status=r.status_code,
                         content_type=r.headers['content-type'])
 
+def pagination(request, tumblr_offset):
+    r = requests.get('{0}/posts?api_key={1}&offset={2}'.format(settings.TUMBLR_API_URL,
+        settings.TUMBLR_API_KEY, tumblr_offset))
+    return HttpResponse(content=r.text, status=r.status_code,
+                        content_type=r.headers['content-type'])
 
 def blog_post(request, post_id):
     context = dict()
@@ -251,3 +256,4 @@ def lastfm(request, username):
 
     return HttpResponse(content=json.dumps(context), status=user.status_code,
                         content_type=user.headers['content-type'])
+
