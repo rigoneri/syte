@@ -5,9 +5,11 @@
 </section>
 {% endblock %}
 {% block extra_inline_js %}
+
+var postOffset = 0;
 $(function() {
   {% if tag_slug %}
-  fetchBlogPosts("{{tag_slug}}");
+  fetchBlogPosts("{{tag_slug}}", postOffset);
   {% else %}
   fetchBlogPosts();
   {% endif %}
@@ -16,5 +18,19 @@ $(function() {
     embedDisqus(true);
   });
   {% endif %}
+});
+
+var resultsLoaded = false;
+$(window).scroll(function() {
+    if(!resultsLoaded && ($(window).scrollTop() + 
+       $(window).height() > $(document).height()/1.2)) {
+        resultsLoaded = true;
+        postOffset += 20; 
+        fetchBlogPosts(undefined, postOffset);
+     }
+    if(resultsLoaded && ($(window).scrollTop() + 
+       $(window).height() < $(document).height()/1.2)) {
+        resultsLoaded = false;
+    }
 });
 {% endblock %}

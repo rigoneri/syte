@@ -1,9 +1,12 @@
 
-function fetchBlogPosts(tag) {
+function fetchBlogPosts(tag, tumblr_offset) {
   var blog_fetch_url = '/blog.json';
 
   if (tag)
       blog_fetch_url = '/tags/' + tag;
+
+  if (tumblr_offset)
+      blog_fetch_url = '/blog_pagination.json/' + tumblr_offset;
 
   $.getJSON(blog_fetch_url, function(blog_posts) {
       require(["text!templates/blog-post-text.html",
@@ -47,7 +50,8 @@ function fetchBlogPosts(tag) {
             });
 
             setupLinks();
-            adjustBlogHeaders();
+            if (!tumblr_offset)
+                adjustBlogHeaders();
             prettyPrint();
             setTimeout(setupBlogHeaderScroll, 1000);
             adjustSelection('home-link');

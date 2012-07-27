@@ -107,6 +107,11 @@ def blog(request):
     return HttpResponse(content=r.text, status=r.status_code,
                         content_type=r.headers['content-type'])
 
+def pagination(request, tumblr_offset):
+    r = requests.get('{0}/posts?api_key={1}&offset={2}'.format(settings.TUMBLR_API_URL,
+        settings.TUMBLR_API_KEY, tumblr_offset))
+    return HttpResponse(content=r.text, status=r.status_code,
+                        content_type=r.headers['content-type'])
 
 def blog_post(request, post_id):
     context = dict()
@@ -233,21 +238,4 @@ def instagram_next(request, max_id):
                         content_type=media_r.headers['content-type'])
 
 
-def lastfm(request, username):
-    url = '{0}?method=user.getrecenttracks&user={1}&api_key={2}&format=json'.format(
-                                                    settings.LASTFM_API_URL,
-                                                    settings.LASTFM_USERNAME,
-                                                    settings.LASTFM_API_KEY)
-    tracks = requests.get(url)
-    url = '{0}?method=user.getinfo&user={1}&api_key={2}&format=json'.format(
-                                                    settings.LASTFM_API_URL,
-                                                    settings.LASTFM_USERNAME,
-                                                    settings.LASTFM_API_KEY)
-    user = requests.get(url)
-    context = {
-        'user_info': user.json,
-        'recenttracks': tracks.json,
-    }
 
-    return HttpResponse(content=json.dumps(context), status=user.status_code,
-                        content_type=user.headers['content-type'])
