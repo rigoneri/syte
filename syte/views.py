@@ -134,7 +134,7 @@ def blog_post(request, post_id):
             compiler = Compiler()
             template = compiler.compile(unicode(f_data))
             context['post_data'] = template(post)
-            context['post_title'] = post['title']
+            context['post_title'] = post.get('title', '')
 
     return render(request, 'blog-post.html', context)
 
