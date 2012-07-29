@@ -106,13 +106,17 @@ def bitbucket(request, username):
 
     data = r.json
 
+    data['user']['followers'] = '?'  # TODO
+
     # Create name from first and last name
     data['user']['name'] = "{0} {1}".format(
         data['user']['first_name'], data['user']['last_name'])
 
-    # TODO
-    data['user']['following'] = '?'
-    data['user']['followers'] = '?'
+    # Number of followers
+    r_followers = requests.get('{0}users/{1}/followers/'.format(
+        settings.BITBUCKET_API_URL,
+        username))
+    data['user']['following'] = r_followers.json['count']
 
     # Count public repositories
     data['user']['public_repos'] = len(data['repositories'])
@@ -120,12 +124,19 @@ def bitbucket(request, username):
     # Create html_url
     for repo in data['repositories']:
         repo['html_url'] = 'https://bitbucket.org/{0}/{1}'.format(
-            repo['owner'], repo['name'])
+            repo['owner'], repo['slug'])
 
         if not repo['language']:
             repo['language'] = 'unknown'
 
-        repo['forks'] = '?'  # TODO
+        # Get forks
+        r_forks = requests.get('{0}repositories/{1}/{2}'.format(
+            settings.BITBUCKET_API_URL,
+            username,
+            repo['slug']))
+        repo['forks'] = r_forks.json['forks_count']
+
+    # TODO(even): sort the repositories on utc_last_updated
 
     return HttpResponse(content=json.dumps(data), status=r.status_code,
                         content_type=r.headers['content-type'])
