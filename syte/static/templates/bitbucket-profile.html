@@ -21,8 +21,8 @@
   </div>
   <ul class="profile-stats">
     <li><a href="http://bitbucket.org/{{ username }}"><strong>{{ public_repos }}</strong> repos</a></li>
-<!--    <li><a href="http://bitbucket.org/{{ username }}/following"><strong>{{ following }}</strong> following</a></li>
-<li><a href="http://bitbucket.org/{{ username }}/followers"><strong>{{ followers }}</strong> followers</a></li> -->
+	<li><a href="http://bitbucket.org/{{ username }}"><strong>{{ following }}</strong> following</a></li>
+	<li><a href="http://bitbucket.org/{{ username }}"><strong>{{ followers }}</strong> followers</a></li>
   </ul>
   <div class="profile-info-footer">
     <a href="http://bitbucket.org/{{ username }}" class="btn">Follow on Bitbucket</a>
@@ -37,8 +37,8 @@
     </p>
     <ul class="profile-repo-stats">
       <li>{{ language }}</li>
-      <li><a href="{{ html_url }}/watchers" class="profile-watchers">{{ watchers }}</a></li>
-      <li><a href="{{ html_url }}/network" class="profile-forks">{{ forks }}</a></li>
+      <li><a href="{{ html_url }}/zealots" class="profile-watchers">{{ followers_count }}</a></li>
+      <li><a href="{{ html_url }}/descendants" class="profile-forks">{{ forks }}</a></li>
     </ul>
     </li>
     {{/each}}

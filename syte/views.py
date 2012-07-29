@@ -2,7 +2,7 @@
 from context_processor import site_pages
 from django.shortcuts import redirect, render
 from django.template import Context, loader
-from django.http import HttpResponse, HttpResponseServerError, Http404
+from django.http import HttpResponse, HttpResponseServerError
 from django.conf import settings
 from pybars import Compiler
 from datetime import datetime
@@ -12,10 +12,12 @@ import requests
 import json
 import oauth2 as oauth
 
+
 def server_error(request, template_name='500.html'):
     t = loader.get_template(template_name)
     d = site_pages(request)
     return HttpResponseServerError(t.render(Context(d)))
+
 
 def page_not_found_error(request, template_name='404.html'):
     t = loader.get_template(template_name)
@@ -44,6 +46,7 @@ def twitter(request, username):
     return HttpResponse(content=content, status=resp.status,
              content_type=resp['content-type'])
 
+
 def github(request, username):
     user_r = requests.get('{0}users/{1}?access_token={2}'.format(
         settings.GITHUB_API_URL,
@@ -60,6 +63,7 @@ def github(request, username):
 
     return HttpResponse(content=json.dumps(context), status=repos_r.status_code,
                         content_type=repos_r.headers['content-type'])
+
 
 def github_auth(request):
     context = dict()
@@ -78,7 +82,7 @@ def github_auth(request):
               'client_secret': settings.GITHUB_CLIENT_SECRET,
               'redirect_uri': '{0}github/auth/'.format(settings.SITE_ROOT_URI),
               'code': code,
-            }, headers={'Accept': 'application/json'});
+            }, headers={'Accept': 'application/json'})
 
         try:
             data = r.json
@@ -93,6 +97,38 @@ def github_auth(request):
         context['error'] = error
 
     return render(request, 'github_auth.html', context)
+
+
+def bitbucket(request, username):
+    r = requests.get('{0}users/{1}/'.format(
+        settings.BITBUCKET_API_URL,
+        username))
+
+    data = r.json
+
+    # Create name from first and last name
+    data['user']['name'] = "{0} {1}".format(
+        data['user']['first_name'], data['user']['last_name'])
+
+    # TODO
+    data['user']['following'] = '?'
+    data['user']['followers'] = '?'
+
+    # Count public repositories
+    data['user']['public_repos'] = len(data['repositories'])
+
+    # Create html_url
+    for repo in data['repositories']:
+        repo['html_url'] = 'https://bitbucket.org/{0}/{1}'.format(
+            repo['owner'], repo['name'])
+
+        if not repo['language']:
+            repo['language'] = 'unknown'
+
+        repo['forks'] = '?'  # TODO
+
+    return HttpResponse(content=json.dumps(data), status=r.status_code,
+                        content_type=r.headers['content-type'])
 
 
 def dribbble(request, username):
@@ -176,7 +212,7 @@ def instagram_auth(request):
               'grant_type': 'authorization_code',
               'redirect_uri': '{0}instagram/auth/'.format(settings.SITE_ROOT_URI),
               'code': code,
-            });
+            })
 
         data = json.loads(r.text)
         error = data.get('error_message', None)
@@ -190,7 +226,6 @@ def instagram_auth(request):
         context['error'] = error
 
     return render(request, 'instagram_auth.html', context)
-
 
 
 def instagram(request):
