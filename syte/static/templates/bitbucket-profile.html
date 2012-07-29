@@ -1,0 +1,46 @@
+<div class="profile github modal fade" id="bitbucket-profile">
+  {{#with user }}
+  <div class="profile-info">
+    <button class="close" data-dismiss="modal">×</button>
+    <a href="http://bitbucket.org/{{ username }}" class="profile-avatar">
+      <img src="{{ avatar }}" alt="{{name}}" />
+    </a>
+    <div class="profile-name">
+      <h2><a href="http://bitbucket.org/{{ username }}">{{ name }}</a></h2>
+      <h3><a href="http://bitbucket.org/{{ username }}">{{ username }}</a></h3>
+    </div>
+   <p class="profile-location-url">
+      {{#if location }}
+      <span>{{ location }}</span>
+      <span class="divider">·</span>
+      {{/if}}
+      {{#if blog }}
+      <span><a href="{{ blog }}">{{ blog }}</a></span>
+      {{/if}}
+    </p>
+  </div>
+  <ul class="profile-stats">
+    <li><a href="http://bitbucket.org/{{ username }}"><strong>{{ public_repos }}</strong> repos</a></li>
+<!--    <li><a href="http://bitbucket.org/{{ username }}/following"><strong>{{ following }}</strong> following</a></li>
+<li><a href="http://bitbucket.org/{{ username }}/followers"><strong>{{ followers }}</strong> followers</a></li> -->
+  </ul>
+  <div class="profile-info-footer">
+    <a href="http://bitbucket.org/{{ username }}" class="btn">Follow on Bitbucket</a>
+  </div>
+  {{/with}}
+  <ul class="profile-repos">
+    {{#each repositories}}
+    <li>
+    <a href="{{ html_url }}" class="profile-repo-name">{{ name }}</a>
+    <p class="profile-repo-text">
+      {{ description }}
+    </p>
+    <ul class="profile-repo-stats">
+      <li>{{ language }}</li>
+      <li><a href="{{ html_url }}/watchers" class="profile-watchers">{{ watchers }}</a></li>
+      <li><a href="{{ html_url }}/network" class="profile-forks">{{ forks }}</a></li>
+    </ul>
+    </li>
+    {{/each}}
+  </ul>
+</div>
