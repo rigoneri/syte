@@ -44,6 +44,28 @@ def twitter(request, username):
     return HttpResponse(content=content, status=resp.status,
              content_type=resp['content-type'])
 
+def soundcloud(request, username):
+    context = dict()
+    user_profile = requests.get('{0}users/{1}.json?client_id={2}'.format(
+        settings.SOUNDCLOUD_API_URL,
+        username,
+        settings.SOUNDCLOUD_CLIENT_ID))
+    user_tracks = requests.get('{0}users/{1}/tracks.json?client_id={2}'.format(
+        settings.SOUNDCLOUD_API_URL,
+        username,
+        settings.SOUNDCLOUD_CLIENT_ID))
+    
+    context = {
+        'user_profile' : user_profile.json, 
+        'user_tracks' : { 
+            'tracks' : user_tracks.json, 
+            'show_artwork' : settings.SOUNDCLOUD_SHOW_ARTWORK,
+            'player_color' : settings.SOUNDCLOUD_PLAYER_COLOR
+        }
+    }
+    return HttpResponse(content=json.dumps(context), status=user_profile.status_code,
+                        content_type=user_profile.headers['content-type'])
+
 def github(request, username):
     user_r = requests.get('{0}users/{1}?access_token={2}'.format(
         settings.GITHUB_API_URL,
