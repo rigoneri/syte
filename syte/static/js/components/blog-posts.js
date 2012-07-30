@@ -1,9 +1,9 @@
 
-function fetchBlogPosts(tag) {
-  var blog_fetch_url = '/blog.json';
+function fetchBlogPosts(offset, tag) {
+  var blog_fetch_url = '/blog.json?o=' + offset;
 
   if (tag)
-      blog_fetch_url = '/tags/' + tag;
+      blog_fetch_url = '/tags/' + tag + '/?o=' + offset;
 
   $.getJSON(blog_fetch_url, function(blog_posts) {
       require(["text!templates/blog-post-text.html",

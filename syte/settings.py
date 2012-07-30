@@ -63,7 +63,6 @@ INSTALLED_APPS = (
     'gunicorn',
 )
 
-
 try:
     from rigoneri_settings import *
 except ImportError:
