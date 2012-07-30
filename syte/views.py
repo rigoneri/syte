@@ -140,21 +140,11 @@ def blog_post(request, post_id):
 
 
 def blog_tags(request, tag_slug):
-    #Due to the issue with the tumblr api described below we will redirect to the
-    #users tumblr tags page for now.
-    return redirect('http://{0}/tagged/{1}'.format(
-        settings.TUMBLR_BLOG_URL, tag_slug))
-
     if request.is_ajax():
-        #Important!!! This request doesn't work for now. There is a bug filed with
-        #tumblr where the array of posts are always being returned empty. For now I'll
-        #point directly to tumblr's url.
-        #https://groups.google.com/d/topic/tumblr-api/9KfQZPKqcgA/discussion
-        r = requests.get('{0}/posts/text?api_key={1}&tag={2}'.format(settings.TUMBLR_API_URL,
-                settings.TUMBLR_API_KEY, tag_slug))
-        return HttpResponse(content=json.loads(r.text), status=r.status_code,
+        r = requests.get('{0}/posts?api_key={1}&tag={2}'.format(settings.TUMBLR_API_URL, 
+            settings.TUMBLR_API_KEY, tag_slug))
+        return HttpResponse(content=r.text, status=r.status_code,
                 content_type=r.headers['content-type'])
-
     return render(request, 'index.html', {'tag_slug': tag_slug})
 
 
