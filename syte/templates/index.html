@@ -9,9 +9,9 @@
 var postOffset = 0;
 $(function() {
   {% if tag_slug %}
-  fetchBlogPosts("{{tag_slug}}", postOffset);
+  fetchBlogPosts(postOffset, "{{tag_slug}}");
   {% else %}
-  fetchBlogPosts();
+  fetchBlogPosts(postOffset);
   {% endif %}
   {% if DISQUS_INTEGRATION_ENABLED %}
   $('body').bind('blog-post-loaded', function() {
@@ -22,15 +22,15 @@ $(function() {
 
 var resultsLoaded = false;
 $(window).scroll(function() {
-    if(!resultsLoaded && ($(window).scrollTop() + 
-       $(window).height() > $(document).height()/1.2)) {
-        resultsLoaded = true;
-        postOffset += 20; 
-        fetchBlogPosts(undefined, postOffset);
-     }
-    if(resultsLoaded && ($(window).scrollTop() + 
-       $(window).height() < $(document).height()/1.2)) {
-        resultsLoaded = false;
-    }
+  if(!resultsLoaded && ($(window).scrollTop() +
+    $(window).height() > $(document).height()/1.2)) {
+      resultsLoaded = true;
+      postOffset += 20;
+      fetchBlogPosts(postOffset{% if tag_slug %}, "{{tag_slug}}"{% endif%});
+  }
+  if(resultsLoaded && ($(window).scrollTop() + 
+    $(window).height() < $(document).height()/1.2)) {
+      resultsLoaded = false;
+  }
 });
 {% endblock %}

@@ -9,9 +9,6 @@ urlpatterns = patterns('',
     url(r'^post/(?P<post_id>\w+)/?$', 'syte.views.blog_post'),
     url(r'^tags/(?P<tag_slug>\w+)/?$', 'syte.views.blog_tags'),
     url(r'^blog.json/?$', 'syte.views.blog'),
-    url(r'^blog.pagination.json/(?P<tumblr_offset>\w+)/?$', 'syte.views.pagination'),
-    
-    url(r'^robots\.txt$', lambda r: HttpResponse("User-agent: *\nDisallow:", mimetype="text/plain")),
     url(r'^about/?$', 'syte.views.home'),
     url(r'^/?$', 'syte.views.home'),
 )

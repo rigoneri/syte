@@ -102,16 +102,12 @@ def dribbble(request, username):
 
 
 def blog(request):
-    r = requests.get('{0}/posts?api_key={1}'.format(settings.TUMBLR_API_URL,
-        settings.TUMBLR_API_KEY))
+    offset = request.GET.get('o', 0)
+    r = requests.get('{0}/posts?api_key={1}&offset={2}'.format(settings.TUMBLR_API_URL,
+        settings.TUMBLR_API_KEY, offset))
     return HttpResponse(content=r.text, status=r.status_code,
                         content_type=r.headers['content-type'])
 
-def pagination(request, tumblr_offset):
-    r = requests.get('{0}/posts?api_key={1}&offset={2}'.format(settings.TUMBLR_API_URL,
-        settings.TUMBLR_API_KEY, tumblr_offset))
-    return HttpResponse(content=r.text, status=r.status_code,
-                        content_type=r.headers['content-type'])
 
 def blog_post(request, post_id):
     context = dict()
@@ -145,9 +141,10 @@ def blog_post(request, post_id):
 
 
 def blog_tags(request, tag_slug):
+    offset = request.GET.get('o', 0)
     if request.is_ajax():
-        r = requests.get('{0}/posts?api_key={1}&tag={2}'.format(settings.TUMBLR_API_URL, 
-            settings.TUMBLR_API_KEY, tag_slug))
+        r = requests.get('{0}/posts?api_key={1}&tag={2}&offset={3}'.format(settings.TUMBLR_API_URL, 
+            settings.TUMBLR_API_KEY, tag_slug, offset))
         return HttpResponse(content=r.text, status=r.status_code,
                 content_type=r.headers['content-type'])
     return render(request, 'index.html', {'tag_slug': tag_slug})

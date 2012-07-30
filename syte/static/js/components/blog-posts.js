@@ -1,12 +1,9 @@
 
-function fetchBlogPosts(tag, tumblr_offset) {
-  var blog_fetch_url = '/blog.json';
+function fetchBlogPosts(offset, tag) {
+  var blog_fetch_url = '/blog.json?o=' + offset;
 
   if (tag)
-      blog_fetch_url = '/tags/' + tag;
-
-  if (tumblr_offset)
-      blog_fetch_url = '/blog.pagination.json/' + tumblr_offset;
+      blog_fetch_url = '/tags/' + tag + '/?o=' + offset;
 
   $.getJSON(blog_fetch_url, function(blog_posts) {
       require(["text!templates/blog-post-text.html",
@@ -50,8 +47,7 @@ function fetchBlogPosts(tag, tumblr_offset) {
             });
 
             setupLinks();
-            if (!tumblr_offset)
-                adjustBlogHeaders();
+            adjustBlogHeaders();
             prettyPrint();
             setTimeout(setupBlogHeaderScroll, 1000);
             adjustSelection('home-link');
