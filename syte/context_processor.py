@@ -23,5 +23,5 @@ def site_pages(request):
     context['LASTFM_INTEGRATION_ENABLED'] = settings.LASTFM_INTEGRATION_ENABLED
 
     context['GOOGLE_ANALYTICS_TRACKING_ID'] = settings.GOOGLE_ANALYTICS_TRACKING_ID
-
+    context['SOUNDCLOUD_INTEGRATION_ENABLED'] = settings.SOUNDCLOUD_INTEGRATION_ENABLED
     return context

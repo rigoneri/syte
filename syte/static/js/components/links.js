@@ -5,7 +5,6 @@ function setupLinks() {
   $('a').click(function(e) {
       if (e.which == 2)
           return;
-
       e.preventDefault();
       e.stopPropagation();
 
@@ -22,6 +21,7 @@ function setupLinks() {
          $('#instagram-profile').remove();
          $('#lastfm-profile').remove();
          $('.modal-backdrop').remove();
+         $('#soundcloud-profile').remove();
          adjustSelection('home-link');
       }
       else if(this.id == 'instagram-link' && instagram_integration_enabled) {
@@ -30,6 +30,7 @@ function setupLinks() {
          $('#twitter-profile').remove();
          $('#lastfm-profile').remove();
          $('.modal-backdrop').remove();
+         $('#soundcloud-profile').remove();
          adjustSelection('instagram-link');
 
          setupInstagram(this);
@@ -41,6 +42,7 @@ function setupLinks() {
          $('#instagram-profile').remove();
          $('#lastfm-profile').remove();
          $('.modal-backdrop').remove();
+         $('#soundcloud-profile').remove();
          adjustSelection('twitter-link');
 
          setupTwitter(url, this);
@@ -52,6 +54,7 @@ function setupLinks() {
         $('#instagram-profile').remove();
         $('#lastfm-profile').remove();
         $('.modal-backdrop').remove();
+        $('#soundcloud-profile').remove();
         adjustSelection('github-link');
 
         setupGithub(url, this);
@@ -63,6 +66,7 @@ function setupLinks() {
          $('#instagram-profile').remove();
          $('#lastfm-profile').remove();
          $('.modal-backdrop').remove();
+         $('#soundcloud-profile').remove();
          adjustSelection('dribbble-link');
 
          setupDribbble(url, this);
@@ -74,9 +78,21 @@ function setupLinks() {
         $('#dribbble-profile').remove();
         $('#instagram-profile').remove();
         $('.modal-backdrop').remove();
+        $('#soundcloud-profile').remove();
         adjustSelection('lastfm-link');
 
         setupLastfm(url, this);
+      }
+      else if (soundcloud_integration_enabled && (url.attr('host') == 'soundcloud.com' || url.attr('host') == 'www.soundcloud.com')) {
+      	$('#twitter-profile').remove();
+        $('#github-profile').remove();
+        $('#dribbble-profile').remove();
+        $('#instagram-profile').remove();
+        $('.modal-backdrop').remove();
+        $('#lastfm-profile').remove();
+        adjustSelection('soundcloud-link');
+        
+        setupSoundcloud(url, this);
       }
       else {
          window.location = this.href;
