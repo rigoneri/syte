@@ -21,6 +21,7 @@ function setupLinks() {
          $('#twitter-profile').remove();
          $('#instagram-profile').remove();
          $('#lastfm-profile').remove();
+         $('#bitbucket-profile').remove();
          $('.modal-backdrop').remove();
          adjustSelection('home-link');
       }
@@ -29,6 +30,7 @@ function setupLinks() {
          $('#dribbble-profile').remove();
          $('#twitter-profile').remove();
          $('#lastfm-profile').remove();
+         $('#bitbucket-profile').remove();
          $('.modal-backdrop').remove();
          adjustSelection('instagram-link');
 
@@ -40,6 +42,7 @@ function setupLinks() {
          $('#dribbble-profile').remove();
          $('#instagram-profile').remove();
          $('#lastfm-profile').remove();
+         $('#bitbucket-profile').remove();
          $('.modal-backdrop').remove();
          adjustSelection('twitter-link');
 
@@ -51,6 +54,7 @@ function setupLinks() {
         $('#dribbble-profile').remove();
         $('#instagram-profile').remove();
         $('#lastfm-profile').remove();
+        $('#bitbucket-profile').remove();
         $('.modal-backdrop').remove();
         adjustSelection('github-link');
 
@@ -62,6 +66,7 @@ function setupLinks() {
          $('#github-profile').remove();
          $('#instagram-profile').remove();
          $('#lastfm-profile').remove();
+         $('#bitbucket-profile').remove();
          $('.modal-backdrop').remove();
          adjustSelection('dribbble-link');
 
@@ -73,10 +78,23 @@ function setupLinks() {
         $('#github-profile').remove();
         $('#dribbble-profile').remove();
         $('#instagram-profile').remove();
+        $('#bitbucket-profile').remove();
         $('.modal-backdrop').remove();
         adjustSelection('lastfm-link');
 
         setupLastfm(url, this);
+      }
+      else if (bitbucket_integration_enabled && (url.attr('host') == 'bitbucket.org' || url.attr('host') == 'www.bitbucket.org')) {
+
+        $('#twitter-profile').remove();
+        $('#github-profile').remove();
+        $('#dribbble-profile').remove();
+        $('#instagram-profile').remove();
+        $('#lastfm-profile').remove();
+        $('.modal-backdrop').remove();
+        adjustSelection('bitbucket-link');
+
+        setupBitbucket(url, this);
       }
       else {
          window.location = this.href;

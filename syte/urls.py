@@ -55,6 +55,12 @@ if settings.LASTFM_INTEGRATION_ENABLED:
         url(r'^lastfm/(?P<username>\S+)/?$', 'syte.views.lastfm'),
     )
 
+#Bitbucket Integration
+if settings.BITBUCKET_INTEGRATION_ENABLED:
+    urlpatterns += patterns('',
+        url(r'^bitbucket/(?P<username>\w+)/?$', 'syte.views.bitbucket'),
+    )
+
 #Statics: Hacky for now... fix this later...
 urlpatterns += patterns('',
     (r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {'url':
@@ -62,7 +68,3 @@ urlpatterns += patterns('',
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': settings.MEDIA_ROOT}),
 )
-
-
-
-

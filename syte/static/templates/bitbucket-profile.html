@@ -1,0 +1,56 @@
+<div class="profile bitbucket modal fade" id="bitbucket-profile">
+  {{#with user }}
+  <div class="profile-info">
+    <button class="close" data-dismiss="modal">×</button>
+    <a href="http://bitbucket.org/{{ username }}" class="profile-avatar">
+      <img src="{{ avatar }}" alt="{{name}}" />
+    </a>
+    <div class="profile-name">
+      <h2><a href="http://bitbucket.org/{{ username }}">{{ first_name }} {{ last_name }}</a></h2>
+      <h3><a href="http://bitbucket.org/{{ username }}">{{ username }}</a></h3>
+    </div>
+    <p class="profile-location-url">
+      {{#if location }}
+      <span>{{ location }}</span>
+      <span class="divider">·</span>
+      {{/if}}
+      {{#if blog }}
+      <span><a href="{{ blog }}">{{ blog }}</a></span>
+      {{/if}}
+    </p>
+  </div>
+  <ul class="profile-stats">
+    <li><a href="http://bitbucket.org/{{ username }}"><strong>{{ public_repos }}</strong> repos</a></li>
+    <li><a href="http://bitbucket.org/{{ username }}"><strong>{{ followers }}</strong> followers</a></li>
+  </ul>
+  <div class="profile-info-footer">
+    <a href="http://bitbucket.org/{{ username }}" class="btn">Follow on Bitbucket</a>
+  </div>
+  {{/with}}
+  <ul class="profile-repos">
+    {{#each repositories}}
+    <li>
+    <a href="http://bitbucket.org/{{ owner }}/{{ slug }}" class="profile-repo-name">{{ name }}</a>
+    {{#if logo }}
+    <a href="http://bitbucket.org/{{ owner }}/{{ slug }}" class="profile-repo-logo"><img src="{{ logo }}" alt="{{ name }}" /></a>
+    {{/if}}
+    {{#if fork_of}}
+    <p class="profile-repo-fork">
+      <a href="http://bitbucket.org/{{ fork_of.owner }}/{{ fork_of.slug }}">Fork of {{ fork_of.owner}} / {{ fork_of.name }}</a>
+      <a href="http://bitbucket.org/{{ fork_of.owner }}/{{ fork_of.slug }}/zealots" class="profile-watchers">{{ fork_of.followers_count }}</a>
+    </p>
+    {{/if}}
+    <p class="profile-repo-text">
+      {{ description }}
+    </p>
+    <ul class="profile-repo-stats">
+      <li>{{ language }}</li>
+      <li><a href="http://bitbucket.org/{{ owner }}/{{ slug }}/zealots" class="profile-watchers">{{ followers_count }}</a></li>
+      {{#if forks_count }}
+      <li><a href="http://bitbucket.org/{{ owner }}/{{ slug }}/descendants" class="profile-forks">{{ forks_count }}</a></li>
+      {{/if}}
+    </ul>
+    </li>
+    {{/each}}
+  </ul>
+</div>

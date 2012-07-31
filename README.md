@@ -90,6 +90,13 @@ Syte has Last.fm integration, which means that when someone clicks on a link tha
 ![Syte Lastfm](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-6.png?raw=true)
 
 
+### Bitbucket
+
+Syte has bitbucket integration, which means that when someone clicks on a link that points to a user's bitbucket profile the profile is loaded within your site along with a list of the user's repos.
+
+TODO: add image showcasing this feature
+
+
 ## Responsive UI
 
 Syte is responsive, which means that it scales down to a mobile device screen size.
@@ -248,6 +255,20 @@ Once you have your API Key from Lastfm you have to enter it in your **syte_setti
 * ***USERNAME*** under `LASTFM_USERNAME`
 
 If you want to turn off Last.fm integration just set `LASTFM_INTEGRATION_ENABLED` to False.
+
+
+
+
+### Setting up Bitbucket integration
+
+The Bitbucket integration does not make any authenticated calls nor does it require a registered API key.
+
+If you want to turn off bitbucket integration just set `BITBUCKET_INTEGRATION_ENABLED` to False.
+
+#### Comment
+To display the fork count on repositories set `BITBUCKET_SHOW_FORKS` to True.  The Bitbucket API require one call for each repository to get fork count, which is disabled by default.
+
+The Bitbucket API throttles the user resource to 100 calls every 30 minutes.
 
 
 
