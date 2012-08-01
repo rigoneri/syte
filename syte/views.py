@@ -144,7 +144,7 @@ def blog_tags(request, tag_slug):
     offset = request.GET.get('o', 0)
     if request.is_ajax():
         r = requests.get('{0}/posts?api_key={1}&tag={2}&offset={3}'.format(settings.TUMBLR_API_URL, 
-            settings.TUMBLR_API_KEY, tag_slug, offset))
+            settings.TUMBLR_API_KEY, tag_slug.encode('UTF-8'), offset))
         return HttpResponse(content=r.text, status=r.status_code,
                 content_type=r.headers['content-type'])
     return render(request, 'index.html', {'tag_slug': tag_slug})
