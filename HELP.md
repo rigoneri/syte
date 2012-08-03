@@ -10,8 +10,11 @@ Basic steps to add support for a particular service:
     [views.py](https://github.com/rigoneri/syte/blob/master/syte/views.py)
     to get info and return json
 5. Add above view to [urls.py](https://github.com/rigoneri/syte/blob/master/syte/urls.py)
-6. Add js file/function to query django view
+6. Write js file/function to query django view and add to
     [js components](https://github.com/rigoneri/syte/tree/master/syte/static/js/components)
+7. Add hook/call to main javascript integration point
+   [links.js](https://github.com/rigoneri/syte/tree/master/syte/static/js/components/links.js)
+    - Don't forget to update all other service calls in links.js to hide your new service.
 7. Add above js to list of js to
     [compress.py](https://github.com/rigoneri/syte/blob/master/syte/compress.py)
 8. Add link for service to
