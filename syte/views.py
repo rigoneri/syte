@@ -6,6 +6,7 @@ from django.http import HttpResponse, HttpResponseServerError, Http404
 from django.conf import settings
 from pybars import Compiler
 from datetime import datetime
+from operator import itemgetter
 
 import os
 import requests
@@ -58,8 +59,12 @@ def github(request, username):
     context = {'user': user_r.json}
     context.update({'repos': repos_r.json})
 
-    return HttpResponse(content=json.dumps(context), status=repos_r.status_code,
+    context['repos'].sort(key=itemgetter('updated_at'), reverse=True)
+
+    return HttpResponse(content=json.dumps(context),
+                        status=repos_r.status_code,
                         content_type=repos_r.headers['content-type'])
+
 
 def github_auth(request):
     context = dict()
