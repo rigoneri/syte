@@ -90,6 +90,14 @@ Syte has Last.fm integration, which means that when someone clicks on a link tha
 ![Syte Lastfm](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-6.png?raw=true)
 
 
+### Markdown blogs
+
+Syte has support for local blogging in the simple
+[Markdown](http://daringfireball.net/projects/markdown/) format.  The support
+for this feature has been adapted from the excellent Python
+[Logr](https://github.com/BrewerHimself/Logr) project.
+
+
 ## Responsive UI
 
 Syte is responsive, which means that it scales down to a mobile device screen size.
@@ -248,6 +256,50 @@ Once you have your API Key from Lastfm you have to enter it in your **syte_setti
 * ***USERNAME*** under `LASTFM_USERNAME`
 
 If you want to turn off Last.fm integration just set `LASTFM_INTEGRATION_ENABLED` to False.
+
+
+
+
+### Setting up Markdown support via Logr
+
+The support for Markdown blogs is done locally so there is no authentication
+setup as with the other supported social services.  However, you can still
+configure where your Markdown files are located, etc.
+
+In short, to use this feature with the default settings:
+
+- Enable support in 'syte > syte_settings.py'
+- Update 'syte > pages > FrontPage.md' with any general information as it will
+  be the homepage of your blog.
+- Write blogs in Markdown format and place files in 'syte > articles'
+
+By default all files with a Markdown-like extension (see full list in
+**syte_settings.py**) are expected to be in 'syte > articles' directory.
+
+You can also place Markdown files in 'syte > pages'.  This is more useful for a
+404 page, homepage, or about page for your blog.  By default, when a user
+browses to the homepage of the blog, '/blog/', the file 'syte > pages >
+Frontpage.md' will be shown.  Again, this page is configurable through the
+settings in 'syte > syte_settings.py'.
+
+The Markdown parsing and url scheme, etc. of this feature is provided by
+[Logr](https://github.com/BrewerHimself/Logr) project.  Thus, the documentation
+on the layout of a Markdown file, etc. is contiained [here](https://github.com/BrewerHimself/Logr/blob/master/README.md#notes].
+
+The important things to note about the Markdown support are:
+
+- The title of the blog/article should be the first line of the file.
+- The title of the blog/article will be used to generate the link for the
+  article.
+- Any files not matching a Markdown extension will never show up.
+- The listing of articles for the homepage is only generated when the syte
+  application boots up.  This is for efficiency reasons.  So, if you add a new
+  article/blog you will need to restart the application for it to show up in
+  the listing.
+- You can control the styling and layout of the articles/blogs via
+  'syte > templates > markdown_post.html'.
+- You can control the styling and layout of the articles/blogs via
+  'syte > templates > markdown_blog_index.html'.
 
 
 
