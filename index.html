@@ -84,6 +84,7 @@
 <a href="http://hussfelt.net"><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/hussfelt.png?raw=true" alt="hussfelt"></a>
 <a href="http://amastys.ru"><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/amastys.png?raw=true" alt="amastys"></a>
 <a href="http://dami.me"><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/damilare.png?raw=true" alt="damilare"></a>  
+<a href="http://eventh.herokuapp.com"><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/eventh.png?raw=true" alt="eventh"></a>
 </p>
 
 <br><br>
@@ -124,6 +125,12 @@
 <p>Syte has Last.fm integration, which means that when someone clicks on a link that points to a user's Last.fm profile the profile information will be loaded directly in the site along with a listing of the most recently scrobbled tracks.</p>
 
 <p><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/f-6.png?raw=true" alt="Syte Lastfm"></p>
+
+<h3>Soundcloud</h3>
+
+<p>Syte has Soundcloud integration, which means that when someone clicks on a link that points to a user's Soundcloud profile the profile information will be loaded directly in the site along with a listing of the user's soundcloud tracks. Since I don't use soundcloud, you can see an example on <a href="http://blog.guramkajaia.com/">Guram's website</a></p>
+
+<p><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/f-7.png?raw=true" alt="Syte Soundcloud"></p>
 
 <br><br>
 <h2>Responsive UI</h2>
@@ -297,6 +304,21 @@
 </ul>
 
 <p>If you want to turn off Last.fm integration just set <code>LASTFM_INTEGRATION_ENABLED</code> to False.</p>
+
+<h2>Setting up Soundcloud integration</h2>
+
+<p>In order to setup the soundcloud integration first need to create a soundcloud application by going to <a href="http://soundcloud.com/you/apps">http://soundcloud.com/you/apps</a>. Once you have the <code>CLIENT_ID</code> from soundcloud open the <strong>syte_settings.py</strong> file an enter it under the <code>SOUNDCLOUD_CLIENT_ID</code> setting.</p>
+
+<p>Inside <strong>syte_settings.py</strong> there are two other options to configure how your soundcloud tracks will be shown.</p>
+
+<ul>
+<li>
+<code>SOUNDCLOUD_SHOW_ARTWORK</code> (Boolean) set this option to true if you want to show your track artwork on page.</li>
+<li>
+<code>SOUNDCLOUD_PLAYER_COLOR</code> you can set your widget theme color here. Use Hex values only without <code>#</code> </li>
+</ul>
+
+<p>If you want to turn off Soundcloud integration just set <code>SOUNDCLOUD_INTEGRATION_ENABLED</code> to False.</p>
 
 <br><br>
 
