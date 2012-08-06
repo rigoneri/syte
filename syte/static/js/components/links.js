@@ -84,14 +84,15 @@ function setupLinks() {
         setupLastfm(url, this);
       }
       else if (soundcloud_integration_enabled && (url.attr('host') == 'soundcloud.com' || url.attr('host') == 'www.soundcloud.com')) {
-      	$('#twitter-profile').remove();
+
+        $('#twitter-profile').remove();
         $('#github-profile').remove();
         $('#dribbble-profile').remove();
         $('#instagram-profile').remove();
         $('.modal-backdrop').remove();
         $('#lastfm-profile').remove();
         adjustSelection('soundcloud-link');
-        
+
         setupSoundcloud(url, this);
       }
       else {

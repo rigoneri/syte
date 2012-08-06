@@ -1,6 +1,6 @@
 # Syte
 
-Syte is a really simple but powerful packaged personal site that has social integrations like tumblr, twitter, github, dribbble and instagram. You can see it in action on my personal site <http://rigoneri.com>
+Syte is a really simple but powerful packaged personal site that has social integrations like tumblr, twitter, github, dribbble, instagram, last.fm and soundcloud. You can see it in action on my personal site <http://rigoneri.com>
 
 ### There is only one rule
 
@@ -90,8 +90,16 @@ Syte has Last.fm integration, which means that when someone clicks on a link tha
 ![Syte Lastfm](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-6.png?raw=true)
 
 
-## Responsive UI
+### Soundcloud
 
+Syte has Soundcloud integration, which means that when someone clicks on a link that points to a user's Soundcloud profile the profile information will be loaded directly in the site along with a listing of the user's soundcloud tracks. Since I don't use soundcloud, you can see an example on [Guram's website](http://blog.guramkajaia.com/)
+
+![Syte Soundcloud](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-7.png?raw=true)
+
+
+
+## Responsive UI
+ 
 Syte is responsive, which means that it scales down to a mobile device screen size.
 
 ![Syte Responsive 1](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-r-1.png?raw=true) ![Syte Responsive 1](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-r-2.png?raw=true)
@@ -250,6 +258,16 @@ Once you have your API Key from Lastfm you have to enter it in your **syte_setti
 If you want to turn off Last.fm integration just set `LASTFM_INTEGRATION_ENABLED` to False.
 
 
+### Setting up Soundcloud integration
+
+In order to setup the soundcloud integration first need to create a soundcloud application by going to <http://soundcloud.com/you/apps>. Once you have the `CLIENT_ID` from soundcloud open the **syte_settings.py** file an enter it under the `SOUNDCLOUD_CLIENT_ID` setting.
+
+Inside **syte_settings.py** there are two other options to configure how your soundcloud tracks will be shown.
+
+* `SOUNDCLOUD_SHOW_ARTWORK` (Boolean) set this option to true if you want to show your track artwork on page.
+* `SOUNDCLOUD_PLAYER_COLOR` you can set your widget theme color here. Use Hex values only without `#` 
+
+If you want to turn off Soundcloud integration just set `SOUNDCLOUD_INTEGRATION_ENABLED` to False.
 
 
 ## Running & Deployment Instructions
