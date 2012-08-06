@@ -20,6 +20,7 @@ function setupLinks() {
          $('#twitter-profile').remove();
          $('#instagram-profile').remove();
          $('#lastfm-profile').remove();
+         $('#bitbucket-profile').remove();
          $('.modal-backdrop').remove();
          $('#soundcloud-profile').remove();
          adjustSelection('home-link');
@@ -29,6 +30,7 @@ function setupLinks() {
          $('#dribbble-profile').remove();
          $('#twitter-profile').remove();
          $('#lastfm-profile').remove();
+         $('#bitbucket-profile').remove();
          $('.modal-backdrop').remove();
          $('#soundcloud-profile').remove();
          adjustSelection('instagram-link');
@@ -41,6 +43,7 @@ function setupLinks() {
          $('#dribbble-profile').remove();
          $('#instagram-profile').remove();
          $('#lastfm-profile').remove();
+         $('#bitbucket-profile').remove();
          $('.modal-backdrop').remove();
          $('#soundcloud-profile').remove();
          adjustSelection('twitter-link');
@@ -53,6 +56,7 @@ function setupLinks() {
         $('#dribbble-profile').remove();
         $('#instagram-profile').remove();
         $('#lastfm-profile').remove();
+        $('#bitbucket-profile').remove();
         $('.modal-backdrop').remove();
         $('#soundcloud-profile').remove();
         adjustSelection('github-link');
@@ -65,6 +69,7 @@ function setupLinks() {
          $('#github-profile').remove();
          $('#instagram-profile').remove();
          $('#lastfm-profile').remove();
+         $('#bitbucket-profile').remove();
          $('.modal-backdrop').remove();
          $('#soundcloud-profile').remove();
          adjustSelection('dribbble-link');
@@ -77,6 +82,7 @@ function setupLinks() {
         $('#github-profile').remove();
         $('#dribbble-profile').remove();
         $('#instagram-profile').remove();
+        $('#bitbucket-profile').remove();
         $('.modal-backdrop').remove();
         $('#soundcloud-profile').remove();
         adjustSelection('lastfm-link');
@@ -84,16 +90,29 @@ function setupLinks() {
         setupLastfm(url, this);
       }
       else if (soundcloud_integration_enabled && (url.attr('host') == 'soundcloud.com' || url.attr('host') == 'www.soundcloud.com')) {
-
         $('#twitter-profile').remove();
         $('#github-profile').remove();
         $('#dribbble-profile').remove();
         $('#instagram-profile').remove();
         $('.modal-backdrop').remove();
+        $('#bitbucket-profile').remove();
         $('#lastfm-profile').remove();
         adjustSelection('soundcloud-link');
 
         setupSoundcloud(url, this);
+      }
+      else if (bitbucket_integration_enabled && (url.attr('host') == 'bitbucket.org' || url.attr('host') == 'www.bitbucket.org')) {
+
+        $('#twitter-profile').remove();
+        $('#github-profile').remove();
+        $('#dribbble-profile').remove();
+        $('#instagram-profile').remove();
+        $('#lastfm-profile').remove();
+        $('.modal-backdrop').remove();
+        $('#soundcloud-profile').remove();
+        adjustSelection('bitbucket-link');
+
+        setupBitbucket(url, this);
       }
       else {
          window.location = this.href;
