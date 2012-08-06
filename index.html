@@ -37,7 +37,7 @@
 
         <h1>Syte</h1>
 
-<p>Syte is a really simple but powerful packaged personal site that has social integrations like tumblr, twitter, github, dribbble and instagram. You can see it in action on my personal site <a href="http://rigoneri.com">http://rigoneri.com</a></p>
+<p>Syte is a really simple but powerful packaged personal site that has social integrations like tumblr, twitter, github, dribbble, instagram, last.fm, soundcloud and bitbucket. You can see it in action on my personal site <a href="http://rigoneri.com">http://rigoneri.com</a></p>
 
 <h3>There is only one rule</h3>
 
@@ -131,6 +131,12 @@
 <p>Syte has Soundcloud integration, which means that when someone clicks on a link that points to a user's Soundcloud profile the profile information will be loaded directly in the site along with a listing of the user's soundcloud tracks. Since I don't use soundcloud, you can see an example on <a href="http://blog.guramkajaia.com/">Guram's website</a></p>
 
 <p><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/f-7.png?raw=true" alt="Syte Soundcloud"></p>
+
+<h3>Bitbucket</h3>
+
+<p>Syte has bitbucket integration, which means that when someone clicks on a link that points to a user's bitbucket profile the profile is loaded within your site along with a list of the user's repos.</p>
+
+<p><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/f-8.png?raw=true" alt="Syte Bitbucket"></p>
 
 <br><br>
 <h2>Responsive UI</h2>
@@ -319,6 +325,18 @@
 </ul>
 
 <p>If you want to turn off Soundcloud integration just set <code>SOUNDCLOUD_INTEGRATION_ENABLED</code> to False.</p>
+
+<h3>Setting up Bitbucket integration</h3>
+
+<p>The Bitbucket integration does not make any authenticated calls nor does it require a registered API key.</p>
+
+<p>If you want to turn off bitbucket integration just set <code>BITBUCKET_INTEGRATION_ENABLED</code> to False.</p>
+
+<h4>Comment</h4>
+
+<p>To display the fork count on repositories set <code>BITBUCKET_SHOW_FORKS</code> to True.  The Bitbucket API require one call for each repository to get fork count, which is disabled by default.</p>
+
+<p>The Bitbucket API throttles the user resource to 100 calls every 30 minutes.</p>
 
 <br><br>
 
