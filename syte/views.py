@@ -7,11 +7,11 @@ from django.conf import settings
 from pybars import Compiler
 from datetime import datetime
 from operator import itemgetter
+from rauth.service import OAuth1Service
 
 import os
 import requests
 import json
-import oauth2 as oauth
 
 
 def server_error(request, template_name='500.html'):
@@ -31,21 +31,25 @@ def home(request):
 
 
 def twitter(request, username):
-    consumer = oauth.Consumer(key=settings.TWITTER_CONSUMER_KEY,
-            secret=settings.TWITTER_CONSUMER_SECRET)
-    token = oauth.Token(key=settings.TWITTER_USER_KEY,
-            secret=settings.TWITTER_USER_SECRET)
-    client = oauth.Client(consumer, token)
+    twitter = OAuth1Service(
+        name='twitter',
+        consumer_key=settings.TWITTER_CONSUMER_KEY,
+        consumer_secret=settings.TWITTER_CONSUMER_SECRET,
+        request_token_url=settings.TWITTER_API_URL + 'oauth/request_token',
+        access_token_url=settings.TWITTER_API_URL + 'oauth/access_token',
+        authorize_url=settings.TWITTER_API_URL + 'oauth/authorize',
+        header_auth=True)
 
-    resp, content = client.request(
-        '{0}{1}'.format(settings.TWITTER_API_URL, username),
-        method = 'GET',
-        headers = None,
-        force_auth_header=True
-    )
+    url = '{0}1/statuses/user_timeline.json?include_rts=false' \
+            '&exclude_replies=true&count=50&screen_name={1}'.format(
+                settings.TWITTER_API_URL, username)
 
-    return HttpResponse(content=content, status=resp.status,
-             content_type=resp['content-type'])
+    r = twitter.request('GET', url, access_token=settings.TWITTER_USER_KEY,
+                        access_token_secret=settings.TWITTER_USER_SECRET)
+
+    return HttpResponse(content=json.dumps(r.response.json),
+                        status=r.response.status_code,
+                        content_type=r.response.headers['content-type'])
 
 
 def github(request, username):
