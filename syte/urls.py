@@ -30,6 +30,11 @@ if settings.GITHUB_INTEGRATION_ENABLED:
         url(r'^github/(?P<username>\w+)/?$', 'syte.views.github'),
     )
 
+#Bitbucket Integration
+if settings.BITBUCKET_INTEGRATION_ENABLED:
+    urlpatterns += patterns('',
+        url(r'^bitbucket/(?P<username>\w+)/?$', 'syte.views.bitbucket'),
+    )
 
 #Dribbble Integration
 if settings.DRIBBBLE_INTEGRATION_ENABLED:
@@ -55,6 +60,14 @@ if settings.LASTFM_INTEGRATION_ENABLED:
         url(r'^lastfm/(?P<username>\S+)/?$', 'syte.views.lastfm'),
     )
 
+
+#Soundcloud Integration
+if settings.SOUNDCLOUD_INTEGRATION_ENABLED:
+    urlpatterns += patterns('',
+        url(r'^soundcloud/(?P<username>\S+)/?$', 'syte.views.soundcloud'),
+    )
+
+
 #Statics: Hacky for now... fix this later...
 urlpatterns += patterns('',
     (r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {'url':
@@ -62,7 +75,6 @@ urlpatterns += patterns('',
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': settings.MEDIA_ROOT}),
 )
-
 
 #Apps
 urlpatterns += patterns('django.views.generic.simple',
@@ -72,3 +84,4 @@ urlpatterns += patterns('django.views.generic.simple',
     url(r'^apps/touchboom/?$', 'redirect_to',
         {'url':'http://itunes.apple.com/us/app/touch-boom/id327876796?mt=8'}),
 )
+

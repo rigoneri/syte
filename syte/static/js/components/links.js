@@ -5,7 +5,6 @@ function setupLinks() {
   $('a').click(function(e) {
       if (e.which == 2)
           return;
-
       e.preventDefault();
       e.stopPropagation();
 
@@ -16,22 +15,28 @@ function setupLinks() {
       $url = this.href;
 
       if (this.id == 'home-link' && window.location.pathname == '/') {
+
          $('#github-profile').remove();
          $('#dribbble-profile').remove();
          $('#twitter-profile').remove();
          $('#instagram-profile').remove();
          $('#lastfm-profile').remove();
-         $('.modal-backdrop').remove();
          $('#apps-modal').remove();
+         $('#bitbucket-profile').remove();
+         $('.modal-backdrop').remove();
+         $('#soundcloud-profile').remove();
          adjustSelection('home-link');
       }
       else if (this.id == 'apps-link') {
+
          $('#github-profile').remove();
          $('#dribbble-profile').remove();
          $('#twitter-profile').remove();
          $('#instagram-profile').remove();
          $('#lastfm-profile').remove();
          $('.modal-backdrop').remove();
+         $('#bitbucket-profile').remove();
+         $('#soundcloud-profile').remove();
          adjustSelection('apps-link');
 
          var spinner = new Spinner(spin_opts).spin();
@@ -47,12 +52,15 @@ function setupLinks() {
             });
       }
       else if(this.id == 'instagram-link' && instagram_integration_enabled) {
+
          $('#github-profile').remove();
          $('#dribbble-profile').remove();
          $('#twitter-profile').remove();
          $('#apps-modal').remove();
          $('#lastfm-profile').remove();
+         $('#bitbucket-profile').remove();
          $('.modal-backdrop').remove();
+         $('#soundcloud-profile').remove();
          adjustSelection('instagram-link');
 
          setupInstagram(this);
@@ -63,8 +71,10 @@ function setupLinks() {
          $('#dribbble-profile').remove();
          $('#instagram-profile').remove();
          $('#lastfm-profile').remove();
-         $('.modal-backdrop').remove();
          $('#apps-modal').remove();
+         $('#bitbucket-profile').remove();
+         $('.modal-backdrop').remove();
+         $('#soundcloud-profile').remove();
          adjustSelection('twitter-link');
 
          setupTwitter(url, this);
@@ -75,8 +85,10 @@ function setupLinks() {
         $('#dribbble-profile').remove();
         $('#instagram-profile').remove();
         $('#lastfm-profile').remove();
-        $('.modal-backdrop').remove();
         $('#apps-modal').remove();
+        $('#bitbucket-profile').remove();
+        $('.modal-backdrop').remove();
+        $('#soundcloud-profile').remove();
         adjustSelection('github-link');
 
         setupGithub(url, this);
@@ -87,8 +99,10 @@ function setupLinks() {
          $('#github-profile').remove();
          $('#instagram-profile').remove();
          $('#lastfm-profile').remove();
-         $('.modal-backdrop').remove();
          $('#apps-modal').remove();
+         $('#bitbucket-profile').remove();
+         $('.modal-backdrop').remove();
+         $('#soundcloud-profile').remove();
          adjustSelection('dribbble-link');
 
          setupDribbble(url, this);
@@ -99,11 +113,42 @@ function setupLinks() {
         $('#github-profile').remove();
         $('#dribbble-profile').remove();
         $('#instagram-profile').remove();
-        $('.modal-backdrop').remove();
         $('#apps-modal').remove();
+        $('#bitbucket-profile').remove();
+        $('.modal-backdrop').remove();
+        $('#soundcloud-profile').remove();
         adjustSelection('lastfm-link');
 
         setupLastfm(url, this);
+      }
+      else if (soundcloud_integration_enabled && (url.attr('host') == 'soundcloud.com' || url.attr('host') == 'www.soundcloud.com')) {
+        $('#twitter-profile').remove();
+        $('#github-profile').remove();
+        $('#dribbble-profile').remove();
+        $('#instagram-profile').remove();
+        $('.modal-backdrop').remove();
+        $('#bitbucket-profile').remove();
+        $('#lastfm-profile').remove();
+        $('#apps-modal').remove();
+
+        adjustSelection('soundcloud-link');
+
+        setupSoundcloud(url, this);
+      }
+      else if (bitbucket_integration_enabled && (url.attr('host') == 'bitbucket.org' || url.attr('host') == 'www.bitbucket.org')) {
+
+        $('#twitter-profile').remove();
+        $('#github-profile').remove();
+        $('#dribbble-profile').remove();
+        $('#instagram-profile').remove();
+        $('#lastfm-profile').remove();
+        $('.modal-backdrop').remove();
+        $('#soundcloud-profile').remove();
+        $('#apps-modal').remove();
+
+        adjustSelection('bitbucket-link');
+
+        setupBitbucket(url, this);
       }
       else {
          window.location = this.href;

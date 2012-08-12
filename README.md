@@ -1,6 +1,6 @@
 # Syte
 
-Syte is a really simple but powerful packaged personal site that has social integrations like tumblr, twitter, github, dribbble and instagram. You can see it in action on my personal site <http://rigoneri.com>
+Syte is a really simple but powerful packaged personal site that has social integrations like tumblr, twitter, github, dribbble, instagram, last.fm, soundcloud and bitbucket. You can see it in action on my personal site <http://rigoneri.com>
 
 ### There is only one rule
 
@@ -46,6 +46,7 @@ You can use, reproduce and do whatever you want with syte but I would like you t
 [![hussfelt](https://github.com/rigoneri/syte/blob/master/readme-imgs/hussfelt.png?raw=true)](http://hussfelt.net)
 [![amastys](https://github.com/rigoneri/syte/blob/master/readme-imgs/amastys.png?raw=true)](http://amastys.ru)
 [![damilare](https://github.com/rigoneri/syte/blob/master/readme-imgs/damilare.png?raw=true)](http://dami.me)
+[![eventh](https://github.com/rigoneri/syte/blob/master/readme-imgs/eventh.png?raw=true)](http://eventh.herokuapp.com)
 
 
 ## Social Integrations
@@ -82,7 +83,6 @@ Syte has instagram integration, which means that you can show your instagram pic
 
 ![Syte Instagram](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-5.png?raw=true)
 
-
 ### Last.fm
 
 Syte has Last.fm integration, which means that when someone clicks on a link that points to a user's Last.fm profile the profile information will be loaded directly in the site along with a listing of the most recently scrobbled tracks.
@@ -92,6 +92,29 @@ Syte has Last.fm integration, which means that when someone clicks on a link tha
 
 ## Responsive UI
 
+### Last.fm
+
+Syte has Last.fm integration, which means that when someone clicks on a link that points to a user's Last.fm profile the profile information will be loaded directly in the site along with a listing of the most recently scrobbled tracks.
+
+![Syte Lastfm](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-6.png?raw=true)
+
+
+### Soundcloud
+
+Syte has Soundcloud integration, which means that when someone clicks on a link that points to a user's Soundcloud profile the profile information will be loaded directly in the site along with a listing of the user's soundcloud tracks. Since I don't use soundcloud, you can see an example on [Guram's website](http://blog.guramkajaia.com/)
+
+![Syte Soundcloud](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-7.png?raw=true)
+
+
+### Bitbucket
+
+Syte has bitbucket integration, which means that when someone clicks on a link that points to a user's bitbucket profile the profile is loaded within your site along with a list of the user's repos.
+
+![Syte Bitbucket](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-8.png?raw=true)
+
+
+## Responsive UI
+ 
 Syte is responsive, which means that it scales down to a mobile device screen size.
 
 ![Syte Responsive 1](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-r-1.png?raw=true) ![Syte Responsive 1](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-r-2.png?raw=true)
@@ -195,6 +218,11 @@ Once you have those two items from Github you have to enter them in your **syte_
 
 After you have entered those two items, folow the steps below for running your Syte locally on your machine. Once you have your Syte running navigate to `http://127.0.0.1:8000/github/auth`, you will be taken to Github's website and will be asked to sign in and authorize your application. After you authorized your application you will be taken back to your Syte and you will be given your ***Access Token***
 
+You can also get your access token via the github api using curl:
+```
+curl -i -u "username:password" https://api.github.com/authorizations
+```
+
 Once you have your access token from Github you have to enter them in your **syte_settings.py** located in `syte > syste_settings.py`. Once you open that file enter it under `GITHUB_ACCESS_TOKEN`
 
 After you validated that your github integration worked go back to Github page and change the ***Callback URL*** field to have your domain info (this is not required), then make sure you turn off the github oauth interation setting so you don't make that available to everyone in the internet. You can do that by setting `GITHUB_OAUTH_ENABLED` to False.
@@ -249,6 +277,30 @@ Once you have your API Key from Lastfm you have to enter it in your **syte_setti
 
 If you want to turn off Last.fm integration just set `LASTFM_INTEGRATION_ENABLED` to False.
 
+
+
+### Setting up Soundcloud integration
+
+In order to setup the soundcloud integration first need to create a soundcloud application by going to <http://soundcloud.com/you/apps>. Once you have the `CLIENT_ID` from soundcloud open the **syte_settings.py** file an enter it under the `SOUNDCLOUD_CLIENT_ID` setting.
+
+Inside **syte_settings.py** there are two other options to configure how your soundcloud tracks will be shown.
+
+* `SOUNDCLOUD_SHOW_ARTWORK` (Boolean) set this option to true if you want to show your track artwork on page.
+* `SOUNDCLOUD_PLAYER_COLOR` you can set your widget theme color here. Use Hex values only without `#` 
+
+If you want to turn off Soundcloud integration just set `SOUNDCLOUD_INTEGRATION_ENABLED` to False.
+
+
+### Setting up Bitbucket integration
+
+The Bitbucket integration does not make any authenticated calls nor does it require a registered API key.
+
+If you want to turn off bitbucket integration just set `BITBUCKET_INTEGRATION_ENABLED` to False.
+
+#### Comment
+To display the fork count on repositories set `BITBUCKET_SHOW_FORKS` to True.  The Bitbucket API require one call for each repository to get fork count, which is disabled by default.
+
+The Bitbucket API throttles the user resource to 100 calls every 30 minutes.
 
 
 
@@ -319,6 +371,25 @@ First signup to [Heroku](http://heroku.com) then follow these simple [Django dep
 1. Change the ``DEPLOYMENT_MODE`` value to prod in **syte_settings.py** located in ``syte > syte_settings.py``
 2. Change the ``SITE_ROOT_URI`` value to your heroku app url in **syte_settings.py** see the available example to how it should be formatted.
 
+
+
+
+
+## Contributing
+
+There are plans for several services to be added in the
+[TODO file](https://github.com/rigoneri/syte/blob/master/TODO.md).  One of
+these services is a good place to start when looking for ways to help.  Also
+posting/fixing [issues](https://github.com/rigoneri/syte/issues) is always
+helpful.
+
+If you would like to add support for a new service you might find the [HELP
+file](https://github.com/rigoneri/syte/blob/master/HELP.md) useful on how to
+get started and where your new code might go, etc.
+
+Also, the [DESIGN file](https://github.com/rigoneri/syte/blob/master/DESIGN.md)
+can be a useful resource when starting out with the project and trying to
+understand roughly how it all fits together.
 
 
 

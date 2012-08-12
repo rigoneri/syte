@@ -2,6 +2,7 @@
 DEPLOYMENT_MODE = 'dev'
 COMPRESS_REVISION_NUMBER = '1.0'
 
+
 #Blog Integration: Tumblr
 TUMBLR_BLOG_URL = '[ENTER TUMBLR BLOG URL] ex. rigoneri.tumblr.com'
 TUMBLR_API_URL = 'http://api.tumblr.com/v2/blog/{0}'.format(TUMBLR_BLOG_URL)
@@ -13,7 +14,7 @@ RSS_FEED_URL = 'http://{0}/rss'.format(TUMBLR_BLOG_URL)
 
 #Twitter Integration
 TWITTER_INTEGRATION_ENABLED = True
-TWITTER_API_URL = 'http://api.twitter.com/1/statuses/user_timeline.json?include_rts=false&exclude_replies=true&count=50&screen_name='
+TWITTER_API_URL = 'https://api.twitter.com/'
 TWITTER_CONSUMER_KEY = '[ENTER TWITTER CONSUMER KEY HERE, SEE TWITTER SETUP INSTRUCTIONS]'
 TWITTER_CONSUMER_SECRET = '[ENTER TWITTER CONSUMER SECRET HERE, SEE TWITTER SETUP INSTRUCTIONS]'
 TWITTER_USER_KEY = '[ENTER TWITTER USER KEY HERE, SEE TWITTER SETUP INSTRUCTIONS]'
@@ -64,6 +65,23 @@ LASTFM_INTEGRATION_ENABLED = True
 LASTFM_API_URL = 'http://ws.audioscrobbler.com/2.0/'
 LASTFM_API_KEY = '[ENTER LASTFM API_KEY HERE, SEE LASTFM SETUP INSTRUCTIONS]'
 LASTFM_USERNAME = '[ENTER LASTFM username HERE, SEE LASTFM SETUP INSTRUCTIONS]'
+
+
+#SoundCloud Integration
+SOUNDCLOUD_INTEGRATION_ENABLED = True
+SOUNDCLOUD_API_URL = 'https://api.soundcloud.com/'
+SOUNDCLOUD_CLIENT_ID = '[ENTER SOUNDCLOUD APPLICATION CLIENT_ID HERE]'
+SOUNDCLOUD_SHOW_ARTWORK = False
+SOUNDCLOUD_PLAYER_COLOR = 'ff912b'
+
+
+#Bitbucket Integration
+BITBUCKET_INTEGRATION_ENABLED = True
+BITBUCKET_API_URL = 'https://api.bitbucket.org/1.0/'
+# Forks count require one connection for each repository,
+# set BITBUCKET_SHOW_FORKS to false to disable
+BITBUCKET_SHOW_FORKS = False
+
 
 
 if DEPLOYMENT_MODE == 'dev':
