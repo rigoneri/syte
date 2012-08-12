@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block pagetitle %}Foursquare Auth{% endblock %}
+{% block main_section %}
+<section class="main-section">
+  <article>
+    {% if error %}
+      <h2>Unable to get Access Token</h2>
+      <p>{{ error }}</p>
+    {% else %}
+      <h2>Foursquare Access Token</h2>
+      <p>Go to your syte_settings.py and enter the token under <code>FOURSQUARE_ACCESS_TOKEN</code> and the user id under <code>FOURSQUARE_USER_ID</code>.</p>
+      <dl>
+        <dt>Access Token</dt><dd>{{ token }}</dd>
+      </dl>
+    {% endif %}
+  </article>
+</section>
+{% endblock %}
+
+

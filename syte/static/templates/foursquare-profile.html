@@ -1,0 +1,45 @@
+<div class="profile foursquare modal fade" id="foursquare-profile">
+  {{#with user}}
+  <div class="profile-info">
+    <button class="close" data-dismiss="modal">×</button>
+    <a href="https://foursquare.com/user/{{ id }}" class="profile-avatar">
+      <img src="{{ photoURL }}" alt="{{ firstName }} {{ lastName }}" />
+    </a>
+    <div class="profile-name">
+      <h2><a href="https://foursquare.com/user/{{ id }}">{{ firstName }} {{ lastName }}</a></h2>
+    </div>
+    <p class="profile-location-url">
+      {{#if homeCity }}
+      <span>{{ homeCity }}</span>
+      {{/if}}
+    </p>
+  </div>
+  <ul class="profile-stats">
+    <li><a href="https://foursquare.com/user/{{ id }}"><strong>{{ checkins.count }}</strong> check-ins</a></li>
+    <li><a href="https://foursquare.com/user/{{ id }}/badges/all"><strong>{{ badges.count }}</strong> badges</a></li>
+    <li><a href="https://foursquare.com/user/{{ id }}/friends"><strong>{{ friends.count }}</strong> friends</a></li>
+  </ul>
+  <div class="profile-info-footer">
+    <a href="https://foursquare.com/user/{{ id }}" class="btn">Follow on Foursquare</a>
+  </div>
+  {{/with}}
+  {{#with checkins}}
+  <ul class="profile-checkins">
+    {{#each items}}
+    <li>
+      {{#with venue}}
+        <a href="{{#if url }}{{url}}{{/if}}" class="checkin-title">
+          <img src="{{ venueImageURL }}" alt="{{ name }}" />
+          <strong>{{ name }}</strong>
+          <span>{{ categoryName }}</span>
+        </a>
+        <p class="checkin-location">{{ location.city }}, {{location.state }}</p>
+      {{/with}}
+      <p class="checkin-date">
+        {{ formated_date }}
+      </p>
+    </li>
+    {{/each }}
+  </ul>
+  {{/with}}
+</div>
