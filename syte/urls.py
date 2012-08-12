@@ -42,7 +42,18 @@ if settings.DRIBBBLE_INTEGRATION_ENABLED:
         url(r'^dribbble/(?P<username>\w+)/?$', 'syte.views_dribbble.dribbble'),
     )
 
-#Instagram Oauth
+#Instagram Integration
+if settings.FOURSQUARE_OAUTH_ENABLED:
+    urlpatterns += patterns('',
+        url(r'^foursquare/auth/?$', 'syte.views_foursquare.foursquare_auth'),
+    )
+
+if settings.FOURSQUARE_INTEGRATION_ENABLED:
+    urlpatterns += patterns('',
+        url(r'^foursquare/?$', 'syte.views_foursquare.foursquare'),
+    )
+
+#Foursquare Integration
 if settings.INSTAGRAM_OAUTH_ENABLED:
     urlpatterns += patterns('',
         url(r'^instagram/auth/?$', 'syte.views_instagram.instagram_auth'),
@@ -53,6 +64,10 @@ if settings.INSTAGRAM_INTEGRATION_ENABLED:
         url(r'^instagram/(?P<max_id>\w+)/?$', 'syte.views_instagram.instagram_next'),
         url(r'^instagram/?$', 'syte.views_instagram.instagram'),
     )
+
+
+
+
 
 #LastFM Integration
 if settings.LASTFM_INTEGRATION_ENABLED:

@@ -29,7 +29,7 @@
     .picture a {
       display: inline-block;
       .square(84px);
-      margin: 60px 35px 20px 35px;
+      margin: 30px 35px 20px 35px;
       border: 3px solid @adjacent-color;
       background: #00000 url('/static/imgs/pic.png');
 
@@ -52,7 +52,7 @@
   }
 
   nav {
-    margin: 65px 0;
+    margin: 30px 0;
 
     ul { border-top: 1px solid #d2d2d2; list-style: none; margin-left: 0; }
     li { margin-bottom: 0; }
@@ -247,6 +247,12 @@
     }
   }
 
+}
+
+@media(max-height:500px) and (min-width: 800px) {
+  header.main-header hgroup h2 {
+    display: none;
+  }
 }
 
 @media (max-width: 800px) {

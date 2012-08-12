@@ -7,7 +7,7 @@ List of services to add integration for:
     - Tumblr [DONE]
     - Wordpress
     - Facebook
-    - Foursquare
+    - Foursquare [DONE]
     - LinkedIn
     - Youtube
     - Netflix

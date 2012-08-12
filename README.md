@@ -1,6 +1,6 @@
 # Syte
 
-Syte is a really simple but powerful packaged personal site that has social integrations like tumblr, twitter, github, dribbble, instagram, last.fm, soundcloud and bitbucket. You can see it in action on my personal site <http://rigoneri.com>
+Syte is a really simple but powerful packaged personal site that has social integrations like twitter, github, dribbble, instagram, foursquare, tumblr, last.fm, soundcloud and bitbucket. You can see it in action on my personal site <http://rigoneri.com>
 
 ### There is only one rule
 
@@ -91,6 +91,13 @@ Syte has Last.fm integration, which means that when someone clicks on a link tha
 
 
 ## Responsive UI
+
+### Foursquare
+
+Syte has foursquare integration, which means that you can show your foursquare check-ins within your site like a profile.
+
+![Syte Foursquare](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-9.png?raw=true)
+
 
 ### Last.fm
 
@@ -261,6 +268,29 @@ After you validated that your instagram integration worked go back to Instragam 
 
 If you want to turn off instagram integration just set `INSTAGRAM_INTEGRATION_ENABLED` to False.
 
+
+### Setting up Foursquare integration
+
+Foursquare has the same level of security as Instagram and similar steps on getting the access token ourselves. To get started go to <https://foursquare.com/oauth/register>, sign in and register a new consumer.
+
+Enter the ***Application Name***, ***Application Website*** and ***Callback URL***. For the callback url enter `http://127.0.0.1:8000/foursquare/auth` for now since we will get the access token while running it locally. Once you are done regestering your consumer you will be given the ***Client ID*** and ***Client Secret***.
+
+Once you have those two items from Foursquare you have to enter them in your **syte_settings.py** located in `syte > syste_settings.py`. Once you open that file enter the following:
+
+* ***Client ID*** under `FOURSQUARE_CLIENT_ID`
+* ***Client Secret*** under `FOURSQUARE_CLIENT_SECRET`
+
+After you have entered those two items, folow the steps below for running your Syte locally on your machine. Once you have your Syte running navigate to `http://127.0.0.1:8000/foursquare/auth`, you will be taken to Foursquare's website and will be asked to sign in and authorize your application. After you authorized your application you will be taken back to your Syte and you will be given your ***Access Token***.
+
+Once you have the access token from Foursquare you have to enter them in your **syte_settings.py** located in `syte > syste_settings.py`. Once you open that file enter the following:
+
+* ***Access Token*** under `FOURSQUARE_ACCESS_TOKEN`
+
+After you validated that your foursquare integration worked go back to Foursquare page and change the ***Callback URL*** field to have your domain info (this is not required), then make sure you turn off the foursquare oauth interation setting so you don't make that available to everyone in the internet. You can do that by setting `FOURSQUARE_OAUTH_ENABLED` to False.
+
+If you want to turn off instagram integration just set `FOURSQUARE_INTEGRATION_ENABLED` to False.
+
+Additionaly if you don't want people to know where you are currently at, you can se 'FOURSQUARE_SHOW_CURRENT_DAY' to False and it will only show check-ins more than a day old.
 
 
 

@@ -7,7 +7,8 @@ var allComponents = [
   'dribbble',
   'lastfm',
   'soundcloud',
-  'bitbucket'
+  'bitbucket',
+  'foursquare'
 ];
 
 function setupLinks() {
@@ -69,6 +70,10 @@ function setupLinks() {
       else if (bitbucket_integration_enabled && (url.attr('host') == 'bitbucket.org' || url.attr('host') == 'www.bitbucket.org')) {
         adjustSelection('bitbucket');
         setupBitbucket(url, this);
+      }
+      else if(this.id == 'foursquare-link' && foursquare_integration_enabled) {
+         adjustSelection('foursquare');
+         setupFoursquare(this);
       }
       else {
          window.location = this.href;
