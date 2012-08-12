@@ -250,6 +250,10 @@
 </li>
 </ul><p>After you have entered those two items, folow the steps below for running your Syte locally on your machine. Once you have your Syte running navigate to <code>http://127.0.0.1:8000/github/auth</code>, you will be taken to Github's website and will be asked to sign in and authorize your application. After you authorized your application you will be taken back to your Syte and you will be given your <strong><em>Access Token</em></strong></p>
 
+<p>You can also get your access token via the github api using curl:</p>
+
+<pre><code>curl -i -u "username:password" https://api.github.com/authorizations </code></pre>
+
 <p>Once you have your access token from Github you have to enter them in your <strong>syte_settings.py</strong> located in <code>syte &gt; syste_settings.py</code>. Once you open that file enter it under <code>GITHUB_ACCESS_TOKEN</code></p>
 
 <p>After you validated that your github integration worked go back to Github page and change the <strong><em>Callback URL</em></strong> field to have your domain info (this is not required), then make sure you turn off the github oauth interation setting so you don't make that available to everyone in the internet. You can do that by setting <code>GITHUB_OAUTH_ENABLED</code> to False.</p>
