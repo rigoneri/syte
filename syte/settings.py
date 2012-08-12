@@ -65,6 +65,6 @@ INSTALLED_APPS = (
 )
 
 try:
-    from rigoneri_settings import *
+    from personal_syte_settings import *
 except ImportError:
     from syte_settings import *
