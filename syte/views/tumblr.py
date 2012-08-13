@@ -35,10 +35,10 @@ def blog_post(request, post_id):
             if settings.DISQUS_INTEGRATION_ENABLED:
                 post['disqus_enabled'] = True
 
-            path_to_here = os.path.abspath(os.path.dirname(__file__))
-            f = open('{0}/static/templates/blog-post-{1}.html'.format(path_to_here, post['type']), 'r')
-            f_data = f.read()
-            f.close()
+            path = '{0}/static/templates/blog-post-{1}.html'.format(
+                os.path.join(os.path.dirname(__file__), '..'), post['type'])
+            with open(path, 'r') as f:
+                f_data = f.read()
 
             compiler = Compiler()
             template = compiler.compile(unicode(f_data))
