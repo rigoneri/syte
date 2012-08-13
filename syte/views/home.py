@@ -1,5 +1,5 @@
 
-from context_processor import site_pages
+from syte.context_processor import site_pages
 from django.shortcuts import render
 from django.template import Context, loader
 from django.http import HttpResponseServerError
@@ -19,4 +19,3 @@ def page_not_found_error(request, template_name='404.html'):
 
 def home(request):
     return render(request, 'index.html', {})
-
