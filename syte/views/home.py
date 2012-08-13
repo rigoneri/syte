@@ -1,8 +1,9 @@
-
-from context_processor import site_pages
+# -*- coding: utf-8 -*-
 from django.shortcuts import render
 from django.template import Context, loader
 from django.http import HttpResponseServerError
+
+from syte.context_processor import site_pages
 
 
 def server_error(request, template_name='500.html'):
@@ -19,4 +20,3 @@ def page_not_found_error(request, template_name='404.html'):
 
 def home(request):
     return render(request, 'index.html', {})
-

@@ -1,11 +1,10 @@
-
+# -*- coding: utf-8 -*-
+import requests
+import json
+from operator import itemgetter
 
 from django.http import HttpResponse
 from django.conf import settings
-from operator import itemgetter
-
-import requests
-import json
 
 
 def bitbucket(request, username):
@@ -38,4 +37,3 @@ def bitbucket(request, username):
 
     return HttpResponse(content=json.dumps(data), status=r.status_code,
                         content_type=r.headers['content-type'])
-
