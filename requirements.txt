@@ -1,7 +1,6 @@
 Django==1.4
 certifi==0.0.8
 chardet==1.0.1
-httplib2==0.7.4
 oauthlib==0.1.3
 pyasn1==0.1.3
 requests==0.12.1
