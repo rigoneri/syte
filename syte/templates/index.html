@@ -33,4 +33,27 @@ $(window).scroll(function() {
       resultsLoaded = false;
   }
 });
+
+{% if open_integration %}
+{% if open_integration == 'instagram' %}
+adjustSelection('instagram');
+setupInstagram($('#instagram-link'));
+{% elif open_integration == 'twitter' %}
+adjustSelection('twitter');
+setupTwitter($.url('http://twitter.com/rigoneri'), $('#twitter-link'));
+{% elif open_integration == 'github' %}
+adjustSelection('github');
+setupGithub($.url('https://github.com/rigoneri'), $('#github-link'));
+{% elif open_integration == 'dribbble' %}
+adjustSelection('dribbble');
+setupDribbble($.url('http://dribbble.com/rigoneri'), $('#dribbble-link'));
+{% elif open_integration == 'lastfm' %}
+adjustSelection('lastfm');
+setupLastfm($.url('http://lastfm.com/user/rigoneri'), $('#lastfm-link'));
+{% elif open_integration == 'foursquare' %}
+adjustSelection('foursquare');
+setupFoursquare($('#foursquare-link'));
+{% endif %}
+{% endif %}
+
 {% endblock %}

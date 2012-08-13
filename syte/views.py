@@ -18,4 +18,7 @@ def page_not_found_error(request, template_name='404.html'):
 
 
 def home(request):
-    return render(request, 'index.html', {})
+    context = dict()
+    if request.GET.get('o', None):
+        context['open_integration'] = request.GET['o']
+    return render(request, 'index.html', context)
