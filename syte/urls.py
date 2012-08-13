@@ -1,6 +1,7 @@
-from django.http import HttpResponse
-from django.conf.urls import patterns, include, url
+# -*- coding: utf-8 -*-
+from django.conf.urls import patterns, url
 from django.conf import settings
+
 
 handler404 = 'syte.views.home.page_not_found_error'
 handler500 = 'syte.views.home.server_error'

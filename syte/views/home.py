@@ -1,8 +1,9 @@
-
-from syte.context_processor import site_pages
+# -*- coding: utf-8 -*-
 from django.shortcuts import render
 from django.template import Context, loader
 from django.http import HttpResponseServerError
+
+from syte.context_processor import site_pages
 
 
 def server_error(request, template_name='500.html'):
