@@ -22,10 +22,9 @@
   <ul class="profile-stats">
     <li><a href="{{ html_url }}/projects"><strong>{{ managed_projects }}</strong>Managed projects</a></li>
     <li><a href="{{ html_url }}/kudos"><strong>{{ kudo_score }}</strong>Kudo score</a></li>
-    <!--<li><a href="http://www.ohloh.net/people/rankings?show={{ id }}"><strong>{{ position }}</strong>Ranking</a></li>-->
-    <li><a href="{{ html_url }}/positions/total"><strong>{{ monthly_commits }}</strong>Monthly commits</a></li>
+    <li><a href="http://www.ohloh.net/people/rankings?show={{ id }}"><strong>{{ position }}</strong>Ranking</a></li>
     <li><a href="{{ html_url }}/positions/total"><strong>{{ total_commits }}</strong>Total commits</a></li>
-    <li><a href="{{ html_url }}/positions/total"><strong>{{ comment_ratio }}</strong>Comment ratio</a></li>
+    <li><a href="{{ html_url }}/positions/total"><strong>{{ total_lines_changed }}</strong>Total lines changed</a></li>
   </ul>
   <span class="ohloh-projects">
     <div class="ohloh-title">
@@ -34,20 +33,17 @@
     <ul class="profile-repos">
       {{#each projects }}
       <li>
+        {{#if homepage_url }}
         <a href="{{ homepage_url }}" class="profile-repo-name">{{ name }}</a>
+        {{else}}
+        <a href="{{ html_url }}" class="profile-repo-name">{{ name }}</a>
+        {{/if}}
         {{#if small_logo_url }}
         <a href="{{ html_url }}" class="profile-repo-logo"><img src="{{ small_logo_url }}" alt="{{ name }}" /></a>
         {{/if}}
         <p class="profile-repo-text">
         {{ description }}
         </p>
-        <ul class="profile-repo-stats">
-          <li>{{ language }}</li>
-          <li class="profile-repo-item"><a href="{{ html_url }}/contributors/{{ contributor_id }}">Commits: {{ commits }}</a></li>
-          {{#if manager }}
-          <li class="profile-repo-item">Manager</li>
-          {{/if}}
-        </ul>
       </li>
       {{/each}}
     </ul>
