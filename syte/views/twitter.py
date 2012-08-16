@@ -1,9 +1,9 @@
+# -*- coding: utf-8 -*-
+import json
 
 from django.http import HttpResponse
 from django.conf import settings
 from rauth.service import OAuth1Service
-
-import json
 
 
 def twitter(request, username):
@@ -17,8 +17,8 @@ def twitter(request, username):
         header_auth=True)
 
     url = '{0}1/statuses/user_timeline.json?include_rts=false' \
-            '&exclude_replies=true&count=50&screen_name={1}'.format(
-                settings.TWITTER_API_URL, username)
+        '&exclude_replies=true&count=50&screen_name={1}'.format(
+            settings.TWITTER_API_URL, username)
 
     r = twitter.request('GET', url, access_token=settings.TWITTER_USER_KEY,
                         access_token_secret=settings.TWITTER_USER_SECRET)

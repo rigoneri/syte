@@ -1,30 +1,36 @@
-
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import os
 import sys
 import subprocess
 import shlex
 import traceback
 
-path_to_here = os.path.abspath(os.path.dirname(__file__))
-path_before_site = path_to_here[0:path_to_here.rfind('syte')]
-sys.path.append(path_before_site)
+PATH_TO_HERE = os.path.abspath(os.path.dirname(__file__))
+sys.path.append(os.path.join(PATH_TO_HERE, '..'))
 os.environ['DJANGO_SETTINGS_MODULE'] = 'syte.settings'
 
 from django.conf import settings
 
+
 def compress_statics():
+    out_paths = (os.path.join(PATH_TO_HERE, 'static/css'),
+                 os.path.join(PATH_TO_HERE, 'static/js/min'))
+
     try:
-        #This won't work on windows.
-        subprocess.check_call(shlex.split('mkdir -p static/css static/js/min'))
-    except Exception:
+        for path in out_paths:
+            if not os.path.exists(path):
+                os.mkdir(path)
+    except OSError:
         print 'Make sure to create "syte > static > css" and "syte > static > js > min" before compressing statics.'
 
     compress_styles()
     compress_js()
 
+
 def compress_styles():
-    less_path = 'static/less/styles.less'
-    css_path = 'static/css/'
+    less_path = os.path.join(PATH_TO_HERE, 'static/less/styles.less')
+    css_path = os.path.join(PATH_TO_HERE, 'static/css/')
 
     try:
         subprocess.check_call(shlex.split('lessc {0} {1}styles-{2}.min.css -yui-compress'
@@ -35,20 +41,21 @@ def compress_styles():
         stack_trace = traceback.format_exception(exc_type, exc_value, exc_traceback)
         print stack_trace
 
+
 def compress_js():
     js_files = [
-      'libs/jquery.url.js',
-      'libs/require.js',
-      'libs/handlebars.js',
-      'libs/moment.min.js',
-      'libs/bootstrap-modal.js',
-      'libs/spin.min.js',
-      'libs/prettify.js',
+        'libs/jquery.url.js',
+        'libs/require.js',
+        'libs/handlebars.js',
+        'libs/moment.min.js',
+        'libs/bootstrap-modal.js',
+        'libs/spin.min.js',
+        'libs/prettify.js',
 
-      'components/base.js',
-      'components/mobile.js',
-      'components/blog-posts.js',
-      'components/links.js',
+        'components/base.js',
+        'components/mobile.js',
+        'components/blog-posts.js',
+        'components/links.js',
     ]
 
     if settings.TWITTER_INTEGRATION_ENABLED:
@@ -80,22 +87,24 @@ def compress_js():
 
     combined = ''
     for js in js_files:
-        f = open('static/js/' + js, 'r')
-        combined += f.read()
-        f.close()
+        with open(os.path.join(PATH_TO_HERE, 'static/js/' + js), 'r') as f:
+            combined += f.read()
 
-    f = open('static/js/combined.js', 'w')
-    f.write(combined)
-    f.close()
+    with open(os.path.join(PATH_TO_HERE, 'static/js/combined.js'), 'w') as f:
+        f.write(combined)
 
     try:
-        subprocess.check_call(shlex.split('uglifyjs -o static/js/min/scripts-{0}.min.js static/js/combined.js'.format(settings.COMPRESS_REVISION_NUMBER)))
-        subprocess.check_call(shlex.split('rm -f static/js/combined.js'))
+        subprocess.check_call(shlex.split('uglifyjs -o {0}scripts-{1}.min.js {2}'.format(
+            os.path.join(PATH_TO_HERE, 'static/js/min/'),
+            settings.COMPRESS_REVISION_NUMBER,
+            os.path.join(PATH_TO_HERE, 'static/js/combined.js'))))
+        os.remove(os.path.join(PATH_TO_HERE, 'static/js/combined.js'))
         print 'JavaScript Combined and Minified: scripts-{0}.min.js'.format(settings.COMPRESS_REVISION_NUMBER)
     except Exception:
         exc_type, exc_value, exc_traceback = sys.exc_info()
         stack_trace = traceback.format_exception(exc_type, exc_value, exc_traceback)
         print stack_trace
+
 
 if __name__ == "__main__":
     compress_statics()
