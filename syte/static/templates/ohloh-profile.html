@@ -1,0 +1,68 @@
+<div class="profile ohloh modal fade-large" id="ohloh-profile">
+  <div class="profile-info">
+    <button class="close" data-dismiss="modal">×</button>
+    <a href="{{ html_url }}" class="profile-avatar">
+      <img src="{{ avatar_url }}" alt="{{name}}" />
+    </a>
+    <div class="profile-name">
+      <h2><a href="{{ html_url }}">{{ name }}</a></h2>
+      <h3><a href="{{ html_url }}">{{ login }}</a></h3>
+    </div>
+    <p class="profile-location-url">
+      {{#if location }}
+      <span>{{ location }}</span>
+      <span class="divider">·</span>
+      {{/if}}
+      {{#if homepage_url }}
+      <span><a href="{{ homepage_url }}">{{ homepage_url }}</a></span>
+      {{/if}}
+    </p>
+    <a href="http://www.ohloh.net"><img alt="ohloh.net" class="ohloh-link" src="http://www.ohloh.net/images/badges/mini.gif"/></a>
+  </div>
+  <ul class="profile-stats">
+    <li><a href="{{ html_url }}/projects"><strong>{{ managed_projects }}</strong>Managed projects</a></li>
+    <li><a href="{{ html_url }}/kudos"><strong>{{ kudo_score }}</strong>Kudo score</a></li>
+    <!--<li><a href="http://www.ohloh.net/people/rankings?show={{ id }}"><strong>{{ position }}</strong>Ranking</a></li>-->
+    <li><a href="{{ html_url }}/positions/total"><strong>{{ monthly_commits }}</strong>Monthly commits</a></li>
+    <li><a href="{{ html_url }}/positions/total"><strong>{{ total_commits }}</strong>Total commits</a></li>
+    <li><a href="{{ html_url }}/positions/total"><strong>{{ comment_ratio }}</strong>Comment ratio</a></li>
+  </ul>
+  <span class="ohloh-projects">
+    <div class="ohloh-title">
+      <a href="{{ html_url }}/positions">Contributions to projects</a><strong>{{ total_projects }}</strong>
+    </div>
+    <ul class="profile-repos">
+      {{#each projects }}
+      <li>
+        <a href="{{ homepage_url }}" class="profile-repo-name">{{ name }}</a>
+        {{#if small_logo_url }}
+        <a href="{{ html_url }}" class="profile-repo-logo"><img src="{{ small_logo_url }}" alt="{{ name }}" /></a>
+        {{/if}}
+        <p class="profile-repo-text">
+        {{ description }}
+        </p>
+        <ul class="profile-repo-stats">
+          <li>{{ language }}</li>
+          <li class="profile-repo-item"><a href="{{ html_url }}/contributors/{{ contributor_id }}">Commits: {{ commits }}</a></li>
+          {{#if manager }}
+          <li class="profile-repo-item">Manager</li>
+          {{/if}}
+        </ul>
+      </li>
+      {{/each}}
+    </ul>
+  </span>
+  <span class="ohloh-languages">
+    <div class="ohloh-title">
+      <a href="{{ html_url }}/positions/total">Language experience</a><strong>{{ total_languages }}</strong>
+    </div>
+    <table class="ohloh-table">
+      <thead><tr><th>Language</th><th>Experience</th><th>Commits</th></tr></thead>
+      <tbody>
+        {{#each languages}}
+        <tr><th>{{ name }}</th><td>{{ experience }}</td><td>{{ total_commits }}</td></tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </span>
+</div>

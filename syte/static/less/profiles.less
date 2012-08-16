@@ -9,11 +9,13 @@
   background: #fff;
 
   .close { line-height: 20px; }
-  .btn {
+  .btn, .ohloh-link {
     position: absolute;
     right: 17px;
     bottom: 20px;
   }
+  .ohloh-link { border-bottom: 0; }
+  .ohloh-link:hover { border-bottom: 0; }
 }
 
 .profile-avatar {
@@ -214,7 +216,7 @@
   color: #999;
 }
 
-//Github and Bitbucket Profile
+//Github, Bitbucket and Ohloh Profile
 .profile-repos {
   list-style: none;
   margin: 0;
@@ -265,6 +267,13 @@
   a:hover {
     border-bottom: 0;
     color: @adjacent-color;
+  }
+}
+
+.profile-repo-item {
+  margin-left: 10px;
+  a {
+    color: @text-color;
   }
 }
 
@@ -487,3 +496,66 @@
   color: #999;
 }
 
+// Ohloh projects and languages
+.ohloh-projects {
+  float: left;
+  width: 355px;
+  margin: 10px 0px 10px 15px;
+  background: #fff;
+
+  .box-shadow();
+
+  .profile-repos li:last-child {
+    border: 0;
+  }
+}
+
+.ohloh-languages {
+  float: left;
+  width: 285px;
+  margin: 10px 10px 15px 15px;
+  background: #fff;
+
+  .box-shadow();
+}
+
+.ohloh-title {
+  border-bottom: 1px solid #C2C2C2;
+  padding: 10px;
+
+  a {
+    padding: 10px 10px;
+    font-weight: 500;
+    border-bottom: 0;
+  }
+  a:hover {
+    border-bottom: 0;
+    color: @adjacent-color;
+  }
+  strong {
+    padding: 10px 10px 10px 20px;
+    border-left: 1px solid #C2C2C2;
+    position: relative;
+    top: -10px;
+    float: right;
+  }
+}
+
+.ohloh-table {
+  width: 255px;
+  margin: 5px 15px 20px 15px;
+
+  thead th {
+    text-align: center;
+    padding: 5px;
+    color: @alternate-text-color;
+  }
+  tbody th {
+    text-align: left;
+    font-weight: 500;
+  }
+  td {
+    text-align: right;
+    color: #777;
+  }
+}

@@ -85,6 +85,9 @@ def compress_js():
     if settings.FOURSQUARE_INTEGRATION_ENABLED:
         js_files.append('components/foursquare.js')
 
+    if settings.OHLOH_INTEGRATION_ENABLED:
+        js_files.append('components/ohloh.js')
+
     combined = ''
     for js in js_files:
         with open(os.path.join(PATH_TO_HERE, 'static/js/' + js), 'r') as f:
