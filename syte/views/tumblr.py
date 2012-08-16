@@ -1,27 +1,27 @@
+# -*- coding: utf-8 -*-
+import os
+from datetime import datetime
 
+import requests
 from django.shortcuts import render
 from django.conf import settings
 from django.http import HttpResponse
-from datetime import datetime
 from pybars import Compiler
-
-import os
-import requests
-import json
 
 
 def blog(request):
     offset = request.GET.get('o', 0)
-    r = requests.get('{0}/posts?api_key={1}&offset={2}'.format(settings.TUMBLR_API_URL,
-        settings.TUMBLR_API_KEY, offset))
+    r = requests.get('{0}/posts?api_key={1}&offset={2}'.format(
+        settings.TUMBLR_API_URL, settings.TUMBLR_API_KEY, offset))
     return HttpResponse(content=r.text, status=r.status_code,
                         content_type=r.headers['content-type'])
+
 
 def blog_post(request, post_id):
     context = dict()
 
-    r = requests.get('{0}/posts?api_key={1}&id={2}'.format(settings.TUMBLR_API_URL,
-            settings.TUMBLR_API_KEY, post_id))
+    r = requests.get('{0}/posts?api_key={1}&id={2}'.format(
+        settings.TUMBLR_API_URL, settings.TUMBLR_API_KEY, post_id))
 
     if r.status_code == 200:
         post_response = r.json.get('response', {})
@@ -35,10 +35,10 @@ def blog_post(request, post_id):
             if settings.DISQUS_INTEGRATION_ENABLED:
                 post['disqus_enabled'] = True
 
-            path_to_here = os.path.abspath(os.path.dirname(__file__))
-            f = open('{0}/static/templates/blog-post-{1}.html'.format(path_to_here, post['type']), 'r')
-            f_data = f.read()
-            f.close()
+            path = '{0}/static/templates/blog-post-{1}.html'.format(
+                os.path.join(os.path.dirname(__file__), '..'), post['type'])
+            with open(path, 'r') as f:
+                f_data = f.read()
 
             compiler = Compiler()
             template = compiler.compile(unicode(f_data))
@@ -51,9 +51,8 @@ def blog_post(request, post_id):
 def blog_tags(request, tag_slug):
     offset = request.GET.get('o', 0)
     if request.is_ajax():
-        r = requests.get('{0}/posts?api_key={1}&tag={2}&offset={3}'.format(settings.TUMBLR_API_URL, 
-            settings.TUMBLR_API_KEY, tag_slug.encode('UTF-8'), offset))
+        r = requests.get('{0}/posts?api_key={1}&tag={2}&offset={3}'.format(
+            settings.TUMBLR_API_URL, settings.TUMBLR_API_KEY, tag_slug.encode('UTF-8'), offset))
         return HttpResponse(content=r.text, status=r.status_code,
-                content_type=r.headers['content-type'])
+                            content_type=r.headers['content-type'])
     return render(request, 'index.html', {'tag_slug': tag_slug})
-

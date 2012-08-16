@@ -1,7 +1,7 @@
-
+# -*- coding: utf-8 -*-
+import requests
 from django.http import HttpResponse
 from django.conf import settings
-import requests
 
 
 def dribbble(request, username):

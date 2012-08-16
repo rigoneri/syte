@@ -33,8 +33,11 @@ function setupFoursquare(el) {
             if (c.venue) {
               var category =  c.venue['categories'][0];
               if (category) {
-                //using mapPrefix instead of prefix since prefix is buggy...
-                c.venue.venueImageURL = category.icon.mapPrefix + category.icon.suffix;
+                var prefix = category.icon.prefix;
+                if (prefix.substring(prefix.length-1) == '_') {
+                  prefix = prefix.substring(0, prefix.length - 1);
+                }
+                c.venue.venueImageURL = prefix  + category.icon.suffix;
                 c.venue.categoryName = category.shortName;
               }
             }

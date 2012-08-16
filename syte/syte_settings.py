@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 DEPLOYMENT_MODE = 'dev'
 COMPRESS_REVISION_NUMBER = '1.0'
@@ -94,7 +95,6 @@ BITBUCKET_API_URL = 'https://api.bitbucket.org/1.0/'
 # Forks count require one connection for each repository,
 # set BITBUCKET_SHOW_FORKS to false to disable
 BITBUCKET_SHOW_FORKS = False
-
 
 
 if DEPLOYMENT_MODE == 'dev':
