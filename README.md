@@ -312,7 +312,7 @@ If you want to turn off Last.fm integration just set `LASTFM_INTEGRATION_ENABLED
 
 ### Setting up Soundcloud integration
 
-In order to setup the soundcloud integration first need to create a soundcloud application by going to <http://soundcloud.com/you/apps>. Once you have the `CLIENT_ID` from soundcloud open the **syte_settings.py** file an enter it under the `SOUNDCLOUD_CLIENT_ID` setting.
+In order to setup the soundcloud integration, you first need to create a soundcloud application by going to <http://soundcloud.com/you/apps>. Once you have the `CLIENT_ID` from soundcloud open the **syte_settings.py** file and enter it under the `SOUNDCLOUD_CLIENT_ID` setting.
 
 Inside **syte_settings.py** there are two other options to configure how your soundcloud tracks will be shown.
 
@@ -336,14 +336,18 @@ The Bitbucket API throttles the user resource to 100 calls every 30 minutes.
 
 ### Setting up Ohloh.net integration
 
-The Bitbucket integration require a registered API key. TODO: complete this!
+The Ohloh integration require a registered API key. Sign in to your Ohloh account and visit [Ohloh API Key Sign Up page](http://www.ohloh.com/accounts/me/api_keys/new) to register an API key. Enter the API key into `OHLOH_API_KEY` in your **syte_settings.py** located in `syte > syte_settings.py`.
+
+Ohloh API only list projects you manage, but you can add other project names in `OHLOH_OTHER_PROJECTS` in **syte_settings.py**. Each extra project requires an additional API call.
+
+#### Comment
+The Ohloh API key is limited to 1000 requests per day. You can see the status and usage of your API key on [Ohloh API Key page](https://www.ohloh.net/accounts/me/api_keys).
 
 
 
 ## Running & Deployment Instructions
 
 Now that you have everything setup and ready to go we will be able to run the project locally and deploy to heroku with the instructions below. Please note that these instructions are for Mac, which should be the same for linux systems. If you have problems with these instructions on Windows, let me know or send a pull request.
-
 
 
 
