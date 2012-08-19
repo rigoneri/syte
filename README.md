@@ -50,6 +50,7 @@ You can use, reproduce and do whatever you want with syte but I would like you t
 [![clayferris](https://github.com/rigoneri/syte/blob/master/readme-imgs/clayferris.png?raw=true)](http://claytonferris.com)
 [![alexmeswarb](https://github.com/rigoneri/syte/blob/master/readme-imgs/ameswarb.png?raw=true)](http://alexmeswarb.com)
 [![pranayairan](https://github.com/rigoneri/syte/blob/master/readme-imgs/pranayairan.png?raw=true)](http://pranayairan.herokuapp.com)
+[![lfranchi](https://github.com/rigoneri/syte/blob/master/readme-imgs/lfranchi.png?raw=true)](http://lfranchi.com)
 
 
 ## Social Integrations
