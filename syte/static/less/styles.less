@@ -19,7 +19,7 @@
   left: 0;
   width: 240px;
   height: 100%;
-  min-height: 700px;
+  min-height: 750px;
   float: left;
   border-right: 1px solid #c2c2c2;
   background: #E9E9E9 url('/static/imgs/b.png');
@@ -236,12 +236,18 @@
   }
 }
 
-@media (max-height: 600px) and (min-width: 800px) {
 
+@media (max-height: 700px) and (min-width: 800px) {
   header.main-header {
     h1 { padding-top: 15px; }
     nav { margin-top: 15px; }
+    hgroup .picture a { margin: 15px 35px 0px 35px; }
+  }
+}
 
+@media (max-height: 600px) and (min-width: 800px) {
+
+  header.main-header {
     .picture {
       display: none;
     }

@@ -38,7 +38,7 @@ function setupLinks() {
             function(apps_view) {
               $(apps_view).modal().on('hidden', function () {
                 $(this).remove();
-                adjustSelection('home-link');
+                adjustSelection('home');
               })
               spinner.stop();
             });
