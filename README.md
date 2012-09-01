@@ -55,6 +55,7 @@ You can use, reproduce and do whatever you want with syte but I would like you t
 [![DavidRagone](https://github.com/rigoneri/syte/blob/master/readme-imgs/dmragone.png?raw=true)](http://www.dmragone.com)
 [![bronskiy](https://github.com/rigoneri/syte/blob/master/readme-imgs/bronskiy.png?raw=true)](http://bronskiy.com)
 [![darrenmowat](https://github.com/rigoneri/syte/blob/master/readme-imgs/darrenmowat.png?raw=true)](http://darrenmowat.co.uk)
+[![sheetsj](https://github.com/rigoneri/syte/blob/master/readme-imgs/sheetsj.png?raw=true)](http://jeffsheets.herokuapp.com)
 
 
 ## Social Integrations
