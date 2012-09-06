@@ -97,6 +97,13 @@ BITBUCKET_API_URL = 'https://api.bitbucket.org/1.0/'
 BITBUCKET_SHOW_FORKS = False
 
 
+#Ohloh Integration
+OHLOH_INTEGRATION_ENABLED = True
+OHLOH_API_URL = 'http://www.ohloh.net/'
+OHLOH_API_KEY = '[ENTER OHLOH API_KEY HERE, SEE OHLOH SETUP INSTRUCTIONS]'
+OHLOH_OTHER_PROJECTS = []
+
+
 if DEPLOYMENT_MODE == 'dev':
     SITE_ROOT_URI = 'http://127.0.0.1:8000/'
     DEBUG = True

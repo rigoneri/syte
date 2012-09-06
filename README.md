@@ -4,7 +4,7 @@ Syte is a really simple but powerful packaged personal site that has social inte
 
 ### There is only one rule
 
-You can use, reproduce and do whatever you want with syte but I would like you to choose a different adjacent color as the ones used by the people below. Once you have chosen your color and deployed your Syte based site, please send a pull request with an image of you containing the color on the border like the ones below. The image needs to be 60x60 px.
+You can use, reproduce and do whatever you want with Syte but I would like you to choose a different adjacent color as the ones used by the people below. Once you have chosen your color and deployed your Syte based site, please send a pull request with an image of you containing the color on the border like the ones below. The image needs to be 60x60 px.
 
 [![rigoneri](https://github.com/rigoneri/syte/blob/master/readme-imgs/rigoneri.png?raw=true)](http://rigoneri.com)
 [![sambao21](https://github.com/rigoneri/syte/blob/master/readme-imgs/sambao21.png?raw=true)](http://sambao21.com)
@@ -122,6 +122,13 @@ Syte has bitbucket integration, which means that when someone clicks on a link t
 ![Syte Bitbucket](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-8.png?raw=true)
 
 
+### Ohloh.net
+
+Syte has Ohloh.net integration, which means that when someone clicks on a link that points to a user's Ohloh profile the profile is loaded within your site along with a list of projects the user has contributed to, and language experiences recorded by Ohloh.
+
+TODO: add ohloh.net integration image
+
+
 ## Responsive UI
  
 Syte is responsive, which means that it scales down to a mobile device screen size.
@@ -218,23 +225,23 @@ If you want to turn off the twitter integration just set `TWITTER_INTEGRATION_EN
 
 Github has the same level of security as Twitter, but they don't provide a button that makes it easy to get the access token, so instead we have to get the access token ourselves. To get started sign in to github and go to <https://github.com/settings/applications/new> to register your application.
 
-Enter the ***Application Name***, ***Main URL*** and ***Callback URL***. For the Callback URL enter `http://127.0.0.1:8000/github/auth` for now since we will get the access token while running it locally. Once you are done regestering your application you will be given the ***Client ID*** and ***Client Secret***.
+Enter the ***Application Name***, ***Main URL*** and ***Callback URL***. For the Callback URL enter `http://127.0.0.1:8000/github/auth` for now since we will get the access token while running it locally. Once you are done registering your application you will be given the ***Client ID*** and ***Client Secret***.
 
 Once you have those two items from Github you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
 
 * ***Client ID*** under `GITHUB_CLIENT_ID`
 * ***Client Secret*** under `GITHUB_CLIENT_SECRET`
 
-After you have entered those two items, folow the steps below for running your Syte locally on your machine. Once you have your Syte running navigate to `http://127.0.0.1:8000/github/auth`, you will be taken to Github's website and will be asked to sign in and authorize your application. After you authorized your application you will be taken back to your Syte and you will be given your ***Access Token***
+After you have entered those two items, follow the steps below for running your Syte locally on your machine. Once you have your Syte running navigate to `http://127.0.0.1:8000/github/auth`, you will be taken to Github's website and will be asked to sign in and authorize your application. After you authorized your application you will be taken back to your Syte and you will be given your ***Access Token***
 
 You can also get your access token via the github api using curl:
 ```
 curl -i -u "username:password" https://api.github.com/authorizations
 ```
 
-Once you have your access token from Github you have to enter them in your **syte_settings.py** located in `syte > syste_settings.py`. Once you open that file enter it under `GITHUB_ACCESS_TOKEN`
+Once you have your access token from Github you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter it under `GITHUB_ACCESS_TOKEN`
 
-After you validated that your github integration worked go back to Github page and change the ***Callback URL*** field to have your domain info (this is not required), then make sure you turn off the github oauth interation setting so you don't make that available to everyone in the internet. You can do that by setting `GITHUB_OAUTH_ENABLED` to False.
+After you validated that your github integration worked go back to Github page and change the ***Callback URL*** field to have your domain info (this is not required), then make sure you turn off the github oauth integration setting so you don't make that available to everyone in the Internet. You can do that by setting `GITHUB_OAUTH_ENABLED` to False.
 
 If you want to turn off github integration just set `GITHUB_INTEGRATION_ENABLED` to False.
 
@@ -252,21 +259,21 @@ You don't have to do anything to setup the dribbble integration. If you want to 
 
 Instagram has the same level of security as Github and similar steps on getting the access token ourselves. To get started go to <http://instagram.com/developer/>, sign in and crate a new client by clicking on the ***Manage Clients*** link on the top right side.
 
-Enter the ***Application Name***, ***Description***, ***Website*** and ***OAuth redirect_uri***. For the OAuth redirect_uri enter `http://127.0.0.1:8000/instagram/auth` for now since we will get the access token while running it locally. Once you are done regestering your client you will be given the ***Client ID*** and ***Client Secret***.
+Enter the ***Application Name***, ***Description***, ***Website*** and ***OAuth redirect_uri***. For the OAuth redirect_uri enter `http://127.0.0.1:8000/instagram/auth` for now since we will get the access token while running it locally. Once you are done registering your client you will be given the ***Client ID*** and ***Client Secret***.
 
-Once you have those two items from Instagram you have to enter them in your **syte_settings.py** located in `syte > syste_settings.py`. Once you open that file enter the following:
+Once you have those two items from Instagram you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
 
 * ***Client ID*** under `INSTAGRAM_CLIENT_ID`
 * ***Client Secret*** under `INSTAGRAM_CLIENT_SECRET`
 
-After you have entered those two items, folow the steps below for running your Syte locally on your machine. Once you have your Syte running navigate to `http://127.0.0.1:8000/instagram/auth`, you will be taken to Instagram's website and will be asked to sign in and authorize your application. After you authorized your application you will be taken back to your Syte and you will be given your ***Access Token*** and your ***User ID***
+After you have entered those two items, follow the steps below for running your Syte locally on your machine. Once you have your Syte running navigate to `http://127.0.0.1:8000/instagram/auth`, you will be taken to Instagram's website and will be asked to sign in and authorize your application. After you authorized your application you will be taken back to your Syte and you will be given your ***Access Token*** and your ***User ID***
 
-Once you have those two items from Instagram you have to enter them in your **syte_settings.py** located in `syte > syste_settings.py`. Once you open that file enter the following:
+Once you have those two items from Instagram you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
 
 * ***Access Token*** under `INSTAGRAM_ACCESS_TOKEN`
 * ***User ID*** under `INSTAGRAM_USER_ID`
 
-After you validated that your instagram integration worked go back to Instragam page and change the ***OAuth redirect_uri*** field to have your domain info (this is not required), then make sure you turn off the instagram oauth interation setting so you don't make that available to everyone in the internet. You can do that by setting `INSTAGRAM_OAUTH_ENABLED` to False.
+After you validated that your instagram integration worked go back to Instagram page and change the ***OAuth redirect_uri*** field to have your domain info (this is not required), then make sure you turn off the instagram oauth integration setting so you don't make that available to everyone in the Internet. You can do that by setting `INSTAGRAM_OAUTH_ENABLED` to False.
 
 If you want to turn off instagram integration just set `INSTAGRAM_INTEGRATION_ENABLED` to False.
 
@@ -275,24 +282,24 @@ If you want to turn off instagram integration just set `INSTAGRAM_INTEGRATION_EN
 
 Foursquare has the same level of security as Instagram and similar steps on getting the access token ourselves. To get started go to <https://foursquare.com/oauth/register>, sign in and register a new consumer.
 
-Enter the ***Application Name***, ***Application Website*** and ***Callback URL***. For the callback url enter `http://127.0.0.1:8000/foursquare/auth` for now since we will get the access token while running it locally. Once you are done regestering your consumer you will be given the ***Client ID*** and ***Client Secret***.
+Enter the ***Application Name***, ***Application Website*** and ***Callback URL***. For the callback url enter `http://127.0.0.1:8000/foursquare/auth` for now since we will get the access token while running it locally. Once you are done registering your consumer you will be given the ***Client ID*** and ***Client Secret***.
 
-Once you have those two items from Foursquare you have to enter them in your **syte_settings.py** located in `syte > syste_settings.py`. Once you open that file enter the following:
+Once you have those two items from Foursquare you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
 
 * ***Client ID*** under `FOURSQUARE_CLIENT_ID`
 * ***Client Secret*** under `FOURSQUARE_CLIENT_SECRET`
 
-After you have entered those two items, folow the steps below for running your Syte locally on your machine. Once you have your Syte running navigate to `http://127.0.0.1:8000/foursquare/auth`, you will be taken to Foursquare's website and will be asked to sign in and authorize your application. After you authorized your application you will be taken back to your Syte and you will be given your ***Access Token***.
+After you have entered those two items, follow the steps below for running your Syte locally on your machine. Once you have your Syte running navigate to `http://127.0.0.1:8000/foursquare/auth`, you will be taken to Foursquare's website and will be asked to sign in and authorize your application. After you authorized your application you will be taken back to your Syte and you will be given your ***Access Token***.
 
-Once you have the access token from Foursquare you have to enter them in your **syte_settings.py** located in `syte > syste_settings.py`. Once you open that file enter the following:
+Once you have the access token from Foursquare you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
 
 * ***Access Token*** under `FOURSQUARE_ACCESS_TOKEN`
 
-After you validated that your foursquare integration worked go back to Foursquare page and change the ***Callback URL*** field to have your domain info (this is not required), then make sure you turn off the foursquare oauth interation setting so you don't make that available to everyone in the internet. You can do that by setting `FOURSQUARE_OAUTH_ENABLED` to False.
+After you validated that your foursquare integration worked go back to Foursquare page and change the ***Callback URL*** field to have your domain info (this is not required), then make sure you turn off the foursquare oauth integration setting so you don't make that available to everyone in the Internet. You can do that by setting `FOURSQUARE_OAUTH_ENABLED` to False.
 
 If you want to turn off instagram integration just set `FOURSQUARE_INTEGRATION_ENABLED` to False.
 
-Additionaly if you don't want people to know where you are currently at, you can se 'FOURSQUARE_SHOW_CURRENT_DAY' to False and it will only show check-ins more than a day old.
+Additionally if you don't want people to know where you are currently at, you can set 'FOURSQUARE_SHOW_CURRENT_DAY' to False and it will only show check-ins more than a day old.
 
 
 
@@ -312,7 +319,7 @@ If you want to turn off Last.fm integration just set `LASTFM_INTEGRATION_ENABLED
 
 ### Setting up Soundcloud integration
 
-In order to setup the soundcloud integration first need to create a soundcloud application by going to <http://soundcloud.com/you/apps>. Once you have the `CLIENT_ID` from soundcloud open the **syte_settings.py** file an enter it under the `SOUNDCLOUD_CLIENT_ID` setting.
+In order to setup the soundcloud integration, you first need to create a soundcloud application by going to <http://soundcloud.com/you/apps>. Once you have the `CLIENT_ID` from soundcloud open the **syte_settings.py** file and enter it under the `SOUNDCLOUD_CLIENT_ID` setting.
 
 Inside **syte_settings.py** there are two other options to configure how your soundcloud tracks will be shown.
 
@@ -334,12 +341,20 @@ To display the fork count on repositories set `BITBUCKET_SHOW_FORKS` to True.  T
 The Bitbucket API throttles the user resource to 100 calls every 30 minutes.
 
 
+### Setting up Ohloh.net integration
+
+The Ohloh integration require a registered API key. Sign in to your Ohloh account and visit [Ohloh API Key Sign Up page](http://www.ohloh.com/accounts/me/api_keys/new) to register an API key. Enter the API key into `OHLOH_API_KEY` in your **syte_settings.py** located in `syte > syte_settings.py`.
+
+Ohloh API only list projects you manage, but you can add other project names in `OHLOH_OTHER_PROJECTS` in **syte_settings.py**. Each extra project requires an additional API call.
+
+#### Comment
+The Ohloh API key is limited to 1000 requests per day. You can see the status and usage of your API key on [Ohloh API Key page](https://www.ohloh.net/accounts/me/api_keys).
+
 
 
 ## Running & Deployment Instructions
 
 Now that you have everything setup and ready to go we will be able to run the project locally and deploy to heroku with the instructions below. Please note that these instructions are for Mac, which should be the same for linux systems. If you have problems with these instructions on Windows, let me know or send a pull request.
-
 
 
 
@@ -358,7 +373,7 @@ $ workon syte
 (syte)$ pip install --use-mirrors -r requirements.txt
 ```
 
-This will install all the project dependencies listed in requirements.txt including Django. Now all you have to do is run the django project and go to <http://127.0.0.1:8000>.
+This will install all the project dependencies listed in requirements.txt including Django. Now all you have to do is run the Django project and go to <http://127.0.0.1:8000>.
 
 ```
 python manage.py runserver
@@ -398,7 +413,7 @@ This will create a minified version of your CSS in `syte > static > css` and the
 
 Deploying to Heroku is extremely easy and free, that's why I chose it over Amazon or similar. That's another fork I would love to see, different deployment instructions maybe to an Amazon EC2 micro instance.
 
-First signup to [Heroku](http://heroku.com) then follow these simple [Django deployement instructions](https://devcenter.heroku.com/articles/django) I already have the requirements.txt and the Procfile ready to go, but before you actually deploy there are two things you need to change:
+First signup to [Heroku](http://heroku.com) then follow these simple [Django deployment instructions](https://devcenter.heroku.com/articles/django) I already have the requirements.txt and the Procfile ready to go, but before you actually deploy there are two things you need to change:
 
 1. Change the ``DEPLOYMENT_MODE`` value to prod in **syte_settings.py** located in ``syte > syte_settings.py``
 2. Change the ``SITE_ROOT_URI`` value to your heroku app url in **syte_settings.py** see the available example to how it should be formatted.
