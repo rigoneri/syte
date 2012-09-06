@@ -155,6 +155,7 @@ For deployment Syte uses [Heroku](http://www.heroku.com/) since it's free for 75
 There are a few steps in order to get Syte configured, but don't worry they are pretty easy.
 
 `Note` I recommend you branching your fork and not checking in sensitive settings to GitHub!
+`Warning` Do not place OAuth keys and tokens in a public repository.
 
 ### Base content changes
 
@@ -182,7 +183,7 @@ Then pick your **adjacent color** and change the `@adjacent-color` hex value in 
 
 ### Setting up your blog (Tumblr)
 
-If you already have a Tumblr blog good! If you don't [signup for one here](https://www.tumblr.com/) it's really easy! I might eventually make Syte integrate with wordpress as well, if you beat me to it please send a pull request.
+If you already have a Tumblr blog good! If you don't [signup for one here](https://www.tumblr.com/) it's really easy! I might eventually make Syte integrate with WordPress as well, if you beat me to it please send a pull request.
 
 Once you have your Tumblr blog you will need to get the `api_key` needed to call their APIs. In order to do that **register your site** with them by going to <http://www.tumblr.com/oauth/register>, fill in the information about your site, there is no need to enter a default callback url or an icon. Once you are done your website will be listed under <http://www.tumblr.com/oauth/apps>, save the `OAuth Consumer Key` value that's the `api_key` we need for Syte.
 
