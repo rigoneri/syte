@@ -358,6 +358,8 @@ $ workon syte
 (syte)$ pip install --use-mirrors -r requirements.txt
 ```
 
+`Note` On Mac/Linux you need to modify your shell startup file to add mkvirtualenv and workon commands, see [virtualenvwrapper installation instructions](http://virtualenvwrapper.readthedocs.org/en/latest/install.html#shell-startup-file)
+
 This will install all the project dependencies listed in requirements.txt including Django. Now all you have to do is run the Django project and go to <http://127.0.0.1:8000>.
 
 ```
