@@ -580,7 +580,7 @@ h3 {
 }
 
 a {
-  color: #ffcc00;
+  color: #D75701;
   font-weight: 400;
   text-decoration: none;
 }
@@ -605,7 +605,7 @@ strong {
 }
 
 .wrapper {
-  max-width: 650px;
+  max-width: 900px;
   margin: 0 auto;
   position: relative;
   padding: 0 20px;
@@ -613,6 +613,7 @@ strong {
 
 section img {
   max-width: 100%;
+  margin-right: 10px;
 }
 
 blockquote {
@@ -623,17 +624,18 @@ blockquote {
 }
 
 code {
-  font-family: "Lucida Sans", Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
+  font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
   color: #efefef;
-  font-size: 13px;
+  font-size: 12px;
   margin: 0 4px;
-  padding: 4px 6px;
+  padding: 2px 4px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   -o-border-radius: 2px;
   -ms-border-radius: 2px;
   -khtml-border-radius: 2px;
   border-radius: 2px;
+  border: 1px solid #333;
 }
 
 pre {
@@ -653,11 +655,13 @@ pre {
   overflow: auto;
   overflow-y: hidden;
 }
+
 pre code {
   color: #efefef;
   text-shadow: 0px 1px 0px #000;
   margin: 0;
   padding: 0;
+  border: 0;
 }
 
 table {
@@ -709,7 +713,7 @@ dt {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
 }
 #header nav {
-  max-width: 650px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 10px;
   background: blue;
@@ -781,15 +785,15 @@ dt {
 }
 
 section {
-  max-width: 650px;
-  padding: 30px 0px 50px 0px;
+  max-width: 900px;
+  padding: 15px 0px 50px 0px;
   margin: 20px 0;
   margin-top: 70px;
 }
 section #title {
   border: 0;
   outline: none;
-  margin: 0 0 50px 0;
+  margin: 0 0 30px 0;
   padding: 0 0 5px 0;
 }
 section #title h1 {
