@@ -58,6 +58,8 @@ You can use, reproduce and do whatever you want with Syte but I would like you t
 [![sheetsj](https://github.com/rigoneri/syte/blob/master/readme-imgs/sheetsj.png?raw=true)](http://jeffsheets.herokuapp.com)
 [![jeiting](https://github.com/rigoneri/syte/blob/master/readme-imgs/jeiting.png?raw=true)](http://jacobeiting.com)
 [![chriskun](https://github.com/rigoneri/syte/blob/master/readme-imgs/chriskun.png?raw=true)](http://chrisbolton.me)
+[![denibertovic](https://github.com/rigoneri/syte/blob/master/readme-imgs/deni.png?raw=true)](http://blog.initeq.net)
+
 
 
 ## Social Integrations
