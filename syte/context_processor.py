@@ -1,5 +1,6 @@
-
+# -*- coding: utf-8 -*-
 from django.conf import settings
+
 
 def site_pages(request):
     context = dict()
@@ -16,6 +17,10 @@ def site_pages(request):
     context['GITHUB_INTEGRATION_ENABLED'] = settings.GITHUB_INTEGRATION_ENABLED
     context['DRIBBBLE_INTEGRATION_ENABLED'] = settings.DRIBBBLE_INTEGRATION_ENABLED
     context['INSTAGRAM_INTEGRATION_ENABLED'] = settings.INSTAGRAM_INTEGRATION_ENABLED
+    context['BITBUCKET_INTEGRATION_ENABLED'] = settings.BITBUCKET_INTEGRATION_ENABLED
+    context['LASTFM_INTEGRATION_ENABLED'] = settings.LASTFM_INTEGRATION_ENABLED
+    context['SOUNDCLOUD_INTEGRATION_ENABLED'] = settings.SOUNDCLOUD_INTEGRATION_ENABLED
+    context['FOURSQUARE_INTEGRATION_ENABLED'] = settings.FOURSQUARE_INTEGRATION_ENABLED
 
     context['DISQUS_INTEGRATION_ENABLED'] = settings.DISQUS_INTEGRATION_ENABLED
     context['DISQUS_SHORTNAME'] = settings.DISQUS_SHORTNAME

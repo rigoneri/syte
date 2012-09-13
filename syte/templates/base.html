@@ -33,6 +33,12 @@
       <li><a href="http://github.com/rigoneri" id="github-link">Github</a></li>
       <li><a href="http://dribbble.com/rigoneri" id="dribbble-link">Dribbble</a></li>
       <li><a href="http://instagr.am/p/Lau1VrEPbt" id="instagram-link">Instagram</a></li>
+      <li><a href="http://lastfm.com/user/rigoneri" id="lastfm-link">Last.fm</a></li>
+      <li><a href="https://foursquare.com/user/8786308" id="foursquare-link">Foursquare</a></li>
+      {% comment %}
+      <li><a href="http://soundcloud.com/guram-kajaia" id="soundcloud-link">Soundcloud</a></li>
+      <li><a href="http://bitbucket.org/rigoneri" id="bitbucket-link">Bitbucket</a></li>
+      {% endcomment %}
       <li><a href="mailto:contact@rigoneri.com?subject=Hello" id="contact-link">Contact</a></li>
     </ul>
   </nav>
@@ -47,13 +53,19 @@
   </span>
   <h3><a href="/">rigoneri.com</a></h3>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript">
 var twitter_integration_enabled = {% if TWITTER_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
     github_integration_enabled = {% if GITHUB_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
     dribbble_integration_enabled = {% if DRIBBBLE_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
     instagram_integration_enabled = {% if INSTAGRAM_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
+    lastfm_integration_enabled = {% if LASTFM_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
+    disqus_integration_enabled = {% if DISQUS_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
+    soundcloud_integration_enabled = {% if SOUNDCLOUD_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
+    bitbucket_integration_enabled = {% if BITBUCKET_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
+    foursquare_integration_enabled = {% if FOURSQUARE_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
     disqus_integration_enabled = {% if DISQUS_INTEGRATION_ENABLED %}true{% else %}false{% endif %};
+
 
 {% if DISQUS_INTEGRATION_ENABLED %}var disqus_shortname = '{{ DISQUS_SHORTNAME }}';{% endif %}
 </script>
@@ -76,8 +88,11 @@ var twitter_integration_enabled = {% if TWITTER_INTEGRATION_ENABLED %}true{% els
 {% if GITHUB_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/github.js"></script>{% endif %}
 {% if DRIBBBLE_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/dribbble.js"></script>{% endif %}
 {% if INSTAGRAM_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/instagram.js"></script>{% endif %}
+{% if LASTFM_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/lastfm.js"></script>{% endif %}
+{% if BITBUCKET_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/bitbucket.js"></script>{% endif %}
 {% if DISQUS_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/disqus.js"></script>{% endif %}
-
+{% if SOUNDCLOUD_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/soundcloud.js"></script>{% endif %}
+{% if FOURSQUARE_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/foursquare.js"></script>{% endif %}
 {% else %}
 <script src="{{ MEDIA_URL }}js/min/scripts-{{ COMPRESS_REVISION_NUMBER }}.min.js"></script>
 {% endif %}

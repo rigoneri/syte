@@ -27,6 +27,3 @@ var spin_opts = {
   className: 'spinner',
   zIndex: 2e9
 };
-
-
-
