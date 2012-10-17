@@ -22,5 +22,6 @@ List of services to add integration for:
     - Bitbucket [DONE]
     - Stack Overflow
     - Slideshare
+    - Tent.io
 
 List taken from [Syte's Unexpected Traction and Numbers](http://rigoneri.com/post/25804668500)
