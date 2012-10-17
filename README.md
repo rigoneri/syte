@@ -51,7 +51,6 @@ You can use, reproduce and do whatever you want with Syte but I would like you t
 [![alexmeswarb](https://github.com/rigoneri/syte/blob/master/readme-imgs/ameswarb.png?raw=true)](http://alexmeswarb.com)
 [![pranayairan](https://github.com/rigoneri/syte/blob/master/readme-imgs/pranayairan.png?raw=true)](http://pranayairan.herokuapp.com)
 [![lfranchi](https://github.com/rigoneri/syte/blob/master/readme-imgs/lfranchi.png?raw=true)](http://lfranchi.com)
-[![mihan007](https://github.com/rigoneri/syte/blob/master/readme-imgs/mihan007.png?raw=true)](http://mihan007.com)
 [![jihonrado](https://github.com/rigoneri/syte/blob/master/readme-imgs/jihonrado.png?raw=true)](http://jihonrado.es)
 [![DavidRagone](https://github.com/rigoneri/syte/blob/master/readme-imgs/dmragone.png?raw=true)](http://www.dmragone.com)
 [![bronskiy](https://github.com/rigoneri/syte/blob/master/readme-imgs/bronskiy.png?raw=true)](http://bronskiy.com)
@@ -65,6 +64,7 @@ You can use, reproduce and do whatever you want with Syte but I would like you t
 [![danielmayo](https://github.com/rigoneri/syte/blob/master/readme-imgs/danmayo.png?raw=true)](http://www.danielmayo.co.uk/)
 [![krisrang](https://github.com/rigoneri/syte/blob/master/readme-imgs/krisrang.png?raw=true)](http://www.kristjanrang.eu)
 [![tbergeron](https://github.com/rigoneri/syte/blob/master/readme-imgs/tbergeron.png?raw=true)](http://tbergeron.com)
+[![mihan007](https://github.com/rigoneri/syte/blob/master/readme-imgs/mihan007.png?raw=true)](http://mihan007.com)
 
 
 ## Social Integrations
