@@ -28,7 +28,7 @@ if settings.GITHUB_OAUTH_ENABLED:
 
 if settings.GITHUB_INTEGRATION_ENABLED:
     urlpatterns += patterns('',
-        url(r'^github/(?P<username>\w+)/?$', 'syte.views.github.github'),
+        url(r'^github/(?P<username>[\-\w]+)/?$', 'syte.views.github.github'),
     )
 
 #Bitbucket Integration

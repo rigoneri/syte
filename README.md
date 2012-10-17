@@ -1,10 +1,10 @@
 # Syte
 
-Syte is a really simple but powerful packaged personal site that has social integrations like twitter, github, dribbble, instagram, foursquare, tumblr, last.fm, soundcloud and bitbucket. You can see it in action on my personal site <http://rigoneri.com>
+Syte is a really simple but powerful packaged personal site that has social integrations like Twitter, GitHub, Dribbble, Instagram, Foursquare, Tumblr, Last.fm, SoundCloud and Bitbucket. You can see it in action on [my personal site](http://rigoneri.com).
 
-### There is only one rule
+### There is only one rule/suggestion
 
-You can use, reproduce and do whatever you want with syte but I would like you to choose a different adjacent color as the ones used by the people below. Once you have chosen your color and deployed your Syte based site, please send a pull request with an image of you containing the color on the border like the ones below. The image needs to be 60x60 px.
+You can use, reproduce and do whatever you want with Syte but I would like you to choose a different adjacent color as the ones used by the people below. Once you have chosen your color and deployed your Syte based site, please send a pull request with an image of you containing the color on the border like the ones below. The image needs to be 60x60 px.
 
 [![rigoneri](https://github.com/rigoneri/syte/blob/master/readme-imgs/rigoneri.png?raw=true)](http://rigoneri.com)
 [![sambao21](https://github.com/rigoneri/syte/blob/master/readme-imgs/sambao21.png?raw=true)](http://sambao21.com)
@@ -54,6 +54,17 @@ You can use, reproduce and do whatever you want with syte but I would like you t
 [![jihonrado](https://github.com/rigoneri/syte/blob/master/readme-imgs/jihonrado.png?raw=true)](http://jihonrado.es)
 [![DavidRagone](https://github.com/rigoneri/syte/blob/master/readme-imgs/dmragone.png?raw=true)](http://www.dmragone.com)
 [![bronskiy](https://github.com/rigoneri/syte/blob/master/readme-imgs/bronskiy.png?raw=true)](http://bronskiy.com)
+[![darrenmowat](https://github.com/rigoneri/syte/blob/master/readme-imgs/darrenmowat.png?raw=true)](http://darrenmowat.co.uk)
+[![sheetsj](https://github.com/rigoneri/syte/blob/master/readme-imgs/sheetsj.png?raw=true)](http://jeffsheets.herokuapp.com)
+[![jeiting](https://github.com/rigoneri/syte/blob/master/readme-imgs/jeiting.png?raw=true)](http://jacobeiting.com)
+[![chriskun](https://github.com/rigoneri/syte/blob/master/readme-imgs/chriskun.png?raw=true)](http://chrisbolton.me)
+[![denibertovic](https://github.com/rigoneri/syte/blob/master/readme-imgs/deni.png?raw=true)](http://blog.initeq.net)
+[![calebalbritton](https://github.com/rigoneri/syte/blob/master/readme-imgs/calebalbritton.png?raw=true)](http://www.calebalbritton.com)
+[![vincentying](https://github.com/rigoneri/syte/blob/master/readme-imgs/vincentying.png?raw=true)](http://ying82.herokuapp.com)
+[![danielmayo](https://github.com/rigoneri/syte/blob/master/readme-imgs/danmayo.png?raw=true)](http://www.danielmayo.co.uk/)
+[![krisrang](https://github.com/rigoneri/syte/blob/master/readme-imgs/krisrang.png?raw=true)](http://www.kristjanrang.eu)
+[![tbergeron](https://github.com/rigoneri/syte/blob/master/readme-imgs/tbergeron.png?raw=true)](http://tbergeron.com)
+[![mihan007](https://github.com/rigoneri/syte/blob/master/readme-imgs/mihan007.png?raw=true)](http://mihan007.com)
 
 
 ## Social Integrations
@@ -61,32 +72,32 @@ You can use, reproduce and do whatever you want with syte but I would like you t
 
 ### Blog: Tumblr
 
-Syte uses [tumblr](http://tumblr.com) for blogging and your blog will be the primary page of the site.
+Syte uses [Tumblr](http://tumblr.com) for blogging and your blog will be the primary page of the site.
 
 ![Syte Home](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-1.png?raw=true)
 
 ### Twitter
 
-Syte has twitter integration, which means that when someone clicks on a link that points to a user's twitter profile the profile is loaded within your site along with the user's latest tweets.
+Syte has Twitter integration, which means that when someone clicks on a link that points to a user's Twitter profile the profile is loaded within your site along with the user's latest tweets.
 
 ![Syte Twitter](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-2.png?raw=true)
 
-### Github
+### GitHub
 
-Syte has github integration, which means that when someone clicks on a link that points to a user's github profile the profile is loaded within your site along with a list of the user's repos.
+Syte has GitHub integration, which means that when someone clicks on a link that points to a user's GitHub profile the profile is loaded within your site along with a list of the user's repos.
 
-![Syte Github](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-3.png?raw=true)
+![Syte GitHub](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-3.png?raw=true)
 
 ### Dribbble
 
-Syte has dribbble integration, which means that when someone clicks on a link that points to a user's dribbble profile the profile is loaded within your site along with the user's latest shots.
+Syte has Dribbble integration, which means that when someone clicks on a link that points to a user's Dribbble profile the profile is loaded within your site along with the user's latest shots.
 
 ![Syte Dribbble](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-4.png?raw=true)
 
 
 ### Instagram
 
-Syte has instagram integration, which means that you can show your instagram pictures within your site like a profile. Currently the only way to display your pictures is through their iPhone and Android apps, this is not even possible through their website.
+Syte has Instagram integration, which means that you can show your Instagram pictures within your site like a profile. Currently the only way to display your pictures is through their iPhone and Android apps, this is not even possible through their website.
 
 ![Syte Instagram](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-5.png?raw=true)
 
@@ -113,16 +124,16 @@ Syte has Last.fm integration, which means that when someone clicks on a link tha
 ![Syte Lastfm](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-6.png?raw=true)
 
 
-### Soundcloud
+### SoundCloud
 
-Syte has Soundcloud integration, which means that when someone clicks on a link that points to a user's Soundcloud profile the profile information will be loaded directly in the site along with a listing of the user's soundcloud tracks. Since I don't use soundcloud, you can see an example on [Guram's website](http://blog.guramkajaia.com/)
+Syte has SoundCloud integration, which means that when someone clicks on a link that points to a user's SoundCloud profile the profile information will be loaded directly in the site along with a listing of the user's SoundCloud tracks. Since I don't use SoundCloud, you can see an example on [Guram's website](http://blog.guramkajaia.com/)
 
 ![Syte Soundcloud](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-7.png?raw=true)
 
 
 ### Bitbucket
 
-Syte has bitbucket integration, which means that when someone clicks on a link that points to a user's bitbucket profile the profile is loaded within your site along with a list of the user's repos.
+Syte has Bitbucket integration, which means that when someone clicks on a link that points to a user's Bitbucket profile the profile is loaded within your site along with a list of the user's repos.
 
 ![Syte Bitbucket](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-8.png?raw=true)
 
@@ -135,7 +146,7 @@ Syte is responsive, which means that it scales down to a mobile device screen si
 
 ## Technologies Used
 
-Syte uses the [Django](https://www.djangoproject.com/) web framework to handle requests and call the integration apis (with [python](http://www.python.org/)). However it doesn't necessarily need to be in Django since the majority of the work is on the frontend (I would love to see a fork using [Node.js](http://nodejs.org/), maybe I'll put one together sometime.)
+Syte uses the [Django](https://www.djangoproject.com/) web framework to handle requests and call the integration APIs (with [python](http://www.python.org/)). However it doesn't necessarily need to be in Django since the majority of the work is on the frontend (I would love to see a fork using [Node.js](http://nodejs.org/), maybe I'll put one together sometime.)
 
 On the frontend Syte uses HTML5 and CSS3 while using the [LESS](http://lesscss.org) CSS preprocessor. Syte also uses several JS libraries listed below:
 
@@ -144,7 +155,7 @@ On the frontend Syte uses HTML5 and CSS3 while using the [LESS](http://lesscss.o
 * [moment.js](http://momentjs.com/)
 * [spin.js](fgnass.github.com/spin.js)
 * [bootstrap-modal.js](http://twitter.github.com/bootstrap/javascript.html#modals)
-* [JQuery URL Parser](https://github.com/allmarkedup/jQuery-URL-Parser)
+* [jQuery URL Parser](https://github.com/allmarkedup/jQuery-URL-Parser)
 * [google-code-prettify](http://google-code-prettify.googlecode.com/svn/trunk/README.html)
 
 For static compression and minification Syte uses some [Node.js](http://nodejs.org/) libraries:
@@ -159,7 +170,8 @@ For deployment Syte uses [Heroku](http://www.heroku.com/) since it's free for 75
 
 There are a few steps in order to get Syte configured, but don't worry they are pretty easy.
 
-`Note` I recommend you branching your fork and not checking in sensitive settings to github!
+`Note` I recommend you branching your fork and not checking in sensitive settings to GitHub!
+`Warning` Do not place OAuth keys and tokens in a public repository.
 
 ### Base content changes
 
@@ -175,8 +187,8 @@ Then make some text and link changes. Open **base.html** located in `syte > temp
 4. Inside the `header` tag change the `h1` tag to have your name.
 5. Inside the `header` tag change the `h2` tag to have a short description about you.
 6. Inside the `nav` tag change the **twitter-link** href to point to your twitter profile, if you don't have twitter just remove that whole line.
-7. Inside the `nav` tag change the **github-link** href to point to your github profile, if you don't have github just remove that whole line.
-8. Inside the `nav` tag change the **dribbble-link** href to point to your dribbble profile, if you don't have dribbble just remove that whole line.
+7. Inside the `nav` tag change the **github-link** href to point to your GitHub profile, if you don't have GitHub just remove that whole line.
+8. Inside the `nav` tag change the **dribbble-link** href to point to your Dribbble profile, if you don't have Dribbble just remove that whole line.
 9. Inside the `nav` tag change the **contact-link** href to point to your email address.
 10. Under `class="mobile-nav"` div change the **h3** link text to have your domain name or your name.
 
@@ -187,15 +199,15 @@ Then pick your **adjacent color** and change the `@adjacent-color` hex value in 
 
 ### Setting up your blog (Tumblr)
 
-If you already have a tumblr blog good! If you don't [signup for one here](https://www.tumblr.com/) it's really easy! I might eventually make Syte integrate with wordpress as well, if you beat me to it please send a pull request.
+If you already have a Tumblr blog good! If you don't [signup for one here](https://www.tumblr.com/) it's really easy! I might eventually make Syte integrate with WordPress as well, if you beat me to it please send a pull request.
 
-Once you have your tumblr blog you will need to get the `api_key` needed to call their APIs. In order to do that **register your site** with them by going to <http://www.tumblr.com/oauth/register>, fill in the information about your site, there is no need to enter a default callback url or an icon. Once you are done your website will be listed under <http://www.tumblr.com/oauth/apps>, save the `OAuth Consumer Key` value that's the `api_key` we need for Syte.
+Once you have your Tumblr blog you will need to get the `api_key` needed to call their APIs. In order to do that **register your site** with them by going to <http://www.tumblr.com/oauth/register>, fill in the information about your site, there is no need to enter a default callback url or an icon. Once you are done your website will be listed under <http://www.tumblr.com/oauth/apps>, save the `OAuth Consumer Key` value that's the `api_key` we need for Syte.
 
-Once you have the `api_key` from tumblr you have to enter it in **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the key under `TUMBLR_API_KEY`, also please enter your tumblr url under `TUMBLR_BLOG_URL` see the example on how it should be formatted.
+Once you have the `api_key` from Tumblr you have to enter it in **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the key under `TUMBLR_API_KEY`, also please enter your Tumblr url under `TUMBLR_BLOG_URL` see the example on how it should be formatted.
 
 #### Comments
 
-Comments are available through [Disqus](http://disqus.com/) in order to get yours setup, make sure to signup through their website. Once you are done you will be given a disqus shortname. Grab the shortname and enter it in **syte_settings.py** under `DISQUS_SHORTNAME`, also make sure to have `DISQUS_INTEGRATION_ENABLED` set to True in order to work.
+Comments are available through [Disqus](http://disqus.com/) in order to get yours setup, make sure to signup through their website. Once you are done you will be given a Disqus shortname. Grab the shortname and enter it in **syte_settings.py** under `DISQUS_SHORTNAME`, also make sure to have `DISQUS_INTEGRATION_ENABLED` set to True in order to work.
 
 
 
@@ -203,111 +215,111 @@ Comments are available through [Disqus](http://disqus.com/) in order to get your
 
 ### Setting up Twitter integration
 
-Twitter has another level of security, therefore we need more information instead of just an api_key like tumblr. To get started create a new application on twitter for your website by going to <https://dev.twitter.com/apps/new>. Once you are done creating your application you will be taken to your application page on twitter, there you already have two pieces of the puzzle, the `Consumer key` and the `Consumer secret` make sure you save those.
+Twitter has another level of security, therefore we need more information instead of just an api_key like Tumblr. To get started create a new application on Twitter for your website by going to <https://dev.twitter.com/apps/new>. Once you are done creating your application you will be taken to your application page on Twitter, there you already have two pieces of the puzzle, the `Consumer key` and the `Consumer secret` make sure you save those.
 
 Next you will need your access tokens, on the bottom of that page there is a link called **Create my access token** click on that. Once you are done you will be given the other two pieces of the puzzle, the `Access token` and the `Access token secret` make sure you save those as well.
 
-Once you have those four items from twitter you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
+Once you have those four items from Twitter you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
 
 * `Consumer key` string you saved under `TWITTER_CONSUMER_KEY`
 * `Consumer secret` string you saved under  `TWITTER_CONSUMER_SECRET`
 * `Access token` string you saved under `TWITTER_USER_KEY`
 * `Access token secret` string you saved under `TWITTER_USER_SECRET`
 
-If you want to turn off the twitter integration just set `TWITTER_INTEGRATION_ENABLED` to False.
+If you want to turn off the Twitter integration just set `TWITTER_INTEGRATION_ENABLED` to False.
 
 
 
 
-### Setting up Github integration
+### Setting up GitHub integration
 
-Github has the same level of security as Twitter, but they don't provide a button that makes it easy to get the access token, so instead we have to get the access token ourselves. To get started sign in to github and go to <https://github.com/settings/applications/new> to register your application.
+GitHub has the same level of security as Twitter, but they don't provide a button that makes it easy to get the access token, so instead we have to get the access token ourselves. To get started sign in to GitHub and go to <https://github.com/settings/applications/new> to register your application.
 
-Enter the ***Application Name***, ***Main URL*** and ***Callback URL***. For the Callback URL enter `http://127.0.0.1:8000/github/auth` for now since we will get the access token while running it locally. Once you are done regestering your application you will be given the ***Client ID*** and ***Client Secret***.
+Enter the ***Application Name***, ***Main URL*** and ***Callback URL***. For the Callback URL enter `http://127.0.0.1:8000/github/auth` for now since we will get the access token while running it locally. Once you are done registering your application you will be given the ***Client ID*** and ***Client Secret***.
 
-Once you have those two items from Github you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
+Once you have those two items from GitHub you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
 
 * ***Client ID*** under `GITHUB_CLIENT_ID`
 * ***Client Secret*** under `GITHUB_CLIENT_SECRET`
 
-After you have entered those two items, folow the steps below for running your Syte locally on your machine. Once you have your Syte running navigate to `http://127.0.0.1:8000/github/auth`, you will be taken to Github's website and will be asked to sign in and authorize your application. After you authorized your application you will be taken back to your Syte and you will be given your ***Access Token***
+After you have entered those two items, follow the steps below for running your Syte locally on your machine. Once you have your Syte running navigate to `http://127.0.0.1:8000/github/auth`, you will be taken to GitHub's website and will be asked to sign in and authorize your application. After you authorized your application you will be taken back to your Syte and you will be given your ***Access Token***
 
-You can also get your access token via the github api using curl:
+You can also get your access token via the GitHub api using curl:
 ```
 curl -i -u "username:password" https://api.github.com/authorizations
 ```
 
-Once you have your access token from Github you have to enter them in your **syte_settings.py** located in `syte > syste_settings.py`. Once you open that file enter it under `GITHUB_ACCESS_TOKEN`
+Once you have your access token from GitHub you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter it under `GITHUB_ACCESS_TOKEN`
 
-After you validated that your github integration worked go back to Github page and change the ***Callback URL*** field to have your domain info (this is not required), then make sure you turn off the github oauth interation setting so you don't make that available to everyone in the internet. You can do that by setting `GITHUB_OAUTH_ENABLED` to False.
+After you validated that your GitHub integration worked go back to GitHub page and change the ***Callback URL*** field to have your domain info (this is not required), then make sure you turn off the GitHub OAuth integration setting so you don't make that available to everyone in the Internet. You can do that by setting `GITHUB_OAUTH_ENABLED` to False.
 
-If you want to turn off github integration just set `GITHUB_INTEGRATION_ENABLED` to False.
+If you want to turn off GitHub integration just set `GITHUB_INTEGRATION_ENABLED` to False.
 
 
 
 
 ### Setting up Dribbble integration
 
-You don't have to do anything to setup the dribbble integration. If you want to turn off this feature just set `DRIBBBLE_INTEGRATION_ENABLED` setting to False in syte_settings.py.
+You don't have to do anything to setup the Dribbble integration. If you want to turn off this feature just set `DRIBBBLE_INTEGRATION_ENABLED` setting to False in syte_settings.py.
 
 
 
 
 ### Setting up Instagram integration
 
-Instagram has the same level of security as Github and similar steps on getting the access token ourselves. To get started go to <http://instagram.com/developer/>, sign in and crate a new client by clicking on the ***Manage Clients*** link on the top right side.
+Instagram has the same level of security as GitHub and similar steps on getting the access token ourselves. To get started go to <http://instagram.com/developer/>, sign in and crate a new client by clicking on the ***Manage Clients*** link on the top right side.
 
-Enter the ***Application Name***, ***Description***, ***Website*** and ***OAuth redirect_uri***. For the OAuth redirect_uri enter `http://127.0.0.1:8000/instagram/auth` for now since we will get the access token while running it locally. Once you are done regestering your client you will be given the ***Client ID*** and ***Client Secret***.
+Enter the ***Application Name***, ***Description***, ***Website*** and ***OAuth redirect_Uri***. For the OAuth redirect_uri enter `http://127.0.0.1:8000/instagram/auth` for now since we will get the access token while running it locally. Once you are done registering your client you will be given the ***Client ID*** and ***Client Secret***.
 
-Once you have those two items from Instagram you have to enter them in your **syte_settings.py** located in `syte > syste_settings.py`. Once you open that file enter the following:
+Once you have those two items from Instagram you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
 
 * ***Client ID*** under `INSTAGRAM_CLIENT_ID`
 * ***Client Secret*** under `INSTAGRAM_CLIENT_SECRET`
 
-After you have entered those two items, folow the steps below for running your Syte locally on your machine. Once you have your Syte running navigate to `http://127.0.0.1:8000/instagram/auth`, you will be taken to Instagram's website and will be asked to sign in and authorize your application. After you authorized your application you will be taken back to your Syte and you will be given your ***Access Token*** and your ***User ID***
+After you have entered those two items, follow the steps below for running your Syte locally on your machine. Once you have your Syte running navigate to `http://127.0.0.1:8000/instagram/auth`, you will be taken to Instagram's website and will be asked to sign in and authorize your application. After you authorized your application you will be taken back to your Syte and you will be given your ***Access Token*** and your ***User ID***
 
-Once you have those two items from Instagram you have to enter them in your **syte_settings.py** located in `syte > syste_settings.py`. Once you open that file enter the following:
+Once you have those two items from Instagram you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
 
 * ***Access Token*** under `INSTAGRAM_ACCESS_TOKEN`
 * ***User ID*** under `INSTAGRAM_USER_ID`
 
-After you validated that your instagram integration worked go back to Instragam page and change the ***OAuth redirect_uri*** field to have your domain info (this is not required), then make sure you turn off the instagram oauth interation setting so you don't make that available to everyone in the internet. You can do that by setting `INSTAGRAM_OAUTH_ENABLED` to False.
+After you validated that your Instagram integration worked go back to Instagram page and change the ***OAuth redirect_uri*** field to have your domain info (this is not required), then make sure you turn off the Instagram OAuth integration setting so you don't make that available to everyone in the Internet. You can do that by setting `INSTAGRAM_OAUTH_ENABLED` to False.
 
-If you want to turn off instagram integration just set `INSTAGRAM_INTEGRATION_ENABLED` to False.
+If you want to turn off Instagram integration just set `INSTAGRAM_INTEGRATION_ENABLED` to False.
 
 
 ### Setting up Foursquare integration
 
 Foursquare has the same level of security as Instagram and similar steps on getting the access token ourselves. To get started go to <https://foursquare.com/oauth/register>, sign in and register a new consumer.
 
-Enter the ***Application Name***, ***Application Website*** and ***Callback URL***. For the callback url enter `http://127.0.0.1:8000/foursquare/auth` for now since we will get the access token while running it locally. Once you are done regestering your consumer you will be given the ***Client ID*** and ***Client Secret***.
+Enter the ***Application Name***, ***Application Website*** and ***Callback URL***. For the callback url enter `http://127.0.0.1:8000/foursquare/auth` for now since we will get the access token while running it locally. Once you are done registering your consumer you will be given the ***Client ID*** and ***Client Secret***.
 
-Once you have those two items from Foursquare you have to enter them in your **syte_settings.py** located in `syte > syste_settings.py`. Once you open that file enter the following:
+Once you have those two items from Foursquare you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
 
 * ***Client ID*** under `FOURSQUARE_CLIENT_ID`
 * ***Client Secret*** under `FOURSQUARE_CLIENT_SECRET`
 
-After you have entered those two items, folow the steps below for running your Syte locally on your machine. Once you have your Syte running navigate to `http://127.0.0.1:8000/foursquare/auth`, you will be taken to Foursquare's website and will be asked to sign in and authorize your application. After you authorized your application you will be taken back to your Syte and you will be given your ***Access Token***.
+After you have entered those two items, follow the steps below for running your Syte locally on your machine. Once you have your Syte running navigate to `http://127.0.0.1:8000/foursquare/auth`, you will be taken to Foursquare's website and will be asked to sign in and authorize your application. After you authorized your application you will be taken back to your Syte and you will be given your ***Access Token***.
 
-Once you have the access token from Foursquare you have to enter them in your **syte_settings.py** located in `syte > syste_settings.py`. Once you open that file enter the following:
+Once you have the access token from Foursquare you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
 
 * ***Access Token*** under `FOURSQUARE_ACCESS_TOKEN`
 
-After you validated that your foursquare integration worked go back to Foursquare page and change the ***Callback URL*** field to have your domain info (this is not required), then make sure you turn off the foursquare oauth interation setting so you don't make that available to everyone in the internet. You can do that by setting `FOURSQUARE_OAUTH_ENABLED` to False.
+After you validated that your foursquare integration worked go back to Foursquare page and change the ***Callback URL*** field to have your domain info (this is not required), then make sure you turn off the foursquare OAuth integration setting so you don't make that available to everyone in the Internet. You can do that by setting `FOURSQUARE_OAUTH_ENABLED` to False.
 
-If you want to turn off instagram integration just set `FOURSQUARE_INTEGRATION_ENABLED` to False.
+If you want to turn off Instagram integration just set `FOURSQUARE_INTEGRATION_ENABLED` to False.
 
-Additionaly if you don't want people to know where you are currently at, you can se 'FOURSQUARE_SHOW_CURRENT_DAY' to False and it will only show check-ins more than a day old.
+Additionally if you don't want people to know where you are currently at, you can set 'FOURSQUARE_SHOW_CURRENT_DAY' to False and it will only show check-ins more than a day old.
 
 
 
 ### Setting up Last.fm integration
 
-The Last.fm integration does not make any authenticated calls so setting it up only requires that you register an application with Lastfm and get an API key.
+The Last.fm integration does not make any authenticated calls so setting it up only requires that you register an application with Last.fm and get an API key.
 
 To get an API key simply follow the [Getting started instructions](http://www.last.fm/api).  You can then view your API Key from [your api account page](http://www.last.fm/api/account).
 
-Once you have your API Key from Lastfm you have to enter it in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
+Once you have your API Key from Last.fm you have to enter it in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
 
 * ***API_KEY*** under `LASTFM_API_KEY`
 * ***USERNAME*** under `LASTFM_USERNAME`
@@ -315,24 +327,23 @@ Once you have your API Key from Lastfm you have to enter it in your **syte_setti
 If you want to turn off Last.fm integration just set `LASTFM_INTEGRATION_ENABLED` to False.
 
 
+### Setting up SoundCloud integration
 
-### Setting up Soundcloud integration
+In order to setup the SoundCloud integration you first need to create a SoundCloud application by going to <http://soundcloud.com/you/apps>. Once you have the `CLIENT_ID` from SoundCloud open the **syte_settings.py** file and enter it under the `SOUNDCLOUD_CLIENT_ID` setting.
 
-In order to setup the soundcloud integration first need to create a soundcloud application by going to <http://soundcloud.com/you/apps>. Once you have the `CLIENT_ID` from soundcloud open the **syte_settings.py** file an enter it under the `SOUNDCLOUD_CLIENT_ID` setting.
-
-Inside **syte_settings.py** there are two other options to configure how your soundcloud tracks will be shown.
+Inside **syte_settings.py** there are two other options to configure how your SoundCloud tracks will be shown.
 
 * `SOUNDCLOUD_SHOW_ARTWORK` (Boolean) set this option to true if you want to show your track artwork on page.
 * `SOUNDCLOUD_PLAYER_COLOR` you can set your widget theme color here. Use Hex values only without `#` 
 
-If you want to turn off Soundcloud integration just set `SOUNDCLOUD_INTEGRATION_ENABLED` to False.
+If you want to turn off SoundCloud integration just set `SOUNDCLOUD_INTEGRATION_ENABLED` to False.
 
 
 ### Setting up Bitbucket integration
 
 The Bitbucket integration does not make any authenticated calls nor does it require a registered API key.
 
-If you want to turn off bitbucket integration just set `BITBUCKET_INTEGRATION_ENABLED` to False.
+If you want to turn off Bitbucket integration just set `BITBUCKET_INTEGRATION_ENABLED` to False.
 
 #### Comment
 To display the fork count on repositories set `BITBUCKET_SHOW_FORKS` to True.  The Bitbucket API require one call for each repository to get fork count, which is disabled by default.
@@ -343,7 +354,7 @@ The Bitbucket API throttles the user resource to 100 calls every 30 minutes.
 
 ## Running & Deployment Instructions
 
-Now that you have everything setup and ready to go we will be able to run the project locally and deploy to heroku with the instructions below. Please note that these instructions are for Mac, which should be the same for linux systems. If you have problems with these instructions on Windows, let me know or send a pull request.
+Now that you have everything setup and ready to go we will be able to run the project locally and deploy to Heroku with the instructions below. Please note that these instructions are for Mac, which should be the same for Linux systems. If you have problems with these instructions on Windows, let me know or send a pull request.
 
 
 
@@ -355,7 +366,7 @@ Running locally is really easy if you are on a Mac since you already have some s
 * [virtualenv](http://www.virtualenv.org/en/latest/index.html)
 * [virtualenvwrapper](http://www.doughellmann.com/projects/virtualenvwrapper/)
 
-Once you have those two installed go to your syte directory and run the following commands:
+Once you have those two installed go to your Syte directory and run the following commands:
 
 ```
 $ mkvirtualenv syte
@@ -363,7 +374,9 @@ $ workon syte
 (syte)$ pip install --use-mirrors -r requirements.txt
 ```
 
-This will install all the project dependencies listed in requirements.txt including Django. Now all you have to do is run the django project and go to <http://127.0.0.1:8000>.
+`Note` On Mac/Linux you need to modify your shell startup file to add mkvirtualenv and workon commands, see [virtualenvwrapper installation instructions](http://virtualenvwrapper.readthedocs.org/en/latest/install.html#shell-startup-file)
+
+This will install all the project dependencies listed in requirements.txt including Django. Now all you have to do is run the Django project and go to <http://127.0.0.1:8000>.
 
 ```
 python manage.py runserver
@@ -403,10 +416,10 @@ This will create a minified version of your CSS in `syte > static > css` and the
 
 Deploying to Heroku is extremely easy and free, that's why I chose it over Amazon or similar. That's another fork I would love to see, different deployment instructions maybe to an Amazon EC2 micro instance.
 
-First signup to [Heroku](http://heroku.com) then follow these simple [Django deployement instructions](https://devcenter.heroku.com/articles/django) I already have the requirements.txt and the Procfile ready to go, but before you actually deploy there are two things you need to change:
+First signup to [Heroku](http://heroku.com) then follow these simple [Django deployment instructions](https://devcenter.heroku.com/articles/django) I already have the requirements.txt and the Procfile ready to go, but before you actually deploy there are two things you need to change:
 
 1. Change the ``DEPLOYMENT_MODE`` value to prod in **syte_settings.py** located in ``syte > syte_settings.py``
-2. Change the ``SITE_ROOT_URI`` value to your heroku app url in **syte_settings.py** see the available example to how it should be formatted.
+2. Change the ``SITE_ROOT_URI`` value to your Heroku app url in **syte_settings.py** see the available example to how it should be formatted.
 
 
 
