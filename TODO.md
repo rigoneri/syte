@@ -20,5 +20,6 @@ List of services to add integration for:
     - Etsy
     - Fitbit
     - Bitbucket [DONE]
+    - Stack Overflow
 
 List taken from [Syte's Unexpected Traction and Numbers](http://rigoneri.com/post/25804668500)
