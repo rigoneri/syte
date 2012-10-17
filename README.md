@@ -2,7 +2,7 @@
 
 Syte is a really simple but powerful packaged personal site that has social integrations like Twitter, GitHub, Dribbble, Instagram, Foursquare, Tumblr, Last.fm, SoundCloud and Bitbucket. You can see it in action on [my personal site](http://rigoneri.com).
 
-### There is only one rule
+### There is only one rule/suggestion
 
 You can use, reproduce and do whatever you want with Syte but I would like you to choose a different adjacent color as the ones used by the people below. Once you have chosen your color and deployed your Syte based site, please send a pull request with an image of you containing the color on the border like the ones below. The image needs to be 60x60 px.
 
