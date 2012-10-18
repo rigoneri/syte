@@ -27,4 +27,8 @@ def site_pages(request):
 
     context['GOOGLE_ANALYTICS_TRACKING_ID'] = settings.GOOGLE_ANALYTICS_TRACKING_ID
 
+    context['WOOPRA_TRACKING_DOMAIN'] = settings.WOOPRA_TRACKING_DOMAIN
+    context['WOOPRA_TRACKING_IDLE_TIMEOUT'] = settings.WOOPRA_TRACKING_IDLE_TIMEOUT
+    context['WOOPRA_TRACKING_INCLUDE_QUERY'] = settings.WOOPRA_TRACKING_INCLUDE_QUERY
+
     return context
