@@ -65,6 +65,7 @@ You can use, reproduce and do whatever you want with Syte but I would like you t
 [![krisrang](https://github.com/rigoneri/syte/blob/master/readme-imgs/krisrang.png?raw=true)](http://www.kristjanrang.eu)
 [![tbergeron](https://github.com/rigoneri/syte/blob/master/readme-imgs/tbergeron.png?raw=true)](http://tbergeron.com)
 [![mihan007](https://github.com/rigoneri/syte/blob/master/readme-imgs/mihan007.png?raw=true)](http://mihan007.com)
+[![pbouda](https://github.com/pbouda/syte/blob/master/readme-imgs/pbouda.png?raw=true)](http://www.peterbouda.eu)
 
 
 ## Social Integrations
