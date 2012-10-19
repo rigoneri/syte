@@ -40,7 +40,7 @@ function setupTent(el) {
             
       var posts = [];
       var item_count = 0;
-      $.each(tent_posts.posts, function(i, t) {
+      $.each(tent_posts, function(i, t) {
         if (item_count > 4)
           return;
 

@@ -103,6 +103,12 @@ var twitter_integration_enabled = {% if TWITTER_INTEGRATION_ENABLED %}true{% els
 <script src="{{ MEDIA_URL }}js/components/tent.js"></script>
 {% endif %}
 {% else %}
+{% if TENT_INTEGRATION_ENABLED %}
+<script type="text/javascript">
+  var tent_entity_uri = '{{ TENT_ENTITY_URI }}';
+  var tent_feed_url = '{{ TENT_FEED_URL }}';
+</script>
+{% endif %}
 <script src="{{ MEDIA_URL }}js/min/scripts-{{ COMPRESS_REVISION_NUMBER }}.min.js"></script>
 {% endif %}
 
