@@ -354,17 +354,10 @@ The Tent.io integration does not make any authenticated calls nor does it requir
 
 If you want to turn off Tent.io integration just set `TENT_INTEGRATION_ENABLED` to False.
 
-Inside **syte_settings.py** there are two options to configure your Tent.io entity.
+Inside **syte_settings.py** there are two other options to configure your Tent.io entity.
 
-* ***Your Entity-URI *** under `TENT_ENTITY_URI`
-* ***URL to a Feed or Tent-Status for your entity *** under `TENT_FEED_URL`
-
-#### Comment
-To display the fork count on repositories set `BITBUCKET_SHOW_FORKS` to True.  The Bitbucket API require one call for each repository to get fork count, which is disabled by default.
-
-The Bitbucket API throttles the user resource to 100 calls every 30 minutes.
-
-
+* ***Your Entity-URI*** under `TENT_ENTITY_URI`
+* ***URL to a Feed or Tent-Status*** under `TENT_FEED_URL`
 
 
 
