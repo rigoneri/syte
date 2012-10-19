@@ -130,6 +130,10 @@ Syte has Bitbucket integration, which means that when someone clicks on a link t
 
 ![Syte Bitbucket](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-8.png?raw=true)
 
+### Tent.io
+
+Syte has Tent.io integration, which means that you can show your Tent.io public posts within your site like a profile.
+
 
 ## Responsive UI
  
@@ -342,6 +346,24 @@ If you want to turn off Bitbucket integration just set `BITBUCKET_INTEGRATION_EN
 To display the fork count on repositories set `BITBUCKET_SHOW_FORKS` to True.  The Bitbucket API require one call for each repository to get fork count, which is disabled by default.
 
 The Bitbucket API throttles the user resource to 100 calls every 30 minutes.
+
+
+### Setting up Tent.io integration
+
+The Tent.io integration does not make any authenticated calls nor does it require a registered API key.
+
+If you want to turn off Tent.io integration just set `TENT_INTEGRATION_ENABLED` to False.
+
+Inside **syte_settings.py** there are two options to configure your Tent.io entity.
+
+* ***Your Entity-URI *** under `TENT_ENTITY_URI`
+* ***URL to a Feed or Tent-Status for your entity *** under `TENT_FEED_URL`
+
+#### Comment
+To display the fork count on repositories set `BITBUCKET_SHOW_FORKS` to True.  The Bitbucket API require one call for each repository to get fork count, which is disabled by default.
+
+The Bitbucket API throttles the user resource to 100 calls every 30 minutes.
+
 
 
 
