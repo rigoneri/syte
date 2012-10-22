@@ -68,6 +68,7 @@ You can use, reproduce and do whatever you want with Syte but I would like you t
 [![pbouda](https://github.com/pbouda/syte/blob/master/readme-imgs/pbouda.png?raw=true)](http://www.peterbouda.eu)
 [![garethwestern](https://github.com/rigoneri/syte/blob/master/readme-imgs/garethwestern.png?raw=true)](http://garethwestern.com)
 [![birarda](https://github.com/rigoneri/syte/blob/master/readme-imgs/birarda.png?raw=true)](http://www.birarda.com)
+[![mraxilus](https://github.com/mraxilus/syte/blob/master/readme-imgs/mraxilus.png?raw=true)](http://mraxil.us)
 
 
 ## Social Integrations
@@ -139,7 +140,7 @@ Syte has Tent.io integration, which means that you can show your Tent.io public 
 ![Syte Tent.io](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-10.png?raw=true)
 
 ## Responsive UI
- 
+
 Syte is responsive, which means that it scales down to a mobile device screen size.
 
 ![Syte Responsive 1](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-r-1.png?raw=true) ![Syte Responsive 1](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-r-2.png?raw=true)
@@ -334,7 +335,7 @@ In order to setup the SoundCloud integration you first need to create a SoundClo
 Inside **syte_settings.py** there are two other options to configure how your SoundCloud tracks will be shown.
 
 * `SOUNDCLOUD_SHOW_ARTWORK` (Boolean) set this option to true if you want to show your track artwork on page.
-* `SOUNDCLOUD_PLAYER_COLOR` you can set your widget theme color here. Use Hex values only without `#` 
+* `SOUNDCLOUD_PLAYER_COLOR` you can set your widget theme color here. Use Hex values only without `#`
 
 If you want to turn off SoundCloud integration just set `SOUNDCLOUD_INTEGRATION_ENABLED` to False.
 
