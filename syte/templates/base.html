@@ -30,13 +30,13 @@
     <ul class="main-nav">
       <li><a href="/" id="home-link">Home</a></li>
       <li><a href="http://twitter.com/#!/rigoneri" id="twitter-link">Twitter</a></li>
-      <li><a href="http://tent.henklein.com" id="tent-link">Tent.io</a></li>
       <li><a href="http://github.com/rigoneri" id="github-link">Github</a></li>
       <li><a href="http://dribbble.com/rigoneri" id="dribbble-link">Dribbble</a></li>
       <li><a href="http://instagr.am/p/Lau1VrEPbt" id="instagram-link">Instagram</a></li>
       <li><a href="http://lastfm.com/user/rigoneri" id="lastfm-link">Last.fm</a></li>
       <li><a href="https://foursquare.com/user/8786308" id="foursquare-link">Foursquare</a></li>
       {% comment %}
+      <li><a href="http://tent.henklein.com" id="tent-link">Tent.io</a></li>
       <li><a href="http://soundcloud.com/guram-kajaia" id="soundcloud-link">Soundcloud</a></li>
       <li><a href="http://bitbucket.org/rigoneri" id="bitbucket-link">Bitbucket</a></li>
       {% endcomment %}
@@ -72,6 +72,13 @@ var twitter_integration_enabled = {% if TWITTER_INTEGRATION_ENABLED %}true{% els
 {% if DISQUS_INTEGRATION_ENABLED %}var disqus_shortname = '{{ DISQUS_SHORTNAME }}';{% endif %}
 </script>
 
+{% if TENT_INTEGRATION_ENABLED %}
+<script type="text/javascript">
+  var tent_entity_uri = '{{ TENT_ENTITY_URI }}';
+  var tent_feed_url = '{{ TENT_FEED_URL }}';
+</script>
+{% endif %}
+
 {% if DEV_DEPLOYMENT_MODE %}
 <script src="{{ MEDIA_URL }}js/libs/jquery.url.js"></script>
 <script src="{{ MEDIA_URL }}js/libs/require.js"></script>
@@ -95,20 +102,8 @@ var twitter_integration_enabled = {% if TWITTER_INTEGRATION_ENABLED %}true{% els
 {% if DISQUS_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/disqus.js"></script>{% endif %}
 {% if SOUNDCLOUD_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/soundcloud.js"></script>{% endif %}
 {% if FOURSQUARE_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/foursquare.js"></script>{% endif %}
-{% if TENT_INTEGRATION_ENABLED %}
-<script type="text/javascript">
-  var tent_entity_uri = '{{ TENT_ENTITY_URI }}';
-  var tent_feed_url = '{{ TENT_FEED_URL }}';
-</script>
-<script src="{{ MEDIA_URL }}js/components/tent.js"></script>
-{% endif %}
+{% if TENT_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/tent.js"></script>{% endif %}
 {% else %}
-{% if TENT_INTEGRATION_ENABLED %}
-<script type="text/javascript">
-  var tent_entity_uri = '{{ TENT_ENTITY_URI }}';
-  var tent_feed_url = '{{ TENT_FEED_URL }}';
-</script>
-{% endif %}
 <script src="{{ MEDIA_URL }}js/min/scripts-{{ COMPRESS_REVISION_NUMBER }}.min.js"></script>
 {% endif %}
 

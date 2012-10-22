@@ -134,6 +134,7 @@ Syte has Bitbucket integration, which means that when someone clicks on a link t
 
 Syte has Tent.io integration, which means that you can show your Tent.io public posts within your site like a profile.
 
+![Syte Tent.io](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-10.png?raw=true)
 
 ## Responsive UI
  
