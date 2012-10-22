@@ -67,6 +67,7 @@ You can use, reproduce and do whatever you want with Syte but I would like you t
 [![mihan007](https://github.com/rigoneri/syte/blob/master/readme-imgs/mihan007.png?raw=true)](http://mihan007.com)
 [![pbouda](https://github.com/pbouda/syte/blob/master/readme-imgs/pbouda.png?raw=true)](http://www.peterbouda.eu)
 [![garethwestern](https://github.com/rigoneri/syte/blob/master/readme-imgs/garethwestern.png?raw=true)](http://garethwestern.com)
+[![birarda](https://github.com/rigoneri/syte/blob/master/readme-imgs/birarda.png?raw=true)](http://www.birarda.com)
 
 
 ## Social Integrations
@@ -268,7 +269,7 @@ You don't have to do anything to setup the Dribbble integration. If you want to 
 
 Instagram has the same level of security as GitHub and similar steps on getting the access token ourselves. To get started go to <http://instagram.com/developer/>, sign in and crate a new client by clicking on the ***Manage Clients*** link on the top right side.
 
-Enter the ***Application Name***, ***Description***, ***Website*** and ***OAuth redirect_Uri***. For the OAuth redirect_uri enter `http://127.0.0.1:8000/instagram/auth` for now since we will get the access token while running it locally. Once you are done registering your client you will be given the ***Client ID*** and ***Client Secret***.
+Enter the ***Application Name***, ***Description***, ***Website*** and ***OAuth redirect_Uri***. For the OAuth redirect_uri enter `http://127.0.0.1:8000/instagram/auth/` for now since we will get the access token while running it locally. The trailing slash is required for Instagram not to complain that the redirect_Uri is wrong. Once you are done registering your client you will be given the ***Client ID*** and ***Client Secret***.
 
 Once you have those two items from Instagram you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
 
