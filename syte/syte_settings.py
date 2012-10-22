@@ -101,6 +101,13 @@ BITBUCKET_API_URL = 'https://api.bitbucket.org/1.0/'
 # set BITBUCKET_SHOW_FORKS to false to disable
 BITBUCKET_SHOW_FORKS = False
 
+#Tent.io Integration
+TENT_INTEGRATION_ENABLED = True
+TENT_ENTITY_URI = '[ENTER YOUR ENTITY URI HERE] ex. https://yourname.tent.is'
+TENT_FEED_URL = '[ENTER A URL TO YOUR FEED] ex. https://yourname.tent.is'
+
+
+
 
 if DEPLOYMENT_MODE == 'dev':
     SITE_ROOT_URI = 'http://127.0.0.1:8000/'
