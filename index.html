@@ -157,6 +157,12 @@
 
 <p><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/f-8.png?raw=true" alt="Syte Bitbucket"></p>
 
+<h3>Tent.io</h3>
+
+<p>Syte has Tent.io integration, which means that you can show your Tent.io public posts within your site like a profile.</p>
+
+<p><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/f-10.png?raw=true" alt="Syte Tent.io"></p>
+
 <h2>Responsive UI</h2>
 
 <p>Syte is responsive, which means that it scales down to a mobile device screen size.</p>
@@ -379,6 +385,23 @@
 <p>To display the fork count on repositories set <code>BITBUCKET_SHOW_FORKS</code> to True.  The Bitbucket API require one call for each repository to get fork count, which is disabled by default.</p>
 
 <p>The Bitbucket API throttles the user resource to 100 calls every 30 minutes.</p>
+
+<h3>Setting up Tent.io integration</h3>
+
+<p>The Tent.io integration does not make any authenticated calls nor does it require a registered API key.</p>
+
+<p>If you want to turn off Tent.io integration just set <code>TENT_INTEGRATION_ENABLED</code> to False.</p>
+
+<p>Inside <strong>syte_settings.py</strong> there are two other options to configure your Tent.io entity.</p>
+
+<ul>
+<li>
+<strong><em>Your Entity-URI</em></strong> under <code>TENT_ENTITY_URI</code>
+</li>
+<li>
+<strong><em>URL to a Feed or Tent-Status</em></strong> under <code>TENT_FEED_URL</code>
+</li>
+</ul>
 
 <h2>Running &amp; Deployment Instructions</h2>
 
