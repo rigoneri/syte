@@ -69,6 +69,7 @@ You can use, reproduce and do whatever you want with Syte but I would like you t
 [![garethwestern](https://github.com/rigoneri/syte/blob/master/readme-imgs/garethwestern.png?raw=true)](http://garethwestern.com)
 [![birarda](https://github.com/rigoneri/syte/blob/master/readme-imgs/birarda.png?raw=true)](http://www.birarda.com)
 [![mraxilus](https://github.com/mraxilus/syte/blob/master/readme-imgs/mraxilus.png?raw=true)](http://mraxil.us)
+[![owensbla](https://github.com/owensbla/syte/blob/master/readme-imgs/blakeowens.png?raw=true)](http://blakeowens.com)
 
 
 ## Social Integrations
