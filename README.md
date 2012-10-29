@@ -65,12 +65,12 @@ You can use, reproduce and do whatever you want with Syte but I would like you t
 [![krisrang](https://github.com/rigoneri/syte/blob/master/readme-imgs/krisrang.png?raw=true)](http://www.kristjanrang.eu)
 [![tbergeron](https://github.com/rigoneri/syte/blob/master/readme-imgs/tbergeron.png?raw=true)](http://tbergeron.com)
 [![mihan007](https://github.com/rigoneri/syte/blob/master/readme-imgs/mihan007.png?raw=true)](http://mihan007.com)
-[![pbouda](https://github.com/pbouda/syte/blob/master/readme-imgs/pbouda.png?raw=true)](http://www.peterbouda.eu)
+[![pbouda](https://github.com/rigoneri/syte/blob/master/readme-imgs/pbouda.png?raw=true)](http://www.peterbouda.eu)
 [![garethwestern](https://github.com/rigoneri/syte/blob/master/readme-imgs/garethwestern.png?raw=true)](http://garethwestern.com)
 [![birarda](https://github.com/rigoneri/syte/blob/master/readme-imgs/birarda.png?raw=true)](http://www.birarda.com)
-[![mraxilus](https://github.com/mraxilus/syte/blob/master/readme-imgs/mraxilus.png?raw=true)](http://mraxil.us)
-[![owensbla](https://github.com/owensbla/syte/blob/master/readme-imgs/blakeowens.png?raw=true)](http://blakeowens.com)
-[![wuotr](https://github.com/wuotr/syte/blob/master/readme-imgs/wuotr.png?raw=true)](http://wuotr.com)
+[![mraxilus](https://github.com/rigoneri/syte/blob/master/readme-imgs/mraxilus.png?raw=true)](http://mraxil.us)
+[![owensbla](https://github.com/rigoneri/syte/blob/master/readme-imgs/blakeowens.png?raw=true)](http://blakeowens.com)
+[![wuotr](https://github.com/rigoneri/syte/blob/master/readme-imgs/wuotr.png?raw=true)](http://wuotr.com)
 
 ## Social Integrations
 
