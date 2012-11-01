@@ -30,8 +30,13 @@
     <ul class="main-nav">
       <li><a href="/" id="home-link">Home</a></li>
       <li><a href="http://github.com/crm416" id="github-link">Github</a></li>
+      <li><a href="http://instagr.am/p/Lau1VrEPbt" id="instagram-link">Instagram</a></li>
+      <li><a href="http://lastfm.com/user/rigoneri" id="lastfm-link">Last.fm</a></li>
       <li><a href="https://foursquare.com/user/8786308" id="foursquare-link">Foursquare</a></li>
       {% comment %}
+      <li><a href="http://tent.henklein.com" id="tent-link">Tent.io</a></li>
+      <li><a href="http://soundcloud.com/guram-kajaia" id="soundcloud-link">Soundcloud</a></li>
+      <li><a href="http://bitbucket.org/rigoneri" id="bitbucket-link">Bitbucket</a></li>
       {% endcomment %}
       <li><a href="mailto:crmarsh@princeton.edu?subject=Hello" id="contact-link">Contact</a></li>
     </ul>
