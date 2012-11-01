@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 DEPLOYMENT_MODE = 'prod'
-COMPRESS_REVISION_NUMBER = '1.3'
+COMPRESS_REVISION_NUMBER = '1.1'
 
 
 #Blog Integration: Tumblr
@@ -78,7 +78,7 @@ WOOPRA_TRACKING_INCLUDE_QUERY = False
 
 #Disqus Integration
 DISQUS_INTEGRATION_ENABLED = True
-DISQUS_SHORTNAME = 'crmarsh'
+DISQUS_SHORTNAME = 'crm416'
 
 
 #Lastfm Integration
@@ -114,6 +114,6 @@ if DEPLOYMENT_MODE == 'dev':
     DEBUG = True
 else:
     DEBUG = False
-    SITE_ROOT_URI = 'http://crmarsh.herokuapp.com/'
+    SITE_ROOT_URI = '[ENTER PROD URL HERE] ex. http://rigoneri.herokuapp.com/'
 
 MEDIA_URL = SITE_ROOT_URI + 'static/'

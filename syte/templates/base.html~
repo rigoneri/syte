@@ -5,7 +5,7 @@
   <meta name="description" content="Personal website and blog of Princeton student and iOS developer Charlie Marsh. Home to his thoughts on programming and, less frequently, life." />
   <meta name="keywords" content="Charlie Marsh, developer, Princeton, Computer Science, EveryCollegeCal" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% block pagetitle %}Charlie Marsh [crmarsh]{% endblock %}</title>
+  <title>{% block pagetitle %}Charlie{% endblock %}</title>
   <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   {% if RSS_FEED_ENABLED %}
   <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ RSS_FEED_URL }}" />
