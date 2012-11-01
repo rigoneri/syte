@@ -114,6 +114,6 @@ if DEPLOYMENT_MODE == 'dev':
     DEBUG = True
 else:
     DEBUG = False
-    SITE_ROOT_URI = 'crmarsh.herokuapp.com'
+    SITE_ROOT_URI = 'crmarsh.herokuapp.com/'
 
 MEDIA_URL = SITE_ROOT_URI + 'static/'
