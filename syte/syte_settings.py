@@ -78,7 +78,7 @@ WOOPRA_TRACKING_INCLUDE_QUERY = False
 
 #Disqus Integration
 DISQUS_INTEGRATION_ENABLED = True
-DISQUS_SHORTNAME = 'crm416'
+DISQUS_SHORTNAME = 'crmarsh'
 
 
 #Lastfm Integration
