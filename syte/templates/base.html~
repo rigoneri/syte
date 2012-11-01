@@ -30,7 +30,7 @@
     <ul class="main-nav">
       <li><a href="/" id="home-link">Home</a></li>
       <li><a href="http://github.com/crm416" id="github-link">Github</a></li>
-      <li><a href="https://foursquare.com/user/8786308" id="foursquare-link">Foursquare</a></li>
+      <li><a href="https://foursquare.com/user/37079414" id="foursquare-link">Foursquare</a></li>
       {% comment %}
       {% endcomment %}
       <li><a href="mailto:crmarsh@princeton.edu?subject=Hello" id="contact-link">Contact</a></li>
