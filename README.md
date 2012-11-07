@@ -140,6 +140,12 @@ Syte has Tent.io integration, which means that you can show your Tent.io public 
 
 ![Syte Tent.io](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-10.png?raw=true)
 
+### Steam
+
+Syte has Steam integration, which means that you can show your Steam Community profile within your site.
+
+![Syte Steam](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-11.png?raw=true)
+
 ## Responsive UI
 
 Syte is responsive, which means that it scales down to a mobile device screen size.
