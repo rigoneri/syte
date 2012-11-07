@@ -144,7 +144,7 @@ Syte has Tent.io integration, which means that you can show your Tent.io public 
 
 Syte has Steam integration, which means that you can show your Steam Community profile within your site.
 
-![Syte Steam](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-11.png?raw=true)
+![Syte Steam](https://github.com/hassankhan/syte/blob/master/readme-imgs/f-11.png?raw=true)
 
 ## Responsive UI
 
