@@ -101,10 +101,17 @@ BITBUCKET_API_URL = 'https://api.bitbucket.org/1.0/'
 # set BITBUCKET_SHOW_FORKS to false to disable
 BITBUCKET_SHOW_FORKS = False
 
+
 #Tent.io Integration
 TENT_INTEGRATION_ENABLED = True
 TENT_ENTITY_URI = '[ENTER YOUR ENTITY URI HERE] ex. https://yourname.tent.is'
 TENT_FEED_URL = '[ENTER A URL TO YOUR FEED] ex. https://yourname.tent.is'
+
+
+#Steam Integration
+STEAM_INTEGRATION_ENABLED = True
+STEAM_API_URL = 'http://api.steampowered.com/ISteamUser'
+STEAM_API_KEY = '[ENTER YOUR STEAM API KEY HERE, SEE STEAM SETUP INSTRUCTIONS]'
 
 
 

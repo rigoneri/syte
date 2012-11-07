@@ -9,7 +9,8 @@ var allComponents = [
   'soundcloud',
   'bitbucket',
   'foursquare',
-  'tent'
+  'tent',
+  'steam'
 ];
 
 function setupLinks() {
@@ -64,6 +65,10 @@ function setupLinks() {
       else if(this.id == 'tent-link' && tent_integration_enabled) {
          adjustSelection('tent');
          setupTent(this);
+      }
+      else if (this.id == 'steam-link' && steam_integration_enabled) {
+        adjustSelection('steam');
+        setupSteam(url, this);
       }
       else {
          window.location = this.href;

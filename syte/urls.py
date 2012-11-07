@@ -78,6 +78,12 @@ if settings.SOUNDCLOUD_INTEGRATION_ENABLED:
         url(r'^soundcloud/(?P<username>\S+)/?$', 'syte.views.soundcloud.soundcloud'),
     )
 
+#Steam Integration
+if settings.STEAM_INTEGRATION_ENABLED:
+    urlpatterns += patterns('',
+        url(r'^steam/(?P<username>\S+)/?$', 'syte.views.steam.steam'),
+    )
+
 #Statics: Hacky for now... fix this later...
 urlpatterns += patterns('',
     (r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {

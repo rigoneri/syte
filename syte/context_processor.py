@@ -26,6 +26,8 @@ def site_pages(request):
     context['TENT_ENTITY_URI'] = settings.TENT_ENTITY_URI
     context['TENT_FEED_URL'] = settings.TENT_FEED_URL
 
+    context['STEAM_INTEGRATION_ENABLED'] = settings.STEAM_INTEGRATION_ENABLED
+
     context['DISQUS_INTEGRATION_ENABLED'] = settings.DISQUS_INTEGRATION_ENABLED
     context['DISQUS_SHORTNAME'] = settings.DISQUS_SHORTNAME
 
