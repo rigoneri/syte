@@ -197,6 +197,7 @@ Then make some text and link changes. Open **base.html** located in `syte > temp
 6. Inside the `nav` tag change the **twitter-link** href to point to your twitter profile, if you don't have twitter just remove that whole line.
 7. Inside the `nav` tag change the **github-link** href to point to your GitHub profile, if you don't have GitHub just remove that whole line.
 8. Inside the `nav` tag change the **dribbble-link** href to point to your Dribbble profile, if you don't have Dribbble just remove that whole line.
+8. Inside the `nav` tag change the **steam-link** href to point to your Steam community profile, if you don't have Steam just remove that whole line.
 9. Inside the `nav` tag change the **contact-link** href to point to your email address.
 10. Under `class="mobile-nav"` div change the **h3** link text to have your domain name or your name.
 
@@ -370,6 +371,11 @@ Inside **syte_settings.py** there are two other options to configure your Tent.i
 * ***Your Entity-URI*** under `TENT_ENTITY_URI`
 * ***URL to a Feed or Tent-Status*** under `TENT_FEED_URL`
 
+### Setting up Steam integration
+
+In order to setup Steam integration you first need to create a Steam Web API key by going to <http://steamcommunity.com/dev/apikey>. Once you have the `STEAM WEB API KEY` from Steam open the **syte_settings.py** file and enter it under the `STEAM_API_KEY` setting.
+
+If you want to turn off Steam integration just set `STEAM_INTEGRATION_ENABLED` to False.
 
 
 ## Running & Deployment Instructions
