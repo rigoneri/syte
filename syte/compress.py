@@ -91,6 +91,9 @@ def compress_js():
     if settings.STEAM_INTEGRATION_ENABLED:
         js_files.append('components/steam.js')
 
+    if settings.STACKOVERFLOW_INTEGRATION_ENABLED:
+        js_files.append('components/stackoverflow.js')
+
     combined = ''
     for js in js_files:
         with open(os.path.join(PATH_TO_HERE, 'static/js/' + js), 'r') as f:

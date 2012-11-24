@@ -541,3 +541,57 @@
 
   a { border-bottom: 0; }
 }
+
+//StackOverflow profile
+.profile-stackoverflow {
+  list-style: none;
+  margin: 0;
+  background: #fff;
+
+  li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #C2C2C2
+  }
+}
+
+.profile-stackoverflow-name {
+  border-bottom: 0;
+  font-weight: 500;
+}
+.profile-stackoverflow-name:hover {
+  border-bottom: 0;
+}
+
+.profile-stackoverflow-description {
+  margin:0;
+  padding: 5px 0;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.profile-stackoverflow-details {
+  color: #777;
+  list-style: none;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+
+  li {
+    padding: 0;
+    border: 0;
+    display: inline-block;
+
+    //ie7 inline-block hack
+    zoom: 1;
+    *display: inline;
+  }
+
+  a {
+    border-bottom: 0;
+  }
+
+  a:hover {
+    border-bottom: 0;
+    color: @adjacent-color;
+  }
+}

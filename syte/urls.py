@@ -84,6 +84,12 @@ if settings.STEAM_INTEGRATION_ENABLED:
         url(r'^steam/(?P<username>\S+)/?$', 'syte.views.steam.steam'),
     )
 
+#StackOverflow Integration
+if settings.STACKOVERFLOW_INTEGRATION_ENABLED:
+    urlpatterns += patterns('',
+        url(r'^stackoverflow/(?P<userid>[\-\w]+)/?$', 'syte.views.stackoverflow.stackoverflow'),
+    )
+
 #Statics: Hacky for now... fix this later...
 urlpatterns += patterns('',
     (r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {

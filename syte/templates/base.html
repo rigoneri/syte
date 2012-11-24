@@ -40,6 +40,7 @@
       <li><a href="http://soundcloud.com/guram-kajaia" id="soundcloud-link">Soundcloud</a></li>
       <li><a href="http://bitbucket.org/rigoneri" id="bitbucket-link">Bitbucket</a></li>
       <li><a href="http://steamcommunity.com/id/steamshortname" id="steam-link">Steam</a></li>
+      <li><a href="http://stackoverflow.com/users/USERID/USERNAME" id="stackoverflow-link">StackOverflow</a></li>
       {% endcomment %}
       <li><a href="mailto:contact@rigoneri.com?subject=Hello" id="contact-link">Contact</a></li>
     </ul>
@@ -69,6 +70,7 @@ var twitter_integration_enabled = {% if TWITTER_INTEGRATION_ENABLED %}true{% els
     disqus_integration_enabled = {% if DISQUS_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
     tent_integration_enabled = {% if TENT_INTEGRATION_ENABLED %}true{% else %}false{% endif %};
     steam_integration_enabled = {% if STEAM_INTEGRATION_ENABLED %}true{% else %}false{% endif %};
+    stackoverflow_integration_enabled = {% if STACKOVERFLOW_INTEGRATION_ENABLED %}true{% else %}false{% endif %};
 
 
 {% if DISQUS_INTEGRATION_ENABLED %}var disqus_shortname = '{{ DISQUS_SHORTNAME }}';{% endif %}
@@ -106,6 +108,7 @@ var twitter_integration_enabled = {% if TWITTER_INTEGRATION_ENABLED %}true{% els
 {% if FOURSQUARE_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/foursquare.js"></script>{% endif %}
 {% if TENT_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/tent.js"></script>{% endif %}
 {% if STEAM_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/steam.js"></script>{% endif %}
+{% if STACKOVERFLOW_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/stackoverflow.js"></script>{% endif %}
 {% else %}
 <script src="{{ MEDIA_URL }}js/min/scripts-{{ COMPRESS_REVISION_NUMBER }}.min.js"></script>
 {% endif %}

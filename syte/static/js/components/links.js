@@ -70,6 +70,10 @@ function setupLinks() {
         adjustSelection('steam');
         setupSteam(url, this);
       }
+      else if (this.id == 'stackoverflow-link' && stackoverflow_integration_enabled) {
+         adjustSelection('stackoverflow');
+         setupStackoverflow(url, this);
+      }
       else {
          window.location = this.href;
       }

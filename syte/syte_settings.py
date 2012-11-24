@@ -34,6 +34,11 @@ GITHUB_OAUTH_AUTHORIZE_URL = 'https://github.com/login/oauth/authorize'
 GITHUB_OAUTH_ACCESS_TOKEN_URL = 'https://github.com/login/oauth/access_token'
 
 
+#Stack Overflow Integration
+STACKOVERFLOW_INTEGRATION_ENABLED = True
+STACKOVERFLOW_API_URL = 'http://api.stackoverflow.com/1.1/'
+
+
 #Dribbble Integration
 DRIBBBLE_INTEGRATION_ENABLED = True
 DRIBBBLE_API_URL = 'http://api.dribbble.com/players/'
