@@ -20,7 +20,8 @@ List of services to add integration for:
     - Etsy
     - Fitbit
     - Bitbucket [DONE]
-    - Stack Overflow
+    - Stack Overflow [DONE]
+    - Steam [DONE]
     - Slideshare
     - Tent.io [DONE]
     - Quora
