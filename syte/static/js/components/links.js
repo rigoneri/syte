@@ -10,7 +10,8 @@ var allComponents = [
   'bitbucket',
   'foursquare',
   'tent',
-  'steam'
+  'steam',
+  'stackoverflow'
 ];
 
 function setupLinks() {
