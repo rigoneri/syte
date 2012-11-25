@@ -27,3 +27,10 @@ var spin_opts = {
   className: 'spinner',
   zIndex: 2e9
 };
+
+Handlebars.registerHelper('4sq_address', function (venue) {
+  var path = $.map([venue.address,venue.city,venue.state], function (item) {
+    if (item) return item;
+  });
+  return new Handlebars.SafeString(item.join(', '));
+});
