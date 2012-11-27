@@ -25,5 +25,7 @@ List of services to add integration for:
     - Slideshare
     - Tent.io [DONE]
     - Quora
+    - trakt
+    - Google+
 
 List taken from [Syte's Unexpected Traction and Numbers](http://rigoneri.com/post/25804668500)

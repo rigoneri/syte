@@ -49,7 +49,7 @@ def compress_js():
         'libs/handlebars.js',
         'libs/moment.min.js',
         'libs/bootstrap-modal.js',
-        'libs/spin.min.js',
+        'libs/spin.js',
         'libs/prettify.js',
 
         'components/base.js',
