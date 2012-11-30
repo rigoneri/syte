@@ -67,6 +67,10 @@
             that.$element[0].offsetWidth // force reflow
           }
 
+          // This mobile part is custom, just following instructions here
+          if (isMobileView)
+             that.$element.css('top', (window.pageYOffset + 45) + 'px');
+
           that.$element
             .addClass('in')
             .attr('aria-hidden', false)
