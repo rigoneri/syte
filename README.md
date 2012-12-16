@@ -283,8 +283,8 @@ Frontpage.md' will be shown.  Again, this page is configurable through the
 settings in 'syte > syte_settings.py'.
 
 The Markdown parsing and url scheme, etc. of this feature is provided by
-[Logr](https://github.com/BrewerHimself/Logr) project.  Thus, the documentation
-on the layout of a Markdown file, etc. is contiained [here](https://github.com/BrewerHimself/Logr/blob/master/README.md#notes].
+[Logr](https://github.com/stevommmm/Logr) project.  Thus, the documentation
+on the layout of a Markdown file, etc. is contiained [here][https://github.com/stevommmm/Logr#notes].
 
 The important things to note about the Markdown support are:
 
