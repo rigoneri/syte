@@ -46,7 +46,6 @@ function fetchBlogPosts(offset, tag) {
 
             });
 
-            setupLinks();
             adjustBlogHeaders();
             prettyPrint();
             setTimeout(setupBlogHeaderScroll, 1000);
@@ -63,7 +62,7 @@ function adjustBlogHeaders() {
 
   $('.blog-section article hgroup').each(function(i, e) {
     $(e).find('h3 a').css({
-       'margin-top': '-' + ($(e).height() + 100) + 'px' 
+       'margin-top': '-' + ($(e).height() + 100) + 'px'
     }).addClass('adjusted');
   });
 }
