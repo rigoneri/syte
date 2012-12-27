@@ -74,11 +74,14 @@ FOURSQUARE_OAUTH_ACCESS_TOKEN_URL = 'https://foursquare.com/oauth2/access_token'
 GOOGLE_ANALYTICS_TRACKING_ID = ''
 
 
+#ShareThis
+SHARETHIS_PUBLISHER_KEY = ''
+
+
 #Woopra
 WOOPRA_TRACKING_DOMAIN = ''
 WOOPRA_TRACKING_IDLE_TIMEOUT = 300000  # 5 minutes
 WOOPRA_TRACKING_INCLUDE_QUERY = False
-
 
 
 #Disqus Integration

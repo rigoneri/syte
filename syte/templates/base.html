@@ -113,6 +113,12 @@ var twitter_integration_enabled = {% if TWITTER_INTEGRATION_ENABLED %}true{% els
 <script src="{{ MEDIA_URL }}js/min/scripts-{{ COMPRESS_REVISION_NUMBER }}.min.js"></script>
 {% endif %}
 
+{% if SHARETHIS_PUBLISHER_KEY %}
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "{{ SHARETHIS_PUBLISHER_KEY }}"});</script>
+{% endif %}
+
 {% block extra_js %}{% endblock %}
 <script type="text/javascript">
 {% block extra_inline_js %}{% endblock %}

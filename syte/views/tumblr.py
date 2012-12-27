@@ -34,6 +34,8 @@ def blog_post(request, post_id):
 
             if settings.DISQUS_INTEGRATION_ENABLED:
                 post['disqus_enabled'] = True
+            if settings.SHARETHIS_PUBLISHER_KEY:
+                post['sharethis_enabled'] = True
 
             path = '{0}/static/templates/blog-post-{1}.html'.format(
                 os.path.join(os.path.dirname(__file__), '..'), post['type'])
