@@ -71,6 +71,7 @@ You can use, reproduce and do whatever you want with Syte but I would like you t
 [![mraxilus](https://github.com/rigoneri/syte/blob/master/readme-imgs/mraxilus.png?raw=true)](http://mraxil.us)
 [![owensbla](https://github.com/rigoneri/syte/blob/master/readme-imgs/blakeowens.png?raw=true)](http://blakeowens.com)
 [![wuotr](https://github.com/rigoneri/syte/blob/master/readme-imgs/wuotr.png?raw=true)](http://wuotr.com)
+[![hpanahi](https://github.com/rigoneri/syte/blob/master/readme-imgs/hpanahi.png?raw=true)](http://hes.am)
 
 ## Social Integrations
 
