@@ -71,7 +71,9 @@ You can use, reproduce and do whatever you want with Syte but I would like you t
 [![mraxilus](https://github.com/rigoneri/syte/blob/master/readme-imgs/mraxilus.png?raw=true)](http://mraxil.us)
 [![owensbla](https://github.com/rigoneri/syte/blob/master/readme-imgs/blakeowens.png?raw=true)](http://blakeowens.com)
 [![wuotr](https://github.com/rigoneri/syte/blob/master/readme-imgs/wuotr.png?raw=true)](http://wuotr.com)
-[![hassankhan](https://github.com/hassankhan/syte/blob/master/readme-imgs/hassankhan.png?raw=true)](http://hassankhan.me)
+[![hassankhan](https://github.com/rigoneri/syte/blob/master/readme-imgs/hassankhan.png?raw=true)](http://hassankhan.me)
+
+
 
 ## Social Integrations
 
@@ -145,13 +147,13 @@ Syte has Tent.io integration, which means that you can show your Tent.io public 
 
 Syte has Steam integration, which means that you can show your Steam Community profile within your site.
 
-![Syte Steam](https://github.com/hassankhan/syte/blob/master/readme-imgs/f-11.png?raw=true)
+![Syte Steam](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-11.png?raw=true)
 
 ### StackOverflow
 
 Syte has StackOverflow integration, which means that you can show your StackOverflow profile within your site.
 
-![Syte Steam](https://github.com/hassankhan/syte/blob/master/readme-imgs/f-12.png?raw=true)
+![Syte Steam](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-12.png?raw=true)
 
 ## Responsive UI
 
