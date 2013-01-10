@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 import os
-from datetime import datetime
-
+import re, htmlentitydefs
 import requests
+
 from django.shortcuts import render
 from django.conf import settings
 from django.http import HttpResponse
+from datetime import datetime
 from pybars import Compiler
 
 
@@ -62,6 +63,8 @@ def blog_post(request, post_id):
 
     # At this point we should have a post dict from either Tumblr or Wordpress
     post['disqus_enabled'] = settings.DISQUS_INTEGRATION_ENABLED
+    if settings.SHARETHIS_PUBLISHER_KEY:
+      post['sharethis_enabled'] = True
 
     path = '{0}/static/templates/blog-post-{1}.html'.format(
         os.path.join(os.path.dirname(__file__), '..'), post['type'])
@@ -71,12 +74,20 @@ def blog_post(request, post_id):
     compiler = Compiler()
     template = compiler.compile(unicode(f_data))
 
-    return render(request, 'blog-post.html', {
-      'post_data': template(post),
-      'post_title': post.get('title', None),
-      'blog_platform': settings.BLOG_PLATFORM,
-      'wp_blog_url': settings.WORDPRESS_BLOG_URL
-    })
+    context = dict()
+    context['post_data'] = template(post)
+
+    alt_title = ''
+    if (post['type'] == 'photo' or post['type'] == 'video'):
+        alt_title = '{0}: {1}'.format(post['type'].capitalize(), post['caption'][3:-4])
+    elif (post['type'] == 'quote'):
+        alt_title = '{0}: {1}'.format(post['type'].capitalize(), post['text'])
+    elif (post['type'] == 'audio'):
+        alt_title = '{0}: {1} - {2}'.format(post['type'].capitalize(), post['artist'], post['track_name'])
+
+    context['post_title'] = post.get('title', unescape(alt_title))
+
+    return render(request, 'blog-post.html', context)
 
 
 def blog_tags(request, tag_slug):
@@ -100,7 +111,25 @@ def blog_tags(request, tag_slug):
 
     # Non-ajax request
     return render(request, 'index.html', {
-      'tag_slug': tag_slug,
-      'blog_platform': settings.BLOG_PLATFORM,
-      'wp_blog_url': settings.WORDPRESS_BLOG_URL
+      'tag_slug': tag_slug
     })
+
+## Thanks to Fredrik Lundh for this function (http://effbot.org/zone/re-sub.htm#unescape-html)
+def unescape(text):
+    def fixup(m):
+        text = m.group(0)
+        if text[:2] == "&#":
+            try:
+                if text[:3] == "&#x":
+                    return unichr(int(text[3:-1], 16))
+                else:
+                    return unichr(int(text[2:-1]))
+            except ValueError:
+                pass
+        else:
+            try:
+                text = unichr(htmlentitydefs.name2codepoint[text[1:-1]])
+            except KeyError:
+                pass
+        return text
+    return re.sub("&#?\w+;", fixup, text)

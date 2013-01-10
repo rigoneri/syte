@@ -1,6 +1,6 @@
 # Syte
 
-Syte is a really simple but powerful packaged personal site that has social integrations like Twitter, GitHub, Dribbble, Instagram, Foursquare, Tumblr, Last.fm, SoundCloud and Bitbucket. You can see it in action on [my personal site](http://rigoneri.com).
+Syte is a really simple but powerful packaged personal site that has social integrations like Twitter, GitHub, Dribbble, Instagram, Foursquare, Tumblr, Wordpress, Last.fm, SoundCloud, Bitbucket, StackOverflow and Steam. You can see it in action on [my personal site](http://rigoneri.com).
 
 ### There is only one rule/suggestion
 
@@ -83,9 +83,9 @@ You can use, reproduce and do whatever you want with Syte but I would like you t
 ## Social Integrations
 
 
-### Blog: Tumblr
+### Blog
 
-Syte uses [Tumblr](http://tumblr.com) for blogging and your blog will be the primary page of the site.
+Syte uses [Tumblr](http://tumblr.com) or [Wordpress.com](http://wordpress.com/) for blogging and your blog will be the primary page of the site.
 
 ![Syte Home](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-1.png?raw=true)
 
@@ -221,13 +221,21 @@ Then pick your **adjacent color** and change the `@adjacent-color` hex value in 
 
 
 
-### Setting up your blog (Tumblr)
+### Setting up your blog
 
-If you already have a Tumblr blog good! If you don't [signup for one here](https://www.tumblr.com/) it's really easy! I might eventually make Syte integrate with WordPress as well, if you beat me to it please send a pull request.
+Syte uses Tumblr or Wordpress for blogging.
 
-Once you have your Tumblr blog you will need to get the `api_key` needed to call their APIs. In order to do that **register your site** with them by going to <http://www.tumblr.com/oauth/register>, fill in the information about your site, there is no need to enter a default callback url or an icon. Once you are done your website will be listed under <http://www.tumblr.com/oauth/apps>, save the `OAuth Consumer Key` value that's the `api_key` we need for Syte.
+#### Setting up Tumblr
+
+If you have a Tumblr blog you will need to get the `api_key` needed to call their APIs. In order to do that **register your site** with them by going to <http://www.tumblr.com/oauth/register>, fill in the information about your site, there is no need to enter a default callback url or an icon. Once you are done your website will be listed under <http://www.tumblr.com/oauth/apps>, save the `OAuth Consumer Key` value that's the `api_key` we need for Syte.
 
 Once you have the `api_key` from Tumblr you have to enter it in **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the key under `TUMBLR_API_KEY`, also please enter your Tumblr url under `TUMBLR_BLOG_URL` see the example on how it should be formatted.
+
+#### Setting up Wordpress
+
+For now Syte only support wordpress blogs that are build using [wordpress.com](http://wordpress.com). 
+
+Open `syte > syte_settings.py` and under `WORDPRESS_BLOG_URL` enter ther url of your wordpress.com blog, also under `BLOG_PLATFORM` set it to "wordpress".
 
 #### Comments
 
