@@ -71,6 +71,7 @@ You can use, reproduce and do whatever you want with Syte but I would like you t
 [![mraxilus](https://github.com/rigoneri/syte/blob/master/readme-imgs/mraxilus.png?raw=true)](http://mraxil.us)
 [![owensbla](https://github.com/rigoneri/syte/blob/master/readme-imgs/blakeowens.png?raw=true)](http://blakeowens.com)
 [![wuotr](https://github.com/rigoneri/syte/blob/master/readme-imgs/wuotr.png?raw=true)](http://wuotr.com)
+[![hassankhan](https://github.com/hassankhan/syte/blob/master/readme-imgs/hassankhan.png?raw=true)](http://hassankhan.me)
 
 ## Social Integrations
 
@@ -140,6 +141,18 @@ Syte has Tent.io integration, which means that you can show your Tent.io public 
 
 ![Syte Tent.io](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-10.png?raw=true)
 
+### Steam
+
+Syte has Steam integration, which means that you can show your Steam Community profile within your site.
+
+![Syte Steam](https://github.com/hassankhan/syte/blob/master/readme-imgs/f-11.png?raw=true)
+
+### StackOverflow
+
+Syte has StackOverflow integration, which means that you can show your StackOverflow profile within your site.
+
+![Syte Steam](https://github.com/hassankhan/syte/blob/master/readme-imgs/f-12.png?raw=true)
+
 ## Responsive UI
 
 Syte is responsive, which means that it scales down to a mobile device screen size.
@@ -191,8 +204,10 @@ Then make some text and link changes. Open **base.html** located in `syte > temp
 6. Inside the `nav` tag change the **twitter-link** href to point to your twitter profile, if you don't have twitter just remove that whole line.
 7. Inside the `nav` tag change the **github-link** href to point to your GitHub profile, if you don't have GitHub just remove that whole line.
 8. Inside the `nav` tag change the **dribbble-link** href to point to your Dribbble profile, if you don't have Dribbble just remove that whole line.
-9. Inside the `nav` tag change the **contact-link** href to point to your email address.
-10. Under `class="mobile-nav"` div change the **h3** link text to have your domain name or your name.
+9. Inside the `nav` tag change the **steam-link** href to point to your Steam community profile, if you don't have Steam just remove that whole line.
+10. Inside the `nav` tag change the **stackoverflow-link** href to point to your StackOverflow profile, if you don't have StackOverflow just remove that whole line.
+11. Inside the `nav` tag change the **contact-link** href to point to your email address.
+12. Under `class="mobile-nav"` div change the **h3** link text to have your domain name or your name.
 
 Then pick your **adjacent color** and change the `@adjacent-color` hex value in variables.less located in `syte > static > less > variables.less` Make sure the color you chose is not used by anyone on the list up above. If you want blue pick a different shade of blue, there are hundreds out there...
 
@@ -364,6 +379,17 @@ Inside **syte_settings.py** there are two other options to configure your Tent.i
 * ***Your Entity-URI*** under `TENT_ENTITY_URI`
 * ***URL to a Feed or Tent-Status*** under `TENT_FEED_URL`
 
+### Setting up Steam integration
+
+In order to setup Steam integration you first need to create a Steam Web API key by going to <http://steamcommunity.com/dev/apikey>. Once you have the `STEAM WEB API KEY` from Steam open the **syte_settings.py** file and enter it under the `STEAM_API_KEY` setting.
+
+If you want to turn off Steam integration just set `STEAM_INTEGRATION_ENABLED` to False.
+
+### Setting up StackOverflow integration
+
+The StackOverflow integration does not make any authenticated calls nor does it require a registered API key.
+
+If you want to turn off StackOverflow integration just set `STACKOVERFLOW_INTEGRATION_ENABLED` to False.
 
 
 ## Running & Deployment Instructions

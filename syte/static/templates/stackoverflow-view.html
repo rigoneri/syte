@@ -1,0 +1,44 @@
+<div class="profile github modal fade" id="stackoverflow-profile">
+  {{#with user}}
+  <div class="profile-info">
+    <button class="close" data-dismiss="modal">×</button>
+    <a href="http://stackoverflow.com/users/{{ user_id }}/" class="profile-avatar">
+      <img src="http://gravatar.com/avatar/{{ email_hash }}" alt="{{ display_name }}" />
+    </a>
+    <div class="profile-name">
+      <h2><a href="http://stackoverflow.com/users/{{ user_id }}/">{{ display_name }}</a></h2>
+    </div>
+    <p class="profile-description">{{ about_me }}</p>
+    <p class="profile-location-url">
+      {{#if location }}
+      <span>{{ location }}</span>
+      <span class="divider">·</span>
+      {{/if}}
+      {{#if website_url }}
+      <span><a href="{{ website_url }}">{{ website_url }}</a></span>
+      {{/if}}
+    </p>
+  </div>
+  <ul class="profile-stats">
+    <li><a href="http://stackoverflow.com/users/{{ user_id }}/?tab=reputation"><strong>{{ reputation }}</strong> reputation</a></li>
+    <li><a href="http://stackoverflow.com/users/{{ user_id }}/?tab=badges"><strong>{{ badge_count }}</strong> badges</a></li> 
+    <li><a href="http://stackoverflow.com/users/{{ user_id }}/?tab=questions"><strong>{{ question_count }}</strong> questions</a></li>
+    <li><a href="http://stackoverflow.com/users/{{ user_id }}/?tab=answers"><strong>{{ answer_count }}</strong> answers</a></li>
+  </ul>
+  <div class="profile-info-footer">
+    <a href="http://stackoverflow.com/users/{{ user_id }}/" class="btn">Follow on StackOverflow</a>
+  </div>
+  {{/with}}
+  <ul class="profile-stackoverflow">
+    {{#each timeline}}
+      <li>
+        <a href="http://stackoverflow.com/users/{{ user_id }}/?tab=activity" class="profile-stackoverflow-name">
+          <strong>{{ action }} {{ creation_date }}</strong>
+        </a>
+        <p class="profile-stackoverflow-description">{{ description }}</p>
+        <p class="profile-stackoverflow-details">{{#if detail}}{{detail}}{{/if}}</p>
+      </li>
+    {{/each}}
+  </ul>
+</div>
+

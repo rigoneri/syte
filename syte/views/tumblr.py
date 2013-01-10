@@ -3,6 +3,7 @@ import os
 from datetime import datetime
 
 import requests
+import re, htmlentitydefs
 from django.shortcuts import render
 from django.conf import settings
 from django.http import HttpResponse
@@ -34,6 +35,8 @@ def blog_post(request, post_id):
 
             if settings.DISQUS_INTEGRATION_ENABLED:
                 post['disqus_enabled'] = True
+            if settings.SHARETHIS_PUBLISHER_KEY:
+                post['sharethis_enabled'] = True
 
             path = '{0}/static/templates/blog-post-{1}.html'.format(
                 os.path.join(os.path.dirname(__file__), '..'), post['type'])
@@ -43,7 +46,16 @@ def blog_post(request, post_id):
             compiler = Compiler()
             template = compiler.compile(unicode(f_data))
             context['post_data'] = template(post)
-            context['post_title'] = post.get('title', None)
+
+            alt_title = ''
+            if (post['type'] == 'photo' or post['type'] == 'video'):
+                alt_title = '{0}: {1}'.format(post['type'].capitalize(), post['caption'][3:-4])
+            elif (post['type'] == 'quote'):
+                alt_title = '{0}: {1}'.format(post['type'].capitalize(), post['text'])
+            elif (post['type'] == 'audio'):
+                alt_title = '{0}: {1} - {2}'.format(post['type'].capitalize(), post['artist'], post['track_name'])
+
+            context['post_title'] = post.get('title', unescape(alt_title))
 
     return render(request, 'blog-post.html', context)
 
@@ -56,3 +68,23 @@ def blog_tags(request, tag_slug):
         return HttpResponse(content=r.text, status=r.status_code,
                             content_type=r.headers['content-type'])
     return render(request, 'index.html', {'tag_slug': tag_slug})
+
+## Thanks to Fredrik Lundh for this function (http://effbot.org/zone/re-sub.htm#unescape-html)
+def unescape(text):
+    def fixup(m):
+        text = m.group(0)
+        if text[:2] == "&#":
+            try:
+                if text[:3] == "&#x":
+                    return unichr(int(text[3:-1], 16))
+                else:
+                    return unichr(int(text[2:-1]))
+            except ValueError:
+                pass
+        else:
+            try:
+                text = unichr(htmlentitydefs.name2codepoint[text[1:-1]])
+            except KeyError:
+                pass
+        return text
+    return re.sub("&#?\w+;", fixup, text)

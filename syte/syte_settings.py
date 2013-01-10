@@ -34,6 +34,11 @@ GITHUB_OAUTH_AUTHORIZE_URL = 'https://github.com/login/oauth/authorize'
 GITHUB_OAUTH_ACCESS_TOKEN_URL = 'https://github.com/login/oauth/access_token'
 
 
+#Stack Overflow Integration
+STACKOVERFLOW_INTEGRATION_ENABLED = True
+STACKOVERFLOW_API_URL = 'http://api.stackoverflow.com/1.1/'
+
+
 #Dribbble Integration
 DRIBBBLE_INTEGRATION_ENABLED = True
 DRIBBBLE_API_URL = 'http://api.dribbble.com/players/'
@@ -69,11 +74,14 @@ FOURSQUARE_OAUTH_ACCESS_TOKEN_URL = 'https://foursquare.com/oauth2/access_token'
 GOOGLE_ANALYTICS_TRACKING_ID = ''
 
 
+#ShareThis
+SHARETHIS_PUBLISHER_KEY = ''
+
+
 #Woopra
 WOOPRA_TRACKING_DOMAIN = ''
 WOOPRA_TRACKING_IDLE_TIMEOUT = 300000  # 5 minutes
 WOOPRA_TRACKING_INCLUDE_QUERY = False
-
 
 
 #Disqus Integration
@@ -101,10 +109,17 @@ BITBUCKET_API_URL = 'https://api.bitbucket.org/1.0/'
 # set BITBUCKET_SHOW_FORKS to false to disable
 BITBUCKET_SHOW_FORKS = False
 
+
 #Tent.io Integration
 TENT_INTEGRATION_ENABLED = True
 TENT_ENTITY_URI = '[ENTER YOUR ENTITY URI HERE] ex. https://yourname.tent.is'
 TENT_FEED_URL = '[ENTER A URL TO YOUR FEED] ex. https://yourname.tent.is'
+
+
+#Steam Integration
+STEAM_INTEGRATION_ENABLED = True
+STEAM_API_URL = 'http://api.steampowered.com/ISteamUser'
+STEAM_API_KEY = '[ENTER YOUR STEAM API KEY HERE, SEE STEAM SETUP INSTRUCTIONS]'
 
 
 
