@@ -11,7 +11,7 @@ urlpatterns = patterns('',
     url(r'^tags/(?P<tag_slug>[\+\s\w\d-]+)/?$', 'syte.views.tumblr.blog_tags'),
     url(r'^blog.json/?$', 'syte.views.tumblr.blog'),
     url(r'^about/?$', 'syte.views.home.home'),
-    url(r'^rss/?$', 'syte.views.rss.rss'),
+    url(r'^rss/?$', 'syte.views.home.rss'),
     url(r'^/?$', 'syte.views.home.home'),
 )
 
