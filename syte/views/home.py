@@ -20,10 +20,7 @@ def page_not_found_error(request, template_name='404.html'):
 
 
 def home(request):
-    context = dict()
-    if request.GET.get('o', None):
-        context['open_integration'] = request.GET['o']
-    return render(request, 'index.html', context)
+    return render(request, 'index.html', {})
 
 def rss(request):
 	r = requests.get('{0}'.format(settings.RSS_FEED_URL))
