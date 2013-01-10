@@ -5,20 +5,26 @@ List of services to add integration for:
     - Dribbble [DONE]
     - Instagram [DONE]
     - Tumblr [DONE]
-    - Wordpress
+    - Foursquare [DONE]    
+    - Last.fm [DONE]
+    - Wordpress [DONE]
+    - Bitbucket [DONE]
+    - Stack Overflow [DONE]
+    - Steam [DONE]
+    - Soundcloud [DONE]
+    - Tent.io [DONE]
     - Facebook
-    - Foursquare [DONE]
     - LinkedIn
     - Youtube
     - Netflix
     - Flickr
     - Picasa
-    - Last.fm [DONE]
     - Rdio
     - Spotify
-    - Soundcloud [DONE]
     - Etsy
     - Fitbit
-    - Bitbucket [DONE]
+    - Slideshare
+    - Quora
+    - trakt
+    - Google+
 
-List taken from [Syte's Unexpected Traction and Numbers](http://rigoneri.com/post/25804668500)

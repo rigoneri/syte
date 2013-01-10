@@ -23,7 +23,7 @@ var spin_opts = {
   speed: 1.5,
   trail: 40,
   shadow: false,
-  hwaccel: false,
+  hwaccel: true,
   className: 'spinner',
   zIndex: 2e9
 };

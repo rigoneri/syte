@@ -6,13 +6,17 @@
 {% endblock %}
 {% block extra_inline_js %}
 
+{% if blog_platform == 'wordpress' %}
+var postOffset = 0,
+    wpDomain = '{{ wp_blog_url }}';
+{% else %}
 var postOffset = 0;
+{% endif %}
+
 $(function() {
-  {% if tag_slug %}
-  fetchBlogPosts(postOffset, "{{tag_slug}}");
-  {% else %}
-  fetchBlogPosts(postOffset);
-  {% endif %}
+  setupLinks();
+  fetchBlogPosts(postOffset, "{{tag_slug}}", "{{ blog_platform }}");
+
   {% if DISQUS_INTEGRATION_ENABLED %}
   $('body').bind('blog-post-loaded', function() {
     embedDisqus(true);
@@ -20,15 +24,22 @@ $(function() {
   {% endif %}
 });
 
-var resultsLoaded = false;
+var resultsLoaded = false,
+    reachedEnd    = false, // set to true if no more blog posts left.
+    scrollWait    = false,
+    scrollWaitDur = 250;
+
 $(window).scroll(function() {
-  if(!resultsLoaded && ($(window).scrollTop() +
-    $(window).height() > $(document).height()/1.2)) {
+  if(!reachedEnd && !resultsLoaded && !scrollWait &&
+      ($(window).scrollTop() + $(window).height() > $(document).height()/1.2)) {
       resultsLoaded = true;
       postOffset += 20;
-      fetchBlogPosts(postOffset{% if tag_slug %}, "{{tag_slug}}"{% endif%});
+      fetchBlogPosts(postOffset, "{% if tag_slug %}{{tag_slug}}{% endif%}", '{{ blog_platform }}');
+      scrollWait = true;
+      // Only load posts at most every scrollWaitDur milliseconds.
+      setTimeout(function() { scrollWait = false; }, scrollWaitDur);
   }
-  if(resultsLoaded && ($(window).scrollTop() + 
+  if(resultsLoaded && ($(window).scrollTop() +
     $(window).height() < $(document).height()/1.2)) {
       resultsLoaded = false;
   }

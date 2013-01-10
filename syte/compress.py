@@ -49,7 +49,7 @@ def compress_js():
         'libs/handlebars.js',
         'libs/moment.min.js',
         'libs/bootstrap-modal.js',
-        'libs/spin.min.js',
+        'libs/spin.js',
         'libs/prettify.js',
 
         'components/base.js',
@@ -84,6 +84,15 @@ def compress_js():
 
     if settings.FOURSQUARE_INTEGRATION_ENABLED:
         js_files.append('components/foursquare.js')
+
+    if settings.TENT_INTEGRATION_ENABLED:
+        js_files.append('components/tent.js')
+
+    if settings.STEAM_INTEGRATION_ENABLED:
+        js_files.append('components/steam.js')
+
+    if settings.STACKOVERFLOW_INTEGRATION_ENABLED:
+        js_files.append('components/stackoverflow.js')
 
     combined = ''
     for js in js_files:

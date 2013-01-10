@@ -1,0 +1,52 @@
+<div class="profile tent modal fade" id="tent-profile">
+  {{#with user}}
+  <div class="profile-info">
+    <button class="close" data-dismiss="modal">×</button>
+    <a href="{{ entity_url }}" class="profile-avatar">
+      <img src="{{ profile_image_url }}" alt="{{name}}" />
+    </a>
+    <div class="profile-name">
+      <h2><a href="{{ feed_url }}">{{ name }}</a></h2>
+      <h3><a href="{{ entity_url }}">^{{ entity_url }}</a></h3>
+    </div>
+    <p class="profile-description">{{{ f_description }}}</p>
+    <p class="profile-location-url">
+      {{#if location }}
+      <span>{{ location }}</span>
+      <span class="divider">·</span>
+      {{/if}}
+      {{#if url }}
+      <span><a href="{{ url }}">{{ url }}</a></span>
+      {{/if}}
+    </p>
+  </div>
+  <ul class="profile-stats">
+    <li><a href="{{ feed_url }}"><strong>{{ statuses_count }}</strong> posts</a></li>
+    <li><a href="{{ feed_url }}/followings"><strong>{{ friends_count }}</strong> following</a></li> 
+    <li><a href="{{ feed_url }}/followers"><strong>{{ followers_count }}</strong> followers</a></li>
+  </ul>
+  <div class="profile-info-footer">
+    <a href="{{ feed_url }}" class="btn">View Profile</a>
+  </div>
+  {{/with}}
+  <ul class="profile-tweets">
+    {{#each posts}}
+      <li>
+        {{#with user}}
+        <a href="{{ entity_url }}" class="tweet-title">
+          <img src="{{ profile_image_url }}" alt="{{ name }}" />
+          <strong>{{ name }}</strong>
+          <span>^{{ entity_url }}</span>
+        </a>
+          {{/with}}
+        <p class="tweet-text">
+        {{{ f_text }}}
+        </p>
+        <p class="tweet-date">
+          {{ formated_date }}
+        </p>
+      </li>
+    {{/each}}
+  </ul>
+</div>
+

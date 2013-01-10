@@ -1,12 +1,7 @@
-Django==1.4
-certifi==0.0.8
-chardet==1.0.1
-oauthlib==0.1.3
-pyasn1==0.1.3
-requests==0.12.1
-rsa==3.0.1
+Django==1.4.3
+requests==0.14.2
 wsgiref==0.1.2
 psycopg2==2.4.5
-gunicorn==0.14.2
-pybars==0.0.1
-rauth==0.4.14
+gunicorn==0.16.1
+pybars==0.0.4
+rauth==0.4.17
