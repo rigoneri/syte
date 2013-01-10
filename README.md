@@ -75,7 +75,7 @@ You can use, reproduce and do whatever you want with Syte but I would like you t
 [![srodal](https://github.com/rigoneri/syte/blob/master/readme-imgs/srodal.png?raw=true)](http://www.srodal.name)
 [![crmarsh](https://github.com/rigoneri/syte/blob/master/readme-imgs/crmarsh.png?raw=true)](http://crmarsh.herokuapp.com)
 [![neoromantic](https://github.com/rigoneri/syte/blob/master/readme-imgs/neoromantic.png?raw=true)](http://sergeypetrov.ru)
-
+[![ilcoso](https://github.com/rigoneri/syte/blob/master/readme-imgs/ilcoso.png?raw=true)](http://ilcoso.herokuapp.com)
 
 ## Social Integrations
 
