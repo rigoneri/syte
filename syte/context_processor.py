@@ -39,4 +39,7 @@ def site_pages(request):
     context['WOOPRA_TRACKING_IDLE_TIMEOUT'] = settings.WOOPRA_TRACKING_IDLE_TIMEOUT
     context['WOOPRA_TRACKING_INCLUDE_QUERY'] = settings.WOOPRA_TRACKING_INCLUDE_QUERY
 
+    context['blog_platform'] = settings.BLOG_PLATFORM
+    context['wp_blog_url'] = settings.WORDPRESS_BLOG_URL
+
     return context
