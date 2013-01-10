@@ -78,6 +78,7 @@ You can use, reproduce and do whatever you want with Syte but I would like you t
 [![ilcoso](https://github.com/rigoneri/syte/blob/master/readme-imgs/ilcoso.png?raw=true)](http://ilcoso.herokuapp.com)
 [![gjacobrobertson](https://github.com/rigoneri/syte/blob/master/readme-imgs/gjacobrobertson.png?raw=true)](http://gjacobrobertson.net)
 [![einat](https://github.com/rigoneri/syte/blob/master/readme-imgs/einat.png?raw=true)](http://einatschlagmann.com)
+[![hpanahi](https://github.com/rigoneri/syte/blob/master/readme-imgs/hpanahi.png?raw=true)](http://hes.am)
 
 ## Social Integrations
 
