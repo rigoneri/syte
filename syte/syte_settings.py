@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
-
 DEPLOYMENT_MODE = 'dev'
 COMPRESS_REVISION_NUMBER = '1.0'
 
-BLOG_PLATFORM =  'tumblr'  #wordpress or tumblr
+BLOG_PLATFORM = 'tumblr'  # Wordpress or tumblr
 
 #Blog Integration: Tumblr
 TUMBLR_BLOG_URL = '[ENTER TUMBLR BLOG URL] ex. rigoneri.tumblr.com'
@@ -125,8 +124,6 @@ TENT_FEED_URL = '[ENTER A URL TO YOUR FEED] ex. https://yourname.tent.is'
 STEAM_INTEGRATION_ENABLED = True
 STEAM_API_URL = 'http://api.steampowered.com/ISteamUser'
 STEAM_API_KEY = '[ENTER YOUR STEAM API KEY HERE, SEE STEAM SETUP INSTRUCTIONS]'
-
-
 
 
 if DEPLOYMENT_MODE == 'dev':
