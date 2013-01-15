@@ -9,6 +9,7 @@ from django.conf import settings
 from django.http import HttpResponse
 from datetime import datetime
 from pybars import Compiler
+from HTMLParser import HTMLParser
 
 
 # Takes a response (e.g. from Wordpress) and converts it into a format that
@@ -89,6 +90,12 @@ def blog_post(request, post_id):
 
     context['post_title'] = post.get('title', unescape(alt_title))
 
+    if post['type'] == 'text' and post['body']:
+        context['meta_description'] = strip_tags(post['body'])[:150]
+
+    if post['tags']:
+        context['meta_keywords'] = ', '.join(post['tags'])
+
     return render(request, 'blog-post.html', context)
 
 
@@ -133,3 +140,18 @@ def unescape(text):
                 pass
         return text
     return re.sub("&#?\w+;", fixup, text)
+
+
+class MLStripper(HTMLParser):
+    def __init__(self):
+        self.reset()
+        self.fed = []
+    def handle_data(self, d):
+        self.fed.append(d)
+    def get_data(self):
+        return ''.join(self.fed)
+
+def strip_tags(html):
+    s = MLStripper()
+    s.feed(html)
+    return s.get_data()
