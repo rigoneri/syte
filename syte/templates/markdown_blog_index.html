@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% load markup %}
+
+{% block pagetitle %}{{ post_title }}{% endblock %}
+
+{% block body %}
+    {% block main_section %}
+        <section class="main-section blog-section" id="blog-posts">
+            <article class="tags">
+                {% for category, posts in articles.items %}
+                    <hgroup>
+                        <h2>{{ category }}</h2>
+                    </hgroup>
+
+                    <ul>
+                        {% for post in posts %}
+                            <li>
+                                <a href="/blog/posts/{{ post.slug }}">{{ post.title }}</a>
+                            </li>
+                        {% empty %}
+                            <div class="alert alert-error">
+                            Unbelievable. There's nothing here.
+                            </div>
+                        {% endfor %}
+                    </ul>
+                    {% empty %}
+                    <div class="alert alert-error">
+                        Unbelievable. There's nothing here.
+                    </div>
+                {% endfor %}
+            </article>
+
+            <article>
+                {{ source|markdown }}
+            </article>
+
+        </section>
+    {% endblock %}
+{% endblock %}

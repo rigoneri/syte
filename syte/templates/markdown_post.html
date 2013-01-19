@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% load markup %}
+
+{% block pagetitle %}{{ article.title }}{% endblock %}
+
+{% block body %}
+    {% block main_section %}
+        <section class="main-section blog-section" id="blog-posts">
+            <article>
+                {{ article.source|markdown }}
+            </article>
+        </section>
+    {% endblock %}
+{% endblock %}

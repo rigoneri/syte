@@ -5,3 +5,4 @@ psycopg2==2.4.5
 gunicorn==0.16.1
 pybars==0.0.4
 rauth==0.4.17
+Markdown

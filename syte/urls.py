@@ -92,6 +92,14 @@ if settings.STACKOVERFLOW_INTEGRATION_ENABLED:
         url(r'^stackoverflow/(?P<userid>[\-\w]+)/?$', 'syte.views.stackoverflow.stackoverflow'),
     )
 
+#Markdown blogs
+if settings.MARKDOWN_BLOG_ENABLED:
+    urlpatterns += patterns('',
+        url(r'^blog/?$', 'syte.views.blog.markdown_blog_index'),
+        url(r'^blog/posts/(?P<slug>\S+)?$',
+            'syte.views.blog.markdown_blog_post'),
+    )
+
 #Statics: Hacky for now... fix this later...
 urlpatterns += patterns('',
     (r'^robots\.txt$', direct_to_template,

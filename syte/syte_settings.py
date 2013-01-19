@@ -126,6 +126,26 @@ STEAM_API_URL = 'http://api.steampowered.com/ISteamUser'
 STEAM_API_KEY = '[ENTER YOUR STEAM API KEY HERE, SEE STEAM SETUP INSTRUCTIONS]'
 
 
+#Markdown Blog Integration
+MARKDOWN_BLOG_ENABLED = True
+MARKDOWN_EXTENSIONS = ('.markdown', '.mdown', '.mkdn', '.md', '.mkd', '.mdwn',
+                       '.mdtxt', '.mdtext', '.text')
+
+# Load up our list of articles for the home page
+# This is done here to prevent reading all the available files each time the
+# home page is requested.  This will only run when the application first boots
+# up and imports from this module.
+if MARKDOWN_BLOG_ENABLED:
+    import os
+    from utils import list_articles
+
+    MARKDOWN_ARTICLES_DIR = os.path.join(os.path.dirname(__file__), 'articles')
+    MARKDOWN_PAGES_DIR = os.path.join(os.path.dirname(__file__), 'pages')
+    MARKDOWN_FRONT_PAGE = 'FrontPage.md'
+    MARKDOWN_ARTICLES = list_articles(MARKDOWN_ARTICLES_DIR,
+                                      MARKDOWN_EXTENSIONS)
+
+
 if DEPLOYMENT_MODE == 'dev':
     SITE_ROOT_URI = 'http://127.0.0.1:8000/'
     DEBUG = True
