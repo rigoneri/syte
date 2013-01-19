@@ -1,0 +1,2202 @@
+commit 98da7ccf7fd5c90e38bd9f696ee63b098cfe4c0a
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Fri Jan 18 11:04:15 2013 -0600
+
+    Fixed typo on keywords block tag
+
+commit 9c4d944604b06aa60623e9e14a50282d050882ee
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Fri Jan 18 10:45:32 2013 -0600
+
+    Fixed typo on keywords block tag
+
+commit c6b76308db33074d9e5768969f804917e03995bb
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Mon Jan 14 22:29:55 2013 -0200
+
+    Blog post description and keywords meta tag and robots.txt file
+
+commit 9374161705fc4c10446af36144cf46e416e67f53
+Merge: 406d789 e0a4572
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sat Jan 12 10:48:17 2013 -0800
+
+    Merge pull request #183 from eventh/pep8-fixes
+    
+    Fixed pep8 errors
+
+commit e0a45729aa0b326e209fa858f8bb856997edba28
+Author: Even Wiik Thomassen <eventh@gmail.com>
+Date:   Sat Jan 12 16:09:19 2013 +0100
+
+    Fixed pep8 errors, e.g., mixed space and tabs.
+
+commit 406d789f461512181b4bca2fa094e508b4da8bce
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jan 10 13:18:24 2013 -0200
+
+    removed tumblr.py since it's now in blog.py
+
+commit eaac794bff3a07be99096319bb478bc25d0de942
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jan 10 13:17:28 2013 -0200
+
+    Added some documentation on wordpress integration as well as some changes from the tumblr.py
+
+commit 5409dee189639220ecdbb8d4b85ce8b713fb7b07
+Merge: bf67052 40ca4c6
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jan 10 12:57:50 2013 -0200
+
+    Some adjustments with the wordpress integration pull request
+
+commit bf67052a1277fd0f4c2072d512ea384fdc291ee1
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jan 10 11:49:13 2013 -0200
+
+    Moved rss stuff to home... Related to #168
+
+commit 6d15c1b820a7ccc84bb3fd29ba2091c405370b8c
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jan 10 11:49:03 2013 -0200
+
+    Moved rss stuff to home... Related to #168
+
+commit da15da7a4a3949b96d6afd893d8fc7b54aee1a40
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jan 10 11:40:57 2013 -0200
+
+    Manually merged pull request #182
+
+commit a72d2c4cf454b49983eee20f8551d9cbbeb2773a
+Merge: 5c0a894 477f7db
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jan 10 05:37:12 2013 -0800
+
+    Merge pull request #179 from gjacobrobertson/always_setup_links
+    
+    Always setup sidebar links
+
+commit 5c0a894cadd61b6ac7d2b9f1828c0e6524e4d0fc
+Merge: 17a4bf0 a1f4e16
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jan 10 11:35:36 2013 -0200
+
+    Fixed merge conflict
+
+commit 17a4bf0859d5518a4140d4b7fd0ddd421a2e1193
+Merge: 2a23697 d701e2d
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jan 10 11:30:21 2013 -0200
+
+    Fixed merge conflict
+
+commit 2a23697afc3e593832bd0be193017ada21c07baa
+Merge: ea72828 06ea7e4
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jan 10 11:26:10 2013 -0200
+
+    fixed merge issue
+
+commit ea72828f98f1ae89f30c296564e354228ce5f1ac
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jan 10 11:23:58 2013 -0200
+
+    Fixed an issue with foursquare checking names being really long
+
+commit bd389ace18816d0bc0e1b5155874116fd16befa7
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jan 10 11:18:59 2013 -0200
+
+    Manually added neoromantic img. #171
+
+commit 979910bbe0eb911c9c80efca520890193338d295
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jan 10 11:16:13 2013 -0200
+
+    Added cmarsh image to readme...
+
+commit b13e7b3984ba68a41ae234abe2a4383774cd0459
+Merge: 34b32ae f712407
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jan 10 11:07:19 2013 -0200
+
+    fixed merge conflict
+
+commit 34b32ae32e71ffe429236a80564d4120bf46865d
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jan 10 11:01:08 2013 -0200
+
+    A few style adjustments related to pull request #168
+
+commit 3e016877f14bce30d43adc48c451fdc1099f532a
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jan 10 10:53:44 2013 -0200
+
+    A few changes releated to pull request #168
+
+commit 70a90bb60dfb5be3c696350213cea0ff9158cd03
+Merge: 9421444 ea4b752
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jan 10 04:35:02 2013 -0800
+
+    Merge pull request #168 from hassankhan/master
+    
+    Added ShareThis, Steam and StackOverflow Integration. Fixed several bugs.
+
+commit ea4b7521b2bf4f7b010d8565568c75136a7f1c28
+Author: Hassan Khan <me@hassankhan.me>
+Date:   Sat Jan 5 02:38:19 2013 +0000
+
+    Fixed new variable name.
+
+commit 3077f2888f0565f3730e7482ebded81612495423
+Author: Hassan Khan <me@hassankhan.me>
+Date:   Sat Jan 5 02:23:49 2013 +0000
+
+    Updated variable name in rss.py
+
+commit 657db2575a26ab838012c52da5cbf5cbe8b8f57d
+Author: Hassan Khan <me@hassankhan.me>
+Date:   Sat Jan 5 02:20:28 2013 +0000
+
+    Redirecting Tumblr's RSS through Syte.
+
+commit 54a032b8f56f1384e0be57695827e56f0874b19e
+Author: Hassan Khan <me@hassankhan.me>
+Date:   Sat Jan 5 00:55:55 2013 +0000
+
+    Fixed issue where post types other than Text had 'None' as page title.
+
+commit d486b89e06fac5f996f4d35791fd158c12f91080
+Author: Hassan Khan <me@hassankhan.me>
+Date:   Fri Jan 4 02:55:00 2013 +0000
+
+    Removed <meta name='description'> tags from individual blog post pages.
+
+commit e470f39fa419804af7048f138799e563f0c59a57
+Author: Hassan Khan <me@hassankhan.me>
+Date:   Thu Dec 27 21:01:11 2012 +0000
+
+    Added CSS for ShareThis
+
+commit 4abb5cae4d6b3460d417a1467df0ea7be254eef9
+Author: Hassan Khan <me@hassankhan.me>
+Date:   Thu Dec 27 20:58:25 2012 +0000
+
+    Added ShareThis integration
+
+commit 40ca4c6c3f6993985d1570e21d247536c3c3d082
+Author: Gordon Koo <gordon@gordonkoo.com>
+Date:   Sun Dec 23 11:22:08 2012 -0800
+
+    add wordpress support
+
+commit d23137644b3c51f412e09dc0f3a3d726cf8d3746
+Author: Hassan Khan <me@hassankhan.me>
+Date:   Sun Dec 23 05:19:51 2012 +0000
+
+    Updated Django to latest version, and removed several unused requirements from requirements.txt.
+    Have not updated requests because new version is somewhat backwards-incompatible.
+
+commit a1f4e1640e266946a3a2410f04ab1bb241d4624d
+Author: Einat Schlagmann <einatschlagmann@gmail.com>
+Date:   Fri Dec 21 21:43:36 2012 +0200
+
+    Updated README. Adjacent color #27293d.
+
+commit 477f7db1c4faf29b92352bdca4df6046bf3f98f7
+Author: Jacob Robertson <g.jacob.robertson@gmail.com>
+Date:   Tue Dec 18 16:59:29 2012 -0500
+
+    Added ; for setupLinks in index template
+
+commit 8af5fc31ae8bb082a44c91083f4b99ef435248a2
+Author: Jacob Robertson <g.jacob.robertson@gmail.com>
+Date:   Tue Dec 18 16:57:20 2012 -0500
+
+    Always sets up links before fetching blog posts
+
+commit d701e2d9d0dbb05ff80dbfc97d15087f4c9e57bc
+Author: Jacob Robertson <g.jacob.robertson@gmail.com>
+Date:   Tue Dec 11 14:29:14 2012 -0500
+
+    Updated README. Adjacent color #d75701
+
+commit 06ea7e4aff8c963a7074501de2927145b4f676bc
+Author: Andrea Bianchini <and.bianchini@gmail.com>
+Date:   Fri Dec 7 12:29:22 2012 +0100
+
+    added ilcoso pic
+
+commit edef8727d5dcab7384ff4186203bc8c506c944eb
+Author: Hassan Khan <me@hassankhan.me>
+Date:   Thu Dec 6 13:00:40 2012 +0000
+
+    Fixed an issue where apostrophes in Tumblr quotes wouldn't show up.
+
+commit 37ad7e37f4ba938ec95df8a8a39ba592c6134939
+Author: Hassan Khan <me@hassankhan.me>
+Date:   Thu Dec 6 08:47:13 2012 +0000
+
+    Fixed a bug where if a a tag_slug had a "+" sign, the regex match would fail.
+
+commit 439121988be5f23aaa9abd511bb32169a8cf1884
+Author: Hassan Khan <me@hassankhan.me>
+Date:   Tue Dec 4 12:33:14 2012 +0000
+
+    Fixed a bug where HTTP 404 errors were redirected as HTTP 500. Required a small change in home.py
+
+commit 023d5a25a082afdb4499a8da3ac515ed52ee39da
+Author: Hassan Khan <me@hassankhan.me>
+Date:   Fri Nov 30 06:33:18 2012 +0000
+
+    Added custom if-statement to bootstrap-modal.js, as per review comment
+
+commit 5304403eb2dd0662304ba5c90d015140af1d0169
+Author: Hassan Khan <me@hassankhan.me>
+Date:   Fri Nov 30 06:23:30 2012 +0000
+
+    Fixed the "Follow on Steam" link URL and added a "See my wishlist" button too
+
+commit 547c59d022670098701157f9ae9a0d4a046d5e99
+Author: Hassan Khan <me@hassankhan.me>
+Date:   Tue Nov 27 06:26:06 2012 +0000
+
+    Deleted old LESS library
+
+commit 09f05124710834ad60922f013959b555f99b5079
+Author: Hassan Khan <me@hassankhan.me>
+Date:   Tue Nov 27 06:13:37 2012 +0000
+
+    Updated the LESS library, updated base.html accordingly
+
+commit 12faeb102b65bf2f45d5c8a522c5bdf1b8541c86
+Author: Hassan Khan <me@hassankhan.me>
+Date:   Tue Nov 27 02:18:39 2012 +0000
+
+    Forgot to change filename of Spin.js in compress.py, fixed that now, also added new services to TODO.md
+
+commit fe980f776ef47e7b0cc2303551307ad30e098836
+Author: Hassan Khan <me@hassankhan.me>
+Date:   Sat Nov 24 19:16:42 2012 +0000
+
+    Updated requirements.txt and the JavaScript libraries
+
+commit c82d6539c70ec7929ca03d77610202570cac9bd5
+Author: Hassan Khan <me@hassankhan.me>
+Date:   Sat Nov 24 05:29:41 2012 +0000
+
+    Updated TODO.md with Steam and StackOverflow status
+
+commit d52735a7591dac95c70c94d99accff6e54ed5120
+Author: Hassan Khan <me@hassankhan.me>
+Date:   Sat Nov 24 04:46:44 2012 +0000
+
+    Forgot to add StackOverflow service to links.js
+
+commit a89946c6215978e4d5d0deab8594c9466d85f977
+Author: Hassan Khan <me@hassankhan.me>
+Date:   Sat Nov 24 04:10:59 2012 +0000
+
+    Added StackOverflow integration, also added my own personal information to README.MD
+
+commit 5a7a636b3cc25911dfb7529ab5cb768cb266fd73
+Author: Hassan Khan <me@hassankhan.me>
+Date:   Wed Nov 7 01:28:37 2012 +0000
+
+    Updated read me with more instruction for setting up Steam integration
+
+commit d9a4354f1ba43520a62bafdc30ffcb229773e28d
+Author: Hassan Khan <me@hassankhan.me>
+Date:   Wed Nov 7 01:25:19 2012 +0000
+
+    Updated read me with link
+
+commit 7fa4592931a3922e03ada17c85084bec89134916
+Author: Hassan Khan <me@hassankhan.me>
+Date:   Wed Nov 7 01:24:04 2012 +0000
+
+    Added info to read me, added screenshot
+
+commit 2155f9e38df8a5cc3bbd2ace58593aee9dee97d3
+Author: Hassan Khan <me@hassankhan.me>
+Date:   Wed Nov 7 01:03:10 2012 +0000
+
+    Added Steam profile integration
+
+commit f712407c8c7c501a57c2ff5988ef7da78d95624d
+Author: Samuel Rødal <srodal@gmail.com>
+Date:   Tue Oct 30 09:13:17 2012 +0100
+
+    Added myself to readme images.
+
+commit 942144412a87f2a1c9fa826af9b1ce694a81597a
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Oct 28 19:10:03 2012 -0500
+
+    Fixed README
+
+commit 73c1826131316e12b2d3dfee8bb9259dbb3b4d80
+Merge: 9f4d1d9 7031a2b
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Oct 28 19:05:57 2012 -0500
+
+    Fixed merge conflict
+
+commit 9f4d1d971615ac2e06b64efea395f5f670f0f627
+Merge: bdbc34a 9686323
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Oct 28 17:02:36 2012 -0700
+
+    Merge pull request #161 from owensbla/master
+    
+    added to README/readme-imgs!
+
+commit 9686323bb2bedd282c7367a5b534a99310b84edb
+Author: Blake Owens <owensbla@gmail.com>
+Date:   Sun Oct 28 16:29:09 2012 -0700
+
+    blakeowens.com added to readme
+
+commit bdbc34a0a1b22fdcdba7add18a5c14902f99bb13
+Merge: 17ac2dc 0251999
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Oct 21 21:56:04 2012 -0500
+
+    Fixed merge conflict
+
+commit 17ac2dccdc9eefe5b90907c3d0f4c3675da7bf54
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Oct 21 21:54:25 2012 -0500
+
+    Updated Todo
+
+commit 1aaea92376174b3ac2cb7b43ece451c5c0a06e93
+Merge: 871903e 68a5939
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Oct 21 19:53:49 2012 -0700
+
+    Merge pull request #149 from martincollignon/patch-1
+    
+    Update TODO.md
+
+commit 871903e4c73f4e497b896060102e941987e270d4
+Merge: 84405cc ef07f95
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Oct 21 21:52:18 2012 -0500
+
+    Fixed merge conflict
+
+commit 84405ccfcee93078e0b64b64475f79bf2542cb22
+Merge: f619c20 e45a958
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Oct 21 21:50:14 2012 -0500
+
+    Fixed merge conflict
+
+commit f619c20d6144ebcaa2838730c0bf5dc152f4aab3
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Oct 21 21:42:04 2012 -0500
+
+    A few adjustments around the Tent.io integration
+
+commit 856132d32836fffaecb5533c051e2402a99cdfeb
+Merge: a7caf7f 928dbc2
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Oct 21 19:32:45 2012 -0700
+
+    Merge pull request #146 from fourty2/master
+    
+    Tent.io  integration
+
+commit a7caf7f4961c7926677a79b06786a882cdfef48d
+Merge: 0e09abe 40a3afa
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Oct 21 19:26:57 2012 -0700
+
+    Merge pull request #143 from clooth/master
+    
+    Added woopra.com analytics support
+
+commit 0251999ccc8eb647cac6ee8b64f691ec6874459b
+Author: mr axilus <esmith@projectaxil.us>
+Date:   Sun Oct 21 21:46:04 2012 +0100
+
+    add mraxilus to the readme images
+
+commit ef07f956b1dcb283a1f544a9dcb94969df806964
+Author: Stephen Birarda <commit@birarda.com>
+Date:   Sun Oct 21 15:31:15 2012 -0400
+
+    add my image to readme, trailing slash for instagram
+
+commit 7031a2b60554b1aac44509a5de4cee6aa7f6dd41
+Author: Wouter Martens <woutermartens@gmail.com>
+Date:   Sun Oct 21 11:36:08 2012 +0200
+
+    added myself to README.md
+
+commit 68a59392195eaf0ef6c598627304217713630e46
+Author: martincollignon <danskcollignon@gmail.com>
+Date:   Sat Oct 20 18:24:08 2012 -0300
+
+    Update TODO.md
+
+commit e45a958b30c226964e4dfd6a59212a32209fac47
+Author: gdubya <gareth@garethwestern.com>
+Date:   Sat Oct 20 12:13:05 2012 +0200
+
+    Added myself to readme
+
+commit 928dbc20e926791b1ea78874ab67beae0d1417fa
+Author: Marc Henklein <mh@campoint.net>
+Date:   Fri Oct 19 17:48:41 2012 +0200
+
+    Tent.io integration bugfixes
+
+commit c9eb4c9f24f6119f95adff3f3d29f63e9c9e5892
+Author: Marc Henklein <mh@campoint.net>
+Date:   Fri Oct 19 15:41:35 2012 +0200
+
+    Tent.io integration, README correction
+
+commit 554bbbe13bb29f8c3f82c7e48530d02e879b9fee
+Author: Marc Henklein <mh@campoint.net>
+Date:   Fri Oct 19 15:38:41 2012 +0200
+
+    Tent.io integration
+
+commit 0e09abe6a8e3b2f3a5a2a182bac161584a7d2f24
+Merge: a6b3180 9f10f7c
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Oct 18 08:41:23 2012 -0700
+
+    Merge pull request #144 from pbouda/master
+    
+    Added my blog to README
+
+commit 9f10f7c118222f3d8bf737a8e10e12f867bfa22a
+Author: Peter Bouda <pbouda@cidles.eu>
+Date:   Thu Oct 18 16:22:32 2012 +0100
+
+    Added pbouda to README.
+
+commit 40a3afae37c6927bd1a815dc06589573032ce503
+Author: Nico Hämäläinen <zenverse@gmail.com>
+Date:   Wed Oct 17 18:01:20 2012 +0300
+
+    Added Woopra Analytics integration
+
+commit a6b3180b26a04da600b574063003fff5b264d9ae
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Wed Oct 17 09:23:15 2012 -0500
+
+    Manually merged TODO change. Closes #136
+
+commit 9c450fba5bdd5118aa27a18c020a21c2280ec803
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Oct 16 22:31:45 2012 -0500
+
+    Update TODO.md
+    
+    Added Slideshare to the TODO list. Closes #106
+
+commit f939dba7a456fa900f0b2a5333f12787824c65e0
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Oct 16 22:27:11 2012 -0500
+
+    Update TODO.md
+    
+    Added Stack Overflow to the TODO list. Closes #139
+
+commit be8acc13b5cdd0492103b923dc424166d1fe8bfd
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Oct 16 20:34:57 2012 -0500
+
+    Removed the last.fm username setting
+
+commit 0e888fe2bbb0c1213eebb396e0b0c9614995ad1f
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Oct 16 20:28:09 2012 -0500
+
+    Small readme change
+
+commit 90e3ce5f9da8dc195d11c21f06a2777de35d4854
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Oct 16 20:26:20 2012 -0500
+
+    Small readme change
+
+commit 901f32e6a31f6f8af9f97a4f47b15e5aead2974a
+Merge: b172527 ac205ec
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Oct 16 18:24:53 2012 -0700
+
+    Merge pull request #141 from mihan007/mihan007-userpic
+    
+    added personal image and link to site
+
+commit b1725277db05de1e28769fadfea7c0459220e028
+Merge: c983c04 da54157
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Oct 16 20:23:20 2012 -0500
+
+    Fixed merge conflict
+
+commit c983c041c9b842ec9235f9dd706c9dfda43b8ec3
+Merge: db018f8 2369025
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Oct 16 20:20:55 2012 -0500
+
+    Merge branch 'master' of https://github.com/rigoneri/syte
+
+commit db018f89e1f1461ba1ec09c00e8fd65158de9119
+Merge: 9e5f328 bf0b8e8
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Oct 16 20:20:15 2012 -0500
+
+    Fixed merge conflict
+
+commit 236902587f70712bb080cae11800d61667988d0d
+Merge: 9e5f328 8ddc2fd
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Oct 16 18:15:50 2012 -0700
+
+    Merge pull request #135 from mertemin/patch-1
+    
+    Resolved coloring of active menu list item
+
+commit 9e5f328b3ffb7da92bc8540828a2957fe99d238f
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Oct 16 20:13:55 2012 -0500
+
+    Added danmayo pic
+
+commit 821a227bd881a4c72379f7d2b1b2f4c90063c7a4
+Merge: e6d4397 59c03c1
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Oct 16 18:12:37 2012 -0700
+
+    Merge pull request #134 from dmayo3/master
+    
+    My syte
+
+commit da54157910684360a02d180bdc146288df5ebc7c
+Author: Tommy Bergeron <t.bergeron@gmail.com>
+Date:   Tue Oct 16 05:52:43 2012 -0400
+
+    my brand new syte!
+
+commit bf0b8e8da8c6a4aa9e2a4096da74f221edf0fcaa
+Author: Kristjan Rang <mail@kristjanrang.eu>
+Date:   Mon Oct 15 11:26:47 2012 +0300
+
+    Claiming #444
+
+commit ac205ecc0a2a267e6602a8166c63da295e30fff4
+Author: Mikhail Kuklin <mihan007@ya.ru>
+Date:   Mon Oct 15 11:36:17 2012 +0400
+
+    added personal image and link to site
+
+commit 8ddc2fd3042662aec6c7b48f09fe321fe418940c
+Author: Mert Emin Kalender <merteminkalender@gmail.com>
+Date:   Thu Oct 11 15:27:07 2012 +0300
+
+    Resolved coloring of active menu list item
+    
+    When you hover active menu link, the border on the right goes down to the next menu list item, outside the background of anchor. The right border for active link item should be defined for anchor.
+
+commit 59c03c1feddb68cb8799de7842b5290d6d1fd82e
+Author: Daniel Mayo <dmayo3@gmail.com>
+Date:   Mon Oct 8 18:46:18 2012 +0100
+
+    Added readme image: danmayo.png
+
+commit e6d439701d3842ecfcb75d970bc07fde01a95ec0
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sat Sep 15 09:06:55 2012 -0500
+
+    Added vincentying pic. Fix #127
+
+commit 67e70e2130d3edc1e18f07ca70fcc9f896286fb8
+Merge: 20f57d6 b65656d
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sat Sep 15 07:05:46 2012 -0700
+
+    Merge pull request #129 from C0deMaver1ck/master
+    
+    Claiming color #5ABB44
+
+commit b65656d1458f2f403725d31ca5ca3edcde7b9e7f
+Author: Caleb Albritton <ithinkincode@gmail.com>
+Date:   Wed Sep 12 22:37:39 2012 -0500
+
+    missed a paren
+
+commit fbd8862f90349e7372c352b965f4d29297024c9f
+Author: Caleb Albritton <ithinkincode@gmail.com>
+Date:   Wed Sep 12 22:35:46 2012 -0500
+
+    Claiming color #5ABB44
+
+commit 20f57d6b4841bb8f164cdf6c8448ac4af7a7591a
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Sep 6 22:51:16 2012 -0500
+
+    Adding jeni pic. Fixes #118
+
+commit 9d5ab786ca9c16cb41fe7c6095eb1e6568396ac9
+Merge: b5c6b25 abe0c08
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Sep 6 20:37:18 2012 -0700
+
+    Merge pull request #125 from eventh/readme-improvements
+    
+    Readme improvements
+
+commit b5c6b2546d58c4af20d36a509a2e94a4726e7a5d
+Merge: dcef42f 254c816
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Sep 6 20:35:35 2012 -0700
+
+    Merge pull request #123 from saiko-chriskun/new_master
+    
+    added chriskun
+
+commit dcef42f29ef2b92c9b54d7b512fca79dbfc1a5ae
+Merge: 1ca5157 a769e86
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Sep 6 20:34:56 2012 -0700
+
+    Merge pull request #120 from eventh/github-url-fix
+    
+    Fix #119, github usernames may contain hyphens.
+
+commit abe0c085a1c00dc3fb4878316c48caa9865c7cc7
+Author: Even Wiik Thomassen <eventh@gmail.com>
+Date:   Thu Sep 6 14:22:24 2012 +0200
+
+    Add a warning about placing OAuth tokens in public repositories.
+    
+    See issue #119 for more detail.
+
+commit 2317bd470d01f8e9daed0298c608e63bed8328c3
+Author: Even Wiik Thomassen <eventh@gmail.com>
+Date:   Thu Sep 6 14:13:01 2012 +0200
+
+    Add note about virtualenvwrapper installation instructions.
+    
+    Should fix issue #104 and #55.
+
+commit fca072f2e00842197a69980fa98af2db2fd3fe9d
+Author: Even Wiik Thomassen <eventh@gmail.com>
+Date:   Thu Sep 6 14:05:46 2012 +0200
+
+    Fix spelling mistakes in README.md, and capitalize services.
+
+commit 254c816c96f8b135af3958b0f1aa10b00b5c55f1
+Author: Chris Bolton <chriskun@saikonet.org>
+Date:   Tue Sep 4 22:07:42 2012 +0200
+
+    added chriskun
+
+commit 7b4db74df89b1794ca880f2fa3994d0e44b33dd1
+Author: Chris Bolton <chriskun@saikonet.org>
+Date:   Tue Sep 4 21:56:16 2012 +0200
+
+    chriskun img
+
+commit a769e868f13373e86bc171b0d62a24ee660d88fc
+Author: Even Wiik Thomassen <eventh@gmail.com>
+Date:   Tue Sep 4 13:49:13 2012 +0200
+
+    Github usernames may contain hyphens.
+    
+    Fix: Syte would give a 404 if the github username contained a hyphen.
+    Solves issue #119.
+
+commit 1ca5157be17dae26f1a05a54627e04cb34148e97
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Fri Aug 31 21:39:27 2012 -0500
+
+    Added Jeiting's pic
+
+commit e185a351c1fd5092b07175bc38c070649e0449d5
+Merge: 430058c b5d5a22
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Fri Aug 31 21:36:21 2012 -0500
+
+    Fixed merge conflict
+
+commit 430058cc93828f0f6eab0b938205f3dfcf903b67
+Merge: a5fcfd2 7f3f163
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Fri Aug 31 19:33:49 2012 -0700
+
+    Merge pull request #116 from DarrenMowat/master
+    
+    Claiming adjacent colour #A2D939
+
+commit b5d5a22477daef7d215f4112d0168a02db4f87f2
+Author: Jeff Sheets <jeffsheets@gmail.com>
+Date:   Thu Aug 30 00:13:14 2012 -0500
+
+    sheetsj claiming color #d75701
+
+commit 7f3f163bf068f1d21391ea484bed26d84901f3bd
+Author: Darren Mowat <dmowat91@gmail.com>
+Date:   Tue Aug 28 22:25:10 2012 +0100
+
+    Change darrenmowat -> rigoneri
+
+commit f16c3ac5a327d8d9e5a0575da228560c8abe041a
+Author: Darren Mowat <dmowat91@gmail.com>
+Date:   Tue Aug 28 22:22:05 2012 +0100
+
+    Add image and link to readme for darrenmowat
+
+commit a5fcfd241777e2effacb33aef9fe2330114493ed
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Aug 26 15:59:30 2012 -0500
+
+    Added bronskiy's pic Fixes #111
+
+commit 45220ea3f18e32f6ee9daaf5034bf60008503b92
+Merge: 8cee73e 5dea245
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Aug 26 15:53:20 2012 -0500
+
+    Fixed README merge issue
+
+commit 8cee73edcf0269f5060b16af7a53f2e7a704dfcb
+Merge: 6a9fa72 121fd88
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Aug 26 13:50:14 2012 -0700
+
+    Merge pull request #114 from jihonrado/color
+    
+    Color assignment for jihonrado
+
+commit 5dea2455518568ac872c838bd07adb3bb4982805
+Author: DavidRagone <dmragone@gmail.com>
+Date:   Sun Aug 26 11:27:11 2012 -0700
+
+    Claiming #3B52EB
+
+commit 121fd8873f3ecb2be100b1e498d3ade0404c168a
+Author: Jose I. Honrado <jihonradob@gmail.com>
+Date:   Sat Aug 25 13:08:09 2012 +0200
+
+    Color assignment for jihonrado
+
+commit 6a9fa721a277b209c682b4a537befbf4cca5302b
+Merge: 142bc94 8a18615
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Aug 19 14:13:06 2012 -0700
+
+    Merge pull request #109 from lfranchi/claim
+    
+    Claim adjacent color #2079D7
+
+commit 142bc94a6c280e184655f9e3b0fb748b4226fea0
+Merge: 96c79f1 d3bc6f7
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Aug 19 13:58:42 2012 -0700
+
+    Merge pull request #107 from eventh/adjustSelection
+    
+    Remove '-link' from argument to adjustSelection function call.
+
+commit 8a18615ab1e4359d9250c5d77dfbbfe004604be8
+Author: Leo Franchi <lfranchi@kde.org>
+Date:   Sun Aug 19 16:58:26 2012 -0400
+
+    Claim adjacent color #2079D7
+
+commit d3bc6f7a7cc49bfd73cfc6cef8a09a0c729795bd
+Author: Even Wiik Thomassen <eventh@gmail.com>
+Date:   Sat Aug 18 22:20:54 2012 +0200
+
+    Remove '-link' from argument to adjustSelection function call.
+    
+    Changeset 85e4fde25933d90114527b511a74243e4d26fe66 changed
+    adjustSelection so that the argument should not contain '-link'.
+    This changeset updates the places where adjustSelection is called.
+
+commit 96c79f1535a95698024d1316e30a4c53cad93bf5
+Merge: 85e2673 e0c6463
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Aug 16 13:09:11 2012 -0700
+
+    Merge pull request #102 from scottackerson/patch-1
+    
+    Update syte/urls.py
+
+commit e0c6463d3ef1825b87995804a1ef3e97233f9eb0
+Author: Scott Ackerson <scott.ackerson@gmail.com>
+Date:   Thu Aug 16 15:07:14 2012 -0500
+
+    Update syte/urls.py
+    
+    Corrected a mistype that causes a ViewDoesNotExist exception
+
+commit 85e26739f7986f3b39a7dca66067b39c91ac2018
+Merge: 5706f07 a158683
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Aug 16 08:22:59 2012 -0700
+
+    Merge pull request #101 from eventh/master
+    
+    Fix alternative text on alexmeswarb readme-image link in README.mb
+
+commit a1586834d58947ba90b5c7d337fac8b79615a298
+Author: Even Wiik Thomassen <eventh@gmail.com>
+Date:   Thu Aug 16 17:12:50 2012 +0200
+
+    Fix alternative text on alexmeswarb readme-image link in README.mb
+    
+    I also added a utf-8 encoding tag to manage.py, which I had
+    forgotten 3 days ago.
+
+commit 5706f07f3fec7401f59b0b49ee87b54f86d44f15
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Aug 16 08:37:34 2012 -0500
+
+    Added pranayairan pic
+
+commit b447b96bccb9935e650c4de77995cc8a38202e29
+Merge: 13e610d 78e7401
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Aug 16 08:34:28 2012 -0500
+
+    Fixed merge conflict
+
+commit 13e610deef4c7e6a000917db6ebc6ecd4c2840e7
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Aug 16 08:32:20 2012 -0500
+
+    Adjustment to clayferris pic
+
+commit 09be2b3b6e03cf2ce78176dbdb3cb6d45511f0a3
+Merge: 489b1c8 bd19b61
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Aug 16 06:30:28 2012 -0700
+
+    Merge pull request #97 from theshortcut/master
+    
+    Claiming #603913
+
+commit 489b1c854e64f685935166c2358ea40638363d6b
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Aug 16 08:27:58 2012 -0500
+
+    Changed foursquare icon paths
+
+commit 46bdcbadbb67f006a52a6dd7cfac08855c3e2cdf
+Merge: 6146ef1 46713ac
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Aug 16 06:16:54 2012 -0700
+
+    Merge pull request #99 from eventh/views-organization
+    
+    Views organization
+
+commit 46713ac2e3f76945de0f4cb2a500ee8cb415a408
+Author: Even Wiik Thomassen <eventh@gmail.com>
+Date:   Mon Aug 13 22:48:33 2012 +0200
+
+    Remove httplib2 requirement.
+    
+    The httplib2 was used by oauth2 library which was replaced by
+    rauth, and is therefor no longer needed.
+
+commit ad5ea45d215771f67ae3ed0f9d5ad8e15a460b28
+Author: Even Wiik Thomassen <eventh@gmail.com>
+Date:   Mon Aug 13 22:26:31 2012 +0200
+
+    Small changes to satisfy PEP 8 etc.
+    
+    pep8.py error E501 line too long not respected.
+    
+    Also added utf-8 coding markers to top of Python modules, emacs style.
+    
+    Some additional changes to compress.py:
+    1. use context-manager instead of manually closing open files.
+    2. use os.path.join to allow compress to be run from anywhere.
+    3. use os.mkdir and os.remove instead of Linux/Mac shell commands.
+
+commit e37799b6db98c36ddfe6c74eb8fcdd18be0a7a7e
+Author: Even Wiik Thomassen <eventh@gmail.com>
+Date:   Mon Aug 13 18:38:00 2012 +0200
+
+    Update urls of views in HELP.md.
+
+commit 78c3e78834479ba620dbdaab3749efa2ad3bfff9
+Author: Even Wiik Thomassen <eventh@gmail.com>
+Date:   Mon Aug 13 18:28:57 2012 +0200
+
+    Update path for blog-post templates.
+
+commit 72c003a6aee05b83d6a20f9a0abe4278c9fd1f54
+Author: Even Wiik Thomassen <eventh@gmail.com>
+Date:   Mon Aug 13 18:16:19 2012 +0200
+
+    Organize views into their own sub-package 'syte.views'.
+
+commit 78e74019af307969ce40b7b99ebf607c0fc30a3b
+Author: ameswarb <alex@meswarb.com>
+Date:   Mon Aug 13 00:18:02 2012 -0500
+
+    claiming adjacent 7FAF1B
+
+commit 6146ef179ddfbf6247d4ba751bd704d330d2c016
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Aug 12 18:11:37 2012 -0500
+
+    Added Foursquare integration
+
+commit 85e4fde25933d90114527b511a74243e4d26fe66
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Aug 12 14:29:18 2012 -0500
+
+    Better views.py organization. And cleaned up links.js
+
+commit f8962b4f4b67f839679bf4bf591404ae9b0c4ee8
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Aug 12 11:51:33 2012 -0500
+
+    fixed issue with blog tag urls that have spaces
+
+commit dadf1384e73fae886bcd0246edb7d85d67e0f95a
+Merge: 4072cac 90b5314
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Aug 12 08:52:39 2012 -0700
+
+    Merge pull request #95 from eventh/twitter-rauth
+    
+    Replace oauth2 with rauth library for twitter.
+
+commit 4072cac07265a01a8a2df1a52b1c2984c0cd9f2c
+Merge: 76c6687 fbd048c
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Aug 12 08:50:25 2012 -0700
+
+    Merge pull request #94 from eventh/operafix
+    
+    Bug fix: Opera does not support window.matchMedia.
+
+commit 76c66877cca651a26e5521e18ef4af48f8a2615d
+Merge: 21f820e 4f60a04
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Aug 12 08:45:21 2012 -0700
+
+    Merge pull request #92 from eventh/optimize
+    
+    Optimize images and gzip
+
+commit 21f820e45229dd73bc4e0abecc3fb2c2bfb72c23
+Merge: 5b02014 044af1a
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Aug 12 08:41:28 2012 -0700
+
+    Merge pull request #90 from eventh/github-sort
+    
+    Sort github repositories on updated_at, freshest first.
+
+commit 5b020142ddc0a0635cdd40ee10a7bcbd7576bce0
+Merge: e17ae61 2f4e604
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Aug 12 08:33:01 2012 -0700
+
+    Merge pull request #89 from daneguempel/test
+    
+    Adding alternative method for getting github access token
+
+commit e17ae610ad48aef22d4ec472ddb778fa8c6688df
+Merge: 536ac6f 4acdad7
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Aug 12 08:32:24 2012 -0700
+
+    Merge pull request #88 from amasty/noneng
+    
+    fix for noneng tags
+
+commit 536ac6fe87af3e7551a2d58385dcadac61b62211
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Aug 12 10:24:20 2012 -0500
+
+    Small TODO doc adjustment
+
+commit 7bdf2a3dd17047e784b077c8849393a6ccbb66f6
+Merge: c30f087 a6df8ab
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Aug 12 08:20:08 2012 -0700
+
+    Merge pull request #69 from durden/doc_improvements
+    
+    Doc improvements
+
+commit bd19b61ec93683c1b9ff041421887ba34a9cf3d8
+Author: Clayton Ferris <cferris@gmail.com>
+Date:   Thu Aug 9 09:15:27 2012 -0700
+
+    added my img to readme
+
+commit 55e95d3a65a5d5d52f6d4fedc91d53497a2cef92
+Author: Clayton Ferris <cferris@gmail.com>
+Date:   Thu Aug 9 09:13:23 2012 -0700
+
+    claiming #603913
+
+commit 90b5314066f1f0a955dfe1313e4de033c667eb50
+Author: Even Wiik Thomassen <eventh@gmail.com>
+Date:   Wed Aug 8 03:03:53 2012 +0200
+
+    Replace oauth2 with rauth library for twitter.
+    
+    The oauth2 library used by Syte [1] is an abandoned fork that has not
+    been updated in 3 years. It must be installed from github through git,
+    instead of a PyPi package. This ment it must be re-installed every
+    time one push changes to heroku.
+    
+    This changeset replaces the oauth2 library with the rauth library,
+    which is maintained and has full test coverage [2].
+    
+    * [1] https://github.com/brosner/python-oauth2
+    * [2] https://github.com/litl/rauth
+
+commit c30f087aba6d397b9feaba80e266ae1d3aa76a11
+Merge: ae56979 b334be8
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Aug 5 23:24:01 2012 -0500
+
+    Merged bitbucket integrated and made necessary changes. Closes #87
+
+commit ae56979b2cd9d271c3ffce1058e4ffbb4b40020c
+Merge: 89a26d0 2321670
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Aug 5 20:18:07 2012 -0700
+
+    Merge pull request #86 from eventh/master
+    
+    Claiming adjacent color #93170a.
+
+commit 89a26d07282c0d2c4570cb65c431bf6d83ce94f2
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Aug 5 22:15:24 2012 -0500
+
+    Soundcloud integration adjustments after merge and README doc.
+
+commit fbd048ca36a575363c89b2b81349cb9c043b3775
+Author: Even Wiik Thomassen <eventh@gmail.com>
+Date:   Mon Aug 6 01:21:17 2012 +0200
+
+    Fix Opera 12 and earlier does not support matchMedia.
+
+commit 4f60a04d4df4054700f9afa7081a5400e2d64bfe
+Author: Even Wiik Thomassen <eventh@gmail.com>
+Date:   Fri Aug 3 16:10:52 2012 +0200
+
+    Compressed images, around 90% smaller sizes.
+
+commit a5bf10375f6622b461b1f498d4f0c4d70e41df3d
+Author: Even Wiik Thomassen <eventh@gmail.com>
+Date:   Fri Aug 3 16:07:51 2012 +0200
+
+    Enable Gzip compression and remove https from jquery url.
+
+commit a6df8ab32a52afa5546435a461c4cdcda6742939
+Author: Luke Lee <durdenmisc@gmail.com>
+Date:   Fri Aug 3 09:05:58 2012 -0500
+
+    Add more information to help for links.js changes
+
+commit 044af1a58c617e8e0bf845e7183df1acc61b396a
+Author: Even Wiik Thomassen <eventh@gmail.com>
+Date:   Fri Aug 3 15:31:31 2012 +0200
+
+    Sort github repositories on updated_at, freshest first.
+
+commit 2f4e6043f5844ebfaf592b440adfb24aff47bd85
+Author: Dane Guempel <daneguempel@gmail.com>
+Date:   Fri Aug 3 00:00:23 2012 -0500
+
+    Adding alternative method for getting github access token
+
+commit 4acdad789175ef6a49f585cf50ea50682b215148
+Author: U-TRAST\kabanovas <kabanovas@LERSO.trast.slv>
+Date:   Wed Aug 1 10:45:33 2012 +0700
+
+    fix for noneng tags
+
+commit 23216708ae72f6c48e9b9e08f6d98a5c5c290cb7
+Author: Even Wiik Thomassen <eventh@gmail.com>
+Date:   Wed Aug 1 00:11:25 2012 +0200
+
+    Claiming adjacent-color #93170a and added my readme-img.
+    
+    My syte is hosted at http://eventh.herokuapp.com/
+
+commit b334be849ec365b86f602a93876db95df90a6c70
+Author: Even Wiik Thomassen <eventh@gmail.com>
+Date:   Tue Jul 31 21:11:17 2012 +0200
+
+    Almost completed bitbucket integration support.
+    
+    Need to do some testing on different browsers etc.
+
+commit eb0cde9bc58e2c09d029d1b29d5d9921e9940612
+Merge: 9fca0b4 ffbd813
+Author: Even Wiik Thomassen <eventh@gmail.com>
+Date:   Tue Jul 31 14:02:42 2012 +0200
+
+    Merge branch 'master' of git://github.com/rigoneri/syte into bitbucket
+    
+    Conflicts:
+    	syte/urls.py
+
+commit 741a6a3bf5738aac3368549dac97ae0f20a86edc
+Author: Guram Kajaia <guram.kajaia@gmail.com>
+Date:   Tue Jul 31 02:02:33 2012 +0400
+
+    Added Soundcloud integration
+
+commit ffbd813ebb6c397e11e5264feda242f4e26d72a0
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Jul 29 22:50:25 2012 -0500
+
+    Some adjustments around the endless pagination. Issue #82
+
+commit 080cd234df0789cf229633ec2c813359ee761b73
+Merge: 758d0d2 8808d4d
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Jul 29 22:33:31 2012 -0500
+
+    Merge branch 'master' of https://github.com/dcesiel/syte into dcesiel-master
+
+commit 758d0d2f90f3e2a904fcda2d504508a6e1a12a53
+Merge: 3200a3a 51ffedf
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Jul 29 22:25:55 2012 -0500
+
+    Merged pull request. Fixes #84
+
+commit 3200a3a079be883f4c4667614ce34bb187c00b97
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Jul 29 22:22:44 2012 -0500
+
+    Added amastys image. Fixes #83
+
+commit 8d8cda154f554ee9d9bdbbe00b72770d4370e811
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Jul 29 22:18:02 2012 -0500
+
+    Tumblr now returns posts by tag correctly. Fixes #80
+
+commit 0f3b726c80ccb31982ea4b6036380215b1b9985a
+Merge: c372696 314d0f3
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Jul 29 19:59:36 2012 -0700
+
+    Merge pull request #78 from durden/lastfm_fix
+    
+    Fix a few places where we could get errors from bad last.fm data
+
+commit c372696ed61b1f4297e2372b9ab435e18949807f
+Merge: a88f7be 8b0edab
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Jul 29 19:55:01 2012 -0700
+
+    Merge pull request #76 from hussfelt/master
+
+commit a88f7be1cddac8b84625888001de6d1b7ec17479
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Jul 29 21:53:28 2012 -0500
+
+    Fixed an blog post bug related to Issue #71
+
+commit 9fca0b4b29df886d2e0d0a0d4ca6413ad2f9c482
+Author: Even Wiik Thomassen <eventh@gmail.com>
+Date:   Mon Jul 30 01:01:13 2012 +0200
+
+    Updated number of followers and forks on bitbucket integration.
+
+commit e1940e42962fd4ac0da2fb7e3beb73003d174cf8
+Author: Even Wiik Thomassen <eventh@gmail.com>
+Date:   Mon Jul 30 00:22:43 2012 +0200
+
+    More work on bitbucket integration.
+    
+    Forgot to stage files before last commit.
+
+commit a3e801a7c304b871a48e1d2987b093fa003447d4
+Author: Even Wiik Thomassen <eventh@gmail.com>
+Date:   Mon Jul 30 00:20:56 2012 +0200
+
+    First attempt at bitbucket integration.
+    
+    Still missing support for a few details, such as forks and
+    followers/following numbers.
+    
+    Need to investigate if we should use oauth.
+
+commit 8808d4daf33cf3bebf285ee38c034c19a1d26621
+Author: David Cesiel <dcesiel@gmail.com>
+Date:   Fri Jul 27 19:20:39 2012 -0400
+
+    Added endless pagination functionality
+
+commit 51ffedfbe122689e2527fb20796d66133ae61cdc
+Author: Damilare Onajole <web.dami@gmail.com>
+Date:   Sat Jul 28 15:53:52 2012 +0100
+
+    fix KeyError when viewing tumblr quote
+
+commit 2c36017fc0b60798e6a9f96254d6b9fccb872ef5
+Author: Luke Lee <durdenmisc@gmail.com>
+Date:   Thu Jul 26 15:03:31 2012 -0500
+
+    Add item about setting up the new view in urls.py
+    
+    - Thanks to @eventh for noticing!
+
+commit 314d0f3e68c132b1a7bf982e894de58bc6711eb7
+Author: Luke Lee <durdenmisc@gmail.com>
+Date:   Tue Jul 24 20:20:30 2012 -0500
+
+    Fix a few places where we could get errors from bad last.fm data
+    
+    - I see lots of 'missing' data when a track is currently playing.  Last.fm
+      seems to return some of the data, but the recent track 'date' is empty when
+      the track is playing and hasn't been 'scrobbled' yet.
+        - You must listen to at least 50% of a song before it really counts towards
+          your scrobbles/stats.  However, while listening the data is returned
+          without the date.
+
+commit 29af1a8155c977ee0e939b5da3e82d9866483590
+Author: Damilare Onajole <web.dami@gmail.com>
+Date:   Tue Jul 24 20:24:08 2012 +0100
+
+    claiming brown 6F4919
+
+commit 8b0edab3acd181b6bf3aa1c053d87be0a2c4c11f
+Author: Henrik Hussfelt <henrik@hussfelt.net>
+Date:   Tue Jul 24 07:35:19 2012 +0200
+
+    Changed domain - claiming #f51634
+
+commit a3a538fb79dc49c6ad762b19bd4e60669d4e1008
+Author: Henrik Hussfelt <henrik@hussfelt.net>
+Date:   Mon Jul 23 13:11:03 2012 +0200
+
+    Claiming red #f51634
+
+commit d8ca330cd063ddbadefc437d28e1e0c1469335c1
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jul 17 21:35:47 2012 -0500
+
+    A few Last.fm integration adjustments. I still need to refactor some of the integration views so it's easier to implement but that will have to wait for another day. Closes #67
+
+commit 11265814e7522cf3208c830f56acaa5e41f05c88
+Merge: 2704ec4 2df2fba
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jul 17 20:04:35 2012 -0500
+
+    Merge branch 'lastfm_integration' of https://github.com/durden/syte into durden-lastfm_integration
+
+commit 2704ec45d4c28f8e2982124e571f84a22e9b0ccb
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jul 17 19:42:54 2012 -0500
+
+    Added 500 Error template
+
+commit 0748b5c1f55b0804b52004e1bf73cc0c8afcab67
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jul 17 19:35:49 2012 -0500
+
+    Merged allydimg's image. Closes #72
+
+commit c2fc735d6a5d2f1964117029617efd4f69aada3a
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jul 17 19:29:29 2012 -0500
+
+    Manually merged junseki's image. Closes #70
+
+commit 652d394c7e3cb57c12759fb6fdc5607c94295129
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jul 17 19:26:07 2012 -0500
+
+    Fixed README merge issue
+
+commit 605d252816f81e8939ee130d8bd805c85122437f
+Merge: f42538d ab45791
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jul 17 19:25:03 2012 -0500
+
+    Merged jtchang's image. Closes #68
+
+commit f42538db464733ed28ceafbefffa55dbfb1afa15
+Merge: 8634d0d 60cb904
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jul 17 19:16:53 2012 -0500
+
+    Merged srir's image. Closes #65
+
+commit 8634d0d474b70bfae63d2848e68befd890a9df64
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jul 17 19:14:04 2012 -0500
+
+    Added readme link for dannycochran pic. Issue #64
+
+commit ddfe6bc9ec94968debef75db48b70dc6799ec597
+Merge: 2a0f1f2 2b4863a
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jul 17 17:12:23 2012 -0700
+
+    Merge pull request #64 from dannycochran/master
+    
+    Color Claim #9AC0CD
+
+commit 2df2fba076092609c019ebafef0bd8abcdd3f28b
+Author: Luke Lee <durdenmisc@gmail.com>
+Date:   Sun Jul 15 17:56:37 2012 -0500
+
+    Add protection for missing data from lastfm
+
+commit e38deb630b149e3c10e032fd3ce8d13f1c75c924
+Author: Luke Lee <durdenmisc@gmail.com>
+Date:   Sun Jul 8 22:25:03 2012 -0500
+
+    Add links to reference files/directories
+
+commit 1931b00913b4a37f82a146ae1ba5bc32992c4aa5
+Author: Luke Lee <durdenmisc@gmail.com>
+Date:   Sun Jul 8 22:13:32 2012 -0500
+
+    Add start of improved docs with design, help, and todo files
+
+commit ab457912b36e6b2ac32e74acd518dfc73640fb0f
+Author: Jeff Tchang <jeff.tchang@gmail.com>
+Date:   Sun Jul 8 14:56:56 2012 -0700
+
+    Updated README and provided my own pic.
+
+commit d1ce91b6862bef8db315d6b93e1d90ce4353e2fb
+Author: Luke Lee <durdenmisc@gmail.com>
+Date:   Sun Jul 8 11:44:58 2012 -0500
+
+    Add information for setting up lastfm in README and image
+    
+    - The image is not exactly the same size as the other demo images.  I believe
+      my resolution is slightly different, etc.  However, I attempted to make it as
+      close as possible
+
+commit fe4abc51c71f1d999448b68254ae35926a36d4e0
+Author: Luke Lee <durdenmisc@gmail.com>
+Date:   Sun Jul 8 11:16:28 2012 -0500
+
+    Add lastfm js to compression
+
+commit 38a782dd130bf16ee2775104b7a80e680572e2ea
+Author: Luke Lee <durdenmisc@gmail.com>
+Date:   Sun Jul 8 11:02:13 2012 -0500
+
+    Add more info to lastfm profile, spruce up display with nice styles, etc.
+
+commit 60cb904c6132b929226b1d85f535bb253a14b215
+Author: Sri Raghavan <sraghavan@twitter.com>
+Date:   Sun Jul 8 02:32:11 2012 -0400
+
+    added image for srir (color @521292)
+
+commit 2b4863ae860d3e6f8f19cd0870cf036a84ceac29
+Author: Danny Cochran <danny@dcochran>
+Date:   Sat Jul 7 20:00:15 2012 -0700
+
+    Color Claim #9AC0CD
+
+commit 48d8c503743ea4a7d3f6d41c5b4cd9ee60591478
+Author: Luke Lee <durdenmisc@gmail.com>
+Date:   Sat Jul 7 15:55:34 2012 -0500
+
+    Add client-side code/template to fetch lastfm data and display it
+    
+    - The actual template for showing the lastfm results is extremely lacking at
+      this point.  It only shows the album name but will be improved soon.
+
+commit 90065c2609f60e8bf443fab4213e3d302ddd87e6
+Author: Luke Lee <durdenmisc@gmail.com>
+Date:   Sat Jul 7 10:11:30 2012 -0500
+
+    Add basic building blocks to support lastfm on server side
+    
+    - There are no templates yet.  However, you can test it by just hitting the
+      lastfm/<username> url to see json returned from lastfm.
+
+commit 2a0f1f2c5e9e4a12f0753d5eccedbbc85ee4ebfc
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Fri Jul 6 07:39:57 2012 -0500
+
+    Added some more readme images, Closes #61 and #62
+
+commit bf4cdab13098e7686e9c251b9e120b4e8243d145
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Mon Jun 25 20:58:00 2012 -0500
+
+    Added windows issue info on readme for reference. Closes #14 since it doesn't appear to be an issue on other OSs.
+
+commit ee9dd4805b6e84f19f329c2fa84bf73b45c4d5cb
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Mon Jun 25 20:51:27 2012 -0500
+
+    Added owen's link to readme
+
+commit 30a666bcd21fa1c5b921d24643929c660fe033de
+Merge: 2acf8ab 20d13fb
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Mon Jun 25 18:47:27 2012 -0700
+
+    Merge pull request #58 from owenwilliams/master
+    
+    I've added my picture/site/color to syte
+
+commit 20d13fbf5f626fdaa185d0fabfdd9d114e1004d2
+Author: Owen Williams <owen@owened.co.nz>
+Date:   Tue Jun 26 13:31:13 2012 +1200
+
+    My picture
+    
+    http://owened.co.nz
+
+commit 2acf8abb98946f69e380d309cbe0afdb4f81eae0
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Mon Jun 25 07:09:46 2012 -0500
+
+    Added a new readme image and link. Closes #57
+
+commit ac1bce6b7ea5c2f96303f065f7ecef9c56c7cd58
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jun 21 00:05:06 2012 -0500
+
+    Disqus integration adjustments and short documentation
+
+commit b8662e6e6093ab5d4542c711232df54a88f6612d
+Author: Denis Krienbühl <denis.krienbuehl@gmail.com>
+Date:   Wed Jun 20 15:36:43 2012 +0200
+
+    Ensure that the disqus code is only run once the dom is ready for it
+
+commit 23e109567a83c0928f8f7788acc26d3d77901e77
+Author: Denis Krienbühl <denis.krienbuehl@gmail.com>
+Date:   Wed Jun 20 15:04:39 2012 +0200
+
+    Adds disqus integration
+
+commit e49113589cc830f89405e5c20aad306938981992
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Wed Jun 20 07:43:34 2012 -0500
+
+    Adding arnonate pic and link. Closes #52
+
+commit 4ae43f9a1eed853e44b5df42dd6a8cbd4c279d1b
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jun 19 08:01:14 2012 -0500
+
+    Small change to blog post max width and some new readme-imgs
+
+commit ae5d8c5e68f408a7b7ac1c20ffb6db14f42e184e
+Merge: 2a7c4f3 4f48202
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jun 19 05:55:13 2012 -0700
+
+    Merge pull request #51 from yanatan16/master
+    
+    Jon Eisen's site: Color #6C91FF
+
+commit 4f48202f02fb18ba7c47c280dd399b710b331fcc
+Author: Jon Eisen <jon.m.eisen@gmail.com>
+Date:   Mon Jun 18 19:11:35 2012 -0400
+
+    Added Jon Eisen's pic
+
+commit 2a7c4f364d05551312d1869e8002c5abbdf0fd27
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Jun 17 16:09:54 2012 -0500
+
+    Blog post only pages now load without javascript
+
+commit c08555ba7f2a0ccc23e6324a02005467017a3f06
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Jun 17 13:46:23 2012 -0500
+
+    changed compress.py so *nix users don't have to create the statics folders before running the compress command. Closes #49
+
+commit 0e8c7381242b515770b4d34e6c134cddba6370ab
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Jun 17 09:24:32 2012 -0500
+
+    Added google analytics tracking setting. Closes #42
+
+commit 4b7d680dd8328d59edb128e96008e2a31a7c3490
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Jun 17 09:12:05 2012 -0500
+
+    Added javisoto's image and link to README
+
+commit 2028deda39309abd61eb4cc0fa100585a218ee98
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Jun 17 09:07:58 2012 -0500
+
+    Changed twitter api to return more tweets. Closes #43
+
+commit 31ca439dc249a8e64c77570cc27ef8e58131ac00
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Jun 17 08:54:58 2012 -0500
+
+    Added yurytsukerman's link to README
+
+commit 991893827eddb483ab86378fb31f6ff61b50cdd8
+Merge: 9513265 7906836
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Jun 17 06:52:22 2012 -0700
+
+    Merge pull request #47 from ytspar/upstream
+    
+    Added 60x60 avatar to readme images
+
+commit 9513265935f48529792d2e6464fdc3621c7afdc4
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Jun 17 08:38:50 2012 -0500
+
+    Adding wavendano pic to Readme
+
+commit 7906836139db2408b00015738ecdf4648aad213b
+Author: Yury Tsukerman <ytspar@gmail.com>
+Date:   Sun Jun 17 16:55:03 2012 +0700
+
+    Added 60x60 avatar to readme images
+    
+    Border color: #384D09
+
+commit b256e8f2dc338d351e2e73480a96b77c20ed9b06
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jun 14 21:18:36 2012 -0500
+
+    Fixed an issue related to #17
+
+commit cc6b05bc4847523ca02366c8fb61832f457ead96
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jun 14 21:06:29 2012 -0500
+
+    Fixing bug when repeatedly clicking on nav links. Closes #17
+
+commit 198ee759d8ef4dd4b9f0a32280457463874327a0
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jun 14 20:54:03 2012 -0500
+
+    Fix for middle click issue. Closes #38
+
+commit be80ca0cf6341e647485e53ccd19455139438b6e
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jun 14 20:43:29 2012 -0500
+
+    Added new readme info and image
+
+commit ac88171f7bcb25240561e3cf208ff15cf1a715f1
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jun 14 09:40:38 2012 -0500
+
+    Had to rename the github profile template since it's been cached
+
+commit 9146b1ef4f4db2d8a0cc5ec4e0ab735484b208ef
+Merge: 21c2ea2 03884b2
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jun 14 07:27:40 2012 -0700
+
+    Merge pull request #37 from manavo/master
+    
+    Fix Github URLs to go to the website rather than the API endpoints
+
+commit 03884b2df731dbf8271d29b8d36bdee65cda1111
+Author: manavo <phil@ml4d.com>
+Date:   Thu Jun 14 15:23:23 2012 +0100
+
+    Fix Github URLs to go to the website rather than the API endpoints
+
+commit 21c2ea25e1724a4e3a4dd065e40d069ef9cba68f
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jun 14 08:07:51 2012 -0500
+
+    Fixed Readme typo
+
+commit 4192b8dd110bd3532e8859f5a57c3318590c0b53
+Merge: 8af969e a3ad28e
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jun 14 08:04:40 2012 -0500
+
+    Mergin Pull Request #34
+
+commit 8af969e89b1dcc5c489db630d4ef60ccfd2f95ed
+Merge: db14bb6 4d9eca0
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Thu Jun 14 05:49:31 2012 -0700
+
+    Merge pull request #36 from EvilFaeton/master
+    
+    Minimal rss feed support
+
+commit 4d9eca036a147204c0b96b45bc779a7fa4a51f70
+Author: Sergey Efremov <efremov.sergey@gmail.com>
+Date:   Thu Jun 14 10:09:55 2012 +0400
+
+    minimal rss feed support
+
+commit db14bb68358b6c39c64010abaec981c8b08360bd
+Merge: 80de4fe 6dcccac
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Wed Jun 13 21:05:56 2012 -0700
+
+    Merge pull request #35 from markwatson/master
+    
+    Added my site...
+
+commit 80de4fed20014a15484761677c4ff117e43dc1d1
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Wed Jun 13 22:34:55 2012 -0500
+
+    Fixed hidden blog posts date on mobile style
+
+commit 6dcccace62cc206a048db9b663295a026823c3c4
+Author: Mark Watson <mw5300@gmail.com>
+Date:   Wed Jun 13 21:33:00 2012 -0600
+
+    Oops, forgot the README
+
+commit cdd2eb17ffc1c48fc2efc572dc61f573f9e4a848
+Author: Mark Watson <mw5300@gmail.com>
+Date:   Wed Jun 13 21:31:53 2012 -0600
+
+    Added mrkrwtsn's face (markwatson.us).
+
+commit 9a53eff6cf083d726114621e8829c15dfb230c48
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Wed Jun 13 22:22:24 2012 -0500
+
+    Fixed vertical responsive issues for navigation. Fixes issue #7 and #9
+
+commit 043980959d0bb1e72effa1a3154f144d6e380377
+Merge: 5a1d737 e34f70f
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Wed Jun 13 21:35:05 2012 -0500
+
+    Merging pull request #33
+
+commit 5a1d737e824d063fdddf4fcd38fce35dbf590b63
+Merge: 639414e 77c424b
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Wed Jun 13 21:32:19 2012 -0500
+
+    Merging pull request #32
+
+commit 639414efd6a643d426c6fd37b14b8b2dec784a57
+Merge: 2a6f65d 46bdfad
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Wed Jun 13 19:28:56 2012 -0700
+
+    Merge pull request #31 from andrewthebold/master
+    
+    Claiming color #A50000
+
+commit a3ad28e1bd7b58c68e2f502ac04f422a9f47a4f0
+Author: manavo <phil@ml4d.com>
+Date:   Thu Jun 14 01:30:30 2012 +0100
+
+    Claiming color #3eb489
+
+commit e34f70fb55821a979041cc59d623af23e4be526f
+Author: Nuri Hodges <nuri@thinglet.com>
+Date:   Wed Jun 13 11:09:38 2012 -0700
+
+    Typographical correction in README
+
+commit dc39f7b5d59f80780a691d96a1658d7f5cd86767
+Author: Nuri Hodges <nuri@thinglet.com>
+Date:   Wed Jun 13 10:42:15 2012 -0700
+
+    Claiming color: #0181d7
+    
+    It's mine!
+
+commit 77c424b56e6246e1b2ceb533e6a8eabaceb926ac
+Author: Øyvind Ingvaldsen <oyvind.ingvaldsen@gmail.com>
+Date:   Wed Jun 13 16:38:11 2012 +0200
+
+    color request
+
+commit 46bdfadea62692f15ee4fbcb9b10b4c0e012acb8
+Author: andrewthebold <andrewthebold@gmail.com>
+Date:   Wed Jun 13 23:34:07 2012 +0900
+
+    Update master
+
+commit 381caedaf38a1686005823ca6b9a2f2b8937f093
+Author: andrewthebold <andrewthebold@gmail.com>
+Date:   Wed Jun 13 23:33:53 2012 +0900
+
+    Update master
+
+commit 4f1329c59c62adc81f58b1e7ae5db1a371ff73fa
+Author: andrewthebold <andrewthebold@gmail.com>
+Date:   Wed Jun 13 23:32:36 2012 +0900
+
+    Quick fix.
+
+commit 42353e5442ebabd4f071b77b12000ea8fb9a409d
+Author: andrewthebold <andrewthebold@gmail.com>
+Date:   Wed Jun 13 23:30:12 2012 +0900
+
+    Added my image! + color is #A50000
+
+commit 2a6f65dca234800d10b3f9e2c12efabd118e6465
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Wed Jun 13 08:04:31 2012 -0500
+
+    Fixed a wording on README
+
+commit 1353ff8d43c79c44dc72ebcd352de84f2ff0cc3e
+Merge: ad5e6be 6541da6
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Wed Jun 13 07:58:32 2012 -0500
+
+    Merging pull request #30
+
+commit ad5e6be58f91ab411c0c7c112fe8f0526b1df944
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Wed Jun 13 07:55:22 2012 -0500
+
+    Added mikehodgson pic to README
+
+commit bd1af759a352b23bca735cc9ab0e4697e9113369
+Merge: a91681f 0a5b732
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Wed Jun 13 05:53:52 2012 -0700
+
+    Merge pull request #29 from mikehodgson/master
+    
+    Claiming color #d75701
+
+commit a91681f45d6a2a6ead2bda4b1cf7d9f8880dd261
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Wed Jun 13 07:52:35 2012 -0500
+
+    Fixed mikaelo pic and added to README
+
+commit f8c3e3661fd47cf5b084e73f9a15f772b3146741
+Merge: c34ab5a de61087
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Wed Jun 13 05:50:37 2012 -0700
+
+    Merge pull request #28 from Mikaelo/upstream
+    
+    My color #93BD20 and my site http://mikaelo.herokuapp.com/!
+
+commit 6541da6c773b8c7b8337f7e605e5b3d39f77a369
+Author: Charlie Key <ckey@paranoidferret.com>
+Date:   Wed Jun 13 02:11:05 2012 -0400
+
+    readme image added color #F83E43
+
+commit 4f1e3bbe91210b690a5b2bd6df9c6ea0e4b8a880
+Author: Charlie Key <ckey@paranoidferret.com>
+Date:   Wed Jun 13 02:08:05 2012 -0400
+
+    venv folder ignore
+
+commit 0a5b7327795d230c3187d89d4ac8a99a6d7e0b3c
+Author: Mike Hodgson <mhodgson@gmail.com>
+Date:   Tue Jun 12 23:16:18 2012 -0400
+
+    Added photo to readme-imgs directory
+
+commit de61087ceb53726d22c18404dea3a6968179f27d
+Author: Mikhail Ushanov <mikhail.ushanov@gmail.com>
+Date:   Wed Jun 13 06:14:55 2012 +0400
+
+    Add mikaelo logo to readme-imgs. Site - http://mikaelo.herokuapp.com/. I love Syte
+
+commit c34ab5a735f918b80e606d443a718e7dff73c927
+Merge: 2b29734 ab14c8e
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jun 12 20:12:37 2012 -0500
+
+    Merging pull request #25
+
+commit 2b2973406b23413d47095414f7d95db80e724694
+Merge: 6b93ba5 865e3d2
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jun 12 20:08:12 2012 -0500
+
+    Merging pull request #23
+
+commit 6b93ba5906d68214fe984e4fae3c29c75a5ed978
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jun 12 17:21:52 2012 -0500
+
+    Removing uncessary import
+
+commit 9065e44b40df5d66d46837908a638790d23ffcd9
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jun 12 17:20:24 2012 -0500
+
+    Fixed github integration by changing to their v3 API, please see the setup instructions, it's similar to Instagrams. #24
+
+commit ab14c8e937e9b23201407171899d2432fd890d07
+Author: Edgar Veiga <edgarmveiga@gmail.com>
+Date:   Tue Jun 12 22:51:35 2012 +0100
+
+    Update eveiga specifics.
+
+commit 865e3d288fab7b8aaf4d437d8e0bd1483b4305b8
+Author: Sergey Efremov <efremov.sergey@gmail.com>
+Date:   Tue Jun 12 23:53:36 2012 +0400
+
+    claim #D72F47
+
+commit 41103795ef65b97f4f97d4e67305fe78a4adca85
+Merge: 9b86649 2508494
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jun 12 13:20:46 2012 -0500
+
+    Merging pull request #20
+
+commit 9b86649c768e6566374961d1c59cdaa34bf63423
+Merge: 8d2293e f24aee8
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jun 12 13:14:38 2012 -0500
+
+    Merging pull request #15
+
+commit 8d2293e1f994d147a6c44dc1d068b93c0817f745
+Merge: 217d16e 079d124
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jun 12 13:08:13 2012 -0500
+
+    Merging pull request #12
+
+commit 217d16efa42e143db66e0b97adbaefcc0e233a66
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jun 12 13:04:22 2012 -0500
+
+    Fixed readme image
+
+commit 0c536cdf3819458ad4faa3c85be4b356a7721b61
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jun 12 13:03:11 2012 -0500
+
+    Fixing merge issue
+
+commit 45f5817d65771463bb3afafe484d99dccb310280
+Merge: 00e17ee da00ac2
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jun 12 13:01:25 2012 -0500
+
+    Merging pull request #11
+
+commit 00e17ee2978da60624ce1f4103976539bb1fb805
+Merge: 94530eb 52126ec
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jun 12 12:52:50 2012 -0500
+
+    Mergin pull request #10
+
+commit 94530eb43cf2f995ef0d9da3bf90199299ca2ead
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jun 12 12:43:22 2012 -0500
+
+    Resized snooze82's image to be 60x60 and added the Readme link
+
+commit 75bf77a41c1a57b932bc0df1cce1ce1b5e00b17e
+Merge: 958518d 9d929ae
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jun 12 10:40:08 2012 -0700
+
+    Merge pull request #22 from fourty2/master
+    
+    claim #00CED1 and fix for #21
+
+commit 958518d1aea42aefd8d3e4427d781a966c1f26b0
+Merge: f1bda7c 68be830
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jun 12 12:31:17 2012 -0500
+
+    Merge branch 'master' of https://github.com/rigoneri/syte
+
+commit f1bda7cf84428af06ce8abeb0b28cf20ab9e8937
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jun 12 12:30:36 2012 -0500
+
+    Changed License to not require a different color
+
+commit 9d929ae965dafbd4058c9a7705968f7e73b2f4a6
+Author: Marc Henklein <mh@campoint.net>
+Date:   Tue Jun 12 17:36:32 2012 +0200
+
+    fixes a bug where instagram isnt showing up after deployment using compress.py
+
+commit 8e1c9d10dd5afa26ecc3af2b7fc74d9b82d36c5e
+Author: Marc Henklein <mh@campoint.net>
+Date:   Tue Jun 12 17:32:19 2012 +0200
+
+    adjacent color image for snooze82 / http://www.henklein.com
+
+commit 2508494c741c2f2abc56a048cebba367f357ecad
+Author: auREAX <mark@xn--hwg34fba.ws>
+Date:   Tue Jun 12 16:01:12 2012 +0200
+
+    Color claim for #ffffff
+
+commit f24aee8c22526c944ef1c81ce414648bb52ae1cd
+Author: Aristides Lourenco <aristidesfl@gmail.com>
+Date:   Tue Jun 12 11:51:04 2012 +0100
+
+    Claim color #000000
+
+commit 079d12444cdc356935a78fd8c43af8b73c5d8e45
+Author: Denis Krienbühl <denis.krienbuehl@gmail.com>
+Date:   Tue Jun 12 12:25:39 2012 +0200
+
+    Fixes broken link in readme
+
+commit 6cec1357423736d00f09ed2de3b545b42f162b52
+Author: Denis Krienbühl <denis.krienbuehl@gmail.com>
+Date:   Tue Jun 12 10:25:37 2012 +0200
+
+    Claming color #149dd9
+
+commit da00ac24793a8287feb56ec1af7bfc4e85d65c49
+Author: MithrandirAgain <mithrandiragain@lavabit.com>
+Date:   Tue Jun 12 01:22:32 2012 -0700
+
+    more consistent name of picture
+
+commit e67b934952f5321ad94ca05338fd8d908fb0cd2b
+Author: MithrandirAgain <mithrandiragain@lavabit.com>
+Date:   Tue Jun 12 01:14:20 2012 -0700
+
+    Add my picture and claim color 87CEEB
+
+commit 52126ecb91f82ab4f09d5a3f5a44550efc2c090b
+Author: John Coogan <coogan.johna@gmail.com>
+Date:   Tue Jun 12 01:05:13 2012 -0700
+
+    Adding my picture to claim color 660C0C
+
+commit 68be830dc64781ccadf377dda25e2a3dc2dd685f
+Merge: 4207da8 f685841
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Mon Jun 11 22:29:48 2012 -0700
+
+    Merge pull request #6 from asparagui/master
+    
+    minor spelling fix
+
+commit 4207da812014912328b0c7f3fd63001b0666ce1d
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue Jun 12 00:18:19 2012 -0500
+
+    Temporary fix blog post back button issue.
+
+commit f685841ff0e3f4540f1e02a43e69f7222818e32e
+Author: Brett Koonce <koonce@gmail.com>
+Date:   Tue Jun 12 00:15:25 2012 -0500
+
+    minor sp fix
+
+commit c19c83fbf74ff99cc7db6a0279133071b21d67d7
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Mon Jun 11 23:45:57 2012 -0500
+
+    Fixed iPad resoponsive media query issue
+
+commit 83e79444ec0db0f2f63a21b4b882b7f43cfbb128
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Jun 10 13:57:16 2012 -0500
+
+    Fixed settings.py import
+
+commit 74e3bab751f30f31f9668717a9f2aa57f55d3353
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Jun 10 13:35:23 2012 -0500
+
+    Fixed the Readme images
+
+commit df7ac9d7ec9946ae050d44ee98d6e04ff73c8ccd
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Jun 10 13:16:24 2012 -0500
+
+    Instagram integration doc
+
+commit d77d2a5925ef541ebfc701911cd6c1d6be5d721a
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sat Jun 9 22:30:52 2012 -0500
+
+    Fixed settings.py import
+
+commit bf43305b8eeccf1119591c507fe8b34d9ced8c4a
+Merge: 21ed387 e7b565e
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sat Jun 9 22:28:27 2012 -0500
+
+    Merge branch 'instagram' of https://github.com/rigoneri/syte into instagram
+
+commit 21ed38790bbfab3e7a73219a42b9ab2178ed9881
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sat Jun 9 22:25:30 2012 -0500
+
+    Added Instagram integration... only thing left are the docs
+
+commit e7b565ec93fcefdb5c03ce4c0346601ea463fb46
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sat Jun 9 22:25:30 2012 -0500
+
+    Added Instagram integration... only thing left are the docs
+
+commit 657a10b26f07a6959f53f8d044209aff2b6e7aea
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sat Jun 9 19:47:02 2012 -0500
+
+    Fixed garry's picture
+
+commit 420a64b930fde51387df000d8114e107911aad76
+Merge: a065ab4 4c10b21
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sat Jun 9 17:44:38 2012 -0700
+
+    Merge pull request #4 from garrypolley/master
+    
+    Garry's Colors
+
+commit 4c10b21400de2175ecebf03f064d68ee3ac1ded8
+Author: Garry Polley <garrympolley@gmail.com>
+Date:   Sat Jun 9 17:33:14 2012 -0500
+
+    updating readme to have my picture
+
+commit b8f4cc69fd799bda2f5e3262efce3c1b73738b88
+Author: Garry Polley <garrympolley@gmail.com>
+Date:   Sat Jun 9 17:31:52 2012 -0500
+
+    adding in my picture to claim usage
+
+commit a065ab46bb52d25b51f27bc9132dd3e1dd1c612f
+Merge: 4e9e7e2 e69303b
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Mon Jun 4 05:58:46 2012 -0700
+
+    Merge pull request #3 from ryanniemeyer/master
+    
+    minor grammar edits
+
+commit e69303b715ffa0bd8e010ec80d5c8f1379fd8b57
+Author: ryanniemeyer <ryan.niemeyer@gmail.com>
+Date:   Sun Jun 3 19:10:43 2012 -0500
+
+    Minor grammar edits.
+
+commit 4e9e7e2e44a7d26ed39f38a140bc40903de05de9
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Jun 3 16:07:23 2012 -0500
+
+    Made the img-link img change only happen on hover
+
+commit 38a4a3379d4eb402c9f23d87b32671e2db5766ea
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Jun 3 15:20:48 2012 -0500
+
+    Added a style for links that have images on blog posts
+
+commit 2d82239e40aafff6f8a71d5fc143254a2659d1cf
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun Jun 3 14:58:37 2012 -0500
+
+    Added Keith's avatar & link to README.md
+
+commit c976f80b02c2692f726c40d0e1f72834123e562b
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sat Jun 2 12:46:52 2012 -0500
+
+    Add another small instruction
+
+commit 2d65abbb6f2e182eac8086fec79d4ca94edcf8b7
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sat Jun 2 12:37:52 2012 -0500
+
+    Added Sam's info to Readme
+
+commit ba4f6d442615418acda8c0a743b94b1bc154938e
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue May 29 12:10:21 2012 -0500
+
+    Added support to prettify code and pre blocks
+
+commit d17c95f028b3f9fa6973b37ab70cb01761145678
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue May 29 09:02:43 2012 -0500
+
+    changed tag urls to point to syte's url and do a redirect instead of having to have the dev change those urls manually
+
+commit a96c2ae95da94208bdfd764d759f5a46740187af
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Tue May 29 08:27:44 2012 -0500
+
+    Fixed issue with blog dates
+
+commit f2100463e2dd3ab5ef912f2b31b85321282e151e
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Mon May 28 17:07:32 2012 -0500
+
+    Doc change after tumblr integration changes
+
+commit 541e297d1795a42f6770dd6755e57a385534ec2e
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Mon May 28 17:01:00 2012 -0500
+
+    Tumblr integration now supports photos, links, quotes, audios and videos
+
+commit 4ba5d79211764733bbfca90322153de1e33eb560
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Mon May 28 10:25:35 2012 -0500
+
+    Added the 'Fork me on Github' link
+
+commit bc0bf7e94879947fd65f4f667d0ca6fc21c7e0b3
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun May 27 13:15:21 2012 -0500
+
+    Added setup and deploy instructions to README.md
+
+commit 56fde7f506a550ed3fae47ed6e71f6f52fe3f160
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun May 27 00:31:04 2012 -0500
+
+    Fixed readme images
+
+commit 7873aea8846c3ebbc304d3569ec272d1e7da3446
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sun May 27 00:25:37 2012 -0500
+
+    Some doc about Syte
+
+commit 356f776d2e39e602a6edc62ea64a23ad1d23f519
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sat May 26 22:36:30 2012 -0500
+
+    Setting instruction adjustments on syte_settings.py
+
+commit 0b53240b8eeec9ddd6b3ed62311a6d218eeeda10
+Author: Rodrigo Neri <rodrigo@rigoneri.com>
+Date:   Sat May 26 22:32:07 2012 -0500
+
+    Initial commit
