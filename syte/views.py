@@ -152,54 +152,6 @@ def blog_tags(request, tag_slug):
     return render(request, 'index.html', {'tag_slug': tag_slug})
 
 
-def markdown_blog_index(request):
-    """Basic view of all available markdown blog posts"""
-
-    with open(os.path.join(settings.MARKDOWN_PAGES_DIR,
-                           settings.MARKDOWN_FRONT_PAGE), 'r') as f:
-        source = f.read().decode('utf8')
-
-    return render(request, 'markdown_blog_index.html',
-                  {'articles':settings.MARKDOWN_ARTICLES, 'source':source})
-
-
-def markdown_blog_post(request, slug):
-    """
-    Search the `articles` directory for an article whose slug matches the URL
-    parameter. When we find the article, render it.
-    """
-    article = None
-
-    # Searching articles ..
-    for file_ in os.listdir(settings.MARKDOWN_ARTICLES_DIR):
-        if file_.endswith(settings.MARKDOWN_EXTENSIONS):
-            with open(os.path.join(settings.MARKDOWN_ARTICLES_DIR,
-                                   file_), 'r') as f:
-                if slug == slugify(f.readline()):
-                    article = os.path.join(settings.MARKDOWN_ARTICLES_DIR,
-                                           file_)
-                    break
-
-    # If we didn't find the article, it doesn't exist.
-    if not article:
-        article = os.path.join(settings.MARKDOWN_PAGES_DIR, 'article-404.md')
-
-    with open(article, 'r') as f:
-        lines = f.read().split('\n')
-
-        # Title should be the first line of the file. 
-        title = lines.pop(0).strip().decode('utf8')
-
-        # Category should be second.
-        category = lines.pop(0).strip().decode('utf8')
-
-        # The rest is the article itself.
-        source = '\n'.join(lines).decode('utf8')
-
-    return render(request, 'markdown_post.html',
-                  {'article':dict(title=title, source=source)})
-
-
 def instagram_auth(request):
     context = dict()
     code = request.GET.get('code', None)
