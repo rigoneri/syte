@@ -13,7 +13,7 @@ TUMBLR_API_KEY = '[ENTER TUMBLR API KEY HERE, SEE TUMBLR SETUP INSTRUCTIONS]'
 WORDPRESS_BLOG_URL = '[ENTER WORDPRESS BLOG URL] ex. gordonkoo.wordpress.com'
 WORDPRESS_API_URL = 'https://public-api.wordpress.com/rest/v1/sites/{0}'.format(WORDPRESS_BLOG_URL)
 
-#RSS Feed Integration: (by default use Tumbrl rss feed)
+#RSS Feed Integration: (by default use Tumblr rss feed)
 RSS_FEED_ENABLED = True
 RSS_FEED_URL = 'http://{0}/rss'.format(TUMBLR_BLOG_URL)
 
