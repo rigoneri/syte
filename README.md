@@ -79,9 +79,12 @@ You can use, reproduce and do whatever you want with Syte but I would like you t
 [![gjacobrobertson](https://github.com/rigoneri/syte/blob/master/readme-imgs/gjacobrobertson.png?raw=true)](http://gjacobrobertson.net)
 [![einat](https://github.com/rigoneri/syte/blob/master/readme-imgs/einat.png?raw=true)](http://einatschlagmann.com)
 [![hpanahi](https://github.com/rigoneri/syte/blob/master/readme-imgs/hpanahi.png?raw=true)](http://hes.am)
+[![kevdashdev](https://github.com/rigoneri/syte/blob/master/readme-imgs/kevdashdev.png?raw=true)](http://bykev.in/)
+[![avijeets](https://github.com/rigoneri/syte/blob/master/readme-imgs/avijeets.png?raw=tru)](http://avijeet.me/)
+
+
 
 ## Social Integrations
-
 
 ### Blog
 
@@ -110,7 +113,7 @@ Syte has Dribbble integration, which means that when someone clicks on a link th
 
 ### Instagram
 
-Syte has Instagram integration, which means that you can show your Instagram pictures within your site like a profile. Currently the only way to display your pictures is through their iPhone and Android apps, this is not even possible through their website.
+Syte has Instagram integration, which means that you can show your Instagram pictures within your site like a profile.
 
 ![Syte Instagram](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-5.png?raw=true)
 
