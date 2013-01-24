@@ -4,6 +4,9 @@
     <h3><a href="#{{ id }}">{{ formated_date }}</a></h3>
   </hgroup>
   {{{ body }}}
+  {{#if show_more}}
+  <p><a href="/post/{{ id }}" class="read-more-link">read more</a></p>
+  {{/if}}
   <footer>
     {{#if tags}}
     <h4>Tags</h4>
