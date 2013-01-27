@@ -6,7 +6,7 @@ function setupTent(el) {
     window.location = href;
     return;
   }
- 
+
   var spinner = new Spinner(spin_opts).spin();
   $('#tent-link').append(spinner.el);
 
@@ -17,19 +17,19 @@ function setupTent(el) {
      "json!" + tent_entity_uri + "/followings", 
      "json!" + tent_entity_uri + "/posts/count",
      "text!templates/tent-view.html"],
-    
+
     function(tent_posts, tent_profile, tent_followers, tent_followings, tent_posts_count, tent_view) {
-       
+
       if (tent_posts.error || tent_posts.length == 0) {
         window.location = href;
           return;
         }
 
       var template = Handlebars.compile(tent_view);
-            
-      
+
+
       var user = tent_profile["https://tent.io/types/info/basic/v0.1.0"];
-      
+
       user.entity_url = tent_profile["https://tent.io/types/info/core/v0.1.0"].entity;
       user.feed_url = tent_feed_url;
       user.profile_image_url = user.avatar_url;
@@ -37,7 +37,7 @@ function setupTent(el) {
       user.friends_count = numberWithCommas(tent_followings.length);
       user.followers_count = numberWithCommas(tent_followers.length);
       user.f_description =  user.bio;
-            
+
       var posts = [];
       var item_count = 0;
       $.each(tent_posts, function(i, t) {
@@ -61,7 +61,9 @@ function setupTent(el) {
 
       $(template(template_data)).modal().on('hidden', function () {
         $(this).remove();
-        adjustSelection('home');
+        if (currSelection === 'tent') {
+          adjustSelection('home');
+        }
       })
 
     spinner.stop();

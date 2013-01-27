@@ -34,7 +34,9 @@ function setupInstagram(el) {
 
         $modal = $(template(instagram_data)).modal().on('hidden', function () {
             $(this).remove();
-            adjustSelection('home');
+            if (currSelection === 'instagram') {
+              adjustSelection('home');
+            }
         });
 
         var more_template = Handlebars.compile(instagram_view_more);

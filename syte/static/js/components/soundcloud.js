@@ -29,7 +29,9 @@ function setupSoundcloud(url, el) {
 
         $(template(soundcloud_data)).modal().on('hidden', function () {
           $(this).remove();
-          adjustSelection('home');
+          if (currSelection === 'soundcloud') {
+            adjustSelection('home');
+          }
         });
         spinner.stop();
     });
