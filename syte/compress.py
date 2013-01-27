@@ -48,6 +48,7 @@ def compress_js():
         'libs/require.js',
         'libs/handlebars.js',
         'libs/moment.min.js',
+        'libs/bootstrap-transition.js',
         'libs/bootstrap-modal.js',
         'libs/spin.min.js',
         'libs/prettify.js',
