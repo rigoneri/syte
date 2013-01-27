@@ -72,8 +72,6 @@ function setupLinks() {
 }
 
 function adjustSelection(component) {
-  $('.modal-backdrop').remove();
-
   for (c in allComponents) {
     if (allComponents[c] != component) {
       $('#' + allComponents[c] + '-profile').remove();
