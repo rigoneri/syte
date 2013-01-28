@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
-
 DEPLOYMENT_MODE = 'dev'
 COMPRESS_REVISION_NUMBER = '1.0'
 
-BLOG_PLATFORM = '["wordpress" or "tumblr", without the double quotes]'
+BLOG_PLATFORM = 'tumblr'  # Wordpress or tumblr
 
 #Blog Integration: Tumblr
 TUMBLR_BLOG_URL = '[ENTER TUMBLR BLOG URL] ex. rigoneri.tumblr.com'
@@ -14,7 +13,7 @@ TUMBLR_API_KEY = '[ENTER TUMBLR API KEY HERE, SEE TUMBLR SETUP INSTRUCTIONS]'
 WORDPRESS_BLOG_URL = '[ENTER WORDPRESS BLOG URL] ex. gordonkoo.wordpress.com'
 WORDPRESS_API_URL = 'https://public-api.wordpress.com/rest/v1/sites/{0}'.format(WORDPRESS_BLOG_URL)
 
-#RSS Feed Integration: (by default use Tumbrl rss feed)
+#RSS Feed Integration: (by default use Tumblr rss feed)
 RSS_FEED_ENABLED = True
 RSS_FEED_URL = 'http://{0}/rss'.format(TUMBLR_BLOG_URL)
 
@@ -37,6 +36,11 @@ GITHUB_CLIENT_ID = '[ENTER GITHUB CLIENT ID HERE, SEE GITHUB SETUP INSTRUCTIONS]
 GITHUB_CLIENT_SECRET = '[ENTER GITHUB CLIENT SECRET HERE, SEE GITHUB SETUP INSTRUCTIONS]'
 GITHUB_OAUTH_AUTHORIZE_URL = 'https://github.com/login/oauth/authorize'
 GITHUB_OAUTH_ACCESS_TOKEN_URL = 'https://github.com/login/oauth/access_token'
+
+
+#Stack Overflow Integration
+STACKOVERFLOW_INTEGRATION_ENABLED = True
+STACKOVERFLOW_API_URL = 'http://api.stackoverflow.com/1.1/'
 
 
 #Dribbble Integration
@@ -74,11 +78,14 @@ FOURSQUARE_OAUTH_ACCESS_TOKEN_URL = 'https://foursquare.com/oauth2/access_token'
 GOOGLE_ANALYTICS_TRACKING_ID = ''
 
 
+#ShareThis
+SHARETHIS_PUBLISHER_KEY = ''
+
+
 #Woopra
 WOOPRA_TRACKING_DOMAIN = ''
 WOOPRA_TRACKING_IDLE_TIMEOUT = 300000  # 5 minutes
 WOOPRA_TRACKING_INCLUDE_QUERY = False
-
 
 
 #Disqus Integration
@@ -106,12 +113,17 @@ BITBUCKET_API_URL = 'https://api.bitbucket.org/1.0/'
 # set BITBUCKET_SHOW_FORKS to false to disable
 BITBUCKET_SHOW_FORKS = False
 
+
 #Tent.io Integration
 TENT_INTEGRATION_ENABLED = True
 TENT_ENTITY_URI = '[ENTER YOUR ENTITY URI HERE] ex. https://yourname.tent.is'
 TENT_FEED_URL = '[ENTER A URL TO YOUR FEED] ex. https://yourname.tent.is'
 
 
+#Steam Integration
+STEAM_INTEGRATION_ENABLED = True
+STEAM_API_URL = 'http://api.steampowered.com/ISteamUser'
+STEAM_API_KEY = '[ENTER YOUR STEAM API KEY HERE, SEE STEAM SETUP INSTRUCTIONS]'
 
 
 if DEPLOYMENT_MODE == 'dev':

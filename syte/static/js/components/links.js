@@ -9,7 +9,9 @@ var allComponents = [
   'soundcloud',
   'bitbucket',
   'foursquare',
-  'tent'
+  'tent',
+  'steam',
+  'stackoverflow'
 ];
 
 currSelection = 'home';
@@ -57,6 +59,14 @@ function setupLinks() {
       }
       else if(this.id == 'tent-link' && tent_integration_enabled) {
         adjustSelection('tent', setupTent.bind(this, this));
+      }
+      else if (this.id == 'steam-link' && steam_integration_enabled) {
+        adjustSelection('steam');
+        setupSteam(url, this);
+      }
+      else if (this.id == 'stackoverflow-link' && stackoverflow_integration_enabled) {
+         adjustSelection('stackoverflow');
+         setupStackoverflow(url, this);
       }
       else {
         window.location = this.href;

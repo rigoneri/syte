@@ -1,6 +1,6 @@
 # Syte
 
-Syte is a really simple but powerful packaged personal site that has social integrations like Twitter, GitHub, Dribbble, Instagram, Foursquare, Tumblr, Last.fm, SoundCloud and Bitbucket. You can see it in action on [my personal site](http://rigoneri.com).
+Syte is a really simple but powerful packaged personal site that has social integrations like Twitter, GitHub, Dribbble, Instagram, Foursquare, Tumblr, Wordpress, Last.fm, SoundCloud, Bitbucket, StackOverflow and Steam. You can see it in action on [my personal site](http://rigoneri.com).
 
 ### There is only one rule/suggestion
 
@@ -71,13 +71,24 @@ You can use, reproduce and do whatever you want with Syte but I would like you t
 [![mraxilus](https://github.com/rigoneri/syte/blob/master/readme-imgs/mraxilus.png?raw=true)](http://mraxil.us)
 [![owensbla](https://github.com/rigoneri/syte/blob/master/readme-imgs/blakeowens.png?raw=true)](http://blakeowens.com)
 [![wuotr](https://github.com/rigoneri/syte/blob/master/readme-imgs/wuotr.png?raw=true)](http://wuotr.com)
+[![hassankhan](https://github.com/rigoneri/syte/blob/master/readme-imgs/hassankhan.png?raw=true)](http://hassankhan.me)
+[![srodal](https://github.com/rigoneri/syte/blob/master/readme-imgs/srodal.png?raw=true)](http://www.srodal.name)
+[![crmarsh](https://github.com/rigoneri/syte/blob/master/readme-imgs/crmarsh.png?raw=true)](http://crmarsh.herokuapp.com)
+[![neoromantic](https://github.com/rigoneri/syte/blob/master/readme-imgs/neoromantic.png?raw=true)](http://sergeypetrov.ru)
+[![ilcoso](https://github.com/rigoneri/syte/blob/master/readme-imgs/ilcoso.png?raw=true)](http://ilcoso.herokuapp.com)
+[![gjacobrobertson](https://github.com/rigoneri/syte/blob/master/readme-imgs/gjacobrobertson.png?raw=true)](http://gjacobrobertson.net)
+[![einat](https://github.com/rigoneri/syte/blob/master/readme-imgs/einat.png?raw=true)](http://einatschlagmann.com)
+[![hpanahi](https://github.com/rigoneri/syte/blob/master/readme-imgs/hpanahi.png?raw=true)](http://hes.am)
+[![kevdashdev](https://github.com/rigoneri/syte/blob/master/readme-imgs/kevdashdev.png?raw=true)](http://bykev.in/)
+[![avijeets](https://github.com/rigoneri/syte/blob/master/readme-imgs/avijeets.png?raw=tru)](http://avijeet.me/)
+
+
 
 ## Social Integrations
 
+### Blog
 
-### Blog: Tumblr
-
-Syte uses [Tumblr](http://tumblr.com) for blogging and your blog will be the primary page of the site.
+Syte uses [Tumblr](http://tumblr.com) or [Wordpress.com](http://wordpress.com/) for blogging and your blog will be the primary page of the site.
 
 ![Syte Home](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-1.png?raw=true)
 
@@ -102,7 +113,7 @@ Syte has Dribbble integration, which means that when someone clicks on a link th
 
 ### Instagram
 
-Syte has Instagram integration, which means that you can show your Instagram pictures within your site like a profile. Currently the only way to display your pictures is through their iPhone and Android apps, this is not even possible through their website.
+Syte has Instagram integration, which means that you can show your Instagram pictures within your site like a profile.
 
 ![Syte Instagram](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-5.png?raw=true)
 
@@ -139,6 +150,18 @@ Syte has Bitbucket integration, which means that when someone clicks on a link t
 Syte has Tent.io integration, which means that you can show your Tent.io public posts within your site like a profile.
 
 ![Syte Tent.io](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-10.png?raw=true)
+
+### Steam
+
+Syte has Steam integration, which means that you can show your Steam Community profile within your site.
+
+![Syte Steam](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-11.png?raw=true)
+
+### StackOverflow
+
+Syte has StackOverflow integration, which means that you can show your StackOverflow profile within your site.
+
+![Syte Steam](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-12.png?raw=true)
 
 ## Responsive UI
 
@@ -191,21 +214,31 @@ Then make some text and link changes. Open **base.html** located in `syte > temp
 6. Inside the `nav` tag change the **twitter-link** href to point to your twitter profile, if you don't have twitter just remove that whole line.
 7. Inside the `nav` tag change the **github-link** href to point to your GitHub profile, if you don't have GitHub just remove that whole line.
 8. Inside the `nav` tag change the **dribbble-link** href to point to your Dribbble profile, if you don't have Dribbble just remove that whole line.
-9. Inside the `nav` tag change the **contact-link** href to point to your email address.
-10. Under `class="mobile-nav"` div change the **h3** link text to have your domain name or your name.
+9. Inside the `nav` tag change the **steam-link** href to point to your Steam community profile, if you don't have Steam just remove that whole line.
+10. Inside the `nav` tag change the **stackoverflow-link** href to point to your StackOverflow profile, if you don't have StackOverflow just remove that whole line.
+11. Inside the `nav` tag change the **contact-link** href to point to your email address.
+12. Under `class="mobile-nav"` div change the **h3** link text to have your domain name or your name.
 
 Then pick your **adjacent color** and change the `@adjacent-color` hex value in variables.less located in `syte > static > less > variables.less` Make sure the color you chose is not used by anyone on the list up above. If you want blue pick a different shade of blue, there are hundreds out there...
 
 
 
 
-### Setting up your blog (Tumblr)
+### Setting up your blog
 
-If you already have a Tumblr blog good! If you don't [signup for one here](https://www.tumblr.com/) it's really easy! I might eventually make Syte integrate with WordPress as well, if you beat me to it please send a pull request.
+Syte uses Tumblr or Wordpress for blogging.
 
-Once you have your Tumblr blog you will need to get the `api_key` needed to call their APIs. In order to do that **register your site** with them by going to <http://www.tumblr.com/oauth/register>, fill in the information about your site, there is no need to enter a default callback url or an icon. Once you are done your website will be listed under <http://www.tumblr.com/oauth/apps>, save the `OAuth Consumer Key` value that's the `api_key` we need for Syte.
+#### Setting up Tumblr
+
+If you have a Tumblr blog you will need to get the `api_key` needed to call their APIs. In order to do that **register your site** with them by going to <http://www.tumblr.com/oauth/register>, fill in the information about your site, there is no need to enter a default callback url or an icon. Once you are done your website will be listed under <http://www.tumblr.com/oauth/apps>, save the `OAuth Consumer Key` value that's the `api_key` we need for Syte.
 
 Once you have the `api_key` from Tumblr you have to enter it in **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the key under `TUMBLR_API_KEY`, also please enter your Tumblr url under `TUMBLR_BLOG_URL` see the example on how it should be formatted.
+
+#### Setting up Wordpress
+
+For now Syte only support wordpress blogs that are build using [wordpress.com](http://wordpress.com). 
+
+Open `syte > syte_settings.py` and under `WORDPRESS_BLOG_URL` enter ther url of your wordpress.com blog, also under `BLOG_PLATFORM` set it to "wordpress".
 
 #### Comments
 
@@ -364,6 +397,17 @@ Inside **syte_settings.py** there are two other options to configure your Tent.i
 * ***Your Entity-URI*** under `TENT_ENTITY_URI`
 * ***URL to a Feed or Tent-Status*** under `TENT_FEED_URL`
 
+### Setting up Steam integration
+
+In order to setup Steam integration you first need to create a Steam Web API key by going to <http://steamcommunity.com/dev/apikey>. Once you have the `STEAM WEB API KEY` from Steam open the **syte_settings.py** file and enter it under the `STEAM_API_KEY` setting.
+
+If you want to turn off Steam integration just set `STEAM_INTEGRATION_ENABLED` to False.
+
+### Setting up StackOverflow integration
+
+The StackOverflow integration does not make any authenticated calls nor does it require a registered API key.
+
+If you want to turn off StackOverflow integration just set `STACKOVERFLOW_INTEGRATION_ENABLED` to False.
 
 
 ## Running & Deployment Instructions

@@ -8,6 +8,13 @@ function renderBlogPosts(posts) {
   if (posts.length === 0) {
       reachedEnd = true;
   }
+  
+  //Update this every time there are changes to the required 
+  //templates since it's cached every time
+  require.config({
+    urlArgs: "bust=v1" 
+  })
+
   require(["text!templates/blog-post-text.html",
           "text!templates/blog-post-photo.html",
           "text!templates/blog-post-link.html",
@@ -33,8 +40,14 @@ function renderBlogPosts(posts) {
             if (disqus_integration_enabled)
                 p.disqus_enabled = true;
 
-            if (p.type == 'text')
+            if (p.type == 'text') {
+                var idx = p.body.indexOf('<!-- more -->');
+                if (idx > 0) {
+                    p.body = p.body.substring(0, idx)
+                    p.show_more = true;
+                }
                 $('#blog-posts').append(text_template(p));
+            }
             else if (p.type == 'photo')
                 $('#blog-posts').append(photo_template(p));
             else if (p.type == 'link')
@@ -48,7 +61,6 @@ function renderBlogPosts(posts) {
 
         });
 
-        setupLinks();
         adjustBlogHeaders();
         prettyPrint();
         setTimeout(setupBlogHeaderScroll, 1000);

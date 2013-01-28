@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from django.views.generic.simple import direct_to_template
 from django.conf.urls import patterns, url
 from django.conf import settings
 
@@ -11,6 +12,7 @@ urlpatterns = patterns('',
     url(r'^tags/(?P<tag_slug>[\s\w\d-]+)/?$', 'syte.views.blog.blog_tags'),
     url(r'^blog.json/?$', 'syte.views.blog.blog'),
     url(r'^about/?$', 'syte.views.home.home'),
+    url(r'^rss/?$', 'syte.views.home.rss'),
     url(r'^/?$', 'syte.views.home.home'),
 )
 
@@ -78,8 +80,22 @@ if settings.SOUNDCLOUD_INTEGRATION_ENABLED:
         url(r'^soundcloud/(?P<username>\S+)/?$', 'syte.views.soundcloud.soundcloud'),
     )
 
+#Steam Integration
+if settings.STEAM_INTEGRATION_ENABLED:
+    urlpatterns += patterns('',
+        url(r'^steam/(?P<username>\S+)/?$', 'syte.views.steam.steam'),
+    )
+
+#StackOverflow Integration
+if settings.STACKOVERFLOW_INTEGRATION_ENABLED:
+    urlpatterns += patterns('',
+        url(r'^stackoverflow/(?P<userid>[\-\w]+)/?$', 'syte.views.stackoverflow.stackoverflow'),
+    )
+
 #Statics: Hacky for now... fix this later...
 urlpatterns += patterns('',
+    (r'^robots\.txt$', direct_to_template,
+        {'template': 'robots.txt', 'mimetype': 'text/plain'}),
     (r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {
         'url': '/static/imgs/favicon.ico'}),
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',
