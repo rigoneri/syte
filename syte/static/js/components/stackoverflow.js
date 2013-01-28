@@ -52,7 +52,9 @@ function setupStackoverflow(url, el) {
 
             $(template(template_data)).modal().on('hidden', function () {
                 $(this).remove();
-                adjustSelection('home');
+                if (currSelection === 'stackoverflow') {
+                  adjustSelection('home');
+                }
             })
 
             spinner.stop();

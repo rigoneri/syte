@@ -48,7 +48,9 @@ function setupTwitter(url, el) {
 
             $(template(template_data)).modal().on('hidden', function () {
                 $(this).remove();
-                adjustSelection('home');
+                if (currSelection === 'twitter') {
+                  adjustSelection('home');
+                }
             })
 
             spinner.stop();
