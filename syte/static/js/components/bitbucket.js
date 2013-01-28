@@ -31,7 +31,9 @@ function setupBitbucket(url, el) {
 
             $(template(bitbucket_data)).modal().on('hidden', function () {
                 $(this).remove();
-                adjustSelection('home');
+                if (currSelection === 'bitbucket') {
+                  adjustSelection('home');
+                }
             })
 
             spinner.stop();
