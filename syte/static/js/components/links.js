@@ -61,12 +61,10 @@ function setupLinks() {
         adjustSelection('tent', setupTent.bind(this, this));
       }
       else if (this.id == 'steam-link' && steam_integration_enabled) {
-        adjustSelection('steam');
-        setupSteam(url, this);
+        adjustSelection('steam', setupSteam.bind(this, url, this));
       }
       else if (this.id == 'stackoverflow-link' && stackoverflow_integration_enabled) {
-         adjustSelection('stackoverflow');
-         setupStackoverflow(url, this);
+        adjustSelection('stackoverflow', setupStackoverflow.bind(this, url, this));
       }
       else {
         window.location = this.href;
