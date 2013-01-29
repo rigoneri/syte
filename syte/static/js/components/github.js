@@ -32,7 +32,9 @@ function setupGithub(url, el) {
 
             $(template(github_data)).modal().on('hidden', function () {
                 $(this).remove();
-                adjustSelection('home');
+                if (currSelection === 'github') {
+                  adjustSelection('home');
+                }
             })
 
             spinner.stop();

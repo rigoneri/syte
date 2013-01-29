@@ -35,7 +35,9 @@ function setupSteam(url, el) {
 
             $(template(template_data)).modal().on('hidden', function () {
                 $(this).remove();
-                adjustSelection('home');
+                if (currSelection === 'steam') {
+                  adjustSelection('home');
+                }
             })
 
             spinner.stop();

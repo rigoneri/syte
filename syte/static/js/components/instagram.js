@@ -14,6 +14,8 @@ function setupInstagram(el) {
           "text!templates/instagram-view.html",
           "text!templates/instagram-view-more.html"],
      function(instagram_data, instagram_view, instagram_view_more) {
+        var $modal;
+
         if (instagram_data.media == 0){
             window.location = href;
             return;
@@ -30,14 +32,16 @@ function setupInstagram(el) {
            p.formated_date = moment.unix(parseInt(p.created_time)).fromNow();
         });
 
-        $(template(instagram_data)).modal().on('hidden', function () {
+        $modal = $(template(instagram_data)).modal().on('hidden', function () {
             $(this).remove();
-            adjustSelection('home');
-        })
+            if (currSelection === 'instagram') {
+              adjustSelection('home');
+            }
+        });
 
         var more_template = Handlebars.compile(instagram_view_more);
 
-        $('#load-more-pics').click(function(e) {
+        $modal.find('#load-more-pics').click(function(e) {
           next = $(this).attr('data-control-next');
 
           var spinner = new Spinner(spin_opts).spin();

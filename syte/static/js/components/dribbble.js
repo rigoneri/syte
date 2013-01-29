@@ -40,7 +40,9 @@ function setupDribbble(url, el) {
 
             $(template(template_data)).modal().on('hidden', function () {
                 $(this).remove();
-                adjustSelection('home');
+                if (currSelection === 'dribbble') {
+                  adjustSelection('home');
+                }
             })
 
             spinner.stop();

@@ -8,9 +8,13 @@
   left: 0;
   background: #000;
 
-  &.fade, &.fade-large {
+  &.fade {
     .transition(e('opacity .2s linear'));
     .opacity(0);
+  }
+
+  &.in {
+    z-index: 1000;
   }
 }
 
@@ -29,21 +33,23 @@
   background-color: #fff;
   border-right: 1px solid @text-color;
   .box-shadow(0 0 7px rgba(0,0,0,0.5));
+
+  &.large {
+    width: 700px;
+  }
 }
 
 .modal {
-  &.fade-large {
-    width: 700px;
-    .transition(e('left .4s ease-out'));
-    left: -1100px;
-  }
-
   &.fade {
     .transition(e('left .4s ease-out'));
     left: -700px;
+
+    &.large {
+      left: -1100px;
+    }
   }
 
-  &.fade.in, &.fade-large.in { left: 240px; }
+  &.fade.in { left: 240px; }
 }
 
 .close {
