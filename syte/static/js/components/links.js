@@ -34,19 +34,26 @@ function setupLinks() {
         adjustSelection('home');
       }
       else if (this.id == 'apps-link') {
-         adjustSelection('apps');
+         adjustSelection('apps', function() {
+           var spinner = new Spinner(spin_opts).spin();
+           $('#apps-link').append(spinner.el);
 
-         var spinner = new Spinner(spin_opts).spin();
-         $('#apps-link').append(spinner.el);
+            require.config({
+              urlArgs: "bust=v1" 
+            })
 
-         require(["text!templates/apps-view.html"],
-            function(apps_view) {
-              $(apps_view).modal().on('hidden', function () {
-                $(this).remove();
-                adjustSelection('home');
-              })
-              spinner.stop();
-            });
+           require(["text!templates/apps-view.html"],
+              function(apps_view) {
+                var template = Handlebars.compile(apps_view);
+                $(template()).modal().on('hidden', function () {
+                  $(this).remove();
+                  if (currSelection === 'apps') {
+                    adjustSelection('home');
+                  }
+                })
+                spinner.stop();
+              });
+        });
       }
       else if(this.id == 'instagram-link' && instagram_integration_enabled) {
         adjustSelection('instagram', setupInstagram.bind(this, this));
@@ -93,6 +100,9 @@ function adjustSelection(component, callback) {
 
   if (currSelection !== 'home') {
     $currProfileEl = $('#' + currSelection + '-profile');
+    if (currSelection === 'apps') {
+      $currProfileEl = $('#apps-modal');
+    }
     transition = $.support.transition && $currProfileEl.hasClass('fade'),
     $currProfileEl.modal('hide');
     if (callback) {
@@ -107,10 +117,10 @@ function adjustSelection(component, callback) {
   else if (callback) {
     callback();
   }
-
+/*
   if (component != 'apps')
     $('#apps-modal').remove();
-
+*/
   $('.main-nav').children('li').removeClass('sel');
   $('#' + component + '-link').parent().addClass('sel');
 
