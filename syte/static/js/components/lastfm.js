@@ -73,7 +73,9 @@ function setupLastfm(url, el) {
 
             $(template(lastfm_data)).modal().on('hidden', function () {
                 $(this).remove();
-                adjustSelection('home');
+                if (currSelection === 'lastfm') {
+                  adjustSelection('home');
+                }
             })
 
             spinner.stop();
