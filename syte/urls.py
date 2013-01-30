@@ -92,6 +92,13 @@ if settings.STACKOVERFLOW_INTEGRATION_ENABLED:
         url(r'^stackoverflow/(?P<userid>[\-\w]+)/?$', 'syte.views.stackoverflow.stackoverflow'),
     )
 
+#Sitemap
+if settings.SITEMAP_ENABLED:
+    urlpatterns += patterns('',
+        (r'^sitemap\.xml$', direct_to_template,
+            {'template': 'sitemap.xml', 'mimetype': 'application/xml'})
+        )
+
 #Statics: Hacky for now... fix this later...
 urlpatterns += patterns('',
     (r'^robots\.txt$', direct_to_template,
