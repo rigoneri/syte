@@ -35,7 +35,7 @@ function renderBlogPosts(posts) {
 
         $('.loading').remove();
         $.each(posts, function(i, p) {
-            p.formated_date = moment(p.date).format('MMMM DD, YYYY')
+            p.formated_date = moment.utc(p.date, 'YYYY-MM-DD HH:mm:ss').local().format('MMMM DD, YYYY')
 
             if (disqus_integration_enabled)
                 p.disqus_enabled = true;
