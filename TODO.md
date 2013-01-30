@@ -28,4 +28,5 @@ List of services to add integration for:
     - trakt
     - Google+
     - Posterous Spaces
+    - viewbook.com
 
