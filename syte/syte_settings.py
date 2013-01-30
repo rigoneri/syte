@@ -126,6 +126,8 @@ STEAM_API_URL = 'http://api.steampowered.com/ISteamUser'
 STEAM_API_KEY = '[ENTER YOUR STEAM API KEY HERE, SEE STEAM SETUP INSTRUCTIONS]'
 
 
+SITEMAP_ENABLED = False
+
 if DEPLOYMENT_MODE == 'dev':
     SITE_ROOT_URI = 'http://127.0.0.1:8000/'
     DEBUG = True
