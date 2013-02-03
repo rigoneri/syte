@@ -580,7 +580,7 @@ h3 {
 }
 
 a {
-  color: #D75701;
+  color: #ffcc00;
   font-weight: 400;
   text-decoration: none;
 }
@@ -605,7 +605,7 @@ strong {
 }
 
 .wrapper {
-  max-width: 800px;
+  max-width: 650px;
   margin: 0 auto;
   position: relative;
   padding: 0 20px;
@@ -616,7 +616,7 @@ section img {
 }
 
 blockquote {
-  border-left: 3px solid #D75701;
+  border-left: 3px solid #ffcc00;
   margin: 0;
   padding: 0 0 0 20px;
   font-style: italic;
@@ -709,7 +709,7 @@ dt {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
 }
 #header nav {
-  max-width: 800px;
+  max-width: 650px;
   margin: 0 auto;
   padding: 0 10px;
   background: blue;
@@ -781,7 +781,7 @@ dt {
 }
 
 section {
-  max-width: 800px;
+  max-width: 650px;
   padding: 30px 0px 50px 0px;
   margin: 20px 0;
   margin-top: 70px;
