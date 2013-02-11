@@ -70,7 +70,7 @@ You can use, reproduce and do whatever you want with Syte but I would like you t
 [![kevdashdev](https://github.com/rigoneri/syte/blob/master/readme-imgs/kevdashdev.png?raw=true)](http://bykev.in/)
 [![avijeets](https://github.com/rigoneri/syte/blob/master/readme-imgs/avijeets.png?raw=tru)](http://avijeet.me/)
 [![avijeets](https://github.com/rigoneri/syte/blob/master/readme-imgs/devgeek.png?raw=tru)](http://devgeek.me/)
-
+[![christianrahn](https://github.com/rigoneri/syte/blob/master/readme-imgs/christianrahn.png?raw=tru)](http://christianrahn.us/)
 
 ## Social Integrations
 
