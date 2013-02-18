@@ -1,8 +1,8 @@
 # Syte
 
-Syte is a really simple but powerful packaged personal site that has social integrations like Twitter, GitHub, Dribbble, Instagram, Foursquare, Tumblr, Last.fm, SoundCloud and Bitbucket. You can see it in action on [my personal site](http://rigoneri.com).
+Syte is a really simple but powerful packaged personal site that has social integrations like Twitter, GitHub, Dribbble, Instagram, Foursquare, Tumblr, Wordpress, Last.fm, SoundCloud, Bitbucket, StackOverflow and Steam. You can see it in action on [my personal site](http://rigoneri.com).
 
-### There is only one rule
+### There is only one rule/suggestion
 
 You can use, reproduce and do whatever you want with Syte but I would like you to choose a different adjacent color as the ones used by the people below. Once you have chosen your color and deployed your Syte based site, please send a pull request with an image of you containing the color on the border like the ones below. The image needs to be 60x60 px.
 
@@ -19,32 +19,22 @@ You can use, reproduce and do whatever you want with Syte but I would like you t
 [![evilfaeton](https://github.com/rigoneri/syte/blob/master/readme-imgs/evilfaeton.png?raw=true)](http://evilfaeton.com)
 [![eveiga](https://github.com/rigoneri/syte/blob/master/readme-imgs/eveiga.png?raw=true)](http://eveiga.herokuapp.com)
 [![mikaelo](https://github.com/rigoneri/syte/blob/master/readme-imgs/mikaelo.png?raw=true)](http://mikaelo.herokuapp.com)
-[![mikehodgson](https://github.com/rigoneri/syte/blob/master/readme-imgs/mikehodgson.png?raw=true)](http://mikehodgson.com)
 [![charliekey](https://github.com/rigoneri/syte/blob/master/readme-imgs/charliekey.png?raw=true)](http://charliekey.me)
-[![andrewthebold](https://github.com/rigoneri/syte/blob/master/readme-imgs/andrewthebold.png?raw=true)](http://atb.herokuapp.com/)
-[![BobuSumisu](https://github.com/rigoneri/syte/blob/master/readme-imgs/oyvind-ingvaldsen.png?raw=true)](http://oyvind-ingvaldsen.net)
 [![nurihodges](https://github.com/rigoneri/syte/blob/master/readme-imgs/nurihodges.png?raw=true)](http://nurihodges.herokuapp.com)
-[![markwatson](https://github.com/rigoneri/syte/blob/master/readme-imgs/mrkrwtsn.png?raw=true)](http://markwatson.us)
 [![manavo](https://github.com/rigoneri/syte/blob/master/readme-imgs/manavo.png?raw=true)](http://manavo.com)
 [![rshepherd](https://github.com/rigoneri/syte/blob/master/readme-imgs/rshepherd.png?raw=true)](http://rshepherd.org)
-[![wavendano](https://github.com/rigoneri/syte/blob/master/readme-imgs/wavendano.png?raw=true)](http://willieavendano.me)
 [![yurytsukerman](https://github.com/rigoneri/syte/blob/master/readme-imgs/yurytsukerman.png?raw=true)](http://yurytsukerman.com)
 [![javisoto](https://github.com/rigoneri/syte/blob/master/readme-imgs/javisoto.png?raw=true)](http://www.javisoto.es)
 [![joneisen](https://github.com/rigoneri/syte/blob/master/readme-imgs/joneisen.png?raw=true)](http://www.joneisen.me)
-[![natetarrh](https://github.com/rigoneri/syte/blob/master/readme-imgs/natetarrh.png?raw=true)](http://www.natetarrh.com)
-[![arnonate](https://github.com/rigoneri/syte/blob/master/readme-imgs/arnonate.png?raw=true)](http://natearnold.me)
 [![mobileiteration](https://github.com/rigoneri/syte/blob/master/readme-imgs/mobileiteration.png?raw=true)](http://mobileiteration.com)
-[![owen](https://github.com/rigoneri/syte/blob/master/readme-imgs/owen.png?raw=true)](http://owened.co.nz)
 [![danielcampo](https://github.com/rigoneri/syte/blob/master/readme-imgs/danielcampo.png?raw=true)](http://danielcampo.com)
 [![bhashkar](https://github.com/rigoneri/syte/blob/master/readme-imgs/bhashkar.png?raw=true)](http://bhashkar.me)
 [![lukelee](https://github.com/rigoneri/syte/blob/master/readme-imgs/lukelee.png?raw=true)](http://lukelee-syte.herokuapp.com)
 [![dannycochran](https://github.com/rigoneri/syte/blob/master/readme-imgs/dannycochran.png?raw=true)](http://dcochran.com)
 [![srir](https://github.com/rigoneri/syte/blob/master/readme-imgs/srir.png?raw=true)](http://sraghavan.net)
-[![tachang](https://github.com/rigoneri/syte/blob/master/readme-imgs/jeff-tchang.png?raw=true)](http://www.returnbooleantrue.com)
 [![junseki](https://github.com/rigoneri/syte/blob/master/readme-imgs/junseki.png?raw=true)](http://junseki.com)
 [![allydimg](https://github.com/rigoneri/syte/blob/master/readme-imgs/allydimg.png?raw=true)](http://allyd.herokuapp.com)
 [![hussfelt](https://github.com/rigoneri/syte/blob/master/readme-imgs/hussfelt.png?raw=true)](http://hussfelt.net)
-[![amastys](https://github.com/rigoneri/syte/blob/master/readme-imgs/amastys.png?raw=true)](http://amastys.ru)
 [![damilare](https://github.com/rigoneri/syte/blob/master/readme-imgs/damilare.png?raw=true)](http://dami.me)
 [![eventh](https://github.com/rigoneri/syte/blob/master/readme-imgs/eventh.png?raw=true)](http://eventh.herokuapp.com)
 [![clayferris](https://github.com/rigoneri/syte/blob/master/readme-imgs/clayferris.png?raw=true)](http://claytonferris.com)
@@ -59,15 +49,34 @@ You can use, reproduce and do whatever you want with Syte but I would like you t
 [![jeiting](https://github.com/rigoneri/syte/blob/master/readme-imgs/jeiting.png?raw=true)](http://jacobeiting.com)
 [![chriskun](https://github.com/rigoneri/syte/blob/master/readme-imgs/chriskun.png?raw=true)](http://chrisbolton.me)
 [![denibertovic](https://github.com/rigoneri/syte/blob/master/readme-imgs/deni.png?raw=true)](http://blog.initeq.net)
-
-
+[![calebalbritton](https://github.com/rigoneri/syte/blob/master/readme-imgs/calebalbritton.png?raw=true)](http://www.calebalbritton.com)
+[![vincentying](https://github.com/rigoneri/syte/blob/master/readme-imgs/vincentying.png?raw=true)](http://ying82.herokuapp.com)
+[![danielmayo](https://github.com/rigoneri/syte/blob/master/readme-imgs/danmayo.png?raw=true)](http://www.danielmayo.co.uk/)
+[![krisrang](https://github.com/rigoneri/syte/blob/master/readme-imgs/krisrang.png?raw=true)](http://www.kristjanrang.eu)
+[![mihan007](https://github.com/rigoneri/syte/blob/master/readme-imgs/mihan007.png?raw=true)](http://mihan007.com)
+[![garethwestern](https://github.com/rigoneri/syte/blob/master/readme-imgs/garethwestern.png?raw=true)](http://garethwestern.com)
+[![birarda](https://github.com/rigoneri/syte/blob/master/readme-imgs/birarda.png?raw=true)](http://www.birarda.com)
+[![mraxilus](https://github.com/rigoneri/syte/blob/master/readme-imgs/mraxilus.png?raw=true)](http://mraxil.us)
+[![owensbla](https://github.com/rigoneri/syte/blob/master/readme-imgs/blakeowens.png?raw=true)](http://blakeowens.com)
+[![wuotr](https://github.com/rigoneri/syte/blob/master/readme-imgs/wuotr.png?raw=true)](http://wuotr.com)
+[![hassankhan](https://github.com/rigoneri/syte/blob/master/readme-imgs/hassankhan.png?raw=true)](http://hassankhan.me)
+[![srodal](https://github.com/rigoneri/syte/blob/master/readme-imgs/srodal.png?raw=true)](http://www.srodal.name)
+[![crmarsh](https://github.com/rigoneri/syte/blob/master/readme-imgs/crmarsh.png?raw=true)](http://crmarsh.herokuapp.com)
+[![neoromantic](https://github.com/rigoneri/syte/blob/master/readme-imgs/neoromantic.png?raw=true)](http://sergeypetrov.ru)
+[![ilcoso](https://github.com/rigoneri/syte/blob/master/readme-imgs/ilcoso.png?raw=true)](http://ilcoso.herokuapp.com)
+[![gjacobrobertson](https://github.com/rigoneri/syte/blob/master/readme-imgs/gjacobrobertson.png?raw=true)](http://gjacobrobertson.net)
+[![einat](https://github.com/rigoneri/syte/blob/master/readme-imgs/einat.png?raw=true)](http://einatschlagmann.com)
+[![hpanahi](https://github.com/rigoneri/syte/blob/master/readme-imgs/hpanahi.png?raw=true)](http://hes.am)
+[![kevdashdev](https://github.com/rigoneri/syte/blob/master/readme-imgs/kevdashdev.png?raw=true)](http://bykev.in/)
+[![avijeets](https://github.com/rigoneri/syte/blob/master/readme-imgs/avijeets.png?raw=tru)](http://avijeet.me/)
+[![avijeets](https://github.com/rigoneri/syte/blob/master/readme-imgs/devgeek.png?raw=tru)](http://devgeek.me/)
+[![christianrahn](https://github.com/rigoneri/syte/blob/master/readme-imgs/christianrahn.png?raw=tru)](http://christianrahn.us/)
 
 ## Social Integrations
 
+### Blog
 
-### Blog: Tumblr
-
-Syte uses [Tumblr](http://tumblr.com) for blogging and your blog will be the primary page of the site.
+Syte uses [Tumblr](http://tumblr.com) or [Wordpress.com](http://wordpress.com/) for blogging and your blog will be the primary page of the site.
 
 ![Syte Home](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-1.png?raw=true)
 
@@ -92,7 +101,7 @@ Syte has Dribbble integration, which means that when someone clicks on a link th
 
 ### Instagram
 
-Syte has Instagram integration, which means that you can show your Instagram pictures within your site like a profile. Currently the only way to display your pictures is through their iPhone and Android apps, this is not even possible through their website.
+Syte has Instagram integration, which means that you can show your Instagram pictures within your site like a profile.
 
 ![Syte Instagram](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-5.png?raw=true)
 
@@ -124,9 +133,26 @@ Syte has Bitbucket integration, which means that when someone clicks on a link t
 
 ![Syte Bitbucket](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-8.png?raw=true)
 
+### Tent.io
+
+Syte has Tent.io integration, which means that you can show your Tent.io public posts within your site like a profile.
+
+![Syte Tent.io](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-10.png?raw=true)
+
+### Steam
+
+Syte has Steam integration, which means that you can show your Steam Community profile within your site.
+
+![Syte Steam](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-11.png?raw=true)
+
+### StackOverflow
+
+Syte has StackOverflow integration, which means that you can show your StackOverflow profile within your site.
+
+![Syte Steam](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-12.png?raw=true)
 
 ## Responsive UI
- 
+
 Syte is responsive, which means that it scales down to a mobile device screen size.
 
 ![Syte Responsive 1](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-r-1.png?raw=true) ![Syte Responsive 1](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-r-2.png?raw=true)
@@ -176,21 +202,31 @@ Then make some text and link changes. Open **base.html** located in `syte > temp
 6. Inside the `nav` tag change the **twitter-link** href to point to your twitter profile, if you don't have twitter just remove that whole line.
 7. Inside the `nav` tag change the **github-link** href to point to your GitHub profile, if you don't have GitHub just remove that whole line.
 8. Inside the `nav` tag change the **dribbble-link** href to point to your Dribbble profile, if you don't have Dribbble just remove that whole line.
-9. Inside the `nav` tag change the **contact-link** href to point to your email address.
-10. Under `class="mobile-nav"` div change the **h3** link text to have your domain name or your name.
+9. Inside the `nav` tag change the **steam-link** href to point to your Steam community profile, if you don't have Steam just remove that whole line.
+10. Inside the `nav` tag change the **stackoverflow-link** href to point to your StackOverflow profile, if you don't have StackOverflow just remove that whole line.
+11. Inside the `nav` tag change the **contact-link** href to point to your email address.
+12. Under `class="mobile-nav"` div change the **h3** link text to have your domain name or your name.
 
 Then pick your **adjacent color** and change the `@adjacent-color` hex value in variables.less located in `syte > static > less > variables.less` Make sure the color you chose is not used by anyone on the list up above. If you want blue pick a different shade of blue, there are hundreds out there...
 
 
 
 
-### Setting up your blog (Tumblr)
+### Setting up your blog
 
-If you already have a Tumblr blog good! If you don't [signup for one here](https://www.tumblr.com/) it's really easy! I might eventually make Syte integrate with WordPress as well, if you beat me to it please send a pull request.
+Syte uses Tumblr or Wordpress for blogging.
 
-Once you have your Tumblr blog you will need to get the `api_key` needed to call their APIs. In order to do that **register your site** with them by going to <http://www.tumblr.com/oauth/register>, fill in the information about your site, there is no need to enter a default callback url or an icon. Once you are done your website will be listed under <http://www.tumblr.com/oauth/apps>, save the `OAuth Consumer Key` value that's the `api_key` we need for Syte.
+#### Setting up Tumblr
+
+If you have a Tumblr blog you will need to get the `api_key` needed to call their APIs. In order to do that **register your site** with them by going to <http://www.tumblr.com/oauth/register>, fill in the information about your site, there is no need to enter a default callback url or an icon. Once you are done your website will be listed under <http://www.tumblr.com/oauth/apps>, save the `OAuth Consumer Key` value that's the `api_key` we need for Syte.
 
 Once you have the `api_key` from Tumblr you have to enter it in **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the key under `TUMBLR_API_KEY`, also please enter your Tumblr url under `TUMBLR_BLOG_URL` see the example on how it should be formatted.
+
+#### Setting up Wordpress
+
+For now Syte only support wordpress blogs that are build using [wordpress.com](http://wordpress.com). 
+
+Open `syte > syte_settings.py` and under `WORDPRESS_BLOG_URL` enter ther url of your wordpress.com blog, also under `BLOG_PLATFORM` set it to "wordpress".
 
 #### Comments
 
@@ -256,7 +292,7 @@ You don't have to do anything to setup the Dribbble integration. If you want to 
 
 Instagram has the same level of security as GitHub and similar steps on getting the access token ourselves. To get started go to <http://instagram.com/developer/>, sign in and crate a new client by clicking on the ***Manage Clients*** link on the top right side.
 
-Enter the ***Application Name***, ***Description***, ***Website*** and ***OAuth redirect_Uri***. For the OAuth redirect_uri enter `http://127.0.0.1:8000/instagram/auth` for now since we will get the access token while running it locally. Once you are done registering your client you will be given the ***Client ID*** and ***Client Secret***.
+Enter the ***Application Name***, ***Description***, ***Website*** and ***OAuth redirect_Uri***. For the OAuth redirect_uri enter `http://127.0.0.1:8000/instagram/auth/` for now since we will get the access token while running it locally. The trailing slash is required for Instagram not to complain that the redirect_Uri is wrong. Once you are done registering your client you will be given the ***Client ID*** and ***Client Secret***.
 
 Once you have those two items from Instagram you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
 
@@ -321,7 +357,7 @@ In order to setup the SoundCloud integration you first need to create a SoundClo
 Inside **syte_settings.py** there are two other options to configure how your SoundCloud tracks will be shown.
 
 * `SOUNDCLOUD_SHOW_ARTWORK` (Boolean) set this option to true if you want to show your track artwork on page.
-* `SOUNDCLOUD_PLAYER_COLOR` you can set your widget theme color here. Use Hex values only without `#` 
+* `SOUNDCLOUD_PLAYER_COLOR` you can set your widget theme color here. Use Hex values only without `#`
 
 If you want to turn off SoundCloud integration just set `SOUNDCLOUD_INTEGRATION_ENABLED` to False.
 
@@ -338,6 +374,28 @@ To display the fork count on repositories set `BITBUCKET_SHOW_FORKS` to True.  T
 The Bitbucket API throttles the user resource to 100 calls every 30 minutes.
 
 
+### Setting up Tent.io integration
+
+The Tent.io integration does not make any authenticated calls nor does it require a registered API key.
+
+If you want to turn off Tent.io integration just set `TENT_INTEGRATION_ENABLED` to False.
+
+Inside **syte_settings.py** there are two other options to configure your Tent.io entity.
+
+* ***Your Entity-URI*** under `TENT_ENTITY_URI`
+* ***URL to a Feed or Tent-Status*** under `TENT_FEED_URL`
+
+### Setting up Steam integration
+
+In order to setup Steam integration you first need to create a Steam Web API key by going to <http://steamcommunity.com/dev/apikey>. Once you have the `STEAM WEB API KEY` from Steam open the **syte_settings.py** file and enter it under the `STEAM_API_KEY` setting.
+
+If you want to turn off Steam integration just set `STEAM_INTEGRATION_ENABLED` to False.
+
+### Setting up StackOverflow integration
+
+The StackOverflow integration does not make any authenticated calls nor does it require a registered API key.
+
+If you want to turn off StackOverflow integration just set `STACKOVERFLOW_INTEGRATION_ENABLED` to False.
 
 
 ## Running & Deployment Instructions

@@ -4,6 +4,9 @@
     <h3><a href="#{{ id }}">{{ formated_date }}</a></h3>
   </hgroup>
   {{{ body }}}
+  {{#if show_more}}
+  <p><a href="/post/{{ id }}" class="read-more-link">read more</a></p>
+  {{/if}}
   <footer>
     {{#if tags}}
     <h4>Tags</h4>
@@ -12,6 +15,16 @@
       <li><a href="/tags/{{ this }}">{{ this }}</a></li>
       {{/each}}
     </ul>
+    {{/if}}
+    {{#if sharethis_enabled}}
+    <div class="sharethis">
+      <span class='st_facebook_hcount' displayText='Facebook'></span>
+      <span class='st_twitter_hcount' displayText='Tweet'></span>
+      <span class='st_linkedin_hcount' displayText='LinkedIn'></span>
+      <span class='st_googleplus_hcount' displayText='Google +'></span>
+      <span class='st_sharethis_hcount' displayText='ShareThis'></span>
+      <span class='st_email_hcount' displayText='Email'></span>
+    </div>
     {{/if}}
     {{#if disqus_enabled }}
     <div id="disqus_thread" class="disqus-thread">
