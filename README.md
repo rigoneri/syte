@@ -435,7 +435,7 @@ Compressing static files like CSS and JS are done using [Node.js](http://nodejs.
 In order to get there you need to first install [node.js](http://nodejs.org/), they have automatic installers which makes installation really easy. Then you need to install [Node Package Manager (npm)](http://npmjs.org/) by running the following command:
 
 ```
-curl http://npmjs.org/install.sh | sudo sh
+curl https://npmjs.org/install.sh | sudo sh
 ```
 
 After npm is installed you need to install two node packages `less` and `uglify-js`. To do that run the following commands:
