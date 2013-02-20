@@ -126,6 +126,11 @@ STEAM_API_URL = 'http://api.steampowered.com/ISteamUser'
 STEAM_API_KEY = '[ENTER YOUR STEAM API KEY HERE, SEE STEAM SETUP INSTRUCTIONS]'
 
 
+#Flickr Integration
+FLICKR_INTEGRATION_ENABLED = True
+FLICKR_ID = '[ENTER YOUR FLICKR ID (NOT USERNAME) HERE]' # You do your username->ID lookup here: http://idgettr.com/
+
+
 SITEMAP_ENABLED = False
 
 if DEPLOYMENT_MODE == 'dev':
