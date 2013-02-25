@@ -1,0 +1,32 @@
+<div class="profile flickr modal fade large" id="flickr-profile">
+  <div class="profile-info">
+    <button class="close" data-dismiss="modal">×</button>
+    <div class="profile-name">
+      <h2>{{ title }}</h2>
+    </div>
+    {{#if description }}<p class="profile-description">{{{ description }}}</p>{{/if}}
+    <p class="profile-location-url">
+      <span><a href="{{ link }}">{{ link }}</a></span>
+    </p>
+  </div>
+  <ul class="profile-shots">
+    {{#each items}}
+    <li>
+      <a href="{{ link }}" class="profile-shot">
+         <img src="{{ media.m }}" alt="Flickr Picture" />
+      </a>
+       <span class="profile-shot-title">
+      {{#if title}}
+        {{ title }}
+      {{else}}
+      Untitled
+      {{/if}}
+      </span>
+      <ul class="profile-shot-stats">
+        <li class="profile-shot-date">{{ formated_date }}</li>
+      </ul>
+    </li>
+    {{/each}}
+  </ul>
+</div>
+
