@@ -18,7 +18,7 @@
 
   </head>
   <body>
-    <div id="header">
+      <div id="header">
         <nav>
           <li class="fork"><a href="https://github.com/rigoneri/syte">View On GitHub</a></li>
           <li class="downloads"><a href="https://github.com/rigoneri/syte/zipball/master">ZIP</a></li>
@@ -26,12 +26,21 @@
           <li class="title">DOWNLOADS</li>
         </nav>
       </div><!-- end header -->
+
     <div class="wrapper">
 
       <section>
+        <div id="title">
+          <h1>Syte</h1>
+          <p>A really simple but powerful packaged personal site that has social integrations like twitter, github, dribbble, instagram, foursquare, tumblr, wordpress and much more...</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/rigoneri">rigoneri</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
+
         <h1>Syte</h1>
 
-<p>Syte is a really simple but powerful packaged personal site that has social integrations like Twitter, GitHub, Dribbble, Instagram, Foursquare, Tumblr, Wordpress, Last.fm, SoundCloud, Bitbucket, StackOverflow and Steam. You can see it in action on <a href="http://rigoneri.com">my personal site</a>.</p>
+<p>Syte is a really simple but powerful packaged personal site that has social integrations like Twitter, GitHub, Dribbble, Instagram, Foursquare, Tumblr, Wordpress, Last.fm, SoundCloud, Bitbucket, StackOverflow, Flickr and Steam. You can see it in action on <a href="http://rigoneri.com">my personal site</a>.</p>
 
 <h3>There is only one rule/suggestion</h3>
 
@@ -101,8 +110,7 @@
 <a href="http://bykev.in/"><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/kevdashdev.png?raw=true" alt="kevdashdev"></a>
 <a href="http://avijeet.me/"><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/avijeets.png?raw=tru" alt="avijeets"></a>
 <a href="http://devgeek.me/"><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/devgeek.png?raw=tru" alt="avijeets"></a>
-<a href="http://christianrahn.us/"><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/christianrahn.png?raw=tru" alt="christianrahn"></a>  
-</p>
+<a href="http://christianrahn.us/"><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/christianrahn.png?raw=tru" alt="christianrahn"></a></p>
 
 <h2>Social Integrations</h2>
 
@@ -178,6 +186,12 @@
 
 <p><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/f-12.png?raw=true" alt="Syte Steam"></p>
 
+<h3>Flickr</h3>
+
+<p>Syte has Flickr integration, which means that you can show your Flickr photos within your site.</p>
+
+<p><img src="https://github.com/rigoneri/syte/blob/master/readme-imgs/f-13.png?raw=true" alt="Syte Flickr"></p>
+
 <h2>Responsive UI</h2>
 
 <p>Syte is responsive, which means that it scales down to a mobile device screen size.</p>
@@ -231,6 +245,7 @@
 <li>Inside the <code>nav</code> tag change the <strong>dribbble-link</strong> href to point to your Dribbble profile, if you don't have Dribbble just remove that whole line.</li>
 <li>Inside the <code>nav</code> tag change the <strong>steam-link</strong> href to point to your Steam community profile, if you don't have Steam just remove that whole line.</li>
 <li>Inside the <code>nav</code> tag change the <strong>stackoverflow-link</strong> href to point to your StackOverflow profile, if you don't have StackOverflow just remove that whole line.</li>
+<li>Inside the <code>nav</code> tag change the <strong>flickr-link</strong> href to point to your Flickr profile, if you don't have Flickr just remove that whole line.</li>
 <li>Inside the <code>nav</code> tag change the <strong>contact-link</strong> href to point to your email address.</li>
 <li>Under <code>class="mobile-nav"</code> div change the <strong>h3</strong> link text to have your domain name or your name.</li>
 </ol><p>Then pick your <strong>adjacent color</strong> and change the <code>@adjacent-color</code> hex value in variables.less located in <code>syte &gt; static &gt; less &gt; variables.less</code> Make sure the color you chose is not used by anyone on the list up above. If you want blue pick a different shade of blue, there are hundreds out there...</p>
@@ -439,6 +454,14 @@
 
 <p>If you want to turn off StackOverflow integration just set <code>STACKOVERFLOW_INTEGRATION_ENABLED</code> to False.</p>
 
+<h3>Setting up Flickr integration</h3>
+
+<p>The Flickr integration does not make any authenticated calls nor does it require a registered API key.</p>
+
+<p>To make it work, you'll need to find your Flickr ID. This is different to your username, and you can do the lookup here: <a href="http://idgettr.com/">http://idgettr.com/</a></p>
+
+<p>If you want to turn off Flickr integration just set <code>FLICKR_INTEGRATION_ENABLED</code> to False.</p>
+
 <h2>Running &amp; Deployment Instructions</h2>
 
 <p>Now that you have everything setup and ready to go we will be able to run the project locally and deploy to Heroku with the instructions below. Please note that these instructions are for Mac, which should be the same for Linux systems. If you have problems with these instructions on Windows, let me know or send a pull request.</p>
@@ -470,7 +493,7 @@ $ workon syte
 
 <p>In order to get there you need to first install <a href="http://nodejs.org/">node.js</a>, they have automatic installers which makes installation really easy. Then you need to install <a href="http://npmjs.org/">Node Package Manager (npm)</a> by running the following command:</p>
 
-<pre><code>curl https://npmjs.org/install.sh | sudo sh
+<pre><code>curl http://npmjs.org/install.sh | sudo sh
 </code></pre>
 
 <p>After npm is installed you need to install two node packages <code>less</code> and <code>uglify-js</code>. To do that run the following commands:</p>
