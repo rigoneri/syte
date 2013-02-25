@@ -66,6 +66,9 @@ function setupLinks() {
       else if (this.id == 'stackoverflow-link' && stackoverflow_integration_enabled) {
         adjustSelection('stackoverflow', setupStackoverflow.bind(this, url, this));
       }
+      else if (this.id == 'flickr-link' && flickr_integration_enabled) {
+          adjustSelection('flickr', setupFlickr.bind(this, url, this));
+      }
       else {
         window.location = this.href;
       }
