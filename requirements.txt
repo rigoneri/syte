@@ -1,4 +1,4 @@
-Django==1.4.3
+Django==1.5
 requests==0.14.2
 wsgiref==0.1.2
 psycopg2==2.4.5
