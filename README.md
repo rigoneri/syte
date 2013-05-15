@@ -484,6 +484,20 @@ First signup to [Heroku](http://heroku.com) then follow these simple [Django dep
 2. Change the ``SITE_ROOT_URI`` value to your Heroku app url in **syte_settings.py** see the available example to how it should be formatted.
 
 
+### Deploying on Tornado
+
+You can also deplay Syte on your on machine using tornado. To do that, intall tornado on your machine with:
+```
+easy_install tornado
+```
+or
+```
+pip install tornado
+```
+Then just go in your root Syte folder and run
+```
+python runserver.py
+```
 
 
 
