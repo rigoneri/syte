@@ -498,6 +498,7 @@ Then just go in your root Syte folder and run
 ```
 python runserver.py
 ```
+It runs on port 80 but you can change the port in the runserver.py script.
 
 
 

@@ -7,10 +7,10 @@ def runserver():
     sys.path.append(os.path.dirname(app_dir))
     os.environ['DJANGO_SETTINGS_MODULE'] = 'syte.settings'
     application = django.core.handlers.wsgi.WSGIHandler()
- 
+
     container = wsgi.WSGIContainer(application)
     server = httpserver.HTTPServer(container)
-    server.listen(8000)
+    server.listen(80)
     try:
         ioloop.IOLoop.instance().start()
     except KeyboardInterrupt:
