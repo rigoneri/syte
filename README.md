@@ -1,6 +1,6 @@
 # Syte
 
-Syte is a really simple but powerful packaged personal site that has social integrations like Twitter, GitHub, Dribbble, Instagram, Foursquare, Tumblr, Wordpress, Last.fm, SoundCloud, Bitbucket, StackOverflow and Steam. You can see it in action on [my personal site](http://rigoneri.com).
+Syte is a really simple but powerful packaged personal site that has social integrations like Twitter, GitHub, Dribbble, Instagram, Foursquare, Tumblr, Wordpress, Last.fm, SoundCloud, Bitbucket, StackOverflow, Flickr and Steam. You can see it in action on [my personal site](http://rigoneri.com).
 
 ### There is only one rule/suggestion
 
@@ -70,7 +70,7 @@ You can use, reproduce and do whatever you want with Syte but I would like you t
 [![kevdashdev](https://github.com/rigoneri/syte/blob/master/readme-imgs/kevdashdev.png?raw=true)](http://bykev.in/)
 [![avijeets](https://github.com/rigoneri/syte/blob/master/readme-imgs/avijeets.png?raw=tru)](http://avijeet.me/)
 [![avijeets](https://github.com/rigoneri/syte/blob/master/readme-imgs/devgeek.png?raw=tru)](http://devgeek.me/)
-
+[![christianrahn](https://github.com/rigoneri/syte/blob/master/readme-imgs/christianrahn.png?raw=tru)](http://christianrahn.us/)
 
 ## Social Integrations
 
@@ -151,6 +151,12 @@ Syte has StackOverflow integration, which means that you can show your StackOver
 
 ![Syte Steam](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-12.png?raw=true)
 
+### Flickr
+
+Syte has Flickr integration, which means that you can show your Flickr photos within your site.
+
+![Syte Flickr](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-13.png?raw=true)
+
 ## Responsive UI
 
 Syte is responsive, which means that it scales down to a mobile device screen size.
@@ -204,8 +210,9 @@ Then make some text and link changes. Open **base.html** located in `syte > temp
 8. Inside the `nav` tag change the **dribbble-link** href to point to your Dribbble profile, if you don't have Dribbble just remove that whole line.
 9. Inside the `nav` tag change the **steam-link** href to point to your Steam community profile, if you don't have Steam just remove that whole line.
 10. Inside the `nav` tag change the **stackoverflow-link** href to point to your StackOverflow profile, if you don't have StackOverflow just remove that whole line.
-11. Inside the `nav` tag change the **contact-link** href to point to your email address.
-12. Under `class="mobile-nav"` div change the **h3** link text to have your domain name or your name.
+11. Inside the `nav` tag change the **flickr-link** href to point to your Flickr profile, if you don't have Flickr just remove that whole line.
+12. Inside the `nav` tag change the **contact-link** href to point to your email address.
+13. Under `class="mobile-nav"` div change the **h3** link text to have your domain name or your name.
 
 Then pick your **adjacent color** and change the `@adjacent-color` hex value in variables.less located in `syte > static > less > variables.less` Make sure the color you chose is not used by anyone on the list up above. If you want blue pick a different shade of blue, there are hundreds out there...
 
@@ -396,6 +403,15 @@ If you want to turn off Steam integration just set `STEAM_INTEGRATION_ENABLED` t
 The StackOverflow integration does not make any authenticated calls nor does it require a registered API key.
 
 If you want to turn off StackOverflow integration just set `STACKOVERFLOW_INTEGRATION_ENABLED` to False.
+
+### Setting up Flickr integration
+
+The Flickr integration does not make any authenticated calls nor does it require a registered API key.
+
+To make it work, you'll need to find your Flickr ID. This is different to your username, and you can do the lookup here: <http://idgettr.com/>
+
+If you want to turn off Flickr integration just set `FLICKR_INTEGRATION_ENABLED` to False.
+
 
 
 ## Running & Deployment Instructions

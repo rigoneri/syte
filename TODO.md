@@ -17,7 +17,7 @@ List of services to add integration for:
     - LinkedIn
     - Youtube
     - Netflix
-    - Flickr
+    - Flickr [DONE]
     - Picasa
     - Rdio
     - Spotify
