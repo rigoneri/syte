@@ -19,7 +19,7 @@ urlpatterns = patterns('',
 #Twitter Integration
 if settings.TWITTER_INTEGRATION_ENABLED:
     urlpatterns += patterns('',
-        url(r'^twitter/(?P<username>\w+)/?$', 'syte.views.twitter.twitter'),
+        url(r'^twitter/(?P<username>\w+)/?$', 'syte.views.twitter_view.twitter_view'),
     )
 
 #Github Integration
