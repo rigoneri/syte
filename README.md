@@ -320,7 +320,7 @@ If you want to turn off Instagram integration just set `INSTAGRAM_INTEGRATION_EN
 
 ### Setting up Foursquare integration
 
-Foursquare has the same level of security as Instagram and similar steps on getting the access token ourselves. To get started go to <https://foursquare.com/oauth/register>, sign in and register a new consumer.
+Foursquare has the same level of security as Instagram and similar steps on getting the access token ourselves. To get started go to <https://foursquare.com/oauth>, sign in and register a new consumer.
 
 Enter the ***Application Name***, ***Application Website*** and ***Callback URL***. For the callback url enter `http://127.0.0.1:8000/foursquare/auth` for now since we will get the access token while running it locally. Once you are done registering your consumer you will be given the ***Client ID*** and ***Client Secret***.
 
