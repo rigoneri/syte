@@ -62,7 +62,14 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
+    'django.contrib.staticfiles',
     'gunicorn',
+)
+
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(SITE_ROOT, "static"),
 )
 
 try:

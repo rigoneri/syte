@@ -8,7 +8,6 @@ def site_pages(request):
         context['DEV_DEPLOYMENT_MODE'] = True
 
     context['COMPRESS_REVISION_NUMBER'] = settings.COMPRESS_REVISION_NUMBER
-    context['MEDIA_URL'] = settings.MEDIA_URL
 
     context['RSS_FEED_URL'] = settings.RSS_FEED_URL
     context['RSS_FEED_ENABLED'] = settings.RSS_FEED_ENABLED
