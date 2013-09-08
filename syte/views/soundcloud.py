@@ -18,9 +18,9 @@ def soundcloud(request, username):
 
     context = dict()
     context = {
-        'user_profile': user_profile.json,
+        'user_profile': user_profile.json(),
         'user_tracks': {
-            'tracks': user_tracks.json,
+            'tracks': user_tracks.json(),
             'show_artwork': settings.SOUNDCLOUD_SHOW_ARTWORK,
             'player_color': settings.SOUNDCLOUD_PLAYER_COLOR
         }

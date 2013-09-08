@@ -19,8 +19,8 @@ def github(request, username):
         username,
         settings.GITHUB_ACCESS_TOKEN))
 
-    context = {'user': user_r.json}
-    context.update({'repos': repos_r.json})
+    context = {'user': user_r.json()}
+    context.update({'repos': repos_r.json()})
 
     context['repos'].sort(key=itemgetter('updated_at'), reverse=True)
 
@@ -49,7 +49,7 @@ def github_auth(request):
         }, headers={'Accept': 'application/json'})
 
         try:
-            data = r.json
+            data = r.json()
             error = data.get('error', None)
         except:
             error = r.text
