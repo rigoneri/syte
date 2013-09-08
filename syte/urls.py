@@ -95,9 +95,9 @@ if settings.STACKOVERFLOW_INTEGRATION_ENABLED:
 #Sitemap
 if settings.SITEMAP_ENABLED:
     urlpatterns += patterns('',
-        (r'^sitemap\.xml$', direct_to_template,
-            {'template': 'sitemap.xml', 'mimetype': 'application/xml'})
-        )
+        (r'^sitemap\.xml$', TemplateView.as_view(template_name="sitemap.xml", 
+            content_type="application/xml")),
+    )
 
 #Statics: Hacky for now... fix this later...
 urlpatterns += patterns('',
