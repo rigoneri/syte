@@ -92,6 +92,12 @@ if settings.STACKOVERFLOW_INTEGRATION_ENABLED:
         url(r'^stackoverflow/(?P<userid>[\-\w]+)/?$', 'syte.views.stackoverflow.stackoverflow'),
     )
 
+#Linkedin Integration
+if settings.LINKEDIN_INTEGRATION_ENABLED:
+    urlpatterns += patterns('',
+        url(r'^linkedin/?$', 'syte.views.linkedin_view.linkedin_view'),
+    )
+
 #Sitemap
 if settings.SITEMAP_ENABLED:
     urlpatterns += patterns('',
