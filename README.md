@@ -71,6 +71,7 @@ You can use, reproduce and do whatever you want with Syte but I would like you t
 [![avijeets](https://github.com/rigoneri/syte/blob/master/readme-imgs/avijeets.png?raw=tru)](http://avijeet.me/)
 [![avijeets](https://github.com/rigoneri/syte/blob/master/readme-imgs/devgeek.png?raw=tru)](http://devgeek.me/)
 [![christianrahn](https://github.com/rigoneri/syte/blob/master/readme-imgs/christianrahn.png?raw=tru)](http://christianrahn.us/)
+[![etoccalino](https://github.com/rigoneri/syte/blob/master/readme-imgs/etoccalino.png?raw=tru)](http://etoccalino.com/)
 
 ## Social Integrations
 
@@ -231,7 +232,7 @@ Once you have the `api_key` from Tumblr you have to enter it in **syte_settings.
 
 #### Setting up Wordpress
 
-For now Syte only support wordpress blogs that are build using [wordpress.com](http://wordpress.com). 
+For now Syte only support wordpress blogs that are build using [wordpress.com](http://wordpress.com).
 
 Open `syte > syte_settings.py` and under `WORDPRESS_BLOG_URL` enter ther url of your wordpress.com blog, also under `BLOG_PLATFORM` set it to "wordpress".
 
