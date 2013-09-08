@@ -15,8 +15,8 @@ def stackoverflow(request, userid):
         settings.STACKOVERFLOW_API_URL,
         userid))
 
-    context = {'user': user_r.json["users"][0]}
-    context.update({'timeline': timeline_r.json["user_timelines"]})
+    context = {'user': user_r.json()["users"][0]}
+    context.update({'timeline': timeline_r.json()["user_timelines"]})
 
     return HttpResponse(content=json.dumps(context),
                         status=timeline_r.status_code,

@@ -47,7 +47,7 @@ def blog_post(request, post_id):
             settings.TUMBLR_API_URL, settings.TUMBLR_API_KEY, post_id))
 
         if r.status_code == 200:
-            post_response = r.json.get('response', {})
+            post_response = r.json().get('response', {})
             posts = post_response.get('posts', [])
 
             if posts:
@@ -61,7 +61,7 @@ def blog_post(request, post_id):
         if r.status_code == 200:
             # Get Wordpress response into the same format as Tumblr so we can
             # reuse Handlebars template
-            post = r.json
+            post = r.json()
             convertWordpressResponse(post)
 
     # At this point we should have a post dict from either Tumblr or Wordpress
@@ -113,7 +113,7 @@ def blog_tags(request, tag_slug):
             r = requests.get('{0}/posts?tag={1}&offset={2}'.format(
                 settings.WORDPRESS_API_URL, settings.TUMBLR_API_KEY, tag_slug.encode('UTF-8'), offset))
             if r.status_code == 200:
-                convertWordpressResponse(r.json)
+                convertWordpressResponse(r.json())
             return HttpResponse(content=r.text, status=r.status_code,
                               content_type=r.headers['content-type'])
 

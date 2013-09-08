@@ -24,7 +24,7 @@ def steam(request, username):
     # Add number of games and friends to user data
     for player in user_data["response"]["players"]:
         gamecount = parseString(username_r.text.encode('utf-8')).getElementsByTagName('game').length
-        friendcount = len(user_friends.json["friendslist"]["friends"])
+        friendcount = len(user_friends.json()["friendslist"]["friends"])
         player["gamecount"] = gamecount
         player["friendcount"] = friendcount
         if player["personastate"] == 0:

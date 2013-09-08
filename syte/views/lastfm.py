@@ -16,8 +16,8 @@ def lastfm(request, username):
     user = requests.get(url)
 
     context = {
-        'user_info': user.json,
-        'recenttracks': tracks.json,
+        'user_info': user.json(),
+        'recenttracks': tracks.json(),
     }
 
     return HttpResponse(content=json.dumps(context), status=user.status_code,
