@@ -158,6 +158,11 @@ Syte has Flickr integration, which means that you can show your Flickr photos wi
 
 ![Syte Flickr](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-13.png?raw=true)
 
+### LinkedIn
+Syte has LinkedIn integration, which means that you can show your LinkedIn profile information within your site.
+
+![Syte LinkedIn](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-14.png?raw=true)
+
 ## Responsive UI
 
 Syte is responsive, which means that it scales down to a mobile device screen size.
@@ -412,6 +417,19 @@ The Flickr integration does not make any authenticated calls nor does it require
 To make it work, you'll need to find your Flickr ID. This is different to your username, and you can do the lookup here: <http://idgettr.com/>
 
 If you want to turn off Flickr integration just set `FLICKR_INTEGRATION_ENABLED` to False.
+
+### Setting up LinkedIn integration
+
+LinkedIn has another level of security, therefore we need more information instead of just an api_key like Tumblr. To get started create a new application on LinkedIn for your website by going to <https://developer.linkedin.com/>. Once you are done creating your application you will be taken to your application page on LinkedIn, there you already have four pieces of the puzzle, the `Consumer key`, `Consumer secret`, `User Token` and `User Secret` make sure you save those.
+
+Once you have those four items from LinkedIn you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
+
+* `Consumer key` string you saved under `LINKEDIN_CONSUMER_KEY`
+* `Consumer secret` string you saved under  `LINKEDIN_CONSUMER_SECRET`
+* `User token` string you saved under `LINKEDIN_USER_TOKEN`
+* `User secret` string you saved under `LINKEDIN_USER_SECRET`
+
+If you want to turn off the LinkedIn integration just set `LINKEDIN_INTEGRATION_ENABLED` to False.
 
 
 

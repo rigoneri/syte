@@ -1,0 +1,86 @@
+<div class="profile linkedin modal fade large" id="twitter-profile">
+  {{#with profile}}
+  <div class="profile-info">
+    <button class="close" data-dismiss="modal">×</button>
+    <a href="{{ profile_url }}" class="profile-avatar">
+      <img src="{{ pictureUrl }}" alt="{{ firstName }}" />
+    </a>
+    <div class="profile-name">
+      <h2><a href="{{ profile_url }}">{{ firstName }} {{ lastName }}</a></h2>
+      <h3><a href="{{ profile_url }}">{{ headline }}</a></h3>
+    </div>
+    <p class="profile-location-url">
+      <span>{{ location_name }} | {{ industry }}</span>
+      <span class="divider">·</span>
+    </p>
+  </div>
+
+  <ul class="profile-stats">
+    <li><a href="{{ profile_url }}"><strong>{{ numConnections }}</strong> connections</a></li>
+    <li><a href="{{ profile_url }}"><strong>{{ numGroups }}</strong> groups</a></li>
+    <li><a href="{{ profile_url }}"><strong>{{ numNetworkUpdates }}</strong> network updates</a></li>
+  </ul>
+  <div class="profile-info-footer">
+    <a href="{{ profile_url }}" class="btn">View Profile</a>
+  </div>
+
+  <ul class="linkedin-details">
+    <li>
+      <span class="linkedin-title">Summary:</span>
+      <ul class="linkedin-text">
+        <li>
+          {{{ summary }}}
+        </li>
+      </ul>
+    </li>
+    <li>
+      <span class="linkedin-title">Experience:</span>
+      <ul class="linkedin-text">
+        {{#each positions.values}}
+        <li>
+          <b>{{{company.name}}}</b><br>
+          {{{title}}}<br>
+          {{{summary}}}<br>
+          {{{startDate.year}}}-{{#if isCurrent}}Present{{/if}}{{#if endDate}}{{{endDate.year}}}{{/if}}<br>
+        </li>
+        {{/each}}
+      </ul>
+    </li>
+    <li>
+      <span class="linkedin-title">Education:</span>
+      <ul class="linkedin-text">
+        {{#each educations.values}}
+        <li>
+          <b>{{{schoolName}}}</b><br>
+          {{{fieldOfStudy}}} ({{{degree}}})<br>
+          {{{endDate.year}}}<br>
+          {{/each}}
+        </li>
+      </ul>
+    </li>
+    <li>
+      <span class="linkedin-title">Skills:</span>
+      <ul class="linkedin-text">
+        <li>
+          {{#each skills.values}}
+          {{{skill.name}}},
+          {{/each}}
+        </li>
+      </ul>
+    </li>
+{{/with}}
+{{#with groups}}
+    <li>
+      <span class="linkedin-title">Groups:</span>
+      <ul class="linkedin-text">
+        <li>
+          {{#each values}}
+          {{{group.name}}},
+          {{/each}}
+        </li>
+      </ul>
+    </li>
+  </ul>
+{{/with}}
+</div>
+
