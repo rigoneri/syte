@@ -42,6 +42,8 @@
       <li><a href="http://bitbucket.org/rigoneri" id="bitbucket-link">Bitbucket</a></li>
       <li><a href="http://steamcommunity.com/id/steamshortname" id="steam-link">Steam</a></li>
       <li><a href="http://stackoverflow.com/users/USERID/USERNAME" id="stackoverflow-link">StackOverflow</a></li>
+      <li><a href="http://www.flickr.com/photos/manavo" id="flickr-link">Flickr</a></li>
+      <li><a href="http://linkedin.com/in/rigoneri" id="linkedin-link">LinkedIn</a></li>
       {% endcomment %}
       <li><a href="mailto:contact@rigoneri.com?subject=Hello" id="contact-link">Contact</a></li>
     </ul>
@@ -68,13 +70,14 @@ var twitter_integration_enabled = {% if TWITTER_INTEGRATION_ENABLED %}true{% els
     soundcloud_integration_enabled = {% if SOUNDCLOUD_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
     bitbucket_integration_enabled = {% if BITBUCKET_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
     foursquare_integration_enabled = {% if FOURSQUARE_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
-    disqus_integration_enabled = {% if DISQUS_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
     tent_integration_enabled = {% if TENT_INTEGRATION_ENABLED %}true{% else %}false{% endif %};
     steam_integration_enabled = {% if STEAM_INTEGRATION_ENABLED %}true{% else %}false{% endif %};
     stackoverflow_integration_enabled = {% if STACKOVERFLOW_INTEGRATION_ENABLED %}true{% else %}false{% endif %};
-
+    flickr_integration_enabled = {% if FLICKR_INTEGRATION_ENABLED %}true{% else %}false{% endif %};
+    linkedin_integration_enabled = {% if LINKEDIN_INTEGRATION_ENABLED %}true{% else %}false{% endif %};
 
 {% if DISQUS_INTEGRATION_ENABLED %}var disqus_shortname = '{{ DISQUS_SHORTNAME }}';{% endif %}
+{% if FLICKR_INTEGRATION_ENABLED %}var flickr_id = '{{ FLICKR_ID }}';{% endif %}
 </script>
 
 {% if TENT_INTEGRATION_ENABLED %}
@@ -111,6 +114,8 @@ var twitter_integration_enabled = {% if TWITTER_INTEGRATION_ENABLED %}true{% els
 {% if TENT_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/tent.js"></script>{% endif %}
 {% if STEAM_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/steam.js"></script>{% endif %}
 {% if STACKOVERFLOW_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/stackoverflow.js"></script>{% endif %}
+{% if FLICKR_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/flickr.js"></script>{% endif %}
+{% if LINKEDIN_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/linkedin.js"></script>{% endif %}
 {% else %}
 <script src="{{ MEDIA_URL }}js/min/scripts-{{ COMPRESS_REVISION_NUMBER }}.min.js"></script>
 {% endif %}

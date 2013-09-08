@@ -1,0 +1,92 @@
+<div class="profile linkedin modal fade large" id="linkedin-profile">
+  {{#with profile}}
+  <div class="profile-info">
+    <button class="close" data-dismiss="modal">×</button>
+    <a href="{{ profile_url }}" class="profile-avatar">
+      <img src="{{ pictureUrl }}" alt="{{ firstName }}" />
+    </a>
+    <div class="profile-name">
+      <h2><a href="{{ profile_url }}">{{ firstName }} {{ lastName }}</a></h2>
+      <h3><a href="{{ profile_url }}">{{ headline }}</a></h3>
+    </div>
+    <p class="profile-location-url">
+      <span>{{ location_name }} | {{ industry }}</span>
+      <span class="divider">·</span>
+    </p>
+  </div>
+
+  <ul class="profile-stats">
+    <li><a href="{{ profile_url }}"><strong>{{ numConnections }}</strong> connections</a></li>
+    {{#if numGroups}}
+    <li><a href="{{ profile_url }}"><strong>{{ numGroups }}</strong> groups</a></li>
+    {{/if}}
+  </ul>
+  <div class="profile-info-footer">
+    <a href="{{ profile_url }}" class="btn">View Profile</a>
+  </div>
+  {{/with}}
+
+  <div class="linkedin-details">
+    {{#with profile}}
+    {{#if summary}}
+      <div class="linkedin-sec linkedin-summary">
+        <h3>Summary</h3>
+        <p>{{{summary}}}</p>
+      </div>
+    {{/if}}
+    {{#if positions}}
+    <div class="linkedin-sec">
+      <h3>Experience</h3>
+      <ul class="linkedin-experience">
+        {{#each positions.values}}
+        <li>
+          <h4>{{{company.name}}} - <span class="linkedin-title">{{{title}}}</span></h4>
+          <p class="linkedin-dates">{{{startDate.year}}} - {{#if isCurrent}}Present{{/if}}{{#if endDate}}{{{endDate.year}}}{{/if}}</p>
+          <p>{{{summary}}}</p>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+    {{/if}}
+    {{#if educations}}
+    <div class="linkedin-sec">
+      <h3>Education</h3>
+      <ul class="linkedin-education">
+        {{#each educations.values}}
+        <li>
+          <h4>{{{schoolName}}}</h4>
+          <p class="linkedin-dates">{{{endDate.year}}}</p>
+          <p>{{{fieldOfStudy}}} ({{{degree}}})</p>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+    {{/if}}
+    {{#if skills}}
+    <div class="linkedin-sec">
+      <h3>Skills</h3>
+      <ul class="linkedin-skills">
+        {{#each skills.values}}
+        <li>
+          {{{skill.name}}}
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+    {{/if}}
+    {{/with}}
+    {{#if groups}}
+    <div class="linkedin-sec">
+      {{#with groups}}
+      <h3>Groups</h3>
+      <ul class="linkedin-groups">
+       {{#each values}}
+       <li>{{{group.name}}}</li>
+       {{/each}}
+      </ul>
+      {{/with}}
+    </div>
+    {{/if}}
+  </div>
+</div>
+

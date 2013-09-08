@@ -95,6 +95,12 @@ def compress_js():
     if settings.STACKOVERFLOW_INTEGRATION_ENABLED:
         js_files.append('components/stackoverflow.js')
 
+    if settings.FLICKR_INTEGRATION_ENABLED:
+        js_files.append('components/flickr.js')
+
+    if settings.LINKEDIN_INTEGRATION_ENABLED:
+        js_files.append('components/linkedin.js')
+
     combined = ''
     for js in js_files:
         with open(os.path.join(PATH_TO_HERE, 'static/js/' + js), 'r') as f:
