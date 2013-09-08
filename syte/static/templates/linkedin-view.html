@@ -1,4 +1,4 @@
-<div class="profile linkedin modal fade large" id="twitter-profile">
+<div class="profile linkedin modal fade large" id="linkedin-profile">
   {{#with profile}}
   <div class="profile-info">
     <button class="close" data-dismiss="modal">×</button>
@@ -17,70 +17,76 @@
 
   <ul class="profile-stats">
     <li><a href="{{ profile_url }}"><strong>{{ numConnections }}</strong> connections</a></li>
+    {{#if numGroups}}
     <li><a href="{{ profile_url }}"><strong>{{ numGroups }}</strong> groups</a></li>
-    <li><a href="{{ profile_url }}"><strong>{{ numNetworkUpdates }}</strong> network updates</a></li>
+    {{/if}}
   </ul>
   <div class="profile-info-footer">
     <a href="{{ profile_url }}" class="btn">View Profile</a>
   </div>
+  {{/with}}
 
-  <ul class="linkedin-details">
-    <li>
-      <span class="linkedin-title">Summary:</span>
-      <ul class="linkedin-text">
-        <li>
-          {{{ summary }}}
-        </li>
-      </ul>
-    </li>
-    <li>
-      <span class="linkedin-title">Experience:</span>
-      <ul class="linkedin-text">
+  <div class="linkedin-details">
+    {{#with profile}}
+    {{#if summary}}
+      <div class="linkedin-sec linkedin-summary">
+        <h3>Summary</h3>
+        <p>{{{summary}}}</p>
+      </div>
+    {{/if}}
+    {{#if positions}}
+    <div class="linkedin-sec">
+      <h3>Experience</h3>
+      <ul class="linkedin-experience">
         {{#each positions.values}}
         <li>
-          <b>{{{company.name}}}</b><br>
-          {{{title}}}<br>
-          {{{summary}}}<br>
-          {{{startDate.year}}}-{{#if isCurrent}}Present{{/if}}{{#if endDate}}{{{endDate.year}}}{{/if}}<br>
+          <h4>{{{company.name}}} - <span class="linkedin-title">{{{title}}}</span></h4>
+          <p class="linkedin-dates">{{{startDate.year}}} - {{#if isCurrent}}Present{{/if}}{{#if endDate}}{{{endDate.year}}}{{/if}}</p>
+          <p>{{{summary}}}</p>
         </li>
         {{/each}}
       </ul>
-    </li>
-    <li>
-      <span class="linkedin-title">Education:</span>
-      <ul class="linkedin-text">
+    </div>
+    {{/if}}
+    {{#if educations}}
+    <div class="linkedin-sec">
+      <h3>Education</h3>
+      <ul class="linkedin-education">
         {{#each educations.values}}
         <li>
-          <b>{{{schoolName}}}</b><br>
-          {{{fieldOfStudy}}} ({{{degree}}})<br>
-          {{{endDate.year}}}<br>
-          {{/each}}
+          <h4>{{{schoolName}}}</h4>
+          <p class="linkedin-dates">{{{endDate.year}}}</p>
+          <p>{{{fieldOfStudy}}} ({{{degree}}})</p>
         </li>
+        {{/each}}
       </ul>
-    </li>
-    <li>
-      <span class="linkedin-title">Skills:</span>
-      <ul class="linkedin-text">
+    </div>
+    {{/if}}
+    {{#if skills}}
+    <div class="linkedin-sec">
+      <h3>Skills</h3>
+      <ul class="linkedin-skills">
+        {{#each skills.values}}
         <li>
-          {{#each skills.values}}
-          {{{skill.name}}},
-          {{/each}}
+          {{{skill.name}}}
         </li>
+        {{/each}}
       </ul>
-    </li>
-{{/with}}
-{{#with groups}}
-    <li>
-      <span class="linkedin-title">Groups:</span>
-      <ul class="linkedin-text">
-        <li>
-          {{#each values}}
-          {{{group.name}}},
-          {{/each}}
-        </li>
+    </div>
+    {{/if}}
+    {{/with}}
+    {{#if groups}}
+    <div class="linkedin-sec">
+      {{#with groups}}
+      <h3>Groups</h3>
+      <ul class="linkedin-groups">
+       {{#each values}}
+       <li>{{{group.name}}}</li>
+       {{/each}}
       </ul>
-    </li>
-  </ul>
-{{/with}}
+      {{/with}}
+    </div>
+    {{/if}}
+  </div>
 </div>
 
