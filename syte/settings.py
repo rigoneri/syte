@@ -66,10 +66,12 @@ INSTALLED_APPS = (
     'gunicorn',
 )
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(SITE_ROOT, "static"),
+    os.path.join(BASE_DIR, 'static'),
 )
 
 try:

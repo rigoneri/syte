@@ -3,7 +3,7 @@ from django.views.generic import TemplateView, RedirectView
 from django.conf.urls import patterns, url
 from django.conf import settings
 
-handler404 = 'syte.views.home.page_not_found_error'
+handler404 = 'syte.views.home.page_not_found_error' 
 handler500 = 'syte.views.home.server_error'
 
 urlpatterns = patterns('',
