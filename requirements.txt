@@ -1,5 +1,5 @@
 Django==1.5.2
-requests==1.2.3
+requests==0.14.2
 wsgiref==0.1.2
 psycopg2==2.4.5
 gunicorn==0.16.1
