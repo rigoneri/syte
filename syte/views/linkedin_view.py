@@ -5,6 +5,7 @@ from linkedin import linkedin
 from django.http import HttpResponse
 from django.conf import settings
 
+LINKEDIN_NETWORK_UPDATE_TYPES = linkedin.NETWORK_UPDATES.enums.values()
 
 def linkedin_view(request):
     authentication = linkedin.LinkedInDeveloperAuthentication(
@@ -22,7 +23,7 @@ def linkedin_view(request):
                                                       'site-standard-profile-request', 'summary', 'positions',
                                                       'industry'])
     group_data = application.get_memberships()
-    network_updates_data = application.get_network_updates(types=settings.LINKEDIN_NETWORK_UPDATE_TYPES)
+    network_updates_data = application.get_network_updates(types=LINKEDIN_NETWORK_UPDATE_TYPES)
 
     context = {'profile': profile_data, 'groups': group_data, 'network_updates': network_updates_data}
 
