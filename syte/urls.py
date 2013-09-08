@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from django.views.generic.simple import direct_to_template
+from django.views.generic import TemplateView
 from django.conf.urls import patterns, url
 from django.conf import settings
 
@@ -101,8 +101,7 @@ if settings.SITEMAP_ENABLED:
 
 #Statics: Hacky for now... fix this later...
 urlpatterns += patterns('',
-    (r'^robots\.txt$', direct_to_template,
-        {'template': 'robots.txt', 'mimetype': 'text/plain'}),
+    (r'^robots\.txt$', TemplateView.as_view(template_name="robots.txt")),
     (r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {
         'url': '/static/imgs/favicon.ico'}),
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',
