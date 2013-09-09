@@ -141,7 +141,9 @@ SITEMAP_ENABLED = False
 
 if DEPLOYMENT_MODE == 'dev':
     SITE_ROOT_URI = 'http://127.0.0.1:8000/'
+    ALLOWED_HOSTS = ['*']
     DEBUG = True
 else:
     DEBUG = False
+    ALLOWED_HOSTS = ['rigoneri.herokuapp.com']
     SITE_ROOT_URI = '[ENTER PROD URL HERE] ex. http://rigoneri.herokuapp.com/'
