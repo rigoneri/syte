@@ -364,8 +364,7 @@ If you want to turn off the LinkedIn integration just set `LINKEDIN_INTEGRATION_
 
 ## Running & Deployment Instructions
 
-Now that you have everything setup and ready to go we will be able to run the project locally and deploy to Heroku with the instructions below. Please note that these instructions are for Mac, which should be the same for Linux systems. If you have problems with these instructions on Windows, let me know or send a pull request.
-
+Now that you have everything setup and ready to go we will be able to run the project locally and deploy to Heroku or AWS with the instructions below. Please note that these instructions are for Mac, which should be the same for Linux systems. If you have problems with these instructions on Windows, let me know or send a pull request.
 
 
 
@@ -432,6 +431,26 @@ First signup to [Heroku](http://heroku.com) then follow these simple [Django dep
 2. Change the ``SITE_ROOT_URI`` value to your Heroku app url in **syte_settings.py** see the available example to how it should be formatted.
 
 
+### Deploying to AWS
+
+Deploying to [AWS](http://aws.amazon.com) is a little more complicated than Heroku, but is a nice alternative.  The easiest way to deploy your application to AWS is by using [AWS Elastic Beanstalk](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_Python_django.html).  To help keep costs low, we will deploy to micro instances.
+
+First signup to [AWS](http://aws.amazon.com) then follow the instructions below.  I have already included some of the required files for you (see syte.config in .ebextensions directory).  The other required files will be created automatically, but some of the settings may need to be altered slightly.
+
+1. Change the ``DEPLOYMENT_MODE`` value to prod in **syte_settings.py** located in ``syte > syte_settings.py``
+2. Change the ``SITE_ROOT_URI`` value to your AWS app url in **syte_settings.py** see the available example to how it should be formatted.
+3. Install the eb command-line tools and add to your path.  Download from [here](http://aws.amazon.com/code/6752709412171743).  This will allow us to control AWS from the command-line.
+4. Execute the `eb init` command in the root of the syte repo and follow the on-screen instructions.  This will help get our project ready to be deployed into AWS.  Please note: during this step you will be asked to provide security credentials.  If you are not sure what to use, see [here](http://docs.aws.amazon.com/general/latest/gr/getting-aws-sec-creds.html)
+5. Execute the `eb start` command to deploy a sample application to AWS.  Once this command completes execute `eb status --verbose` and confirm that the sample application is running at the provided url.
+6. Let's make sure our configurations are right.
+   - First, open ./ebextensions/syte.config and confirm the settings here.  You should not have to update anything.
+   - Second, open the ./elasticbeanstalk/opensettings.XXX-env (where XXX-env is the name of your environment).  Update this by updating: 
+     DJANGO_SETTINGS_MODULE=syte.settings
+     StaticFiles=syte/static=
+     WSGIPath=syte/wsgi.py
+7. To make sure the above changes are not reverted, execute `eb update`.
+8. Deploy the repo to AWS by executing `git aws.push`.  This command can be rerun whenever you have changes that you want to deploy.
+9. Execute `eb status --verbose` or monitor the provisioning process on AWS' website.  To troubleshoot, go to the ElasticBeanstalk section of AWS, get a snapshot of the logs and review them for errors.
 
 
 
