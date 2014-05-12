@@ -1,7 +1,6 @@
 Django==1.5.2
 requests==1.2.3
 wsgiref==0.1.2
-psycopg2==2.4.5
 gunicorn==0.16.1
 pybars==0.0.4
 python-twitter==1.0
