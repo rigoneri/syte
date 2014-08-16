@@ -104,20 +104,20 @@ var twitter_integration_enabled = {% if TWITTER_INTEGRATION_ENABLED %}true{% els
 <script src="{% static 'js/components/blog-posts.js'%}"></script>
 <script src="{% static 'js/components/links.js'%}"></script>
 
-{% if TWITTER_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/twitter.js"></script>{% endif %}
-{% if GITHUB_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/github.js"></script>{% endif %}
-{% if DRIBBBLE_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/dribbble.js"></script>{% endif %}
-{% if INSTAGRAM_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/instagram.js"></script>{% endif %}
-{% if LASTFM_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/lastfm.js"></script>{% endif %}
-{% if BITBUCKET_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/bitbucket.js"></script>{% endif %}
-{% if SOUNDCLOUD_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/soundcloud.js"></script>{% endif %}
-{% if DISQUS_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/disqus.js"></script>{% endif %}
-{% if FOURSQUARE_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/foursquare.js"></script>{% endif %}
-{% if TENT_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/tent.js"></script>{% endif %}
-{% if STEAM_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/steam.js"></script>{% endif %}
-{% if STACKOVERFLOW_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/stackoverflow.js"></script>{% endif %}
-{% if FLICKR_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/flickr.js"></script>{% endif %}
-{% if LINKEDIN_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/linkedin.js"></script>{% endif %}
+{% if TWITTER_INTEGRATION_ENABLED %}<script src="{% static 'js/components/twitter.js'%}"></script>{% endif %}
+{% if GITHUB_INTEGRATION_ENABLED %}<script src="{% static 'js/components/github.js'%}"></script>{% endif %}
+{% if DRIBBBLE_INTEGRATION_ENABLED %}<script src="{% static 'js/components/dribbble.js'%}"></script>{% endif %}
+{% if INSTAGRAM_INTEGRATION_ENABLED %}<script src="{% static 'js/components/instagram.js'%}"></script>{% endif %}
+{% if LASTFM_INTEGRATION_ENABLED %}<script src="{% static 'js/components/lastfm.js'%}"></script>{% endif %}
+{% if BITBUCKET_INTEGRATION_ENABLED %}<script src="{% static 'js/components/bitbucket.js'%}"></script>{% endif %}
+{% if DISQUS_INTEGRATION_ENABLED %}<script src="{% static 'js/components/disqus.js'%}"></script>{% endif %}
+{% if SOUNDCLOUD_INTEGRATION_ENABLED %}<script src="{% static 'js/components/soundcloud.js'%}"></script>{% endif %}
+{% if FOURSQUARE_INTEGRATION_ENABLED %}<script src="{% static 'js/components/foursquare.js'%}"></script>{% endif %}
+{% if TENT_INTEGRATION_ENABLED %}<script src="{% static 'js/components/tent.js'%}"></script>{% endif %}
+{% if STEAM_INTEGRATION_ENABLED %}<script src="{% static 'js/components/steam.js'%}"></script>{% endif %}
+{% if STACKOVERFLOW_INTEGRATION_ENABLED %}<script src="{% static 'js/components/stackoverflow.js'%}"></script>{% endif %}
+{% if FLICKR_INTEGRATION_ENABLED %}<script src="{% static 'js/components/flickr.js'%}"></script>{% endif %}
+{% if LINKEDIN_INTEGRATION_ENABLED %}<script src="{% static 'js/components/linkedin.js'%}"></script>{% endif %}
 {% else %}
 <script src="{% static 'js/min/scripts-'|add:COMPRESS_REVISION_NUMBER|add:'.min.js'%}"></script>
 {% endif %}
