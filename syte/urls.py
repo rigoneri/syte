@@ -94,6 +94,7 @@ if settings.STACKOVERFLOW_INTEGRATION_ENABLED:
 #Linkedin Integration
 if settings.LINKEDIN_INTEGRATION_ENABLED:
     urlpatterns += patterns('',
+        url(r'^linkedin/auth/?$', 'syte.views.linkedin_view.linkedin_auth'),
         url(r'^linkedin/?$', 'syte.views.linkedin_view.linkedin_view'),
     )
 

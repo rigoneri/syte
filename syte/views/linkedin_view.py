@@ -4,20 +4,30 @@ from linkedin import linkedin
 
 from django.http import HttpResponse
 from django.conf import settings
+from django.shortcuts import redirect, render
 
 LINKEDIN_NETWORK_UPDATE_TYPES = linkedin.NETWORK_UPDATES.enums.values()
 
-def linkedin_view(request):
-    authentication = linkedin.LinkedInDeveloperAuthentication(
-        consumer_key=settings.LINKEDIN_CONSUMER_KEY,
-        consumer_secret=settings.LINKEDIN_CONSUMER_SECRET,
-        user_token=settings.LINKEDIN_USER_TOKEN,
-        user_secret=settings.LINKEDIN_USER_SECRET,
-        redirect_uri=settings.SITE_ROOT_URI,
-        permissions=linkedin.PERMISSIONS.enums.values()
+def linkedin_auth(request):
+    code = request.GET.get('code', None)
+
+    authentication = linkedin.LinkedInAuthentication(
+        settings.LINKEDIN_API_KEY,
+        settings.LINKEDIN_API_SECRET,
+        '{0}linkedin/auth/'.format(settings.SITE_ROOT_URI),
+        linkedin.PERMISSIONS.enums.values()
     )
 
-    application = linkedin.LinkedInApplication(authentication)
+    if not code:
+        return redirect(authentication.authorization_url)
+
+    if code:
+        authentication.authorization_code = code
+        token = authentication.get_access_token()
+        return render(request, 'linkedin_auth.html', {'token': token[0]})
+
+def linkedin_view(request):
+    application = linkedin.LinkedInApplication(token=settings.LINKEDIN_TOKEN)
     profile_data = application.get_profile(selectors=['id', 'first-name', 'last-name', 'headline', 'location',
                                                       'num-connections', 'skills', 'educations', 'picture-url',
                                                       'site-standard-profile-request', 'summary', 'positions',
