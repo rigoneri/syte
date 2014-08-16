@@ -108,10 +108,10 @@ function fetchWordpressBlogPosts(offset, tag) {
         // TODO: figure out how to preserve timezone info and make it consistent with
         // python's datetime.strptime
         if (p.date.lastIndexOf('+') > 0) {
-          p.date = p.date.substring(0, p.date.indexOf('+'));
+          p.date = p.date.substring(0, p.date.lastIndexOf('+'));
         }
         else {
-          p.date = p.date.substring(0, p.date.indexOf('-'));
+          p.date = p.date.substring(0, p.date.lastIndexOf('-'));
         }
     });
     renderBlogPosts(data.posts);

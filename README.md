@@ -1,6 +1,6 @@
 # Syte
 
-Syte is a really simple but powerful packaged personal site that has social integrations like Twitter, GitHub, Dribbble, Instagram, Foursquare, Tumblr, Wordpress, Last.fm, SoundCloud, Bitbucket, StackOverflow, Flickr and Steam. You can see it in action on [my personal site](http://rigoneri.com).
+Syte is a really simple but powerful packaged personal site that has social integrations like Twitter, GitHub, Dribbble, Instagram, Foursquare, Tumblr, Wordpress, Linkedin, Spotify/Last.fm, SoundCloud, Bitbucket, StackOverflow, Flickr and Steam. You can see it in action on [my personal site](http://rigoneri.com).
 
 ## Social Integrations
 
@@ -349,23 +349,27 @@ If you want to turn off Flickr integration just set `FLICKR_INTEGRATION_ENABLED`
 
 ### Setting up LinkedIn integration
 
-LinkedIn has another level of security, therefore we need more information instead of just an api_key like Tumblr. To get started create a new application on LinkedIn for your website by going to <https://developer.linkedin.com/>. Once you are done creating your application you will be taken to your application page on LinkedIn, there you already have four pieces of the puzzle, the `Consumer key`, `Consumer secret`, `User Token` and `User Secret` make sure you save those.
+LinkedIn has the same level of security as Instagram and Foursquare and similar steps on getting the access token ourselves. To get started create a new application on LinkedIn for your website by going to <https://developer.linkedin.com/>. Once you are done creating your application you will be taken to your application page on LinkedIn, there you already have a few pieces of the puzzle, the `Api Key`, `Secret Key`, make sure you save those.
 
-Once you have those four items from LinkedIn you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
+In that same page make sure to enter `http://127.0.0.1:8000/linkedin/auth/` under Oauth 2.0 Redirect URls.
 
-* `Consumer key` string you saved under `LINKEDIN_CONSUMER_KEY`
-* `Consumer secret` string you saved under  `LINKEDIN_CONSUMER_SECRET`
-* `User token` string you saved under `LINKEDIN_USER_TOKEN`
-* `User secret` string you saved under `LINKEDIN_USER_SECRET`
+Once you have those items from LinkedIn you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
+
+* `Consumer key` string you saved under `LINKEDIN_API_KEY`
+* `Consumer secret` string you saved under  `LINKEDIN_API_SECRET`
+
+After you have entered those two items, follow the steps below for running your Syte locally on your machine. Once you have your Syte running navigate to `http://127.0.0.1:8000/linkedin/auth`, you will be taken to Linkedin's website and will be asked to sign in and authorize your application. After you authorized your application you will be taken back to your Syte and you will be given your ***Access Token***.
+
+Once you have the access token from Foursquare you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
+
+* ***Access Token*** under `LINKEDIN_TOKEN`
 
 If you want to turn off the LinkedIn integration just set `LINKEDIN_INTEGRATION_ENABLED` to False.
 
 
-
 ## Running & Deployment Instructions
 
-Now that you have everything setup and ready to go we will be able to run the project locally and deploy to Heroku with the instructions below. Please note that these instructions are for Mac, which should be the same for Linux systems. If you have problems with these instructions on Windows, let me know or send a pull request.
-
+Now that you have everything setup and ready to go we will be able to run the project locally and deploy to Heroku or AWS with the instructions below. Please note that these instructions are for Mac, which should be the same for Linux systems. If you have problems with these instructions on Windows, let me know or send a pull request.
 
 
 
@@ -432,6 +436,26 @@ First signup to [Heroku](http://heroku.com) then follow these simple [Django dep
 2. Change the ``SITE_ROOT_URI`` value to your Heroku app url in **syte_settings.py** see the available example to how it should be formatted.
 
 
+### Deploying to AWS
+
+Deploying to [AWS](http://aws.amazon.com) is a little more complicated than Heroku, but is a nice alternative.  The easiest way to deploy your application to AWS is by using [AWS Elastic Beanstalk](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_Python_django.html).  To help keep costs low, we will deploy to micro instances.
+
+First signup to [AWS](http://aws.amazon.com) then follow the instructions below.  I have already included some of the required files for you (see syte.config in .ebextensions directory).  The other required files will be created automatically, but some of the settings may need to be altered slightly.
+
+1. Change the ``DEPLOYMENT_MODE`` value to prod in **syte_settings.py** located in ``syte > syte_settings.py``
+2. Change the ``SITE_ROOT_URI`` value to your AWS app url in **syte_settings.py** see the available example to how it should be formatted.
+3. Install the eb command-line tools and add to your path.  Download from [here](http://aws.amazon.com/code/6752709412171743).  This will allow us to control AWS from the command-line.
+4. Execute the `eb init` command in the root of the syte repo and follow the on-screen instructions.  This will help get our project ready to be deployed into AWS.  Please note: during this step you will be asked to provide security credentials.  If you are not sure what to use, see [here](http://docs.aws.amazon.com/general/latest/gr/getting-aws-sec-creds.html)
+5. Execute the `eb start` command to deploy a sample application to AWS.  Once this command completes execute `eb status --verbose` and confirm that the sample application is running at the provided url.
+6. Let's make sure our configurations are right.
+   - First, open ./ebextensions/syte.config and confirm the settings here.  You should not have to update anything.
+   - Second, open the ./elasticbeanstalk/opensettings.XXX-env (where XXX-env is the name of your environment).  Update this by updating: 
+     DJANGO_SETTINGS_MODULE=syte.settings
+     StaticFiles=syte/static=
+     WSGIPath=syte/wsgi.py
+7. To make sure the above changes are not reverted, execute `eb update`.
+8. Deploy the repo to AWS by executing `git aws.push`.  This command can be rerun whenever you have changes that you want to deploy.
+9. Execute `eb status --verbose` or monitor the provisioning process on AWS' website.  To troubleshoot, go to the ElasticBeanstalk section of AWS, get a snapshot of the logs and review them for errors.
 
 
 

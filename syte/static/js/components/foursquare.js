@@ -1,4 +1,3 @@
-
 function setupFoursquare(el) {
   var href = el.href;
 
@@ -33,7 +32,7 @@ function setupFoursquare(el) {
             if (c.venue) {
               var category =  c.venue['categories'][0];
               if (category) {
-                var prefix = category.icon.prefix;
+                var prefix = category.icon.prefix + 'bg_32';
                 if (prefix.substring(prefix.length-1) == '_') {
                   prefix = prefix.substring(0, prefix.length - 1);
                 }

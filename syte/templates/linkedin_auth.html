@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block pagetitle %}Linkedin Auth{% endblock %}
+{% block main_section %}
+<section class="main-section">
+  <article>
+      <h2>Linkedin Access Token</h2>
+      <p>Go to your syte_settings.py and enter the token under <code>LINKEDIN_TOKEN</code>.</p>
+      <dl>
+        <dt>Access Token</dt><dd>{{ token }}</dd>
+      </dl>
+  </article>
+</section>
+{% endblock %}
+
+

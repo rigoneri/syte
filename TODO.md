@@ -14,7 +14,7 @@ List of services to add integration for:
     - Soundcloud [DONE]
     - Tent.io [DONE]
     - Facebook
-    - LinkedIn
+    - LinkedIn [DONE]
     - Youtube
     - Netflix
     - Flickr [DONE]

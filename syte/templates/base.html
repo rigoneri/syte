@@ -17,6 +17,7 @@
   {% else %}
   <link rel="stylesheet" href="{% static 'css/styles-'|add:COMPRESS_REVISION_NUMBER|add:'.min.css' %}" type="text/css" media="screen, projection">
   {% endif %}
+  {% include "favicon.html" %}
 </head>
 <body>
 <header class="main-header">
@@ -25,7 +26,7 @@
       <a href="/" rel="home"></a>
     </div>
     <h1>Rodrigo Neri</h1>
-    <h2>iOS & Web Developer + Designer + Entrepreneur Co-Founder of <a href="http://instin.com">Instin</a></h2>
+    <h2>iOS &amp; Web Developer + Designer + Entrepreneur Co-Founder of <a href="http://instin.com">Instin</a></h2>
   </hgroup>
   <nav>
     <ul class="main-nav">
