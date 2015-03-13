@@ -107,15 +107,15 @@ On the frontend Syte uses HTML5 and CSS3 while using the [LESS](http://lesscss.o
 * [require.js](http://github.com/jrburke/requirejs)
 * [handlebars.js](http://handlebarsjs.com/)
 * [moment.js](http://momentjs.com/)
-* [spin.js](fgnass.github.com/spin.js)
+* [spin.js](http://fgnass.github.io/spin.js/)
 * [bootstrap-modal.js](http://twitter.github.com/bootstrap/javascript.html#modals)
 * [jQuery URL Parser](https://github.com/allmarkedup/jQuery-URL-Parser)
 * [google-code-prettify](http://google-code-prettify.googlecode.com/svn/trunk/README.html)
 
 For static compression and minification Syte uses some [Node.js](http://nodejs.org/) libraries:
 
-* [less](http://search.npmjs.org/#/less)
-* [uglify-js](http://search.npmjs.org/#/uglify-js)
+* [less](https://www.npmjs.com/package/less)
+* [uglify-js](https://www.npmjs.com/package/uglify-js)
 
 For deployment Syte uses [Heroku](http://www.heroku.com/) since it's free for 750 dyno-hours per month. While the included instructions are for Heroku, Syte doesn't necessarily need to be deployed there.
 
@@ -180,7 +180,7 @@ Comments are available through [Disqus](http://disqus.com/) in order to get your
 
 ### Setting up Twitter integration
 
-Twitter has another level of security, therefore we need more information instead of just an api_key like Tumblr. To get started create a new application on Twitter for your website by going to <https://dev.twitter.com/apps/new>. Once you are done creating your application you will be taken to your application page on Twitter, there you already have two pieces of the puzzle, the `Consumer key` and the `Consumer secret` make sure you save those.
+Twitter has another level of security, therefore we need more information instead of just an api_key like Tumblr. To get started create a new application on Twitter for your website by going to <https://apps.twitter.com/app/new>. Once you are done creating your application you will be taken to your application page on Twitter, there you already have two pieces of the puzzle, the `Consumer key` and the `Consumer secret` make sure you save those.
 
 Next you will need your access tokens, on the bottom of that page there is a link called **Create my access token** click on that. Once you are done you will be given the other two pieces of the puzzle, the `Access token` and the `Access token secret` make sure you save those as well.
 
@@ -255,7 +255,7 @@ If you want to turn off Instagram integration just set `INSTAGRAM_INTEGRATION_EN
 
 ### Setting up Foursquare integration
 
-Foursquare has the same level of security as Instagram and similar steps on getting the access token ourselves. To get started go to <https://foursquare.com/oauth/register>, sign in and register a new consumer.
+Foursquare has the same level of security as Instagram and similar steps on getting the access token ourselves. To get started go to <https://foursquare.com/developers/register>, sign in and register a new consumer.
 
 Enter the ***Application Name***, ***Application Website*** and ***Callback URL***. For the callback url enter `http://127.0.0.1:8000/foursquare/auth` for now since we will get the access token while running it locally. Once you are done registering your consumer you will be given the ***Client ID*** and ***Client Secret***.
 
