@@ -111,12 +111,3 @@ urlpatterns += patterns('',
     (r'^favicon\.ico$', RedirectView.as_view(url="/static/imgs/favicon.ico")),
 )
 
-#Applications
-urlpatterns += patterns('django.views.generic.simple',
-    url(r'^apps/?$', 'direct_to_template', {'template':'apps.html'}),
-    url(r'^apps/mygoal/?$', 'redirect_to',
-        {'url':'http://itunes.apple.com/us/app/my-goal/id375722933?mt=8'}),
-    url(r'^apps/touchboom/?$', 'redirect_to',
-        {'url':'http://itunes.apple.com/us/app/touch-boom/id327876796?mt=8'}),
-)
-
