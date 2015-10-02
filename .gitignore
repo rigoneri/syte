@@ -4,3 +4,5 @@
 personal_syte_settings.py
 .elasticbeanstalk/
 .vagrant/
+personal_static
+personal_templates
