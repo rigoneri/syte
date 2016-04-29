@@ -225,9 +225,13 @@ If you want to turn off GitHub integration just set `GITHUB_INTEGRATION_ENABLED`
 
 ### Setting up Dribbble integration
 
-You don't have to do anything to setup the Dribbble integration. If you want to turn off this feature just set `DRIBBBLE_INTEGRATION_ENABLED` setting to False in syte_settings.py.
+To get started go to <http://developer.dribbble.com/> and click on **Register a New Application**.
 
+Enter ***Name***, ***Description***, ***Website URL*** and ***Callback URL***. After that is done Dribbble will give you a **Client Access Token** to use.
 
+Once you have your access token from Dribbble you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter it under `DRIBBBLE_ACCESS_TOKEN`
+
+If you want to turn off this feature just set `DRIBBBLE_INTEGRATION_ENABLED` setting to False in syte_settings.py.
 
 
 ### Setting up Instagram integration

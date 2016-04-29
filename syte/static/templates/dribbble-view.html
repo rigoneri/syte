@@ -24,15 +24,15 @@
     <li><a href="http://dribbble.com/{{ username }}"><strong>{{ shots_count }}</strong> shots</a></li>
     <li><a href="http://dribbble.com/{{ username }}" class="shots-likes-received"><strong>{{ likes_received_count }}</strong> likes received</a></li>
     <li><a href="http://dribbble.com/{{ username }}" class="shots-likes-given"><strong>{{ likes_count }}</strong> likes given</a></li>
-    <li><a href="http://dribbble.com/{{ username }}/following"><strong>{{ following_count }}</strong> following</a></li> 
+    <li><a href="http://dribbble.com/{{ username }}/following"><strong>{{ followings_count }}</strong> following</a></li> 
     <li><a href="http://dribbble.com/{{ username }}/followers"><strong>{{ followers_count }}</strong> followers</a></li>
   </ul>
   {{/with}}
   <ul class="profile-shots">
     {{#each shots}}
     <li>
-      <a href="{{ url }}" class="profile-shot">
-        <img src="{{ image_url }}" alt="{{ title }}" />
+      <a href="{{ html_url }}" class="profile-shot">
+        <img src="{{ images.normal }}" alt="{{ title }}" />
       </a>
       <span class="profile-shot-title">{{ title }}</span>
       <ul class="profile-shot-stats">
