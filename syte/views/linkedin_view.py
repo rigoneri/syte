@@ -15,7 +15,7 @@ def linkedin_auth(request):
         settings.LINKEDIN_API_KEY,
         settings.LINKEDIN_API_SECRET,
         '{0}linkedin/auth/'.format(settings.SITE_ROOT_URI),
-        linkedin.PERMISSIONS.enums.values()
+        ['r_basicprofile', 'r_emailaddress']
     )
 
     if not code:
@@ -32,10 +32,8 @@ def linkedin_view(request):
                                                       'num-connections', 'skills', 'educations', 'picture-url',
                                                       'site-standard-profile-request', 'summary', 'positions',
                                                       'industry'])
-    group_data = application.get_memberships()
-    network_updates_data = application.get_network_updates(types=LINKEDIN_NETWORK_UPDATE_TYPES)
 
-    context = {'profile': profile_data, 'groups': group_data, 'network_updates': network_updates_data}
+    context = {'profile': profile_data}
 
     return HttpResponse(content=json.dumps(context),
                         status=200,
