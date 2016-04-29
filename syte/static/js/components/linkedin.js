@@ -19,9 +19,7 @@ function setupLinkedin(url, el) {
 
         var template = Handlebars.compile(linkedin_view);
 
-        linkedin_data.profile['profile_url'] = 'http://linkedin.com/profile/view?id=' + linkedin_data.profile['id']
-        linkedin_data.profile['numGroups'] = linkedin_data.groups['_count']
-        linkedin_data.profile['numNetworkUpdates'] = linkedin_data.network_updates['_total']
+        linkedin_data.profile['profile_url'] = 'http://linkedin.com/profile/view?id=' + linkedin_data.profile['id']        
         linkedin_data.profile['location_name'] = linkedin_data.profile['location']['name']
 
         $(template(linkedin_data)).modal().on('hidden', function () {

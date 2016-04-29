@@ -17,9 +17,6 @@
 
   <ul class="profile-stats">
     <li><a href="{{ profile_url }}"><strong>{{ numConnections }}</strong> connections</a></li>
-    {{#if numGroups}}
-    <li><a href="{{ profile_url }}"><strong>{{ numGroups }}</strong> groups</a></li>
-    {{/if}}
   </ul>
   <div class="profile-info-footer">
     <a href="{{ profile_url }}" class="btn">View Profile</a>
@@ -74,19 +71,7 @@
       </ul>
     </div>
     {{/if}}
-    {{/with}}
-    {{#if groups}}
-    <div class="linkedin-sec">
-      {{#with groups}}
-      <h3>Groups</h3>
-      <ul class="linkedin-groups">
-       {{#each values}}
-       <li>{{{group.name}}}</li>
-       {{/each}}
-      </ul>
-      {{/with}}
-    </div>
-    {{/if}}
+    {{/with}} 
   </div>
 </div>
 
