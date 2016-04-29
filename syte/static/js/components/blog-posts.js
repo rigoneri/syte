@@ -12,7 +12,7 @@ function renderBlogPosts(posts) {
   //Update this every time there are changes to the required 
   //templates since it's cached every time
   require.config({
-    urlArgs: "bust=v2" 
+    urlArgs: "bust=v4" 
   })
 
   require(["text!templates/blog-post-text.html",
