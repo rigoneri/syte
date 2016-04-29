@@ -28,8 +28,8 @@ function setupDribbble(url, el) {
 
             var template = Handlebars.compile(dribbble_view);
 
-            var user = dribbble_data.shots[0].player;
-            user.following_count = numberWithCommas(user.following_count);
+            var user = dribbble_data.user;
+            user.followings_count = numberWithCommas(user.followings_count);
             user.followers_count = numberWithCommas(user.followers_count);
             user.likes_count = numberWithCommas(user.likes_count);
 
