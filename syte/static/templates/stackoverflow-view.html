@@ -3,7 +3,7 @@
   <div class="profile-info">
     <button class="close" data-dismiss="modal">×</button>
     <a href="http://stackoverflow.com/users/{{ user_id }}/" class="profile-avatar">
-      <img src="http://gravatar.com/avatar/{{ email_hash }}" alt="{{ display_name }}" />
+      <img src="{{ profile_image }}" alt="{{ display_name }}" />
     </a>
     <div class="profile-name">
       <h2><a href="http://stackoverflow.com/users/{{ user_id }}/">{{ display_name }}</a></h2>
@@ -32,11 +32,11 @@
   <ul class="profile-stackoverflow">
     {{#each timeline}}
       <li>
-        <a href="http://stackoverflow.com/users/{{ user_id }}/?tab=activity" class="profile-stackoverflow-name">
-          <strong>{{ action }} {{ creation_date }}</strong>
+        <a href="{{ link }}" class="profile-stackoverflow-name">
+          <strong>{{ timeline_type }} {{ creation_date }}</strong>
         </a>
-        <p class="profile-stackoverflow-description">{{ description }}</p>
-        <p class="profile-stackoverflow-details">{{#if detail}}{{detail}}{{/if}}</p>
+        <p class="profile-stackoverflow-description">{{ title }}</p>
+        {{#if detail}}<p class="profile-stackoverflow-details">{{detail}}</p>{{/if}}
       </li>
     {{/each}}
   </ul>
