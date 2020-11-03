@@ -1,7 +1,7 @@
 Django==1.5.2
 requests==2.3.0
 wsgiref==0.1.2
-gunicorn==0.16.1
+gunicorn==19.5.0
 pybars==0.0.4
 python-twitter==1.0
 python-linkedin==4.1
